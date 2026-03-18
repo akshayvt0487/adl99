@@ -12,11 +12,50 @@ import { fetchGraphQL } from "@/lib/wordpress-server";
 import { GET_HOME_PAGE, GET_ALL_SERVICES, GET_ALL_INDUSTRIES } from "@/lib/wordpress-queries";
 import type { Metadata } from "next";
 
-// SEO metadata
+// Enhanced SEO metadata for homepage
 export const metadata: Metadata = {
-  title: "ADL99 Cybersecurity | Assess • Defend • Leverage",
-  description: "ADL99 provides expert cybersecurity services for Australian businesses. Protect your data, meet compliance requirements, and build cyber resilience.",
-  keywords: ["cybersecurity Australia", "cyber security Melbourne", "cybersecurity consulting", "Essential Eight", "ISO 27001", "NIST", "cyber maturity assessment", "vCISO"],
+  title: "ADL99 Cybersecurity | Expert Cyber Security Services Australia",
+  description: "Protect your business with Australia's leading cybersecurity experts. We provide vCISO services, Essential Eight compliance, penetration testing, security awareness training & 24/7 monitoring. Free security assessment available.",
+  keywords: [
+    "cybersecurity Australia",
+    "cyber security Melbourne",
+    "cybersecurity consulting",
+    "vCISO services Australia",
+    "Essential Eight compliance",
+    "ISO 27001 Australia",
+    "NIST framework",
+    "cyber maturity assessment",
+    "penetration testing",
+    "security awareness training",
+    "cyber incident response",
+    "data breach prevention",
+    "Australian cyber security",
+  ],
+  openGraph: {
+    title: "ADL99 Cybersecurity | Expert Cyber Security Services Australia",
+    description: "Protect your business with Australia's leading cybersecurity experts. vCISO, Essential Eight, penetration testing & more. Free security assessment.",
+    url: "https://adl99.com.au",
+    siteName: "ADL99 Cybersecurity",
+    images: [
+      {
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "ADL99 Cybersecurity - Protecting Australian Businesses",
+      },
+    ],
+    locale: "en_AU",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "ADL99 Cybersecurity | Expert Cyber Security Services Australia",
+    description: "Protect your business with Australia's leading cybersecurity experts. Free security assessment available.",
+    images: ["/og-image.png"],
+  },
+  alternates: {
+    canonical: "https://adl99.com.au",
+  },
 };
 
 // Server-side data fetching
@@ -60,7 +99,7 @@ export default async function HomePage() {
 
   const homePage = homePageData?.page;
 
-  // JSON-LD structured data
+  // Enhanced JSON-LD structured data for rich snippets
   const organizationSchema = {
     "@context": "https://schema.org",
     "@type": "Organization",
@@ -83,12 +122,130 @@ export default async function HomePage() {
     },
   };
 
+  // FAQ Schema for rich snippets
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: [
+      {
+        "@type": "Question",
+        name: "What cybersecurity services does ADL99 provide?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "ADL99 provides comprehensive cybersecurity services including vCISO (virtual Chief Information Security Officer), cyber maturity assessments, Essential Eight compliance, ISO 27001 implementation, penetration testing, security awareness training, and 24/7 security monitoring for Australian businesses.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "What is Essential Eight compliance?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "Essential Eight is the Australian Cyber Security Centre's (ACSC) prioritized mitigation strategies to protect organizations from cyber threats. It includes application control, patch applications, configure Microsoft Office macro settings, user application hardening, restrict administrative privileges, patch operating systems, multi-factor authentication, and regular backups.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "Who needs cybersecurity services in Australia?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "All Australian businesses need cybersecurity protection, regardless of size. This includes healthcare clinics, law firms, accounting practices, manufacturers, retailers, and research organizations. Cyber threats target businesses of all sizes, making professional security services essential.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "What is a vCISO service?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "A vCISO (virtual Chief Information Security Officer) is an outsourced security leadership service that provides expert cybersecurity strategy, risk management, compliance oversight, and security program development without the cost of a full-time executive. It's ideal for small to medium businesses needing enterprise-level security expertise.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "How often should businesses conduct cyber security assessments?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "Australian businesses should conduct comprehensive cybersecurity assessments at least annually, with continuous monitoring throughout the year. Additional assessments are recommended after significant changes to IT infrastructure, following security incidents, or when compliance requirements change.",
+        },
+      },
+    ],
+  };
+
+  // Service schema for search visibility
+  const serviceSchema = {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    serviceType: "Cybersecurity Consulting",
+    provider: {
+      "@type": "Organization",
+      name: "ADL99 Cybersecurity",
+      url: "https://adl99.com.au",
+    },
+    areaServed: {
+      "@type": "Country",
+      name: "Australia",
+    },
+    hasOfferCatalog: {
+      "@type": "OfferCatalog",
+      name: "Cybersecurity Services",
+      itemListElement: [
+        {
+          "@type": "Offer",
+          itemOffered: {
+            "@type": "Service",
+            name: "vCISO Services",
+            description: "Virtual Chief Information Security Officer services for strategic security leadership",
+          },
+        },
+        {
+          "@type": "Offer",
+          itemOffered: {
+            "@type": "Service",
+            name: "Cyber Maturity Assessment",
+            description: "Comprehensive evaluation of your organization's cybersecurity posture",
+          },
+        },
+        {
+          "@type": "Offer",
+          itemOffered: {
+            "@type": "Service",
+            name: "Essential Eight Compliance",
+            description: "Implementation and audit of ACSC Essential Eight mitigation strategies",
+          },
+        },
+        {
+          "@type": "Offer",
+          itemOffered: {
+            "@type": "Service",
+            name: "Penetration Testing",
+            description: "Ethical hacking to identify vulnerabilities in your systems",
+          },
+        },
+        {
+          "@type": "Offer",
+          itemOffered: {
+            "@type": "Service",
+            name: "Security Awareness Training",
+            description: "Employee training to build a security-conscious culture",
+          },
+        },
+      ],
+    },
+  };
+
   return (
     <div className="min-h-screen bg-background">
-      {/* JSON-LD Structured Data */}
+      {/* JSON-LD Structured Data for Enhanced SEO */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
       />
 
       <Header />
