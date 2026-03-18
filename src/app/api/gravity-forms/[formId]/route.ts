@@ -26,25 +26,20 @@ export async function POST(
   const body = await req.json();
   const auth = Buffer.from(`${GF_CONSUMER_KEY}:${GF_CONSUMER_SECRET}`).toString("base64");
 
-  // Add form_id to the payload as required by Gravity Forms API
-  const payload = {
-    form_id: parseInt(formId),
-    ...body
-  };
+  console.log('[GF API Route] Submitting to form:', formId, 'with data:', body);
 
-  console.log('[GF API Route] Submitting entry:', payload);
-
-  const res = await fetch(`${GF_BASE}/gf/v2/entries`, {
+  // Use submissions endpoint which triggers notifications
+  const res = await fetch(`${GF_BASE}/gf/v2/forms/${formId}/submissions`, {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
       Authorization: `Basic ${auth}`,
     },
-    body: JSON.stringify(payload),
+    body: JSON.stringify(body),
   });
 
   const responseData = await res.json();
-  console.log('[GF API Route] Response:', responseData);
+  console.log('[GF API Route] Submission response:', responseData);
 
   return NextResponse.json(responseData, { status: res.status });
 }

@@ -62,9 +62,9 @@ function toSubmissionPayload(entry: GravityFormEntry): Record<string, string | n
   for (const [rawKey, rawValue] of Object.entries(entry)) {
     if (rawValue === '' || rawValue === null || rawValue === undefined) continue;
     const key = String(rawKey);
-    // Gravity Forms expects field IDs as plain numbers (e.g., "1", "3", "4")
-    // Remove any "input_" prefix if present, keep dots for sub-fields (e.g., "1.3" for name fields)
-    const normalized = key.startsWith('input_') ? key.replace('input_', '').replace(/_/g, '.') : key;
+    // Gravity Forms submissions endpoint expects "input_1", "input_3" format
+    // Add "input_" prefix if not present, handle dots for sub-fields (e.g., "input_1_3")
+    const normalized = key.startsWith('input_') ? key : `input_${key.replace(/\./g, '_')}`;
     payload[normalized] = rawValue as string | number;
   }
   return payload;
@@ -116,7 +116,7 @@ export async function submitGravityFormEntry(
     const data = await response.json();
     console.log('[GravityForms] Response data:', data);
 
-    // Check for validation errors (submissions endpoint validation)
+    // Check for validation errors from submissions endpoint
     if (data.is_valid === false) {
       console.warn('[GravityForms] Validation failed:', data.validation_messages);
       return {
@@ -126,12 +126,12 @@ export async function submitGravityFormEntry(
       };
     }
 
-    // Check for successful entry creation (entries endpoint)
-    if (data.id && response.ok) {
-      console.log('[GravityForms] Entry created successfully with ID:', data.id);
+    // Check for successful submission (submissions endpoint returns is_valid: true)
+    if (data.is_valid === true || (response.ok && !data.code)) {
+      console.log('[GravityForms] Form submitted successfully');
       return {
         success: true,
-        message: 'Thanks for contacting us! We will get in touch with you shortly.',
+        message: data.confirmation_message || 'Thanks for contacting us! We will get in touch with you shortly.',
       };
     }
 
