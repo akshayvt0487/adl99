@@ -27,6 +27,7 @@ export interface GravityFormField {
   size?: string;
   cssClass?: string;
   visibility?: string;
+  inputName?: string;
 }
 
 export interface GravityForm {
