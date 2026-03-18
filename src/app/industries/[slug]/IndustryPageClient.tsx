@@ -277,9 +277,9 @@ export default function IndustryPageClient({
                       <div className="bg-primary rounded-2xl p-8 text-primary-foreground">
                         <div className="flex items-center gap-3 mb-6">
                           <CheckCircle className="w-8 h-8" />
-                          <h3 className="font-display text-2xl font-bold uppercase tracking-wide">
+                          <h2 className="font-display text-2xl font-bold uppercase tracking-wide">
                             Why Choose ADL99?
-                          </h3>
+                          </h2>
                         </div>
                         <ul className="space-y-4 mb-8">
                           {industry.industryFields.whyChooseUs.map(

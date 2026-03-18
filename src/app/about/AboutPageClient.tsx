@@ -112,9 +112,9 @@ export default function AboutPageClient({
                   <MapPin className="w-6 h-6 text-primary" />
                 </div>
                 <div>
-                  <h3 className="font-display text-xl font-bold text-foreground uppercase tracking-wide">
+                  <h2 className="font-display text-xl font-bold text-foreground uppercase tracking-wide">
                     {australianOwnedTitle}
-                  </h3>
+                  </h2>
                   <p className="text-muted-foreground">{australianOwnedDescription}</p>
                 </div>
               </div>
