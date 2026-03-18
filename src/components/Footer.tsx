@@ -21,7 +21,7 @@ const Footer = () => {
               />
             </Link>
             <p className="text-sm text-background/70 mb-4">
-              Professional cybersecurity solutions protecting Australian businesses from evolving cyber threats.
+            Next.  Professional cybersecurity solutions protecting Australian businesses from evolving cyber threats.
             </p>
             <div className="flex gap-3">
               <a 
