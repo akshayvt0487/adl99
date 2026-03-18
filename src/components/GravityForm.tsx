@@ -57,12 +57,29 @@ const GravityForm = ({
       setIsLoading(true);
       setFormError(null);
       const formData = await fetchGravityForm(formId);
-      
+
       if (!formData) {
         setFormError('Unable to load the form. Please refresh the page or try again later.');
       }
-      
+
       setForm(formData);
+
+      // Auto-populate hidden fields like source page
+      if (formData && typeof window !== 'undefined') {
+        const initialData: GravityFormEntry = {};
+
+        // Find and populate source page field (field 9 or any field with inputName="source_page")
+        const sourcePageField = formData.fields.find(
+          f => f.inputName === 'source_page' || (f.id === 9 && f.visibility === 'hidden')
+        );
+
+        if (sourcePageField) {
+          initialData[sourcePageField.id] = window.location.pathname + window.location.search;
+        }
+
+        setFormData(initialData);
+      }
+
       setIsLoading(false);
     };
     loadForm();

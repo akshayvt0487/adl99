@@ -61,7 +61,9 @@ function toSubmissionPayload(entry: GravityFormEntry): Record<string, string | n
   for (const [rawKey, rawValue] of Object.entries(entry)) {
     if (rawValue === '' || rawValue === null || rawValue === undefined) continue;
     const key = String(rawKey);
-    const normalized = key.startsWith('input_') ? key : `input_${key.replace(/\./g, '_')}`;
+    // Gravity Forms expects field IDs as plain numbers (e.g., "1", "3", "4")
+    // Remove any "input_" prefix if present, keep dots for sub-fields (e.g., "1.3" for name fields)
+    const normalized = key.startsWith('input_') ? key.replace('input_', '').replace(/_/g, '.') : key;
     payload[normalized] = rawValue as string | number;
   }
   return payload;
@@ -111,13 +113,33 @@ export async function submitGravityFormEntry(
     console.log(`[GravityForms] Submission response status: ${response.status}`);
 
     const data = await response.json();
+    console.log('[GravityForms] Response data:', data);
 
+    // Check for validation errors (submissions endpoint validation)
     if (data.is_valid === false) {
       console.warn('[GravityForms] Validation failed:', data.validation_messages);
       return {
         success: false,
         message: 'Please fix the errors and try again.',
         validationErrors: data.validation_messages,
+      };
+    }
+
+    // Check for successful entry creation (entries endpoint)
+    if (data.id && response.ok) {
+      console.log('[GravityForms] Entry created successfully with ID:', data.id);
+      return {
+        success: true,
+        message: 'Thanks for contacting us! We will get in touch with you shortly.',
+      };
+    }
+
+    // Check for API errors
+    if (data.code || !response.ok) {
+      console.error('[GravityForms] API error:', data);
+      return {
+        success: false,
+        message: data.message || 'Failed to submit form. Please try again.',
       };
     }
 
