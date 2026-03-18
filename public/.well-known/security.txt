@@ -1,9 +1,9 @@
 Contact: mailto:security@adl99.com.au
 Expires: 2027-12-31T23:59:59.000Z
 Preferred-Languages: en
-Canonical: https://adl99.com.au/.well-known/security.txt
-Policy: https://adl99.com.au/security-policy
-Acknowledgments: https://adl99.com.au/security-acknowledgments
+Canonical: https://www.adl99.com.au/.well-known/security.txt
+Policy: https://www.adl99.com.au/security-policy
+Acknowledgments: https://www.adl99.com.au/security-acknowledgments
 
 # ADL99 Cybersecurity - Responsible Disclosure
 # We take security seriously. Please report vulnerabilities responsibly.

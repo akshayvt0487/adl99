@@ -41,7 +41,7 @@ User-agent: dotbot
 Disallow: /
 
 # Sitemap location
-Sitemap: https://adl99.com.au/sitemap.xml
+Sitemap: https://www.adl99.com.au/sitemap.xml
 
 # Host preference (for search engines that support it)
-Host: https://adl99.com.au
+Host: https://www.adl99.com.au

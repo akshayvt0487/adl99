@@ -89,7 +89,7 @@ export default async function ContactPage() {
     "@type": "ContactPage",
     "name": "Contact Us",
     "description": "Get in touch with ADL99 for expert cybersecurity consultation.",
-    "url": "https://adl99.com.au/contact"
+    "url": "https://www.adl99.com.au/contact"
   };
 
   const breadcrumbSchema = {
@@ -100,13 +100,13 @@ export default async function ContactPage() {
         "@type": "ListItem",
         "position": 1,
         "name": "Home",
-        "item": "https://adl99.com.au"
+        "item": "https://www.adl99.com.au"
       },
       {
         "@type": "ListItem",
         "position": 2,
         "name": "Contact",
-        "item": "https://adl99.com.au/contact"
+        "item": "https://www.adl99.com.au/contact"
       }
     ]
   };

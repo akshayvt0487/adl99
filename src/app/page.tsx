@@ -34,7 +34,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "ADL99 Cybersecurity | Expert Cyber Security Services Australia",
     description: "Protect your business with Australia's leading cybersecurity experts. vCISO, Essential Eight, penetration testing & more. Free security assessment.",
-    url: "https://adl99.com.au",
+    url: "https://www.adl99.com.au",
     siteName: "ADL99 Cybersecurity",
     images: [
       {
@@ -54,7 +54,7 @@ export const metadata: Metadata = {
     images: ["/og-image.png"],
   },
   alternates: {
-    canonical: "https://adl99.com.au",
+    canonical: "https://www.adl99.com.au",
   },
 };
 
@@ -104,8 +104,8 @@ export default async function HomePage() {
     "@context": "https://schema.org",
     "@type": "Organization",
     name: "ADL99 Cybersecurity",
-    url: "https://adl99.com.au",
-    logo: "https://adl99.com.au/og-image.png",
+    url: "https://www.adl99.com.au",
+    logo: "https://www.adl99.com.au/og-image.png",
     description: "Expert cybersecurity services for Australian businesses",
     address: {
       "@type": "PostalAddress",
@@ -178,7 +178,7 @@ export default async function HomePage() {
     provider: {
       "@type": "Organization",
       name: "ADL99 Cybersecurity",
-      url: "https://adl99.com.au",
+      url: "https://www.adl99.com.au",
     },
     areaServed: {
       "@type": "Country",

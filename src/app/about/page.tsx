@@ -112,13 +112,13 @@ export default async function AboutPage() {
         "@type": "ListItem",
         "position": 1,
         "name": "Home",
-        "item": "https://adl99.com.au"
+        "item": "https://www.adl99.com.au"
       },
       {
         "@type": "ListItem",
         "position": 2,
         "name": "About",
-        "item": "https://adl99.com.au/about"
+        "item": "https://www.adl99.com.au/about"
       }
     ]
   };

@@ -62,7 +62,7 @@ export default async function IndustriesPage() {
     "@type": "WebPage",
     "name": "Industries We Serve",
     "description": "Industry-specific cybersecurity solutions for Australian businesses.",
-    "url": "https://adl99.com.au/industries"
+    "url": "https://www.adl99.com.au/industries"
   };
 
   const breadcrumbSchema = {
@@ -73,13 +73,13 @@ export default async function IndustriesPage() {
         "@type": "ListItem",
         "position": 1,
         "name": "Home",
-        "item": "https://adl99.com.au"
+        "item": "https://www.adl99.com.au"
       },
       {
         "@type": "ListItem",
         "position": 2,
         "name": "Industries",
-        "item": "https://adl99.com.au/industries"
+        "item": "https://www.adl99.com.au/industries"
       }
     ]
   };

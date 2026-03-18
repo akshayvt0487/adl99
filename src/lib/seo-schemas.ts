@@ -1,6 +1,6 @@
 // Centralized JSON-LD schema generators for SEO
 
-const SITE_URL = 'https://adl99.com.au';
+const SITE_URL = 'https://www.adl99.com.au';
 const SITE_NAME = 'ADL99 Cybersecurity';
 const LOGO_URL = `${SITE_URL}/og-image.png`;
 

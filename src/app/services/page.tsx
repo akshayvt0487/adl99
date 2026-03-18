@@ -124,7 +124,7 @@ export default async function ServicesPage() {
     "@type": "WebPage",
     "name": "Cybersecurity Services",
     "description": "Comprehensive cybersecurity services for Australian businesses.",
-    "url": "https://adl99.com.au/services"
+    "url": "https://www.adl99.com.au/services"
   };
 
   const faqSchema = {
@@ -148,13 +148,13 @@ export default async function ServicesPage() {
         "@type": "ListItem",
         "position": 1,
         "name": "Home",
-        "item": "https://adl99.com.au"
+        "item": "https://www.adl99.com.au"
       },
       {
         "@type": "ListItem",
         "position": 2,
         "name": "Services",
-        "item": "https://adl99.com.au/services"
+        "item": "https://www.adl99.com.au/services"
       }
     ]
   };

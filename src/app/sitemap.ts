@@ -3,7 +3,7 @@ import { fetchGraphQL } from '@/lib/wordpress-server';
 import { GET_ALL_SERVICES, GET_ALL_INDUSTRIES } from '@/lib/wordpress-queries';
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
-  const baseUrl = 'https://adl99.com.au';
+  const baseUrl = 'https://www.adl99.com.au';
 
   // Fetch dynamic routes
   let services: string[] = [];

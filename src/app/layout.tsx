@@ -15,7 +15,7 @@ export const viewport: Viewport = {
 
 // Complete SEO metadata for maximum search engine ranking
 export const metadata: Metadata = {
-  metadataBase: new URL("https://adl99.com.au"),
+  metadataBase: new URL("https://www.adl99.com.au"),
   title: {
     default: "ADL99 Cybersecurity | Expert Cyber Security Services Australia",
     template: "%s | ADL99 Cybersecurity",
@@ -60,7 +60,7 @@ export const metadata: Metadata = {
     "Australian cyber security firm",
     "cyber security services Victoria",
   ],
-  authors: [{ name: "ADL99 Cybersecurity", url: "https://adl99.com.au" }],
+  authors: [{ name: "ADL99 Cybersecurity", url: "https://www.adl99.com.au" }],
   creator: "ADL99 Cybersecurity",
   publisher: "ADL99 Cybersecurity",
   category: "Cybersecurity Services",
@@ -73,7 +73,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_AU",
-    url: "https://adl99.com.au",
+    url: "https://www.adl99.com.au",
     siteName: "ADL99 Cybersecurity",
     title: "ADL99 Cybersecurity | Expert Cyber Security Services Australia",
     description: "Protect your business with Australia's trusted cybersecurity experts. vCISO, Essential Eight compliance, penetration testing & 24/7 security monitoring. Get a free security assessment today.",
@@ -112,9 +112,9 @@ export const metadata: Metadata = {
     },
   },
   alternates: {
-    canonical: "https://adl99.com.au",
+    canonical: "https://www.adl99.com.au",
     languages: {
-      'en-AU': 'https://adl99.com.au',
+      'en-AU': 'https://www.adl99.com.au',
     },
   },
   icons: {
@@ -148,13 +148,13 @@ export default function RootLayout({
   const organizationSchema = {
     "@context": "https://schema.org",
     "@type": "ProfessionalService",
-    "@id": "https://adl99.com.au/#organization",
+    "@id": "https://www.adl99.com.au/#organization",
     name: "ADL99 Cybersecurity",
     alternateName: "ADL99",
-    url: "https://adl99.com.au",
+    url: "https://www.adl99.com.au",
     logo: {
       "@type": "ImageObject",
-      url: "https://adl99.com.au/og-image.png",
+      url: "https://www.adl99.com.au/og-image.png",
       width: 1200,
       height: 630,
     },
@@ -207,18 +207,18 @@ export default function RootLayout({
   const websiteSchema = {
     "@context": "https://schema.org",
     "@type": "WebSite",
-    "@id": "https://adl99.com.au/#website",
-    url: "https://adl99.com.au",
+    "@id": "https://www.adl99.com.au/#website",
+    url: "https://www.adl99.com.au",
     name: "ADL99 Cybersecurity",
     description: "Expert cybersecurity services for Australian businesses",
     publisher: {
-      "@id": "https://adl99.com.au/#organization",
+      "@id": "https://www.adl99.com.au/#organization",
     },
     potentialAction: {
       "@type": "SearchAction",
       target: {
         "@type": "EntryPoint",
-        urlTemplate: "https://adl99.com.au/search?q={search_term_string}",
+        urlTemplate: "https://www.adl99.com.au/search?q={search_term_string}",
       },
       "query-input": "required name=search_term_string",
     },
