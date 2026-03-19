@@ -8,8 +8,8 @@ import IndustriesPageClient from "./IndustriesPageClient";
 
 // SEO metadata
 export const metadata: Metadata = {
-  title: "Industries We Serve | ADL99 Cybersecurity",
-  description: "Industry-specific cybersecurity solutions for law firms, healthcare, accounting, retail, manufacturing, and research organisations.",
+  title: "Industry Cybersecurity Solutions Melbourne | ADL99",
+  description: "ADL99 delivers tailored cybersecurity for law firms, health clinics, accounting, retail, manufacturing and research organisations across Australia.",
   keywords: ["industry cybersecurity", "sector specific security", "Australian business cyber protection"],
   alternates: {
     canonical: "https://www.adl99.com.au/industries",

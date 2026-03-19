@@ -8,8 +8,8 @@ import ServicesPageClient from "./ServicesPageClient";
 
 // SEO metadata
 export const metadata: Metadata = {
-  title: "Cybersecurity Services | ADL99",
-  description: "Comprehensive cybersecurity services for Australian businesses. From maturity assessments to vCISO services, we protect your business.",
+  title: "Cybersecurity Services for Australian Businesses | ADL99 Melbourne",
+  description: "From incident response to vCISO and cyber awareness training, ADL99 delivers practical cybersecurity solutions for Australian businesses.",
   keywords: ["cybersecurity services Australia", "cyber security consulting", "security assessment", "managed security services"],
   alternates: {
     canonical: "https://www.adl99.com.au/services",

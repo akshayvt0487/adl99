@@ -27,6 +27,30 @@ export async function generateStaticParams() {
   }
 }
 
+// SEO metadata for specific services
+const serviceSEO: Record<string, { title: string; description: string }> = {
+  "cyber-maturity": {
+    title: "Cyber Maturity Assessment Services Melbourne | ADL99",
+    description: "Know where your business stands against NIST, ISO 27001 & Essential Eight. ADL99 delivers a clear cyber security roadmap and gap analysis.",
+  },
+  "technical-advisory": {
+    title: "Cybersecurity Technical Advisory Services | ADL99 Melbourne",
+    description: "Navigate complex security decisions with confidence. ADL99's Melbourne advisors provide expert guidance on architecture, risk management and compliance.",
+  },
+  "engineering-support": {
+    title: "Cybersecurity Engineering Support Services | ADL99 Melbourne",
+    description: "Hands-on security implementation from ADL99's Melbourne engineers — deploying and optimising your network defence, endpoint protection and cloud security.",
+  },
+  "cyber-awareness": {
+    title: "Cyber Awareness Training  | ADL99 Melbourne",
+    description: "Turn your employees into your strongest defence. ADL99 delivers phishing simulations, staff training and security awareness programs for Australian workplaces.",
+  },
+  "vciso": {
+    title: "Virtual CISO (vCISO) Services Melbourne | ADL99",
+    description: "Get executive-level cybersecurity leadership without the full-time cost. ADL99's Melbourne vCISO provides strategic oversight, governance and board reporting.",
+  },
+};
+
 // Generate metadata for SEO
 export async function generateMetadata({ params }: ServicePageProps): Promise<Metadata> {
   const { slug } = await params;
@@ -46,16 +70,17 @@ export async function generateMetadata({ params }: ServicePageProps): Promise<Me
     }
 
     const service = data.service;
+    const customSEO = serviceSEO[slug];
 
     return {
-      title: service.seo?.title || `${service.title} | ADL99`,
-      description: service.seo?.description || service.serviceFields?.shortDescription || "",
+      title: customSEO?.title || service.seo?.title || `${service.title} | ADL99`,
+      description: customSEO?.description || service.seo?.description || service.serviceFields?.shortDescription || "",
       alternates: {
         canonical: `https://www.adl99.com.au/services/${slug}`,
       },
       openGraph: {
-        title: service.seo?.title || service.title,
-        description: service.seo?.description || service.serviceFields?.shortDescription || "",
+        title: customSEO?.title || service.seo?.title || service.title,
+        description: customSEO?.description || service.seo?.description || service.serviceFields?.shortDescription || "",
         type: "website",
         url: `https://www.adl99.com.au/services/${slug}`,
         images: service.featuredImage?.node?.sourceUrl
@@ -69,8 +94,8 @@ export async function generateMetadata({ params }: ServicePageProps): Promise<Me
       },
       twitter: {
         card: "summary_large_image",
-        title: service.seo?.title || service.title,
-        description: service.seo?.description || service.serviceFields?.shortDescription || "",
+        title: customSEO?.title || service.seo?.title || service.title,
+        description: customSEO?.description || service.seo?.description || service.serviceFields?.shortDescription || "",
         images: service.featuredImage?.node?.sourceUrl
           ? [service.featuredImage.node.sourceUrl]
           : undefined,

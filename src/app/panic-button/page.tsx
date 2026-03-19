@@ -7,8 +7,8 @@ import PanicButtonPageClient from "./PanicButtonPageClient";
 
 // SEO metadata
 export const metadata: Metadata = {
-  title: "Urgent Help | ADL99 Cybersecurity",
-  description: "Emergency cyber incident response. If you're experiencing a cyber attack or security breach, contact ADL99 immediately for expert assistance.",
+  title: "Emergency Cyber Incident Response Melbourne | ADL99",
+  description: "Experiencing a cyber attack or data breach? ADL99's Melbourne emergency team responds in under 15 minutes. Immediate containment and recovery.",
   keywords: ["cyber incident response", "emergency cybersecurity help", "data breach response Australia"],
   alternates: {
     canonical: "https://www.adl99.com.au/panic-button",

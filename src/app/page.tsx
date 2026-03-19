@@ -14,8 +14,8 @@ import type { Metadata } from "next";
 
 // Enhanced SEO metadata for homepage
 export const metadata: Metadata = {
-  title: "ADL99 Cybersecurity | Expert Cyber Security Services Australia",
-  description: "Protect your business with Australia's leading cybersecurity experts. We provide vCISO services, Essential Eight compliance, penetration testing, security awareness training & 24/7 monitoring. Free security assessment available.",
+  title: "Cybersecurity Services for Australian Businesses | ADL99",
+  description: "ADL99 is Melbourne's trusted cybersecurity partner — expert assessments, vCISO services & incident response. Book a free consultation.",
   keywords: [
     "cybersecurity Australia",
     "cyber security Melbourne",
@@ -32,8 +32,8 @@ export const metadata: Metadata = {
     "Australian cyber security",
   ],
   openGraph: {
-    title: "ADL99 Cybersecurity | Expert Cyber Security Services Australia",
-    description: "Protect your business with Australia's leading cybersecurity experts. vCISO, Essential Eight, penetration testing & more. Free security assessment.",
+    title: "Cybersecurity Services for Australian Businesses | ADL99",
+    description: "ADL99 is Melbourne's trusted cybersecurity partner — expert assessments, vCISO services & incident response. Book a free consultation.",
     url: "https://www.adl99.com.au",
     siteName: "ADL99 Cybersecurity",
     images: [
@@ -49,8 +49,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "ADL99 Cybersecurity | Expert Cyber Security Services Australia",
-    description: "Protect your business with Australia's leading cybersecurity experts. Free security assessment available.",
+    title: "Cybersecurity Services for Australian Businesses | ADL99",
+    description: "ADL99 is Melbourne's trusted cybersecurity partner — expert assessments, vCISO services & incident response. Book a free consultation.",
     images: ["/og-image.png"],
   },
   alternates: {

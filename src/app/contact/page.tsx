@@ -8,8 +8,8 @@ import ContactPageClient from "./ContactPageClient";
 
 // SEO metadata
 export const metadata: Metadata = {
-  title: "Contact Us | ADL99 Cybersecurity",
-  description: "Get in touch with ADL99 for expert cybersecurity consultation. Located in Melbourne, serving Australian businesses.",
+  title: "Contact ADL99 | Free Cybersecurity Consultation",
+  description: "Get in touch with ADL99's Melbourne cybersecurity team. Book a free 30-minute consultation or call 03 7067 3373. Response within 24 hours.",
   keywords: ["contact ADL99", "cybersecurity consultation Melbourne", "cyber security quote Australia"],
   alternates: {
     canonical: "https://www.adl99.com.au/contact",
