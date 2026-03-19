@@ -11,6 +11,9 @@ export const metadata: Metadata = {
   title: "Cybersecurity Services | ADL99",
   description: "Comprehensive cybersecurity services for Australian businesses. From maturity assessments to vCISO services, we protect your business.",
   keywords: ["cybersecurity services Australia", "cyber security consulting", "security assessment", "managed security services"],
+  alternates: {
+    canonical: "https://www.adl99.com.au/services",
+  },
 };
 
 // Default pain points (fallback)

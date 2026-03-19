@@ -50,11 +50,14 @@ export async function generateMetadata({ params }: IndustryPageProps): Promise<M
     return {
       title: industry.seo?.title || `Cybersecurity for ${industry.title} | ADL99`,
       description: industry.seo?.description || industry.industryFields?.shortDescription || "",
+      alternates: {
+        canonical: `https://www.adl99.com.au/industries/${slug}`,
+      },
       openGraph: {
         title: industry.seo?.title || `Cybersecurity for ${industry.title}`,
         description: industry.seo?.description || industry.industryFields?.shortDescription || "",
         type: "website",
-        url: `https://adl99.com.au/industries/${slug}`,
+        url: `https://www.adl99.com.au/industries/${slug}`,
         images: industry.featuredImage?.node?.sourceUrl
           ? [
               {

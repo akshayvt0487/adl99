@@ -10,6 +10,9 @@ export const metadata: Metadata = {
   title: "Urgent Help | ADL99 Cybersecurity",
   description: "Emergency cyber incident response. If you're experiencing a cyber attack or security breach, contact ADL99 immediately for expert assistance.",
   keywords: ["cyber incident response", "emergency cybersecurity help", "data breach response Australia"],
+  alternates: {
+    canonical: "https://www.adl99.com.au/panic-button",
+  },
 };
 
 // Default info cards (fallback)

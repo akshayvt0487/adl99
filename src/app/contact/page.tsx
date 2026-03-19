@@ -11,6 +11,9 @@ export const metadata: Metadata = {
   title: "Contact Us | ADL99 Cybersecurity",
   description: "Get in touch with ADL99 for expert cybersecurity consultation. Located in Melbourne, serving Australian businesses.",
   keywords: ["contact ADL99", "cybersecurity consultation Melbourne", "cyber security quote Australia"],
+  alternates: {
+    canonical: "https://www.adl99.com.au/contact",
+  },
 };
 
 // Default contact info (fallback)

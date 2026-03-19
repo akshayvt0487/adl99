@@ -16,6 +16,9 @@ export const metadata: Metadata = {
   title: "About ADL99",
   description: "Learn about ADL99 - A new force in Australian cybersecurity, dedicated to protecting businesses of all sizes from evolving digital threats.",
   keywords: ["about ADL99", "cybersecurity company", "Australian cybersecurity", "cyber security team"],
+  alternates: {
+    canonical: "https://www.adl99.com.au/about",
+  },
 };
 
 // Default values (fallback)

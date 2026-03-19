@@ -50,11 +50,14 @@ export async function generateMetadata({ params }: ServicePageProps): Promise<Me
     return {
       title: service.seo?.title || `${service.title} | ADL99`,
       description: service.seo?.description || service.serviceFields?.shortDescription || "",
+      alternates: {
+        canonical: `https://www.adl99.com.au/services/${slug}`,
+      },
       openGraph: {
         title: service.seo?.title || service.title,
         description: service.seo?.description || service.serviceFields?.shortDescription || "",
         type: "website",
-        url: `https://adl99.com.au/services/${slug}`,
+        url: `https://www.adl99.com.au/services/${slug}`,
         images: service.featuredImage?.node?.sourceUrl
           ? [
               {

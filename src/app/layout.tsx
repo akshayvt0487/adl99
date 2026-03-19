@@ -112,7 +112,6 @@ export const metadata: Metadata = {
     },
   },
   alternates: {
-    canonical: "https://www.adl99.com.au",
     languages: {
       'en-AU': 'https://www.adl99.com.au',
     },
