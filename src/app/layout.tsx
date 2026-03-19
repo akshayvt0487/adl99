@@ -1,12 +1,21 @@
 import type { Metadata, Viewport } from "next";
-import { Inter } from "next/font/google";
+import { Inter, Oswald } from "next/font/google";
 import "./globals.css";
 import { Providers } from "./providers";
 
 const inter = Inter({
   subsets: ["latin"],
-  display: 'swap', // Prevent render blocking
+  display: 'swap',
   preload: true,
+  variable: '--font-inter',
+});
+
+const oswald = Oswald({
+  subsets: ["latin"],
+  weight: ['400', '500', '600', '700'],
+  display: 'swap',
+  preload: true,
+  variable: '--font-oswald',
 });
 
 // Viewport configuration
@@ -261,7 +270,7 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }}
         />
       </head>
-      <body className={inter.className}>
+      <body className={`${inter.variable} ${oswald.variable} ${inter.className}`}>
         <Providers>{children}</Providers>
       </body>
     </html>
