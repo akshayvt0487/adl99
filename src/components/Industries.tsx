@@ -102,7 +102,7 @@ const Industries = ({ data, sectionTitle, sectionDescription }: IndustriesProps)
           className="text-center mb-12"
         >
           <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-4 uppercase tracking-wide">
-            {sectionTitle || "Industry-Specific Expertise"}
+            {sectionTitle || "Cybersecurity Solutions by Industry"}
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">
             {sectionDescription || "From initial assessments to ongoing support, we provide end-to-end cybersecurity solutions tailored to your organization's unique needs."}

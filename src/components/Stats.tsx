@@ -12,7 +12,7 @@ const defaultStats = [
 ];
 
 const defaultSection = {
-  sectionTitle: "Don't Let Your Business Become Another Statistic",
+  sectionTitle: "The Cyber Threat Landscape Facing Melbourne & Australian Businesses",
   sectionDescription: "The threat landscape is evolving rapidly in Australia, but most attacks are preventable with the right security strategy.",
   source: "Sources: Australian Cyber Security Centre (ACSC), IBM Security, Cybersecurity Ventures",
 };

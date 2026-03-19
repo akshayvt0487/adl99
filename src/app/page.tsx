@@ -1,5 +1,6 @@
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
+import IntroSection from "@/components/IntroSection";
 import BenefitsStrip from "@/components/BenefitsStrip";
 import Stats from "@/components/Stats";
 import Services from "@/components/Services";
@@ -253,6 +254,14 @@ export default async function HomePage() {
         <Hero
           data={homePage?.homeFields?.heroSection}
           isLoading={false}
+        />
+        <IntroSection
+          title="Melbourne's Trusted Cybersecurity Services for Australian Businesses"
+          description="Based in Melbourne and serving businesses across Australia, ADL99 delivers practical, no-nonsense cybersecurity tailored to your industry and budget. From cyber maturity assessments to emergency incident response, we protect what matters most — your data, your clients, and your reputation."
+          links={[
+            { text: "cyber maturity assessments", href: "/services/cyber-maturity" },
+            { text: "emergency incident response", href: "/panic-button" }
+          ]}
         />
         <Stats
           data={homePage?.homeFields?.statsSection}

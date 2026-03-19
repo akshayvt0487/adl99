@@ -12,9 +12,9 @@ const taglineWords = ["ASSESS", "DEFEND", "LEVERAGE"];
 
 // Default hero content (fallback)
 const defaultHero = {
-  headline: "Stop Worrying About Cyber Threats",
-  headlineHighlight: "Get Peace of Mind",
-  subheadline: "Feeling overwhelmed by cybersecurity?",
+  headline: "Stop Worrying About Cyber Threats.",
+  headlineHighlight: "Get Peace of Mind.",
+  subheadline: "Feeling overwhelmed by cybersecurity? ADL99 is Melbourne's trusted cybersecurity partner — simplifying protection for Australian businesses so you can focus on what you do best.",
   ctaText: "Speak With A Cyber Expert",
   ctaLink: "/contact",
 };

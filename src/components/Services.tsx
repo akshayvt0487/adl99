@@ -37,12 +37,12 @@ const defaultServicesData: Record<string, { icon: string; description: string; a
 
 // Default services list (used when WordPress fails)
 const defaultServices = [
-  { icon: AlertTriangle, title: "Urgent Help", slug: "urgent-help", description: defaultServicesData['urgent-help'].description, accent: true },
-  { icon: Search, title: "Cyber Maturity Assessments", slug: "cyber-maturity", description: defaultServicesData['cyber-maturity'].description },
+  { icon: AlertTriangle, title: "Emergency Cyber Incident Response", slug: "urgent-help", description: defaultServicesData['urgent-help'].description, accent: true },
+  { icon: Search, title: "Cyber Maturity Assessment & Security Gap Analysis", slug: "cyber-maturity", description: defaultServicesData['cyber-maturity'].description },
   { icon: Lightbulb, title: "Technical Advisory Services", slug: "technical-advisory", description: defaultServicesData['technical-advisory'].description },
   { icon: Shield, title: "Engineering Support", slug: "engineering-support", description: defaultServicesData['engineering-support'].description },
   { icon: BookOpen, title: "Cyber Awareness Training", slug: "cyber-awareness", description: defaultServicesData['cyber-awareness'].description },
-  { icon: Briefcase, title: "vCISO Services", slug: "vciso", description: defaultServicesData['vciso'].description },
+  { icon: Briefcase, title: "Virtual CISO (vCISO) Services", slug: "vciso", description: defaultServicesData['vciso'].description },
 ];
 
 interface ServicesProps {
@@ -103,7 +103,7 @@ const Services = ({ data, sectionTitle, sectionDescription }: ServicesProps) => 
           className="text-center mb-12"
         >
           <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-4 uppercase tracking-wide">
-            {sectionTitle || "Comprehensive Cybersecurity Services"}
+            {sectionTitle || "Our Cybersecurity Services"}
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">
             {sectionDescription || "From initial assessments to ongoing support, we provide end-to-end cybersecurity solutions tailored to your organization's unique needs."}
