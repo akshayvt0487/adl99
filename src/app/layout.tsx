@@ -3,7 +3,11 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import { Providers } from "./providers";
 
-const inter = Inter({ subsets: ["latin"] });
+const inter = Inter({
+  subsets: ["latin"],
+  display: 'swap', // Prevent render blocking
+  preload: true,
+});
 
 // Viewport configuration
 export const viewport: Viewport = {
@@ -226,9 +230,7 @@ export default function RootLayout({
   return (
     <html lang="en-AU">
       <head>
-        {/* DNS Prefetch & Preconnect for performance */}
-        <link rel="dns-prefetch" href="https://cms.adl99.com.au" />
-        <link rel="preconnect" href="https://cms.adl99.com.au" crossOrigin="anonymous" />
+        {/* Preconnect for performance - fonts handled by next/font */}
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
 
