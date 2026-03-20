@@ -8,6 +8,7 @@ import Breadcrumb from "@/components/Breadcrumb";
 import ServiceContactForm from "@/components/ServiceContactForm";
 import { WPService } from "@/lib/wordpress";
 import { getIcon } from "@/lib/icon-map";
+import { servicesFallbackData } from "@/lib/services-fallback-data";
 import {
   Accordion,
   AccordionContent,
@@ -20,11 +21,24 @@ interface ServicePageClientProps {
 }
 
 export default function ServicePageClient({ service }: ServicePageClientProps) {
-  const IconComponent = getIcon(service.serviceFields?.icon || "shield");
-  const formBenefits =
-    service.serviceFields?.formBenefits?.map((b) => b.benefit) ||
-    service.serviceFields?.benefits?.map((b) => b.title) ||
-    [];
+  // Use fallback data instead of WordPress data
+  const fallbackData = servicesFallbackData[service.slug];
+  const IconComponent = getIcon(service.serviceFields?.icon || fallbackData?.painPoints?.[0]?.icon || "shield");
+
+  // Use fallback content (ignore WordPress for now)
+  const heroHeadline = fallbackData?.heroHeadline || service.title;
+  const heroSubheadline = fallbackData?.heroSubheadline || service.serviceFields?.heroSubheadline || "";
+  const painPointsTitle = fallbackData?.painPointsTitle || "Sound Familiar?";
+  const benefitsTitle = fallbackData?.benefitsTitle || "Key Benefits";
+  const rightForYouTitle = fallbackData?.rightForYouTitle || "Is This Right For You?";
+  const faqTitle = fallbackData?.faqTitle || "Frequently Asked Questions";
+
+  const painPoints = fallbackData?.painPoints || [];
+  const benefits = fallbackData?.benefits || [];
+  const rightForYou = fallbackData?.rightForYou || [];
+  const whatsIncluded = fallbackData?.whatsIncluded || [];
+  const faqs = fallbackData?.faqs || [];
+  const formBenefits = fallbackData?.formBenefits?.map((b) => b.benefit) || [];
 
   return (
     <div className="min-h-screen bg-background">
@@ -50,13 +64,11 @@ export default function ServicePageClient({ service }: ServicePageClientProps) {
               <IconComponent className="w-8 h-8 text-primary-foreground" />
             </div>
             <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold text-primary-foreground mb-6 uppercase tracking-wide">
-              {service.serviceFields?.heroHeadline || service.title}
+              {heroHeadline}
             </h1>
-            {(service.serviceFields?.heroSubheadline ||
-              service.serviceFields?.shortDescription) && (
+            {heroSubheadline && (
               <p className="text-lg md:text-xl text-primary-foreground/80 mb-8">
-                {service.serviceFields.heroSubheadline ||
-                  service.serviceFields.shortDescription}
+                {heroSubheadline}
               </p>
             )}
             <div className="flex flex-col sm:flex-row gap-4">
@@ -77,8 +89,7 @@ export default function ServicePageClient({ service }: ServicePageClientProps) {
       </section>
 
       {/* Pain Points Section */}
-      {service.serviceFields?.painPoints &&
-        service.serviceFields.painPoints.length > 0 && (
+      {painPoints.length > 0 && (
           <section className="py-20 bg-secondary/30">
             <div className="container mx-auto px-6">
               <motion.div
@@ -88,7 +99,7 @@ export default function ServicePageClient({ service }: ServicePageClientProps) {
                 className="text-center mb-12"
               >
                 <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-4 uppercase tracking-wide">
-                  Sound Familiar?
+                  {painPointsTitle}
                 </h2>
                 <p className="text-muted-foreground max-w-2xl mx-auto">
                   These are the challenges we help you overcome.
@@ -96,7 +107,7 @@ export default function ServicePageClient({ service }: ServicePageClientProps) {
               </motion.div>
 
               <div className="grid md:grid-cols-2 gap-6">
-                {service.serviceFields.painPoints.map((point, index) => {
+                {painPoints.map((point, index) => {
                   const PointIcon = getIcon(point.icon || "alert-triangle");
                   return (
                     <motion.div
@@ -125,8 +136,7 @@ export default function ServicePageClient({ service }: ServicePageClientProps) {
         )}
 
       {/* Benefits Grid */}
-      {service.serviceFields?.benefits &&
-        service.serviceFields.benefits.length > 0 && (
+      {benefits.length > 0 && (
           <section id="benefits" className="py-20 scroll-mt-24">
             <div className="container mx-auto px-6">
               <motion.div
@@ -136,12 +146,12 @@ export default function ServicePageClient({ service }: ServicePageClientProps) {
                 className="text-center mb-12"
               >
                 <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-4 uppercase tracking-wide">
-                  Key Benefits
+                  {benefitsTitle}
                 </h2>
               </motion.div>
 
               <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-                {service.serviceFields.benefits.map((item, index) => {
+                {benefits.map((item, index) => {
                   const BenefitIcon = getIcon(item.icon || "check-circle");
                   return (
                     <motion.div
@@ -170,27 +180,25 @@ export default function ServicePageClient({ service }: ServicePageClientProps) {
         )}
 
       {/* Right For You / What's Included Section */}
-      {(service.serviceFields?.rightForYou ||
-        service.serviceFields?.whatsIncluded) && (
+      {(rightForYou.length > 0 || whatsIncluded.length > 0) && (
         <section className="py-20 bg-secondary/30">
           <div className="container mx-auto px-6">
             <div className="grid lg:grid-cols-2 gap-12 items-start">
               {/* Right For You */}
-              {service.serviceFields?.rightForYou &&
-                service.serviceFields.rightForYou.length > 0 && (
+              {rightForYou.length > 0 && (
                   <motion.div
                     initial={{ opacity: 0, x: -30 }}
                     whileInView={{ opacity: 1, x: 0 }}
                     viewport={{ once: true }}
                   >
                     <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-6 uppercase tracking-wide">
-                      Is This Right For You?
+                      {rightForYouTitle}
                     </h2>
                     <p className="text-muted-foreground text-lg mb-8">
                       This service is ideal if you:
                     </p>
                     <ul className="space-y-4">
-                      {service.serviceFields.rightForYou.map((item, index) => (
+                      {rightForYou.map((item, index) => (
                         <motion.li
                           key={index}
                           initial={{ opacity: 0, x: -20 }}
@@ -212,8 +220,7 @@ export default function ServicePageClient({ service }: ServicePageClientProps) {
                 )}
 
               {/* What's Included */}
-              {service.serviceFields?.whatsIncluded &&
-                service.serviceFields.whatsIncluded.length > 0 && (
+              {whatsIncluded.length > 0 && (
                   <motion.div
                     initial={{ opacity: 0, x: 30 }}
                     whileInView={{ opacity: 1, x: 0 }}
@@ -224,7 +231,7 @@ export default function ServicePageClient({ service }: ServicePageClientProps) {
                       What&apos;s Included
                     </h3>
                     <ul className="space-y-3">
-                      {service.serviceFields.whatsIncluded.map((item, index) => (
+                      {whatsIncluded.map((item, index) => (
                         <motion.li
                           key={index}
                           initial={{ opacity: 0, x: 20 }}
@@ -249,20 +256,8 @@ export default function ServicePageClient({ service }: ServicePageClientProps) {
         </section>
       )}
 
-      {/* Content Section */}
-      {service.content && (
-        <section className="py-20">
-          <div className="container mx-auto px-6">
-            <div
-              className="prose prose-lg max-w-4xl mx-auto prose-headings:font-display prose-headings:uppercase prose-headings:tracking-wide prose-headings:text-foreground prose-p:text-muted-foreground prose-a:text-primary prose-strong:text-foreground"
-              dangerouslySetInnerHTML={{ __html: service.content }}
-            />
-          </div>
-        </section>
-      )}
-
       {/* FAQ Section */}
-      {service.serviceFields?.faqs && service.serviceFields.faqs.length > 0 && (
+      {faqs.length > 0 && (
         <section className="py-20 bg-secondary/30">
           <div className="container mx-auto px-6">
             <motion.div
@@ -272,13 +267,13 @@ export default function ServicePageClient({ service }: ServicePageClientProps) {
               className="text-center mb-12"
             >
               <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-4 uppercase tracking-wide">
-                Frequently Asked Questions
+                {faqTitle}
               </h2>
             </motion.div>
 
             <div className="max-w-3xl mx-auto">
               <Accordion type="single" collapsible className="space-y-4">
-                {service.serviceFields.faqs.map((faq, index) => (
+                {faqs.map((faq, index) => (
                   <motion.div
                     key={index}
                     initial={{ opacity: 0, y: 20 }}
@@ -293,8 +288,8 @@ export default function ServicePageClient({ service }: ServicePageClientProps) {
                       <AccordionTrigger className="text-left font-display text-foreground hover:no-underline py-5">
                         {faq.question}
                       </AccordionTrigger>
-                      <AccordionContent className="text-muted-foreground pb-5 leading-relaxed [&>p]:mb-2">
-                        <div dangerouslySetInnerHTML={{ __html: faq.answer }} />
+                      <AccordionContent className="text-muted-foreground pb-5 leading-relaxed">
+                        {faq.answer}
                       </AccordionContent>
                     </AccordionItem>
                   </motion.div>
