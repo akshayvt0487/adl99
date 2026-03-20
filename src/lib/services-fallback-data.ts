@@ -71,6 +71,11 @@ export const servicesFallbackData: Record<string, ServiceFallbackData> = {
         icon: "FileText",
         title: "Compliance Alignment",
         description: "Ensure alignment with industry frameworks and regulations"
+      },
+      {
+        icon: "TrendingUp",
+        title: "Measurable Progress",
+        description: "Track improvements and demonstrate security maturity over time"
       }
     ],
     rightForYou: [
@@ -148,6 +153,11 @@ export const servicesFallbackData: Record<string, ServiceFallbackData> = {
         icon: "Scale",
         title: "Risk-Based Decisions",
         description: "Make informed choices based on your risk profile"
+      },
+      {
+        icon: "Users",
+        title: "Flexible Engagement",
+        description: "On-demand expertise without full-time hiring costs"
       }
     ],
     rightForYou: [
@@ -221,6 +231,11 @@ export const servicesFallbackData: Record<string, ServiceFallbackData> = {
         icon: "Layers",
         title: "Integrated Defense",
         description: "Coordinated security across all your systems"
+      },
+      {
+        icon: "CheckCircle",
+        title: "Proven Expertise",
+        description: "Vendor-certified engineers with real-world experience"
       }
     ],
     rightForYou: [
@@ -294,6 +309,11 @@ export const servicesFallbackData: Record<string, ServiceFallbackData> = {
         icon: "AlertTriangle",
         title: "Incident Awareness",
         description: "Staff know how to respond when something goes wrong"
+      },
+      {
+        icon: "TrendingUp",
+        title: "Compliance Ready",
+        description: "Meet security awareness training requirements for regulations"
       }
     ],
     rightForYou: [
@@ -371,6 +391,11 @@ export const servicesFallbackData: Record<string, ServiceFallbackData> = {
         icon: "Users",
         title: "Board Communication",
         description: "Clear security reporting for leadership and board"
+      },
+      {
+        icon: "Shield",
+        title: "Program Management",
+        description: "End-to-end oversight of your security initiatives"
       }
     ],
     rightForYou: [
