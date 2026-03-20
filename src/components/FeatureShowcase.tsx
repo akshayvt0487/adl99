@@ -39,7 +39,7 @@ const FeatureShowcase = () => {
           className="text-center mb-12"
         >
           <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-4 uppercase tracking-wide">
-            Why Businesses Trust Us
+            Why Melbourne Businesses Choose ADL99 for Cybersecurity
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">
             Our comprehensive approach to cybersecurity keeps your business safe and your mind at ease.

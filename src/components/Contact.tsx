@@ -17,7 +17,7 @@ const Contact = () => {
           className="text-center mb-12"
         >
           <h2 className="font-display text-3xl md:text-4xl font-bold mb-4 uppercase tracking-wide">
-            Get Your Free Security Assessment
+            Book a Free Cybersecurity Consultation in Melbourne
           </h2>
           <p className="text-primary-foreground/80 mb-10 max-w-2xl mx-auto">
             Take the first step towards protecting your business. Schedule your free 30-minute consultation with our cybersecurity experts.

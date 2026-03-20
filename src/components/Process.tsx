@@ -23,7 +23,7 @@ const defaultSteps = [
 ];
 
 const defaultSection = {
-  sectionTitle: "Your Path to Complete Protection",
+  sectionTitle: "How Our Melbourne Cybersecurity Process Works",
   sectionDescription: "Getting started with professional cybersecurity protection is simple. Here's how we work together to secure your business.",
 };
 
