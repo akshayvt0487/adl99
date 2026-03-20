@@ -21,25 +21,25 @@ interface ServicePageClientProps {
 }
 
 export default function ServicePageClient({ service }: ServicePageClientProps) {
-  // Use fallback data instead of WordPress data
+  // Use WordPress data with fallback support
   const fallbackData = servicesFallbackData[service.slug];
   const IconComponent = getIcon(service.serviceFields?.icon || fallbackData?.painPoints?.[0]?.icon || "shield");
 
-  // Use fallback content (ignore WordPress for now)
-  const heroHeadline = fallbackData?.heroHeadline || service.title;
-  const heroSubheadline = fallbackData?.heroSubheadline || service.serviceFields?.heroSubheadline || "";
-  const introContent = fallbackData?.introContent || "";
+  // Prioritize WordPress content, fall back to fallback data if needed
+  const heroHeadline = service.serviceFields?.heroHeadline || service.title;
+  const heroSubheadline = service.serviceFields?.heroSubheadline || fallbackData?.heroSubheadline || "";
+  const introContent = service.content || fallbackData?.introContent || "";
   const painPointsTitle = fallbackData?.painPointsTitle || "Sound Familiar?";
   const benefitsTitle = fallbackData?.benefitsTitle || "Key Benefits";
   const rightForYouTitle = fallbackData?.rightForYouTitle || "Is This Right For You?";
   const faqTitle = fallbackData?.faqTitle || "Frequently Asked Questions";
 
-  const painPoints = fallbackData?.painPoints || [];
-  const benefits = fallbackData?.benefits || [];
-  const rightForYou = fallbackData?.rightForYou || [];
-  const whatsIncluded = fallbackData?.whatsIncluded || [];
-  const faqs = fallbackData?.faqs || [];
-  const formBenefits = fallbackData?.formBenefits?.map((b) => b.benefit) || [];
+  const painPoints = service.serviceFields?.painPoints || fallbackData?.painPoints || [];
+  const benefits = service.serviceFields?.benefits || fallbackData?.benefits || [];
+  const rightForYou = service.serviceFields?.rightForYou || fallbackData?.rightForYou || [];
+  const whatsIncluded = service.serviceFields?.whatsIncluded || fallbackData?.whatsIncluded || [];
+  const faqs = service.serviceFields?.faqs || fallbackData?.faqs || [];
+  const formBenefits = service.serviceFields?.formBenefits?.map((b) => b.benefit) || fallbackData?.formBenefits?.map((b) => b.benefit) || [];
 
   return (
     <div className="min-h-screen bg-background">

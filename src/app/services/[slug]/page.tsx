@@ -10,12 +10,25 @@ interface ServicePageProps {
   params: Promise<{ slug: string }>;
 }
 
-// Generate static params for all services using fallback data
+// Generate static params for all services
 export async function generateStaticParams() {
-  // Use fallback data instead of WordPress
-  return Object.keys(servicesFallbackData).map((slug) => ({
-    slug,
-  }));
+  try {
+    const data = await fetchGraphQL<{ services: { nodes: WPService[] } }>(
+      GET_ALL_SERVICES,
+      {},
+      3600 // Cache for 1 hour
+    );
+
+    return data.services.nodes.map((service) => ({
+      slug: service.slug,
+    }));
+  } catch (error) {
+    console.error("Error fetching services for static params:", error);
+    // Fallback to using fallback data slugs if WordPress fails
+    return Object.keys(servicesFallbackData).map((slug) => ({
+      slug,
+    }));
+  }
 }
 
 // SEO metadata for specific services
@@ -42,62 +55,83 @@ const serviceSEO: Record<string, { title: string; description: string }> = {
   },
 };
 
-// Generate metadata for SEO using fallback data
+// Generate metadata for SEO
 export async function generateMetadata({ params }: ServicePageProps): Promise<Metadata> {
   const { slug } = await params;
 
-  const customSEO = serviceSEO[slug];
-  const fallbackData = servicesFallbackData[slug];
+  try {
+    const data = await fetchGraphQL<{ service: WPService }>(
+      GET_SERVICE_BY_SLUG,
+      { slug },
+      300 // Cache for 5 minutes
+    );
 
-  if (!customSEO && !fallbackData) {
+    if (!data.service) {
+      return {
+        title: "Service Not Found | ADL99",
+        description: "The requested service could not be found.",
+      };
+    }
+
+    const service = data.service;
+    const customSEO = serviceSEO[slug];
+
     return {
-      title: "Service Not Found | ADL99",
-      description: "The requested service could not be found.",
+      title: customSEO?.title || service.seo?.title || `${service.title} | ADL99`,
+      description: customSEO?.description || service.seo?.description || service.serviceFields?.shortDescription || "",
+      alternates: {
+        canonical: `https://www.adl99.com.au/services/${slug}`,
+      },
+      openGraph: {
+        title: customSEO?.title || service.seo?.title || service.title,
+        description: customSEO?.description || service.seo?.description || service.serviceFields?.shortDescription || "",
+        type: "website",
+        url: `https://www.adl99.com.au/services/${slug}`,
+        images: service.featuredImage?.node?.sourceUrl
+          ? [
+              {
+                url: service.featuredImage.node.sourceUrl,
+                alt: service.featuredImage.node.altText || service.title,
+              },
+            ]
+          : undefined,
+      },
+      twitter: {
+        card: "summary_large_image",
+        title: customSEO?.title || service.seo?.title || service.title,
+        description: customSEO?.description || service.seo?.description || service.serviceFields?.shortDescription || "",
+        images: service.featuredImage?.node?.sourceUrl
+          ? [service.featuredImage.node.sourceUrl]
+          : undefined,
+      },
+    };
+  } catch (error) {
+    console.error("Error generating metadata:", error);
+    return {
+      title: "Service | ADL99",
+      description: "ADL99 Cybersecurity Services",
     };
   }
-
-  return {
-    title: customSEO?.title || `${fallbackData?.heroHeadline} | ADL99`,
-    description: customSEO?.description || fallbackData?.heroSubheadline || "",
-    alternates: {
-      canonical: `https://www.adl99.com.au/services/${slug}`,
-    },
-    openGraph: {
-      title: customSEO?.title || fallbackData?.heroHeadline || "",
-      description: customSEO?.description || fallbackData?.heroSubheadline || "",
-      type: "website",
-      url: `https://www.adl99.com.au/services/${slug}`,
-    },
-    twitter: {
-      card: "summary_large_image",
-      title: customSEO?.title || fallbackData?.heroHeadline || "",
-      description: customSEO?.description || fallbackData?.heroSubheadline || "",
-    },
-  };
 }
 
-// Server component - uses fallback data instead of WordPress
+// Server component - fetches data from WordPress and passes to client component
 export default async function ServicePage({ params }: ServicePageProps) {
   const { slug } = await params;
 
-  const fallbackData = servicesFallbackData[slug];
+  try {
+    const data = await fetchGraphQL<{ service: WPService }>(
+      GET_SERVICE_BY_SLUG,
+      { slug },
+      300 // Revalidate every 5 minutes
+    );
 
-  if (!fallbackData) {
+    if (!data.service) {
+      notFound();
+    }
+
+    return <ServicePageClient service={data.service} />;
+  } catch (error) {
+    console.error("Error fetching service:", error);
     notFound();
   }
-
-  // Create a mock WPService object with just the slug and title
-  // The ServicePageClient will use fallback data for everything else
-  const mockService: WPService = {
-    id: slug,
-    slug: slug,
-    title: fallbackData.heroHeadline,
-    content: "",
-    excerpt: "",
-    serviceFields: null,
-    seo: null,
-    featuredImage: null,
-  };
-
-  return <ServicePageClient service={mockService} />;
 }
