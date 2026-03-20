@@ -28,6 +28,7 @@ export default function ServicePageClient({ service }: ServicePageClientProps) {
   // Use fallback content (ignore WordPress for now)
   const heroHeadline = fallbackData?.heroHeadline || service.title;
   const heroSubheadline = fallbackData?.heroSubheadline || service.serviceFields?.heroSubheadline || "";
+  const introContent = fallbackData?.introContent || "";
   const painPointsTitle = fallbackData?.painPointsTitle || "Sound Familiar?";
   const benefitsTitle = fallbackData?.benefitsTitle || "Key Benefits";
   const rightForYouTitle = fallbackData?.rightForYouTitle || "Is This Right For You?";
@@ -87,6 +88,25 @@ export default function ServicePageClient({ service }: ServicePageClientProps) {
           </motion.div>
         </div>
       </section>
+
+      {/* Intro Content Section */}
+      {introContent && (
+        <section className="py-16 bg-background">
+          <div className="container mx-auto px-6">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="max-w-4xl mx-auto"
+            >
+              <div
+                className="prose prose-lg prose-p:text-muted-foreground prose-p:leading-relaxed prose-p:mb-4"
+                dangerouslySetInnerHTML={{ __html: introContent }}
+              />
+            </motion.div>
+          </div>
+        </section>
+      )}
 
       {/* Pain Points Section */}
       {painPoints.length > 0 && (
