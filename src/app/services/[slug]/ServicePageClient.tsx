@@ -28,6 +28,7 @@ export default function ServicePageClient({ service }: ServicePageClientProps) {
   // Prioritize WordPress content, fall back to fallback data if needed
   const heroHeadline = service.serviceFields?.heroHeadline || service.title;
   const heroSubheadline = service.serviceFields?.heroSubheadline || fallbackData?.heroSubheadline || "";
+  const introTitle = fallbackData?.introTitle || "";
   const introContent = service.content || fallbackData?.introContent || "";
   const painPointsTitle = fallbackData?.painPointsTitle || "Sound Familiar?";
   const benefitsTitle = fallbackData?.benefitsTitle || "Key Benefits";
@@ -90,7 +91,7 @@ export default function ServicePageClient({ service }: ServicePageClientProps) {
       </section>
 
       {/* Intro Content Section */}
-      {introContent && (
+      {(introTitle || introContent) && (
         <section className="py-16 bg-background">
           <div className="container mx-auto px-6">
             <motion.div
@@ -99,10 +100,17 @@ export default function ServicePageClient({ service }: ServicePageClientProps) {
               viewport={{ once: true }}
               className="max-w-4xl mx-auto"
             >
-              <div
-                className="prose prose-lg prose-p:text-muted-foreground prose-p:leading-relaxed prose-p:mb-4"
-                dangerouslySetInnerHTML={{ __html: introContent }}
-              />
+              {introTitle && (
+                <h2 className="font-display text-2xl md:text-3xl lg:text-4xl font-bold text-foreground mb-6 text-center">
+                  {introTitle}
+                </h2>
+              )}
+              {introContent && (
+                <div
+                  className="prose prose-lg prose-p:text-muted-foreground prose-p:leading-relaxed prose-p:mb-4"
+                  dangerouslySetInnerHTML={{ __html: introContent }}
+                />
+              )}
             </motion.div>
           </div>
         </section>

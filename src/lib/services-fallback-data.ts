@@ -5,6 +5,7 @@ export interface ServiceFallbackData {
   slug: string;
   heroHeadline: string;
   heroSubheadline: string;
+  introTitle?: string; // H2 for intro section
   introContent?: string; // HTML content for intro section
   painPointsTitle: string;
   benefitsTitle: string;
@@ -34,7 +35,8 @@ export const servicesFallbackData: Record<string, ServiceFallbackData> = {
     slug: "cyber-maturity",
     heroHeadline: "Know Where You Stand",
     heroSubheadline: "Melbourne-based cyber maturity assessments that benchmark your security against NIST, ISO 27001, and the Essential Eight — giving you a clear, prioritised roadmap for improvement.",
-    introContent: "<p>Our Cyber Maturity Assessment provides a comprehensive evaluation of your organization's security capabilities, helping you understand where you stand and what steps to take next.</p><p>We benchmark your security practices against frameworks like NIST, ISO 27001, and the Australian Essential Eight, giving you a clear roadmap for improvement.</p>",
+    introTitle: "Cyber Maturity Assessment Services in Melbourne & Australia",
+    introContent: "<p>ADL99 conducts comprehensive cyber maturity assessments for Melbourne businesses and organisations across Australia. We evaluate your current security posture against industry frameworks and deliver a plain-English report with prioritised actions — so you know exactly what to fix, in what order, and why.</p>",
     painPointsTitle: "Cybersecurity Challenges Our Melbourne Assessment Team Solves",
     benefitsTitle: "Benefits of a Cyber Maturity Assessment",
     rightForYouTitle: "Is a Cyber Maturity Assessment Right for Your Business?",
@@ -116,7 +118,8 @@ export const servicesFallbackData: Record<string, ServiceFallbackData> = {
     slug: "technical-advisory",
     heroHeadline: "Expert Security Guidance",
     heroSubheadline: "Navigate complex cybersecurity decisions with confidence — backed by Melbourne's experienced security advisors.",
-    introContent: "<p>Make informed cybersecurity decisions with expert guidance. Our Technical Advisory Services provide strategic insights on architecture, risk management, and compliance.</p><p>Whether you're evaluating new security technologies, developing policies, or navigating regulatory requirements, our advisors bring clarity to complex decisions.</p>",
+    introTitle: "Cybersecurity Technical Advisory Services in Melbourne & Australia",
+    introContent: "<p>ADL99's Melbourne-based security advisors help Australian businesses make informed cybersecurity decisions — from architecture reviews and technology evaluations to policy development and regulatory compliance. We translate complex security requirements into clear, actionable guidance your leadership team can act on.</p>",
     painPointsTitle: "Security Challenges Our Melbourne Advisory Team Addresses",
     benefitsTitle: "Benefits of Cybersecurity Technical Advisory",
     rightForYouTitle: "Is This Right For You?",
@@ -194,7 +197,8 @@ export const servicesFallbackData: Record<string, ServiceFallbackData> = {
     slug: "engineering-support",
     heroHeadline: "Technical Security Implementation",
     heroSubheadline: "Hands-on cybersecurity engineering expertise from ADL99's Melbourne-based team — implementing and optimising your security infrastructure from the ground up.",
-    introContent: "<p>Get hands-on technical expertise for your security infrastructure. Our engineers help implement, configure, and optimize security technologies across your environment.</p><p>From network defense and endpoint protection to cloud security and SIEM deployment, we ensure your security tools work effectively together.</p>",
+    introTitle: "Cybersecurity Engineering & Implementation Support in Melbourne",
+    introContent: "<p>ADL99 provides hands-on cybersecurity engineering support for Melbourne businesses and Australian organisations — covering network defence, endpoint protection, cloud security, and SIEM deployment. We implement, configure, and optimise your security stack so it works as one cohesive defence.</p>",
     painPointsTitle: "Security Implementation Challenges We Solve",
     benefitsTitle: "Benefits of Cybersecurity Engineering Support",
     rightForYouTitle: "Is This Right For You?",
@@ -272,7 +276,8 @@ export const servicesFallbackData: Record<string, ServiceFallbackData> = {
     slug: "cyber-awareness",
     heroHeadline: "Build a Human Firewall",
     heroSubheadline: "Turn your biggest vulnerability into your strongest defence — with cyber awareness training designed for Melbourne businesses and Australian workplaces.",
-    introContent: "<p>Your employees are your first line of defense. Our Cyber Awareness Training transforms your team from a security vulnerability into a security asset.</p><p>Through engaging, practical training sessions, we teach your staff to recognize threats, respond appropriately, and maintain secure practices in their daily work.</p>",
+    introTitle: "Cyber Security Awareness Training for Melbourne & Australian Businesses",
+    introContent: "<p>ADL99 delivers tailored cyber awareness training programs for Melbourne teams and Australian organisations — including phishing simulations, interactive workshops, and industry-specific security modules. We make security training practical, engaging, and measurable so your staff become your first line of defence.</p>",
     painPointsTitle: "Why Your Staff Are Your Biggest Cybersecurity Risk",
     benefitsTitle: "Benefits of Cyber Awareness Training",
     rightForYouTitle: "Is This Right For You?",
@@ -354,7 +359,8 @@ export const servicesFallbackData: Record<string, ServiceFallbackData> = {
     slug: "vciso",
     heroHeadline: "Executive Security Leadership",
     heroSubheadline: "Executive-level cybersecurity leadership, without the executive price tag — from ADL99's Melbourne-based virtual CISO team.",
-    introContent: "<p>Access senior cybersecurity leadership without the executive salary. Our Virtual CISO service provides strategic security oversight, governance, and program management tailored to your organization's needs.</p><p>Our vCISOs become an extension of your leadership team, providing board-level reporting, vendor management, and security strategy development.</p>",
+    introTitle: "Virtual CISO (vCISO) Services for Melbourne & Australian Businesses",
+    introContent: "<p>ADL99's vCISO service gives Melbourne businesses and Australian organisations access to senior cybersecurity leadership on a flexible, cost-effective basis. Our virtual CISOs provide strategic oversight, board-level reporting, governance, and vendor management — everything a full-time CISO delivers, at a fraction of the cost.</p>",
     painPointsTitle: "Why Melbourne Businesses Need a Virtual CISO",
     benefitsTitle: "Benefits of a Virtual CISO Service",
     rightForYouTitle: "Is a Virtual CISO Right for Your Melbourne Business?",
