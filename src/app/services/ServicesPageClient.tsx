@@ -83,6 +83,25 @@ export default function ServicesPageClient({
         </div>
       </section>
 
+      {/* Intro Section */}
+      <section className="py-16 bg-background">
+        <div className="container mx-auto px-6">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="max-w-4xl mx-auto text-center"
+          >
+            <h2 className="font-display text-2xl md:text-3xl lg:text-4xl font-bold text-foreground mb-6">
+              Cybersecurity Services for Melbourne & Australian Businesses
+            </h2>
+            <p className="text-muted-foreground text-lg leading-relaxed">
+              From cyber maturity assessments and virtual CISO services to phishing training and emergency incident response, ADL99 offers a complete cybersecurity service suite. Whether you're a Melbourne SMB or a multi-location Australian business, we scale our protection to fit your needs.
+            </p>
+          </motion.div>
+        </div>
+      </section>
+
       {/* Pain Points Section */}
       <section className="py-20 bg-secondary/30">
         <div className="container mx-auto px-6">
@@ -93,7 +112,7 @@ export default function ServicesPageClient({
             className="text-center mb-12"
           >
             <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-4 uppercase tracking-wide">
-              Sound Familiar?
+              Common Cybersecurity Challenges Facing Melbourne Businesses
             </h2>
             <p className="text-muted-foreground max-w-2xl mx-auto text-lg">
               These are the concerns we hear every day from business owners just like you.
@@ -139,7 +158,7 @@ export default function ServicesPageClient({
             className="text-center mb-16"
           >
             <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-4 uppercase tracking-wide">
-              How We Help
+              Our Cybersecurity Services Explained
             </h2>
             <p className="text-muted-foreground max-w-2xl mx-auto text-lg">
               From emergency response to strategic planning, we offer comprehensive cybersecurity
@@ -201,7 +220,7 @@ export default function ServicesPageClient({
             className="text-center mb-12"
           >
             <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-4 uppercase tracking-wide">
-              Frequently Asked Questions
+              Cybersecurity Services FAQ — Melbourne Businesses
             </h2>
           </motion.div>
 

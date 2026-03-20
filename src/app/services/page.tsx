@@ -101,7 +101,7 @@ export default async function ServicesPage() {
   // Get content from WordPress or use defaults
   const heroTitle = pageData?.servicesPageFields?.heroTitle || "Cybersecurity Services That Actually Protect Your Business";
   const heroDescription = pageData?.servicesPageFields?.heroDescription || "Stop worrying about cyber threats and start focusing on what you do best—running your business.";
-  const heroSubDescription = pageData?.servicesPageFields?.heroSubDescription || "We provide practical, no-nonsense cybersecurity solutions tailored for Australian businesses. No jargon, no fear-mongering—just effective protection that works for your budget and your business.";
+  const heroSubDescription = pageData?.servicesPageFields?.heroSubDescription || "Melbourne-based ADL99 provides practical, no-nonsense cybersecurity services for Australian businesses of all sizes. No jargon, no fear-mongering — just effective protection tailored to your budget, your industry, and your risk profile.";
   const painPoints = pageData?.servicesPageFields?.painPoints && pageData.servicesPageFields.painPoints.length > 0
     ? pageData.servicesPageFields.painPoints
     : defaultPainPoints;
