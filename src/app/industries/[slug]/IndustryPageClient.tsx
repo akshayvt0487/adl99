@@ -97,15 +97,17 @@ export default function IndustryPageClient({
             </h1>
             {(industry.industryFields?.heroSubheadline ||
               industry.industryFields?.shortDescription) && (
-              <p className="text-lg md:text-xl text-primary-foreground/80 mb-4">
+              <p className="text-lg md:text-xl text-primary-foreground/90 mb-4 font-medium leading-relaxed">
                 {industry.industryFields.heroSubheadline ||
                   industry.industryFields.shortDescription}
               </p>
             )}
             {industry.industryFields?.heroDescription && (
-              <p className="text-primary-foreground/70 mb-8">
-                {industry.industryFields.heroDescription}
-              </p>
+              <div className="bg-primary-foreground/10 backdrop-blur-sm border border-primary-foreground/20 rounded-2xl p-6 md:p-8 mb-8">
+                <p className="text-primary-foreground/90 text-base md:text-lg leading-relaxed">
+                  {industry.industryFields.heroDescription}
+                </p>
+              </div>
             )}
             <div className="flex flex-col sm:flex-row gap-4">
               <Button variant="accent" size="lg" asChild>
