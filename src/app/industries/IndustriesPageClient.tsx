@@ -19,6 +19,8 @@ interface Industry {
 interface IndustriesPageClientProps {
   heroTitle: string;
   heroDescription: string;
+  introTitle?: string;
+  introDescription?: string;
   industries: Industry[];
   ctaTitle: string;
   ctaDescription: string;
@@ -27,6 +29,8 @@ interface IndustriesPageClientProps {
 export default function IndustriesPageClient({
   heroTitle,
   heroDescription,
+  introTitle,
+  introDescription,
   industries,
   ctaTitle,
   ctaDescription,
@@ -55,6 +59,30 @@ export default function IndustriesPageClient({
           </motion.div>
         </div>
       </section>
+
+      {/* Intro Section */}
+      {introTitle && (
+        <section className="py-16 bg-background">
+          <div className="container mx-auto px-6">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+              className="max-w-4xl mx-auto text-center"
+            >
+              <h2 className="font-display text-2xl md:text-3xl lg:text-4xl font-bold text-foreground mb-6">
+                {introTitle}
+              </h2>
+              {introDescription && (
+                <p className="text-muted-foreground text-lg leading-relaxed">
+                  {introDescription}
+                </p>
+              )}
+            </motion.div>
+          </div>
+        </section>
+      )}
 
       {/* Industries Grid */}
       <section className="py-20">

@@ -43,6 +43,8 @@ export default async function IndustriesPage() {
   // Get content from WordPress or use defaults
   const heroTitle = pageData?.industriesPageFields?.heroTitle || "Industries We Serve";
   const heroDescription = pageData?.industriesPageFields?.heroDescription || "Every industry faces unique cybersecurity challenges. We deliver tailored solutions that address your specific risks and compliance requirements.";
+  const introTitle = pageData?.industriesPageFields?.introTitle || "Industry-Specific Cybersecurity Solutions in Melbourne & Across Australia";
+  const introDescription = pageData?.industriesPageFields?.introDescription || "From law firms and health clinics to accounting practices, retailers, manufacturers, and research organisations — ADL99 delivers cybersecurity solutions tailored to your industry's compliance frameworks, operational risks, and unique threat landscape. Whether you're based in Melbourne or operating nationally, we understand the challenges you face.";
   const ctaTitle = pageData?.industriesPageFields?.ctaTitle || "Don't See Your Industry?";
   const ctaDescription = pageData?.industriesPageFields?.ctaDescription || "We work with businesses across all sectors. Contact us to discuss how we can address your unique cybersecurity challenges.";
 
@@ -104,6 +106,8 @@ export default async function IndustriesPage() {
       <IndustriesPageClient
         heroTitle={heroTitle}
         heroDescription={heroDescription}
+        introTitle={introTitle}
+        introDescription={introDescription}
         industries={industriesList}
         ctaTitle={ctaTitle}
         ctaDescription={ctaDescription}
