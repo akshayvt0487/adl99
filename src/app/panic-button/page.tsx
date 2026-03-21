@@ -19,19 +19,19 @@ export const metadata: Metadata = {
 const defaultInfoCards = [
   {
     icon: "AlertTriangle",
-    title: "Urgent Help",
+    title: "Melbourne's 24/7 Cyber Emergency Response Team",
     value: "Ready to Help",
     description: "Emergency cyber response"
   },
   {
     icon: "Clock",
-    title: "Response Time",
+    title: "Under 15-Minute Callback Guarantee",
     value: "Under 15 Minutes",
     description: "Average callback time"
   },
   {
     icon: "Shield",
-    title: "What We Do",
+    title: "What Our Incident Response Team Does",
     description: "Comprehensive incident response",
     items: [
       { item: "Immediate threat containment" },
@@ -45,10 +45,10 @@ const defaultInfoCards = [
 
 // Default content (fallback)
 const defaultContent = {
-  heroTitle: "Emergency Incident Response",
-  heroDescription: "If you're experiencing a cyber attack or security breach, fill out this form immediately. Our response team is ready to help contain and resolve the threat.",
+  heroTitle: "Emergency Incident Response — We're Ready Right Now",
+  heroDescription: "If you're experiencing a cyber attack or data breach, don't wait. ADL99's Melbourne-based emergency response team is available now — with an average callback time of under 15 minutes.",
   emergencyBannerText: "Urgent Help - Emergency Cyber Response",
-  formTitle: "Report an Incident",
+  formTitle: "Melbourne Cyber Incident Response — Report Your Emergency",
   importantNotice: "Do not shut down affected systems unless instructed. Preserve all evidence and avoid making changes to compromised systems. Our team will guide you through the proper response procedures."
 };
 

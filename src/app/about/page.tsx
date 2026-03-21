@@ -59,14 +59,15 @@ const defaultApproachItems = [
 
 const defaultContent = {
   heroTitle: "About ADL99",
-  heroDescription: "A new force in Australian cybersecurity, dedicated to protecting businesses of all sizes from evolving digital threats.",
-  missionStatement: "Our Mission",
-  missionDescription: "At ADL99, we believe every Australian business deserves enterprise-grade cybersecurity protection. We're here to demystify cybersecurity and make it accessible, practical, and effective for organizations of all sizes.\n\nFounded with a passion for protecting businesses from cyber threats, ADL99 brings together experienced security professionals who understand the unique challenges facing Australian organizations today.",
-  australianOwnedTitle: "Australian Owned",
-  australianOwnedDescription: "Proudly serving Australian businesses",
+  heroDescription: "A Melbourne-based cybersecurity firm dedicated to protecting Australian businesses of all sizes from evolving digital threats — with practical expertise, no jargon, and a genuine commitment to your security.",
+  missionStatement: "Our Mission: Accessible Cybersecurity for Every Melbourne & Australian Business",
+  missionDescription: "At ADL99, we believe every Melbourne and Australian business deserves enterprise-grade cybersecurity protection. We're here to demystify cybersecurity and make it accessible, practical, and effective — for organisations of all sizes, from St Kilda Road startups to national enterprises.\n\nFounded with a passion for protecting businesses from cyber threats, ADL99 brings together experienced security professionals who understand the unique challenges facing Australian organizations today.",
+  australianOwnedTitle: "Melbourne-Based Cybersecurity Experts Serving Australia",
+  australianOwnedDescription: "ADL99 is headquartered at 470 St Kilda Road, Melbourne — giving our clients direct access to a local team that understands the Victorian business landscape. We serve clients across Melbourne, Victoria, and nationally, bringing enterprise-grade security expertise to businesses that previously couldn't access it.",
   valuesTitle: "Our Values",
   valuesDescription: "The principles that guide everything we do at ADL99.",
-  approachTitle: "Our Approach",
+  approachTitle: "Our Cybersecurity Approach: Assess, Defend, Leverage",
+  approachDescription: "Our proven three-step methodology transforms cybersecurity from a checkbox exercise into a strategic business advantage.",
   ctaTitle: "Let's Work Together",
   ctaDescription: "Ready to strengthen your cybersecurity posture? We're here to help.",
   ctaButtonText: "Get in Touch",
@@ -97,6 +98,7 @@ export default async function AboutPage() {
   const valuesTitle = aboutFields?.valuesTitle || defaultContent.valuesTitle;
   const valuesDescription = aboutFields?.valuesDescription || defaultContent.valuesDescription;
   const approachTitle = aboutFields?.approachTitle || defaultContent.approachTitle;
+  const approachDescription = aboutFields?.approachDescription || defaultContent.approachDescription;
   const ctaTitle = aboutFields?.ctaTitle || defaultContent.ctaTitle;
   const ctaDescription = aboutFields?.ctaDescription || defaultContent.ctaDescription;
   const ctaButtonText = aboutFields?.ctaButtonText || defaultContent.ctaButtonText;
@@ -148,6 +150,7 @@ export default async function AboutPage() {
         values={values}
         stats={stats}
         approachTitle={approachTitle}
+        approachDescription={approachDescription}
         approachItems={approachItems}
         ctaTitle={ctaTitle}
         ctaDescription={ctaDescription}

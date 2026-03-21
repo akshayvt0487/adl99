@@ -49,9 +49,9 @@ const defaultWhatToExpect = [
 // Default content (fallback)
 const defaultContent = {
   heroTitle: "Contact Us",
-  heroDescription: "Have questions about your cybersecurity needs? We're here to help. Reach out for a free consultation.",
+  heroDescription: "Have questions about your cybersecurity needs? ADL99's Melbourne team is here to help. Reach out for a free 30-minute consultation — no obligation, no pressure.",
   emergencyBannerText: "Experiencing a cyber incident? Get immediate help",
-  formTitle: "Send Us a Message",
+  formTitle: "Get in Touch With Melbourne's Cybersecurity Experts",
   whatToExpectTitle: "What to Expect"
 };
 

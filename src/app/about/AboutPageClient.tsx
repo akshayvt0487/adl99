@@ -34,6 +34,7 @@ interface AboutPageClientProps {
   values: Value[];
   stats: Stat[];
   approachTitle: string;
+  approachDescription: string;
   approachItems: ApproachItem[];
   ctaTitle: string;
   ctaDescription: string;
@@ -53,6 +54,7 @@ export default function AboutPageClient({
   values,
   stats,
   approachTitle,
+  approachDescription,
   approachItems,
   ctaTitle,
   ctaDescription,
@@ -199,6 +201,11 @@ export default function AboutPageClient({
             >
               {approachTitle}
             </motion.h2>
+            {approachDescription && (
+              <p className="text-muted-foreground text-lg mb-8">
+                {approachDescription}
+              </p>
+            )}
             <div className="space-y-6 text-left">
               {approachItems.map((approach, index) => (
                 <motion.div
