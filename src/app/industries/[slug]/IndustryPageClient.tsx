@@ -16,6 +16,48 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 
+// Industry-specific section titles per SEO CSV
+const getIndustrySectionTitles = (slug: string) => {
+  const titles: Record<string, { challenges: string; solutions: string; faq: string }> = {
+    "law-firms": {
+      challenges: "Key Cybersecurity Challenges Facing Melbourne & Australian Law Firms",
+      solutions: "Cybersecurity Solutions for Melbourne & Australian Law Firms",
+      faq: "Law Firm Cybersecurity FAQ"
+    },
+    "health-clinics": {
+      challenges: "Cybersecurity Challenges Facing Melbourne & Australian Healthcare Providers",
+      solutions: "Cybersecurity Solutions for Melbourne Health Clinics & Medical Practices",
+      faq: "Healthcare Cybersecurity FAQ"
+    },
+    "accounting": {
+      challenges: "Cybersecurity Challenges for Melbourne & Australian Accounting Firms",
+      solutions: "Cybersecurity Solutions for Melbourne Accounting Firms",
+      faq: "Accounting Firm Cybersecurity FAQ"
+    },
+    "retail": {
+      challenges: "Cybersecurity Threats Facing Melbourne & Australian Retailers",
+      solutions: "Cybersecurity Solutions for Melbourne & Australian Retail Businesses",
+      faq: "Retail Cybersecurity FAQ"
+    },
+    "manufacturing": {
+      challenges: "Cyber Threats Facing Melbourne & Australian Manufacturers",
+      solutions: "Cybersecurity Solutions for Melbourne & Australian Manufacturers",
+      faq: "Manufacturing Cybersecurity FAQ"
+    },
+    "research": {
+      challenges: "Cybersecurity Challenges for Australian Research Institutions",
+      solutions: "Cybersecurity Solutions for Australian Research Organisations",
+      faq: "Research Organisation Cybersecurity FAQ"
+    }
+  };
+
+  return titles[slug] || {
+    challenges: "Industry-Specific Challenges",
+    solutions: "Tailored Security Solutions",
+    faq: "Frequently Asked Questions"
+  };
+};
+
 interface IndustryPageClientProps {
   industry: WPIndustry;
 }
@@ -24,6 +66,7 @@ export default function IndustryPageClient({
   industry,
 }: IndustryPageClientProps) {
   const IconComponent = getIcon(industry.industryFields?.icon || "building");
+  const sectionTitles = getIndustrySectionTitles(industry.slug);
 
   return (
     <div className="min-h-screen bg-background">
@@ -126,7 +169,7 @@ export default function IndustryPageClient({
                 className="max-w-3xl mx-auto text-center mb-12"
               >
                 <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-4 uppercase tracking-wide">
-                  Industry-Specific Challenges
+                  {sectionTitles.challenges}
                 </h2>
                 <p className="text-muted-foreground text-lg">
                   Understanding the unique cybersecurity threats facing{" "}
@@ -227,7 +270,7 @@ export default function IndustryPageClient({
                   viewport={{ once: true }}
                 >
                   <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-6 uppercase tracking-wide">
-                    Tailored Security Solutions
+                    {sectionTitles.solutions}
                   </h2>
                   <p className="text-muted-foreground mb-8 text-lg">
                     Our comprehensive approach to protecting{" "}
@@ -338,7 +381,7 @@ export default function IndustryPageClient({
                     <HelpCircle className="w-7 h-7 text-primary" />
                   </div>
                   <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-4 uppercase tracking-wide">
-                    Frequently Asked Questions
+                    {sectionTitles.faq}
                   </h2>
                   <p className="text-muted-foreground text-lg">
                     Common questions from {industry.title.toLowerCase()}.
