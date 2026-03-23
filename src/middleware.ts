@@ -6,16 +6,19 @@ export function middleware(request: NextRequest) {
   const host = request.headers.get('host') || '';
   const protocol = request.headers.get('x-forwarded-proto') || 'https';
 
-  // Redirect HTTP to HTTPS
-  if (protocol === 'http') {
-    const httpsUrl = `https://${host}${pathname}${search}`;
-    return NextResponse.redirect(httpsUrl, 301);
-  }
+  // Always redirect to www.adl99.com.au with HTTPS
+  const isNonWww = host === 'adl99.com.au';
+  const isHttp = protocol === 'http';
+  const shouldRedirect = isNonWww || isHttp;
 
-  // Redirect non-www to www (only for production domain)
-  if (host === 'adl99.com.au') {
-    const wwwUrl = `https://www.adl99.com.au${pathname}${search}`;
-    return NextResponse.redirect(wwwUrl, 301);
+  if (shouldRedirect) {
+    const canonicalUrl = `https://www.adl99.com.au${pathname}${search}`;
+    return NextResponse.redirect(canonicalUrl, {
+      status: 301,
+      headers: {
+        'Cache-Control': 'public, max-age=31536000, immutable',
+      },
+    });
   }
 
   return NextResponse.next();
