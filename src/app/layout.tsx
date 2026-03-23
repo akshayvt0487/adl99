@@ -143,8 +143,7 @@ export const metadata: Metadata = {
   },
   manifest: "/site.webmanifest",
   verification: {
-    google: "google-site-verification-code-here",
-    // Add your verification codes when you get them
+    google: "3gFhBW6fieXbDasiUGflD-707pSA-D4ai8-FZ_dBtgA",
   },
   other: {
     'mobile-web-app-capable': 'yes',
