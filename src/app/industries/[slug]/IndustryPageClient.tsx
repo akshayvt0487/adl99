@@ -197,9 +197,10 @@ export default function IndustryPageClient({
                       <h3 className="font-display text-xl font-bold text-foreground mb-3 uppercase tracking-wide">
                         {item.title}
                       </h3>
-                      <p className="text-muted-foreground mb-4">
-                        {item.description}
-                      </p>
+                      <div
+                        className="text-muted-foreground mb-4"
+                        dangerouslySetInnerHTML={{ __html: item.description }}
+                      />
                       {item.impact && (
                         <p className="text-sm text-accent font-medium flex items-center gap-2">
                           <TrendingUp className="w-4 h-4" />
@@ -251,7 +252,10 @@ export default function IndustryPageClient({
                       <h3 className="font-display text-lg font-bold text-foreground mb-3">
                         {point.title}
                       </h3>
-                      <p className="text-muted-foreground">{point.description}</p>
+                      <div
+                        className="text-muted-foreground"
+                        dangerouslySetInnerHTML={{ __html: point.description }}
+                      />
                     </motion.div>
                   );
                 })}
@@ -300,9 +304,10 @@ export default function IndustryPageClient({
                             <h3 className="font-semibold text-foreground mb-1">
                               {solution.title}
                             </h3>
-                            <p className="text-muted-foreground text-sm">
-                              {solution.description}
-                            </p>
+                            <div
+                              className="text-muted-foreground text-sm"
+                              dangerouslySetInnerHTML={{ __html: solution.description }}
+                            />
                           </div>
                         </motion.div>
                       );

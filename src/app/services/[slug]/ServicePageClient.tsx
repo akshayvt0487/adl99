@@ -152,9 +152,10 @@ export default function ServicePageClient({ service }: ServicePageClientProps) {
                       <h3 className="font-display text-lg font-bold text-foreground mb-2">
                         {point.title}
                       </h3>
-                      <p className="text-muted-foreground text-sm leading-relaxed">
-                        {point.description}
-                      </p>
+                      <div
+                        className="text-muted-foreground text-sm leading-relaxed"
+                        dangerouslySetInnerHTML={{ __html: point.description }}
+                      />
                     </motion.div>
                   );
                 })}
@@ -196,9 +197,10 @@ export default function ServicePageClient({ service }: ServicePageClientProps) {
                       <h3 className="font-display text-lg font-bold text-foreground mb-2 uppercase tracking-wide">
                         {item.title}
                       </h3>
-                      <p className="text-muted-foreground text-sm">
-                        {item.description}
-                      </p>
+                      <div
+                        className="text-muted-foreground text-sm"
+                        dangerouslySetInnerHTML={{ __html: item.description }}
+                      />
                     </motion.div>
                   );
                 })}
@@ -317,7 +319,7 @@ export default function ServicePageClient({ service }: ServicePageClientProps) {
                         {faq.question}
                       </AccordionTrigger>
                       <AccordionContent className="text-muted-foreground pb-5 leading-relaxed">
-                        {faq.answer}
+                        <div dangerouslySetInnerHTML={{ __html: faq.answer }} />
                       </AccordionContent>
                     </AccordionItem>
                   </motion.div>
