@@ -101,7 +101,10 @@ export default function PanicButtonPageClient({
                     {card.value && (
                       <p className="text-2xl font-bold text-foreground mb-1">{card.value}</p>
                     )}
-                    <p className="text-sm text-muted-foreground">{card.description}</p>
+                    <div
+                      className="text-sm text-muted-foreground"
+                      dangerouslySetInnerHTML={{ __html: card.description }}
+                    />
                     {card.items && card.items.length > 0 && (
                       <ul className="space-y-2 text-sm text-muted-foreground mt-3">
                         {card.items.map((item, itemIndex) => (

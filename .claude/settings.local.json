@@ -12,7 +12,20 @@
       "Bash(ADL99\"\n- Description: Tailored security for law firms, health, accounting, retail, etc.\n\nAbout Page:\n- Title: \"About ADL99)",
       "Bash(Melbourne Cybersecurity Experts\"\n- Description: Melbourne-based firm helping businesses protect data\n\nContact Page:\n- Title: \"Contact ADL99)",
       "Bash(Free Cybersecurity Consultation\"\n- Description: Free 30-min consultation, 24-hour response\n\nPanic Button:\n- Title: \"Emergency Cyber Incident Response Melbourne)",
-      "Bash(ADL99\"\n- Description: Under 15-minute emergency response\n\nService Pages \\(cyber-maturity, technical-advisory, engineering-support, cyber-awareness, vciso\\):\n- Custom SEO titles and descriptions for each service\n\nIndustry Pages \\(law-firms, health-clinics, accounting, retail, manufacturing, research\\):\n- Custom SEO titles and descriptions for each industry\n\nAll titles under 60 characters, descriptions under 160 characters per SEO best practices.\n\nCo-Authored-By: Claude Sonnet 4.5 <noreply@anthropic.com>\nEOF\n\\)\")"
+      "Bash(ADL99\"\n- Description: Under 15-minute emergency response\n\nService Pages \\(cyber-maturity, technical-advisory, engineering-support, cyber-awareness, vciso\\):\n- Custom SEO titles and descriptions for each service\n\nIndustry Pages \\(law-firms, health-clinics, accounting, retail, manufacturing, research\\):\n- Custom SEO titles and descriptions for each industry\n\nAll titles under 60 characters, descriptions under 160 characters per SEO best practices.\n\nCo-Authored-By: Claude Sonnet 4.5 <noreply@anthropic.com>\nEOF\n\\)\")",
+      "Bash(npm run dev:*)",
+      "Bash(timeout 15 tail:*)",
+      "Bash(python:*)",
+      "Bash(timeout:*)",
+      "Bash(git diff:*)",
+      "Bash(ls:*)",
+      "Bash(git rm:*)",
+      "Bash(where convert:*)",
+      "Bash(echo:*)",
+      "Bash(npx --yes @jsquash/png sharp-cli:*)",
+      "Bash(npx:*)",
+      "Bash(npx --yes @jsquash/png:*)",
+      "Bash(npm uninstall:*)"
     ]
   }
 }

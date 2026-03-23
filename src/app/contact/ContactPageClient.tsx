@@ -108,9 +108,15 @@ export default function ContactPageClient({
                         <h3 className="font-display text-lg font-bold text-foreground uppercase tracking-wide">
                           {item.title}
                         </h3>
-                        <p className="text-foreground">{item.description}</p>
+                        <div
+                          className="text-foreground"
+                          dangerouslySetInnerHTML={{ __html: item.description }}
+                        />
                         {item.detail && (
-                          <p className="text-sm text-muted-foreground">{item.detail}</p>
+                          <div
+                            className="text-sm text-muted-foreground"
+                            dangerouslySetInnerHTML={{ __html: item.detail }}
+                          />
                         )}
                       </div>
                     </motion.div>
