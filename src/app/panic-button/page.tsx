@@ -10,6 +10,15 @@ export const metadata: Metadata = {
   title: "Emergency Cyber Incident Response Melbourne | ADL99",
   description: "Experiencing a cyber attack or data breach? ADL99's Melbourne emergency team responds in under 15 minutes. Immediate containment and recovery.",
   keywords: ["cyber incident response", "emergency cybersecurity help", "data breach response Australia"],
+  openGraph: {
+    title: "Emergency Cyber Incident Response Melbourne | ADL99",
+    description: "Experiencing a cyber attack or data breach? ADL99's Melbourne emergency team responds in under 15 minutes. Immediate containment and recovery.",
+    url: "https://www.adl99.com.au/panic-button",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+  },
   alternates: {
     canonical: "https://www.adl99.com.au/panic-button",
   },

@@ -11,6 +11,15 @@ export const metadata: Metadata = {
   title: "Contact ADL99 | Free Cybersecurity Consultation",
   description: "Get in touch with ADL99's Melbourne cybersecurity team. Book a free 30-minute consultation or call 03 7067 3373. Response within 24 hours.",
   keywords: ["contact ADL99", "cybersecurity consultation Melbourne", "cyber security quote Australia"],
+  openGraph: {
+    title: "Contact ADL99 | Free Cybersecurity Consultation",
+    description: "Get in touch with ADL99's Melbourne cybersecurity team. Book a free 30-minute consultation. Response within 24 hours.",
+    url: "https://www.adl99.com.au/contact",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+  },
   alternates: {
     canonical: "https://www.adl99.com.au/contact",
   },

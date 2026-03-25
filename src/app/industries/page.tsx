@@ -11,6 +11,15 @@ export const metadata: Metadata = {
   title: "Industry Cybersecurity Solutions Melbourne | ADL99",
   description: "ADL99 delivers tailored cybersecurity for law firms, health clinics, accounting, retail, manufacturing and research organisations across Australia.",
   keywords: ["industry cybersecurity", "sector specific security", "Australian business cyber protection"],
+  openGraph: {
+    title: "Industry Cybersecurity Solutions Melbourne | ADL99",
+    description: "ADL99 delivers tailored cybersecurity for law firms, health clinics, accounting, retail, manufacturing and research organisations across Australia.",
+    url: "https://www.adl99.com.au/industries",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+  },
   alternates: {
     canonical: "https://www.adl99.com.au/industries",
   },

@@ -37,14 +37,6 @@ export const metadata: Metadata = {
     description: "ADL99 is Melbourne's trusted cybersecurity partner — expert assessments, vCISO services & incident response. Book a free consultation.",
     url: "https://www.adl99.com.au",
     siteName: "ADL99 Cybersecurity",
-    images: [
-      {
-        url: "/og-image.png",
-        width: 1200,
-        height: 630,
-        alt: "ADL99 Cybersecurity - Protecting Australian Businesses",
-      },
-    ],
     locale: "en_AU",
     type: "website",
   },
@@ -52,7 +44,6 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Cybersecurity Services for Australian Businesses | ADL99",
     description: "ADL99 is Melbourne's trusted cybersecurity partner — expert assessments, vCISO services & incident response. Book a free consultation.",
-    images: ["/og-image.png"],
   },
   alternates: {
     canonical: "https://www.adl99.com.au",

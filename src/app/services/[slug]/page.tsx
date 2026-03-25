@@ -87,22 +87,11 @@ export async function generateMetadata({ params }: ServicePageProps): Promise<Me
         description: customSEO?.description || service.seo?.description || service.serviceFields?.shortDescription || "",
         type: "website",
         url: `https://www.adl99.com.au/services/${slug}`,
-        images: service.featuredImage?.node?.sourceUrl
-          ? [
-              {
-                url: service.featuredImage.node.sourceUrl,
-                alt: service.featuredImage.node.altText || service.title,
-              },
-            ]
-          : undefined,
       },
       twitter: {
         card: "summary_large_image",
         title: customSEO?.title || service.seo?.title || service.title,
         description: customSEO?.description || service.seo?.description || service.serviceFields?.shortDescription || "",
-        images: service.featuredImage?.node?.sourceUrl
-          ? [service.featuredImage.node.sourceUrl]
-          : undefined,
       },
     };
   } catch (error) {

@@ -11,6 +11,15 @@ export const metadata: Metadata = {
   title: "Cybersecurity Services for Australian Businesses | ADL99 Melbourne",
   description: "From incident response to vCISO and cyber awareness training, ADL99 delivers practical cybersecurity solutions for Australian businesses.",
   keywords: ["cybersecurity services Australia", "cyber security consulting", "security assessment", "managed security services"],
+  openGraph: {
+    title: "Cybersecurity Services for Australian Businesses | ADL99 Melbourne",
+    description: "From incident response to vCISO and cyber awareness training, ADL99 delivers practical cybersecurity solutions for Australian businesses.",
+    url: "https://www.adl99.com.au/services",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+  },
   alternates: {
     canonical: "https://www.adl99.com.au/services",
   },

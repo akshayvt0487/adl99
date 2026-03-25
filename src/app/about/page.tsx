@@ -16,6 +16,15 @@ export const metadata: Metadata = {
   title: "About ADL99 | Melbourne Cybersecurity Experts",
   description: "ADL99 is a Melbourne-based cybersecurity firm. We help Australian businesses of all sizes protect their data, meet compliance and grow securely.",
   keywords: ["about ADL99", "cybersecurity company", "Australian cybersecurity", "cyber security team"],
+  openGraph: {
+    title: "About ADL99 | Melbourne Cybersecurity Experts",
+    description: "ADL99 is a Melbourne-based cybersecurity firm. We help Australian businesses of all sizes protect their data, meet compliance and grow securely.",
+    url: "https://www.adl99.com.au/about",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+  },
   alternates: {
     canonical: "https://www.adl99.com.au/about",
   },

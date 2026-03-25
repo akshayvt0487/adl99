@@ -87,22 +87,11 @@ export async function generateMetadata({ params }: IndustryPageProps): Promise<M
         description: customSEO?.description || industry.seo?.description || industry.industryFields?.shortDescription || "",
         type: "website",
         url: `https://www.adl99.com.au/industries/${slug}`,
-        images: industry.featuredImage?.node?.sourceUrl
-          ? [
-              {
-                url: industry.featuredImage.node.sourceUrl,
-                alt: industry.featuredImage.node.altText || industry.title,
-              },
-            ]
-          : undefined,
       },
       twitter: {
         card: "summary_large_image",
         title: customSEO?.title || industry.seo?.title || `Cybersecurity for ${industry.title}`,
         description: customSEO?.description || industry.seo?.description || industry.industryFields?.shortDescription || "",
-        images: industry.featuredImage?.node?.sourceUrl
-          ? [industry.featuredImage.node.sourceUrl]
-          : undefined,
       },
     };
   } catch (error) {

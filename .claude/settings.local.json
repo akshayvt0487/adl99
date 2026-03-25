@@ -26,7 +26,8 @@
       "Bash(npx:*)",
       "Bash(npx --yes @jsquash/png:*)",
       "Bash(npm uninstall:*)",
-      "Bash(git push:*)"
+      "Bash(git push:*)",
+      "Bash(npm run build:*)"
     ]
   }
 }
