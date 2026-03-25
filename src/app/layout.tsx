@@ -92,15 +92,6 @@ export const metadata: Metadata = {
     siteName: "ADL99 Cybersecurity",
     title: "ADL99 Cybersecurity | Expert Cyber Security Services Australia",
     description: "Protect your business with Australia's trusted cybersecurity experts. vCISO, Essential Eight compliance, penetration testing & 24/7 security monitoring. Get a free security assessment today.",
-    images: [
-      {
-        url: "/og-image.png",
-        width: 1200,
-        height: 630,
-        alt: "ADL99 Cybersecurity - Leading Australian Cyber Security Consultants",
-        type: "image/png",
-      },
-    ],
   },
   twitter: {
     card: "summary_large_image",
@@ -108,10 +99,6 @@ export const metadata: Metadata = {
     creator: "@adl99cyber",
     title: "ADL99 Cybersecurity | Expert Cyber Security Services Australia",
     description: "Protect your business with Australia's trusted cybersecurity experts. vCISO, Essential Eight, penetration testing & more.",
-    images: {
-      url: "/og-image.png",
-      alt: "ADL99 Cybersecurity - Leading Australian Cyber Security Consultants",
-    },
   },
   robots: {
     index: true,
