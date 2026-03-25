@@ -25,7 +25,8 @@
       "Bash(npx --yes @jsquash/png sharp-cli:*)",
       "Bash(npx:*)",
       "Bash(npx --yes @jsquash/png:*)",
-      "Bash(npm uninstall:*)"
+      "Bash(npm uninstall:*)",
+      "Bash(git push:*)"
     ]
   }
 }

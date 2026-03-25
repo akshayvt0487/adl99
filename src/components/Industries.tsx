@@ -9,7 +9,7 @@ import { getIcon } from "@/lib/icon-map";
 // Default industries data (for fallback)
 const defaultIndustriesData: Record<string, { description: string; challenges: string[] }> = {
   'law-firms': {
-    description: "Specialized cybersecurity solutions for legal practices, ensuring client confidentiality and regulatory compliance.",
+    description: "Specialised cybersecurity solutions for legal practices, ensuring client confidentiality and regulatory compliance.",
     challenges: ["Client confidentiality requirements", "Legal privilege protection", "Regulatory compliance", "Data breach prevention"],
   },
   'health-clinics': {
@@ -29,7 +29,7 @@ const defaultIndustriesData: Record<string, { description: string; challenges: s
     challenges: ["OT/ICS security", "IP protection", "IT/OT convergence", "Legacy system security"],
   },
   'research': {
-    description: "Specialized solutions ensuring research data protection and IP security.",
+    description: "Specialised solutions ensuring research data protection and IP security.",
     challenges: ["IP protection strategies", "Research data security", "Collaboration security", "Export control compliance"],
   },
 };

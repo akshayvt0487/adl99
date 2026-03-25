@@ -71,7 +71,7 @@ export const servicesData: ServiceData[] = [
         { icon: "Shield", title: "Expert Guidance", description: "Experienced incident responders guide you through the crisis" },
       ],
       painPoints: [
-        { icon: "AlertCircle", title: "Active Breach", description: "Currently experiencing unauthorized access or data theft" },
+        { icon: "AlertCircle", title: "Active Breach", description: "Currently experiencing unauthorised access or data theft" },
         { icon: "Lock", title: "Ransomware", description: "Files encrypted and ransom demanded" },
         { icon: "Mail", title: "Compromised Email", description: "Business email compromise or phishing attack" },
       ],
@@ -176,7 +176,7 @@ export const servicesData: ServiceData[] = [
     title: "Engineering Support",
     slug: "engineering-support",
     excerpt: "Hands-on expertise to implement and optimise your security infrastructure.",
-    content: `<p>Get hands-on technical expertise for your security infrastructure. Our engineers help implement, configure, and optimize security technologies across your environment.</p>
+    content: `<p>Get hands-on technical expertise for your security infrastructure. Our engineers help implement, configure, and optimise security technologies across your environment.</p>
 <p>From network defense and endpoint protection to cloud security and SIEM deployment, we ensure your security tools work effectively together.</p>`,
     acf: {
       icon: "Shield",
@@ -185,7 +185,7 @@ export const servicesData: ServiceData[] = [
       heroSubheadline: "Hands-on expertise to implement and optimise your security infrastructure.",
       benefits: [
         { icon: "Wrench", title: "Hands-On Implementation", description: "Expert deployment and configuration of security tools" },
-        { icon: "Zap", title: "Optimized Performance", description: "Ensure your security stack works at peak efficiency" },
+        { icon: "Zap", title: "Optimised Performance", description: "Ensure your security stack works at peak efficiency" },
         { icon: "Layers", title: "Integrated Defense", description: "Coordinated security across all your systems" },
       ],
       painPoints: [
@@ -196,7 +196,7 @@ export const servicesData: ServiceData[] = [
       rightForYou: [
         { item: "You need help implementing security technologies" },
         { item: "Your security tools aren't working as expected" },
-        { item: "You want to optimize your security stack" },
+        { item: "You want to optimise your security stack" },
         { item: "You need integration support" },
       ],
       whatsIncluded: [
@@ -245,7 +245,7 @@ export const servicesData: ServiceData[] = [
         { item: "You want to reduce human error risks" },
       ],
       whatsIncluded: [
-        { item: "Customized training programs" },
+        { item: "Customised training programs" },
         { item: "Phishing simulation campaigns" },
         { item: "Interactive workshops" },
         { item: "Ongoing awareness materials" },
@@ -253,12 +253,12 @@ export const servicesData: ServiceData[] = [
       ],
       formBenefits: [
         { benefit: "Engaging, practical training" },
-        { benefit: "Customized to your industry" },
+        { benefit: "Customised to your industry" },
         { benefit: "Measurable results" },
       ],
       faqs: [
         { question: "How long are training sessions?", answer: "Sessions range from 1-hour awareness talks to full-day workshops depending on depth required." },
-        { question: "Can training be customized for our industry?", answer: "Absolutely. We tailor content to your industry's specific threats and compliance requirements." },
+        { question: "Can training be customised for our industry?", answer: "Absolutely. We tailor content to your industry's specific threats and compliance requirements." },
         { question: "Do you offer phishing simulations?", answer: "Yes, we provide realistic phishing simulations to test and reinforce training." },
       ],
     },
@@ -670,7 +670,7 @@ export const pagesData: PageData[] = [
       },
       industriesSection: {
         sectionTitle: "Industries We Protect",
-        sectionDescription: "Specialized security solutions for the sectors that need it most.",
+        sectionDescription: "Specialised security solutions for the sectors that need it most.",
       },
       processSection: {
         sectionTitle: "Your Path to Complete Protection",
@@ -838,7 +838,7 @@ export const pagesData: PageData[] = [
         { type: "Ransomware Attack" },
         { type: "Data Breach" },
         { type: "Phishing/Social Engineering" },
-        { type: "Unauthorized Access" },
+        { type: "Unauthorised Access" },
         { type: "Malware Infection" },
         { type: "DDoS Attack" },
         { type: "Insider Threat" },

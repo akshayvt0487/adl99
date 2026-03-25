@@ -228,7 +228,7 @@ export const servicesFallbackData: Record<string, ServiceFallbackData> = {
       },
       {
         icon: "Zap",
-        title: "Optimized Performance",
+        title: "Optimised Performance",
         description: "Ensure your security stack works at peak efficiency"
       },
       {
@@ -245,7 +245,7 @@ export const servicesFallbackData: Record<string, ServiceFallbackData> = {
     rightForYou: [
       { item: "You need help implementing security technologies" },
       { item: "Your security tools aren't working as expected" },
-      { item: "You want to optimize your security stack" },
+      { item: "You want to optimise your security stack" },
       { item: "You need integration support" }
     ],
     whatsIncluded: [
@@ -328,7 +328,7 @@ export const servicesFallbackData: Record<string, ServiceFallbackData> = {
       { item: "You want to reduce human error risks" }
     ],
     whatsIncluded: [
-      { item: "Customized training programs" },
+      { item: "Customised training programs" },
       { item: "Phishing simulation campaigns" },
       { item: "Interactive workshops" },
       { item: "Ongoing awareness materials" },
@@ -336,7 +336,7 @@ export const servicesFallbackData: Record<string, ServiceFallbackData> = {
     ],
     formBenefits: [
       { benefit: "Engaging, practical training" },
-      { benefit: "Customized to your industry" },
+      { benefit: "Customised to your industry" },
       { benefit: "Measurable results" }
     ],
     faqs: [
@@ -345,7 +345,7 @@ export const servicesFallbackData: Record<string, ServiceFallbackData> = {
         answer: "Sessions range from 1-hour awareness talks to full-day workshops depending on depth required."
       },
       {
-        question: "Can training be customized for our industry?",
+        question: "Can training be customised for our industry?",
         answer: "Absolutely. We tailor content to your industry's specific threats and compliance requirements."
       },
       {

@@ -31,7 +31,7 @@
         {
           "icon": "AlertCircle",
           "title": "Active Breach",
-          "description": "Currently experiencing unauthorized access or data theft"
+          "description": "Currently experiencing unauthorised access or data theft"
         },
         {
           "icon": "Lock",
@@ -260,7 +260,7 @@
     "title": "Engineering Support",
     "slug": "engineering-support",
     "excerpt": "Hands-on expertise to implement and optimise your security infrastructure.",
-    "content": "<p>Get hands-on technical expertise for your security infrastructure. Our engineers help implement, configure, and optimize security technologies across your environment.</p>\n<p>From network defense and endpoint protection to cloud security and SIEM deployment, we ensure your security tools work effectively together.</p>",
+    "content": "<p>Get hands-on technical expertise for your security infrastructure. Our engineers help implement, configure, and optimise security technologies across your environment.</p>\n<p>From network defense and endpoint protection to cloud security and SIEM deployment, we ensure your security tools work effectively together.</p>",
     "acf": {
       "icon": "Shield",
       "shortDescription": "We deliver hands-on technical support for implementing and optimizing security technologies, including network defense, endpoint protection, and cloud security.",
@@ -274,7 +274,7 @@
         },
         {
           "icon": "Zap",
-          "title": "Optimized Performance",
+          "title": "Optimised Performance",
           "description": "Ensure your security stack works at peak efficiency"
         },
         {
@@ -308,7 +308,7 @@
           "item": "Your security tools aren't working as expected"
         },
         {
-          "item": "You want to optimize your security stack"
+          "item": "You want to optimise your security stack"
         },
         {
           "item": "You need integration support"
@@ -414,7 +414,7 @@
       ],
       "whatsIncluded": [
         {
-          "item": "Customized training programs"
+          "item": "Customised training programs"
         },
         {
           "item": "Phishing simulation campaigns"
@@ -434,7 +434,7 @@
           "benefit": "Engaging, practical training"
         },
         {
-          "benefit": "Customized to your industry"
+          "benefit": "Customised to your industry"
         },
         {
           "benefit": "Measurable results"
@@ -446,7 +446,7 @@
           "answer": "Sessions range from 1-hour awareness talks to full-day workshops depending on depth required."
         },
         {
-          "question": "Can training be customized for our industry?",
+          "question": "Can training be customised for our industry?",
           "answer": "Absolutely. We tailor content to your industry's specific threats and compliance requirements."
         },
         {
