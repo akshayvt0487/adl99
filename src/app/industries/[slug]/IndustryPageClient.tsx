@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { ArrowRight, HelpCircle, CheckCircle, TrendingUp } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
+import Image from "next/image";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import Breadcrumb from "@/components/Breadcrumb";
@@ -15,6 +16,20 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
+
+// Map slugs to banner image filenames
+const getIndustryBannerImage = (slug: string) => {
+  const imageMap: Record<string, string> = {
+    "law-firms": "Law Firms.webp",
+    "health-clinics": "Health Clinics.webp",
+    "accounting": "Accounting.webp",
+    "retail": "Retail.webp",
+    "manufacturing": "Manufacturing.webp",
+    "research": "Research.webp"
+  };
+
+  return imageMap[slug] || "services.webp";
+};
 
 // Industry-specific section titles per SEO CSV
 const getIndustrySectionTitles = (slug: string) => {
@@ -67,6 +82,7 @@ export default function IndustryPageClient({
 }: IndustryPageClientProps) {
   const IconComponent = getIcon(industry.industryFields?.icon || "building");
   const sectionTitles = getIndustrySectionTitles(industry.slug);
+  const bannerImage = getIndustryBannerImage(industry.slug);
 
   return (
     <div className="min-h-screen bg-background">
@@ -79,8 +95,17 @@ export default function IndustryPageClient({
       />
 
       {/* Hero Section */}
-      <section className="relative pt-32 pb-20 bg-primary overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-primary via-primary to-primary/80" />
+      <section className="relative pt-32 pb-20 overflow-hidden">
+        <div className="absolute inset-0">
+          <Image
+            src={`/banner-images/${bannerImage}`}
+            alt={industry.title}
+            fill
+            priority
+            className="object-cover"
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-primary/95 via-primary/85 to-primary/60" />
+        </div>
         <div className="container mx-auto px-6 relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
