@@ -16,6 +16,14 @@ export const metadata: Metadata = {
     description: "ADL99 delivers tailored cybersecurity for law firms, health clinics, accounting, retail, manufacturing and research organisations across Australia.",
     url: "https://www.adl99.com.au/industries",
     type: "website",
+
+    images: [
+      {
+        url: "/industries-og.png",
+        width: 1200,
+        height: 630,
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",

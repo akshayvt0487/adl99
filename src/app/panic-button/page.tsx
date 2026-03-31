@@ -15,6 +15,14 @@ export const metadata: Metadata = {
     description: "Experiencing a cyber attack or data breach? ADL99's Melbourne emergency team responds in under 15 minutes. Immediate containment and recovery.",
     url: "https://www.adl99.com.au/panic-button",
     type: "website",
+
+    images: [
+      {
+        url: "/panic-button-og.png",
+        width: 1200,
+        height: 630,
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",

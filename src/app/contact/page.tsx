@@ -16,6 +16,14 @@ export const metadata: Metadata = {
     description: "Get in touch with ADL99's Melbourne cybersecurity team. Book a free 30-minute consultation. Response within 24 hours.",
     url: "https://www.adl99.com.au/contact",
     type: "website",
+
+    images: [
+      {
+        url: "/contact-og.png",
+        width: 1200,
+        height: 630,
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",

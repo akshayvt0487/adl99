@@ -87,11 +87,19 @@ export async function generateMetadata({ params }: ServicePageProps): Promise<Me
         description: customSEO?.description || service.seo?.description || service.serviceFields?.shortDescription || "",
         type: "website",
         url: `https://www.adl99.com.au/services/${slug}`,
+        images: [
+          {
+            url: `/services/${slug}-og.png`,
+            width: 1200,
+            height: 630,
+          },
+        ],
       },
       twitter: {
         card: "summary_large_image",
         title: customSEO?.title || service.seo?.title || service.title,
         description: customSEO?.description || service.seo?.description || service.serviceFields?.shortDescription || "",
+        images: [`/services/${slug}-og.png`],
       },
     };
   } catch (error) {

@@ -16,6 +16,14 @@ export const metadata: Metadata = {
     description: "From incident response to vCISO and cyber awareness training, ADL99 delivers practical cybersecurity solutions for Australian businesses.",
     url: "https://www.adl99.com.au/services",
     type: "website",
+
+    images: [
+      {
+        url: "/services-og.png",
+        width: 1200,
+        height: 630,
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",

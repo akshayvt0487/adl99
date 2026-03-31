@@ -39,11 +39,20 @@ export const metadata: Metadata = {
     siteName: "ADL99 Cybersecurity",
     locale: "en_AU",
     type: "website",
+    images: [
+      {
+        url: "/opengraph-image.png",
+        width: 1200,
+        height: 630,
+        alt: "ADL99 Cybersecurity - Melbourne's Trusted Cybersecurity Partner",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "Cybersecurity Services for Australian Businesses | ADL99",
     description: "ADL99 is Melbourne's trusted cybersecurity partner — expert assessments, vCISO services & incident response. Book a free consultation.",
+    images: ["/opengraph-image.png"],
   },
   alternates: {
     canonical: "https://www.adl99.com.au",

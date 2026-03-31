@@ -87,11 +87,19 @@ export async function generateMetadata({ params }: IndustryPageProps): Promise<M
         description: customSEO?.description || industry.seo?.description || industry.industryFields?.shortDescription || "",
         type: "website",
         url: `https://www.adl99.com.au/industries/${slug}`,
+        images: [
+          {
+            url: `/industries/${slug}-og.png`,
+            width: 1200,
+            height: 630,
+          },
+        ],
       },
       twitter: {
         card: "summary_large_image",
         title: customSEO?.title || industry.seo?.title || `Cybersecurity for ${industry.title}`,
         description: customSEO?.description || industry.seo?.description || industry.industryFields?.shortDescription || "",
+        images: [`/industries/${slug}-og.png`],
       },
     };
   } catch (error) {
