@@ -154,7 +154,7 @@ export default function IndustryPageClient({
       {/* Statistics Section */}
       {industry.industryFields?.statistics &&
         industry.industryFields.statistics.length > 0 && (
-          <section className="py-16 bg-accent/5 border-y border-border">
+          <section className="py-16 bg-accent/5 border-y border-border" data-nosnippet>
             <div className="container mx-auto px-6">
               <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
                 {industry.industryFields.statistics.map((stat, index) => (
