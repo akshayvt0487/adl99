@@ -324,9 +324,9 @@ export const industriesData: IndustryData[] = [
     acf: {
       icon: "Scale",
       shortDescription: "Specialized cybersecurity solutions for legal practices, ensuring client confidentiality and regulatory compliance.",
-      heroHeadline: "Cybersecurity for Australian Law Firms",
-      heroSubheadline: "Protecting attorney-client privilege in the digital age. Specialised security solutions designed for legal practices—from sole practitioners to major partnerships.",
-      heroDescription: "Your clients trust you with their most sensitive matters. We help you honour that trust with robust cybersecurity that meets bar association requirements and exceeds client expectations.",
+      heroHeadline: "Melbourne Law Firms Need Specialised Cyber Protection—Here's Why",
+      heroSubheadline: "Legal practices hold privileged communications, case files, and confidential client information that cybercriminals actively target. One breach can destroy decades of trust and expose you to malpractice claims.",
+      heroDescription: "ADL99 protects law firms across Melbourne and Australia with security solutions built specifically for legal practice management software, document systems, and email platforms. We understand bar association obligations, attorney-client privilege, and the unique threats facing legal professionals.",
       statistics: [
         { value: "29%", label: "of law firms experienced a security breach in 2023", source: "ABA Legal Technology Survey" },
         { value: "$4.47M", label: "average cost of a data breach in professional services", source: "IBM Security Report 2023" },
@@ -377,9 +377,9 @@ export const industriesData: IndustryData[] = [
     acf: {
       icon: "Heart",
       shortDescription: "HIPAA-compliant cybersecurity assessments and solutions designed specifically for healthcare providers.",
-      heroHeadline: "Cybersecurity for Australian Health Clinics",
-      heroSubheadline: "Protecting patient data while you protect patient health. Privacy-compliant security solutions designed for medical practices, allied health clinics, and healthcare providers.",
-      heroDescription: "Your patients trust you with their most personal information. We help you honour that trust with robust cybersecurity that meets Australian privacy requirements and exceeds patient expectations.",
+      heroHeadline: "Australian Health Clinics Face Unique Privacy and Security Obligations",
+      heroSubheadline: "Medical practices handle sensitive patient records, Medicare details, and health information worth 10x more than credit card data on the dark web. Healthcare is the #1 ransomware target—and attackers know you can't afford downtime.",
+      heroDescription: "ADL99 delivers healthcare-specific cybersecurity that protects patient data, secures practice management systems, and ensures Australian Privacy Act compliance. We work with Best Practice, Medical Director, and all major clinical software platforms used across Melbourne and regional Victoria.",
       statistics: [
         { value: "13%", label: "of Australian healthcare breaches result in identity theft", source: "OAIC Notifiable Data Breaches Report" },
         { value: "$10.9M", label: "average cost of a healthcare data breach globally", source: "IBM Security Report 2023" },
@@ -430,8 +430,9 @@ export const industriesData: IndustryData[] = [
     acf: {
       icon: "Calculator",
       shortDescription: "Safeguarding financial records and client information from cyber threats and fraud.",
-      heroHeadline: "Cybersecurity for Accounting Practices",
-      heroSubheadline: "Protect your clients' financial data, maintain professional compliance, and defend against targeted attacks. Specialised security solutions designed for Australian accounting firms.",
+      heroHeadline: "Why Accounting Firms Are Prime Targets for Business Email Compromise",
+      heroSubheadline: "Tax returns, financial statements, banking credentials—accounting practices hold everything cybercriminals need for identity theft and fraud. During tax season, your team faces heightened phishing attacks when they're most vulnerable.",
+      heroDescription: "ADL99 secures accounting firms with protections designed for Xero, MYOB, and other platforms you rely on daily. We implement email security, client portal encryption, and backup systems that protect your practice while meeting Tax Practitioners Board and APES 110 obligations.",
       statistics: [
         { value: "60%", label: "of accounting firms experienced a cyber attack in the past year", source: "Journal of Accountancy, 2023" },
         { value: "$4.5M", label: "average cost of a data breach in financial services", source: "IBM Cost of Data Breach Report, 2023" },
@@ -485,8 +486,9 @@ export const industriesData: IndustryData[] = [
     acf: {
       icon: "ShoppingCart",
       shortDescription: "Securing point-of-sale systems, customer data, and supply chain operations.",
-      heroHeadline: "Cybersecurity for Retail Chains",
-      heroSubheadline: "Protect your payment systems, customer data, and multi-location operations from cyber threats. Maintain PCI compliance while delivering seamless customer experiences.",
+      heroHeadline: "Retail Cyber Attacks Cost Melbourne Businesses $3.28M on Average",
+      heroSubheadline: "Point-of-sale malware, payment card breaches, and ransomware attacks shut down stores and destroy customer trust overnight. Multi-location retailers face exponentially higher risk—one compromised store can expose your entire network.",
+      heroDescription: "ADL99 protects retail chains with PCI DSS-compliant solutions for payment terminals, centralized security across multiple locations, and e-commerce platform hardening. From independent retailers to national chains, we secure the systems that keep Melbourne's retail sector running.",
       statistics: [
         { value: "24%", label: "of all data breaches occur in the retail sector", source: "Verizon DBIR, 2023" },
         { value: "$3.28M", label: "average cost of a retail data breach", source: "IBM Cost of Data Breach Report, 2023" },
@@ -535,8 +537,9 @@ export const industriesData: IndustryData[] = [
     acf: {
       icon: "Factory",
       shortDescription: "Protecting operational technology and intellectual property from cyber threats.",
-      heroHeadline: "Cybersecurity for Manufacturing",
-      heroSubheadline: "Protect your operational technology, intellectual property, and supply chain from cyber threats that can halt production and steal competitive advantages.",
+      heroHeadline: "Manufacturing Cyber Attacks Have Increased 2.5x Since 2020",
+      heroSubheadline: "Ransomware that shuts down production lines. Industrial espionage stealing designs and trade secrets. Supply chain attacks disrupting just-in-time operations. Australian manufacturers face sophisticated threats targeting both IT systems and operational technology.",
+      heroDescription: "ADL99 specializes in OT/IT convergence security for Melbourne's manufacturing sector. We protect SCADA systems, PLCs, and legacy industrial equipment without requiring production downtime, while securing intellectual property and supply chain communications that keep your competitive edge.",
       statistics: [
         { value: "61%", label: "of manufacturing companies experienced a cyber attack", source: "IBM X-Force Threat Intelligence, 2023" },
         { value: "$4.24M", label: "average cost of a manufacturing data breach", source: "IBM Cost of Data Breach Report, 2023" },
@@ -585,8 +588,9 @@ export const industriesData: IndustryData[] = [
     acf: {
       icon: "Beaker",
       shortDescription: "Protecting intellectual property and research data from targeted attacks.",
-      heroHeadline: "Cybersecurity for Research Organisations",
-      heroSubheadline: "Protect your intellectual property and research data from nation-state actors, competitors, and cybercriminals targeting valuable innovations.",
+      heroHeadline: "Nation-State Attacks on Australian Research Have Tripled Since 2020",
+      heroSubheadline: "Foreign intelligence services systematically target university research, biotechnology innovations, and defence-related projects. $2.1 billion in intellectual property is stolen annually from Australian research institutions—often by adversaries with unlimited resources and patience.",
+      heroDescription: "ADL99 protects research organisations with security tailored for collaborative environments. We balance open scientific exchange with IP protection, meet Defence Industry Security Program requirements, navigate export controls, and defend against sophisticated nation-state threats targeting Melbourne's world-class research sector.",
       statistics: [
         { value: "78%", label: "of universities experienced significant cyber attacks", source: "Australian Universities Cyber Survey, 2023" },
         { value: "$2.1B", label: "estimated annual IP theft from Australian research", source: "Parliamentary Joint Committee on Intelligence, 2023" },
