@@ -107,7 +107,7 @@ export const createServiceSchema = (
     '@type': 'Country',
     name: 'Australia',
   },
-  serviceType: 'Cybersecurity',
+  category: 'Cybersecurity Services',
 });
 
 export const createFAQSchema = (faqs: FAQ[]) => ({
