@@ -248,14 +248,6 @@ export default function RootLayout({
         <meta name="rating" content="general" />
         <meta name="referrer" content="strict-origin-when-cross-origin" />
 
-        {/* Facebook OG tags - required for proper WhatsApp/Facebook sharing */}
-        <meta property="og:type" content="website" />
-        <meta property="og:site_name" content="ADL99 Cybersecurity" />
-        <meta property="og:image:secure_url" content="https://www.adl99.com.au/opengraph-image.png" />
-        <meta property="og:image:type" content="image/png" />
-        <meta property="og:image:width" content="1200" />
-        <meta property="og:image:height" content="630" />
-
         {/* Structured Data - Organization & Website */}
         <script
           type="application/ld+json"

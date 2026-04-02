@@ -7,16 +7,36 @@ async function optimizeOGImage(imagePath, outputPath) {
   console.log(`\nOptimizing: ${path.basename(imagePath)}`);
   console.log(`Original size: ${Math.round(originalStats.size / 1024)}KB`);
 
+  // Try JPEG first for better compression (WhatsApp prefers JPEG anyway)
+  const jpegPath = outputPath.replace('.png', '-temp.jpg');
+
   await sharp(imagePath)
+    .jpeg({
+      quality: 85,
+      progressive: true,
+      mozjpeg: true
+    })
+    .toFile(jpegPath);
+
+  const jpegStats = fs.statSync(jpegPath);
+  console.log(`JPEG version: ${Math.round(jpegStats.size / 1024)}KB`);
+
+  // Convert back to PNG with aggressive optimization
+  await sharp(jpegPath)
     .png({
-      quality: 90,
+      quality: 85,
       compressionLevel: 9,
-      palette: true // Use palette-based PNG for smaller size
+      palette: true,
+      colors: 256, // Limit to 256 colors for smaller size
+      effort: 10 // Maximum compression effort
     })
     .toFile(outputPath);
 
+  // Clean up temp JPEG
+  fs.unlinkSync(jpegPath);
+
   const newStats = fs.statSync(outputPath);
-  console.log(`Optimized size: ${Math.round(newStats.size / 1024)}KB`);
+  console.log(`Final PNG size: ${Math.round(newStats.size / 1024)}KB`);
   console.log(`Savings: ${Math.round((originalStats.size - newStats.size) / 1024)}KB (${Math.round((1 - newStats.size / originalStats.size) * 100)}%)`);
 }
 
