@@ -41,10 +41,11 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "https://www.adl99.com.au/opengraph-image.png",
+        url: "https://www.adl99.com.au/opengraph-image.jpg",
         width: 1200,
         height: 630,
         alt: "ADL99 Cybersecurity - Melbourne's Trusted Cybersecurity Partner",
+        type: "image/jpeg",
       },
     ],
   },
@@ -52,7 +53,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Cybersecurity Services for Australian Businesses | ADL99",
     description: "ADL99 is Melbourne's trusted cybersecurity partner — expert assessments, vCISO services & incident response. Book a free consultation.",
-    images: ["https://www.adl99.com.au/opengraph-image.png"],
+    images: ["https://www.adl99.com.au/opengraph-image.jpg"],
   },
   alternates: {
     canonical: "https://www.adl99.com.au",
