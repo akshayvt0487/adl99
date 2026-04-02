@@ -89,7 +89,7 @@ export async function generateMetadata({ params }: ServicePageProps): Promise<Me
         url: `https://www.adl99.com.au/services/${slug}`,
         images: [
           {
-            url: `/services/${slug}-og.png`,
+            url: `https://www.adl99.com.au/services/${slug}-og.png`,
             width: 1200,
             height: 630,
           },
@@ -99,7 +99,7 @@ export async function generateMetadata({ params }: ServicePageProps): Promise<Me
         card: "summary_large_image",
         title: customSEO?.title || service.seo?.title || service.title,
         description: customSEO?.description || service.seo?.description || service.serviceFields?.shortDescription || "",
-        images: [`/services/${slug}-og.png`],
+        images: [`https://www.adl99.com.au/services/${slug}-og.png`],
       },
     };
   } catch (error) {

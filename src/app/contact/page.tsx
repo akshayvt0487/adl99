@@ -19,7 +19,7 @@ export const metadata: Metadata = {
 
     images: [
       {
-        url: "/contact-og.png",
+        url: "https://www.adl99.com.au/contact-og.png",
         width: 1200,
         height: 630,
       },

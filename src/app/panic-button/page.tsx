@@ -18,7 +18,7 @@ export const metadata: Metadata = {
 
     images: [
       {
-        url: "/panic-button-og.png",
+        url: "https://www.adl99.com.au/panic-button-og.png",
         width: 1200,
         height: 630,
       },

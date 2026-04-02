@@ -89,7 +89,7 @@ export async function generateMetadata({ params }: IndustryPageProps): Promise<M
         url: `https://www.adl99.com.au/industries/${slug}`,
         images: [
           {
-            url: `/industries/${slug}-og.png`,
+            url: `https://www.adl99.com.au/industries/${slug}-og.png`,
             width: 1200,
             height: 630,
           },
@@ -99,7 +99,7 @@ export async function generateMetadata({ params }: IndustryPageProps): Promise<M
         card: "summary_large_image",
         title: customSEO?.title || industry.seo?.title || `Cybersecurity for ${industry.title}`,
         description: customSEO?.description || industry.seo?.description || industry.industryFields?.shortDescription || "",
-        images: [`/industries/${slug}-og.png`],
+        images: [`https://www.adl99.com.au/industries/${slug}-og.png`],
       },
     };
   } catch (error) {
