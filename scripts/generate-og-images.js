@@ -154,7 +154,7 @@ function escapeXML(text) {
     .replace(/'/g, '&apos;');
 }
 
-// Create SVG text overlay
+// Create SVG text overlay (logo will be composited separately)
 function createSVG(config) {
   const { title, subtitle, badges } = config;
 
@@ -188,13 +188,8 @@ function createSVG(config) {
       <!-- Dark overlay -->
       <rect width="1200" height="630" fill="url(#overlay)"/>
 
-      <!-- Logo area -->
-      <rect x="80" y="80" width="60" height="60" rx="12" fill="#3b82f6"/>
-      <text x="110" y="120" font-family="Arial, sans-serif" font-size="30" text-anchor="middle" fill="white" font-weight="bold">⬡</text>
-
-      <!-- ADL99 text -->
-      <text x="160" y="110" font-family="Arial, sans-serif" font-size="42" font-weight="bold" fill="white" letter-spacing="-0.5">ADL99</text>
-      <text x="160" y="135" font-family="Arial, sans-serif" font-size="18" fill="#94a3b8">Cybersecurity</text>
+      <!-- Logo will be composited separately as image -->
+      <!-- Placeholder space for 200px wide logo at x=80, y=80 -->
 
       <!-- Main title -->
       ${escapedTitle.split('\n').map((line, i) => `
@@ -232,10 +227,23 @@ async function generateOGImage(config) {
       return;
     }
 
+    // Load and prepare ADL99 logo
+    const logoPath = path.join(process.cwd(), 'public', 'ADL99-LOGO.jpg');
+    if (!fs.existsSync(logoPath)) {
+      console.error(`  ❌ Logo not found: ${logoPath}`);
+      return;
+    }
+
+    // Resize logo to fit in header area (max 200px wide, maintain aspect ratio)
+    const logoBuffer = await sharp(logoPath)
+      .resize(200, 60, { fit: 'inside', withoutEnlargement: true })
+      .png()
+      .toBuffer();
+
     // Create SVG overlay
     const svgOverlay = Buffer.from(createSVG(config));
 
-    // Composite background + overlay
+    // Composite background + SVG overlay + logo
     await sharp(bgPath)
       .resize(1200, 630, { fit: 'cover', position: 'center' })
       .composite([
@@ -243,6 +251,11 @@ async function generateOGImage(config) {
           input: svgOverlay,
           top: 0,
           left: 0
+        },
+        {
+          input: logoBuffer,
+          top: 80,
+          left: 80
         }
       ])
       .png()
