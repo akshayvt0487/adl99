@@ -41,7 +41,7 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "https://www.adl99.com.au/opengraph-image.jpg",
+        url: "https://www.adl99.com.au/ADL99-LOGO.webp",
         width: 1200,
         height: 630,
         alt: "ADL99 Cybersecurity - Melbourne's Trusted Cybersecurity Partner",
