@@ -30,7 +30,13 @@
       "Bash(npm run build:*)",
       "Bash(tail:*)",
       "Bash(git checkout:*)",
-      "Bash(find:*)"
+      "Bash(find:*)",
+      "Bash(ADL99\"\n- About: \"About ADL99)",
+      "Bash(Cybersecurity Experts You Can Trust\"\n- Contact: \"Contact ADL99)",
+      "Bash(Cybersecurity Help for Your Business\"\n- Panic Button: \"Emergency Cyber Incident Response)",
+      "Bash(ADL99 Panic Button\"\n- Services Hub: \"Comprehensive Cybersecurity Services for Business)",
+      "Bash(ADL99\"\n- Industries Hub: \"Cybersecurity Solutions Across Every Industry)",
+      "Bash(ADL99\"\n- Updated all 5 service detail pages \\(cyber-maturity, technical-advisory, engineering-support, cyber-awareness, vciso, urgent-help\\)\n- Updated all 6 industry detail pages \\(law-firms, health-clinics, accounting, retail, manufacturing, research\\)\n\nOG Image Fixes:\n- Replaced homepage and about OG images with simple ADL99 logo on white background \\(10KB each\\)\n- Changed format back to PNG to match other pages \\(was JPEG\\)\n- Homepage: opengraph-image.png \\(10KB vs previous 85KB JPEG\\)\n- About: about-og.png \\(10KB vs previous 73KB JPEG\\)\n- Added scripts to generate homepage and about OG images\n\nCo-Authored-By: Claude Sonnet 4.5 <noreply@anthropic.com>\nEOF\n\\)\")"
     ]
   }
 }

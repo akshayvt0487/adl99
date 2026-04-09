@@ -30,28 +30,28 @@ export async function generateStaticParams() {
 // SEO metadata for specific industries
 const industrySEO: Record<string, { title: string; description: string }> = {
   "law-firms": {
-    title: "Trusted Cybersecurity Services for Law Firms | ADL99",
-    description: "Protect client privilege and sensitive legal data with ADL99's cybersecurity for law firms. Tailored compliance, risk management, and incident response.",
+    title: "Cybersecurity for Australian Law Firms | ADL99 Melbourne",
+    description: "Protect client confidentiality and attorney-client privilege. ADL99 delivers specialist cybersecurity for Australian law firms — all sizes, full compliance.",
   },
   "health-clinics": {
-    title: "Trusted Cybersecurity Services for Health Clinics | ADL99",
-    description: "Safeguard patient records and meet healthcare compliance obligations with ADL99. Expert cybersecurity built for Australian health clinics and medical practices.",
+    title: "Cybersecurity for Health Clinics | ADL99 Melbourne",
+    description: "Privacy Act-compliant cybersecurity for medical practices and allied health providers. ADL99 protects patient data, EHR systems and medical devices.",
   },
   "accounting": {
-    title: "Cybersecurity Services for Accounting Firms | ADL99",
-    description: "Accounting firms are prime cyber targets. ADL99 protects Australian accounting practices with tailored security, compliance support, and risk management.",
+    title: "Cybersecurity for Accounting Firms | ADL99 Melbourne",
+    description: "Protect client financial data, meet TPB and Privacy Act obligations, and defend against tax season phishing. Specialist cybersecurity for accountants.",
   },
   "retail": {
-    title: "Cybersecurity Solutions for Retail Businesses | ADL99",
-    description: "Protect customer data, payment systems, and supply chains with ADL99's retail cybersecurity. Practical, affordable solutions for Australian retail businesses.",
+    title: "Cybersecurity for Australian Retail Businesses | ADL99",
+    description: "Secure your POS systems, achieve PCI DSS compliance and protect customer data across all locations. ADL99 delivers cybersecurity for Australian retailers.",
   },
   "manufacturing": {
-    title: "Proven Cybersecurity Services for Manufacturers | ADL99",
-    description: "ADL99 secures Australian manufacturing operations — protecting OT systems, supply chains, and IP from cyber threats. Purpose-built for the manufacturing sector.",
+    title: "Cybersecurity for Australian Manufacturers | ADL99 Melbourne",
+    description: "Protect your OT systems, industrial control infrastructure and IP from cyber threats. ADL99 delivers specialist OT/IT cybersecurity for manufacturers.",
   },
   "research": {
-    title: "Cybersecurity Services for Research Organisations | ADL99",
-    description: "Protect sensitive research data and intellectual property with ADL99. Cybersecurity solutions for Australian universities, R&D labs, and research institutions.",
+    title: "Cybersecurity for Research Organisations | ADL99 Melbourne",
+    description: "Defend your research IP from nation-state threats. ADL99 helps Australian research institutions meet DISP, export control and funder security requirements.",
   },
 };
 
