@@ -13,20 +13,19 @@ import AboutPageClient from "./AboutPageClient";
 
 // SEO metadata
 export const metadata: Metadata = {
-  title: "About ADL99 | Melbourne Cybersecurity Experts",
-  description: "ADL99 is a Melbourne-based cybersecurity firm. We help Australian businesses of all sizes protect their data, meet compliance and grow securely.",
+  title: "About ADL99 | Cybersecurity Experts You Can Trust",
+  description: "ADL99 is an Australian cybersecurity consultancy helping businesses reduce risk and build resilience. Meet the team behind your security strategy. Learn more.",
   keywords: ["about ADL99", "cybersecurity company", "Australian cybersecurity", "cyber security team"],
   openGraph: {
-    title: "About ADL99 | Melbourne Cybersecurity Experts",
-    description: "ADL99 is a Melbourne-based cybersecurity firm. We help Australian businesses of all sizes protect their data, meet compliance and grow securely.",
+    title: "About ADL99 | Cybersecurity Experts You Can Trust",
+    description: "ADL99 is an Australian cybersecurity consultancy helping businesses reduce risk and build resilience. Meet the team behind your security strategy. Learn more.",
     url: "https://www.adl99.com.au/about",
     type: "website",
     images: [
       {
-        url: "https://www.adl99.com.au/about-og.jpg",
+        url: "https://www.adl99.com.au/about-og.png",
         width: 1200,
         height: 630,
-        type: "image/jpeg",
       },
     ],
   },

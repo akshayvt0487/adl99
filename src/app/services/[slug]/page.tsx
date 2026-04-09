@@ -34,24 +34,28 @@ export async function generateStaticParams() {
 // SEO metadata for specific services
 const serviceSEO: Record<string, { title: string; description: string }> = {
   "cyber-maturity": {
-    title: "Cyber Maturity Assessment Services Melbourne | ADL99",
-    description: "Know where your business stands against NIST, ISO 27001 & Essential Eight. ADL99 delivers a clear cyber security roadmap and gap analysis.",
+    title: "Cyber Maturity Assessments for Your Business | ADL99",
+    description: "Find out where your business stands with ADL99's cyber maturity assessments. Get a clear roadmap to reduce risk and meet Australian compliance standards.",
   },
   "technical-advisory": {
-    title: "Cybersecurity Technical Advisory Services | ADL99 Melbourne",
-    description: "Navigate complex security decisions with confidence. ADL99's Melbourne advisors provide expert guidance on architecture, risk management and compliance.",
+    title: "Cybersecurity Technical Advisory Services | ADL99",
+    description: "ADL99's technical advisory gives Australian businesses direct access to expert security guidance — practical, jargon-free advice aligned with your goals.",
   },
   "engineering-support": {
-    title: "Cybersecurity Engineering Support Services | ADL99 Melbourne",
-    description: "Hands-on security implementation from ADL99's Melbourne engineers — deploying and optimising your network defence, endpoint protection and cloud security.",
+    title: "Cybersecurity Engineering Support Services | ADL99",
+    description: "Hands-on cybersecurity engineering support for Australian businesses. ADL99 helps you implement, configure, and maintain robust security infrastructure.",
   },
   "cyber-awareness": {
-    title: "Cyber Awareness Training  | ADL99 Melbourne",
-    description: "Turn your employees into your strongest defence. ADL99 delivers phishing simulations, staff training and security awareness programs for Australian workplaces.",
+    title: "Cyber Awareness Training for Your Business Teams | ADL99",
+    description: "Equip your staff to spot and stop cyber threats with ADL99's cyber awareness training. Practical, engaging sessions built for Australian business teams.",
   },
   "vciso": {
-    title: "Virtual CISO (vCISO) Services Melbourne | ADL99",
-    description: "Get executive-level cybersecurity leadership without the full-time cost. ADL99's Melbourne vCISO provides strategic oversight, governance and board reporting.",
+    title: "Trusted Virtual CISO Services for Your Business | ADL99",
+    description: "Get executive-level cybersecurity leadership without the full-time cost. ADL99's vCISO service gives your business strategic security guidance on demand.",
+  },
+  "urgent-help": {
+    title: "Urgent Cybersecurity Help When You Need It | ADL99",
+    description: "Facing an active cyber threat or breach? ADL99 provides urgent cybersecurity assistance to get your business secure fast. Contact our team right now.",
   },
 };
 

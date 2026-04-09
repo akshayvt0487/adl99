@@ -13,10 +13,10 @@ import { fetchGraphQL } from "@/lib/wordpress-server";
 import { GET_HOME_PAGE, GET_ALL_SERVICES, GET_ALL_INDUSTRIES } from "@/lib/wordpress-queries";
 import type { Metadata } from "next";
 
-// Enhanced SEO metadata for homepage
+// SEO metadata
 export const metadata: Metadata = {
-  title: "Cybersecurity Services for Australian Businesses | ADL99",
-  description: "ADL99 is Melbourne's trusted cybersecurity partner — expert assessments, vCISO services & incident response. Book a free consultation.",
+  title: "Expert Cybersecurity Services for Your Business | ADL99",
+  description: "ADL99 delivers expert cybersecurity for Australian businesses - from cyber maturity assessments to vCISO services. Protect what matters. Get in touch today.",
   keywords: [
     "cybersecurity Australia",
     "cyber security Melbourne",
@@ -33,27 +33,20 @@ export const metadata: Metadata = {
     "Australian cyber security",
   ],
   openGraph: {
-    title: "Cybersecurity Services for Australian Businesses | ADL99",
-    description: "ADL99 is Melbourne's trusted cybersecurity partner — expert assessments, vCISO services & incident response. Book a free consultation.",
+    title: "Expert Cybersecurity Services for Your Business | ADL99",
+    description: "ADL99 delivers expert cybersecurity for Australian businesses - from cyber maturity assessments to vCISO services. Protect what matters. Get in touch today.",
     url: "https://www.adl99.com.au",
-    siteName: "ADL99 Cybersecurity",
-    locale: "en_AU",
     type: "website",
     images: [
       {
-        url: "https://www.adl99.com.au/ADL99-LOGO.webp",
+        url: "https://www.adl99.com.au/opengraph-image.png",
         width: 1200,
         height: 630,
-        alt: "ADL99 Cybersecurity - Melbourne's Trusted Cybersecurity Partner",
-        type: "image/jpeg",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Cybersecurity Services for Australian Businesses | ADL99",
-    description: "ADL99 is Melbourne's trusted cybersecurity partner — expert assessments, vCISO services & incident response. Book a free consultation.",
-    images: ["https://www.adl99.com.au/opengraph-image.jpg"],
   },
   alternates: {
     canonical: "https://www.adl99.com.au",

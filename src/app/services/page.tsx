@@ -8,15 +8,14 @@ import ServicesPageClient from "./ServicesPageClient";
 
 // SEO metadata
 export const metadata: Metadata = {
-  title: "Cybersecurity Services for Australian Businesses | ADL99 Melbourne",
-  description: "From incident response to vCISO and cyber awareness training, ADL99 delivers practical cybersecurity solutions for Australian businesses.",
+  title: "Comprehensive Cybersecurity Services for Business | ADL99",
+  description: "Explore ADL99's full range of cybersecurity services — cyber maturity, vCISO, technical advisory, engineering support, and cyber awareness training.",
   keywords: ["cybersecurity services Australia", "cyber security consulting", "security assessment", "managed security services"],
   openGraph: {
-    title: "Cybersecurity Services for Australian Businesses | ADL99 Melbourne",
-    description: "From incident response to vCISO and cyber awareness training, ADL99 delivers practical cybersecurity solutions for Australian businesses.",
+    title: "Comprehensive Cybersecurity Services for Business | ADL99",
+    description: "Explore ADL99's full range of cybersecurity services — cyber maturity, vCISO, technical advisory, engineering support, and cyber awareness training.",
     url: "https://www.adl99.com.au/services",
     type: "website",
-
     images: [
       {
         url: "https://www.adl99.com.au/services-og.png",

@@ -7,15 +7,14 @@ import PanicButtonPageClient from "./PanicButtonPageClient";
 
 // SEO metadata
 export const metadata: Metadata = {
-  title: "Emergency Cyber Incident Response Melbourne | ADL99",
-  description: "Experiencing a cyber attack or data breach? ADL99's Melbourne emergency team responds in under 15 minutes. Immediate containment and recovery.",
+  title: "Emergency Cyber Incident Response | ADL99 Panic Button",
+  description: "Experiencing a cyberattack right now? ADL99's emergency incident response is ready when you need it most. Contact us immediately — we respond fast, 24/7.",
   keywords: ["cyber incident response", "emergency cybersecurity help", "data breach response Australia"],
   openGraph: {
-    title: "Emergency Cyber Incident Response Melbourne | ADL99",
-    description: "Experiencing a cyber attack or data breach? ADL99's Melbourne emergency team responds in under 15 minutes. Immediate containment and recovery.",
+    title: "Emergency Cyber Incident Response | ADL99 Panic Button",
+    description: "Experiencing a cyberattack right now? ADL99's emergency incident response is ready when you need it most. Contact us immediately — we respond fast, 24/7.",
     url: "https://www.adl99.com.au/panic-button",
     type: "website",
-
     images: [
       {
         url: "https://www.adl99.com.au/panic-button-og.png",

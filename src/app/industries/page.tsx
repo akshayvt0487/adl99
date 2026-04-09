@@ -8,15 +8,14 @@ import IndustriesPageClient from "./IndustriesPageClient";
 
 // SEO metadata
 export const metadata: Metadata = {
-  title: "Industry Cybersecurity Solutions Melbourne | ADL99",
-  description: "ADL99 delivers tailored cybersecurity for law firms, health clinics, accounting, retail, manufacturing and research organisations across Australia.",
+  title: "Cybersecurity Solutions Across Every Industry | ADL99",
+  description: "ADL99 delivers tailored cybersecurity across law, health, accounting, retail, manufacturing, and research sectors in Australia. Find your industry today.",
   keywords: ["industry cybersecurity", "sector specific security", "Australian business cyber protection"],
   openGraph: {
-    title: "Industry Cybersecurity Solutions Melbourne | ADL99",
-    description: "ADL99 delivers tailored cybersecurity for law firms, health clinics, accounting, retail, manufacturing and research organisations across Australia.",
+    title: "Cybersecurity Solutions Across Every Industry | ADL99",
+    description: "ADL99 delivers tailored cybersecurity across law, health, accounting, retail, manufacturing, and research sectors in Australia. Find your industry today.",
     url: "https://www.adl99.com.au/industries",
     type: "website",
-
     images: [
       {
         url: "https://www.adl99.com.au/industries-og.png",
