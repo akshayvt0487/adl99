@@ -2,7 +2,7 @@
 
 import { motion, AnimatePresence } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import { AlertTriangle, Menu, X, ChevronDown, Shield, FileSearch, Wrench, Users, UserCheck, Scale, Heart, Calculator, ShoppingBag, Factory, FlaskConical } from "lucide-react";
+import { AlertTriangle, Menu, X, ChevronDown, Shield, FileSearch, Wrench, Users, UserCheck, Scale, Heart, Calculator, ShoppingBag, Factory, FlaskConical, MapPin } from "lucide-react";
 import Link from "next/link";
 import { useState } from "react";
 import Image from "next/image";
@@ -24,6 +24,36 @@ const industriesItems = [
   { href: "/industries/retail", label: "Retail Chains", icon: ShoppingBag, description: "Protect customer transactions" },
   { href: "/industries/manufacturing", label: "Small Manufacturers", icon: Factory, description: "Secure operational technology" },
   { href: "/industries/research", label: "Research & Innovation", icon: FlaskConical, description: "Protect intellectual property" },
+];
+
+const locationsItems = [
+  // Tier 1 - CBD & Inner Business Core
+  { href: "/locations/melbourne-cbd", label: "Melbourne CBD", postcode: "3000", tier: "CBD & Inner Business" },
+  { href: "/locations/southbank", label: "Southbank", postcode: "3006", tier: "CBD & Inner Business" },
+  { href: "/locations/docklands", label: "Docklands", postcode: "3008", tier: "CBD & Inner Business" },
+
+  // Tier 2 - Affluent Inner Suburbs
+  { href: "/locations/south-yarra", label: "South Yarra", postcode: "3141", tier: "Inner Suburbs" },
+  { href: "/locations/toorak", label: "Toorak", postcode: "3142", tier: "Inner Suburbs" },
+  { href: "/locations/st-kilda", label: "St Kilda", postcode: "3182", tier: "Inner Suburbs" },
+  { href: "/locations/brighton", label: "Brighton", postcode: "3186", tier: "Inner Suburbs" },
+  { href: "/locations/richmond", label: "Richmond", postcode: "3121", tier: "Inner Suburbs" },
+
+  // Tier 3 - Professional & Commercial Hubs
+  { href: "/locations/hawthorn", label: "Hawthorn", postcode: "3122", tier: "Commercial Hubs" },
+  { href: "/locations/camberwell", label: "Camberwell", postcode: "3124", tier: "Commercial Hubs" },
+  { href: "/locations/malvern", label: "Malvern", postcode: "3144", tier: "Commercial Hubs" },
+  { href: "/locations/prahran", label: "Prahran", postcode: "3181", tier: "Commercial Hubs" },
+  { href: "/locations/east-melbourne", label: "East Melbourne", postcode: "3002", tier: "Commercial Hubs" },
+
+  // Tier 4 - Growth & Emerging Hubs
+  { href: "/locations/south-melbourne", label: "South Melbourne", postcode: "3205", tier: "Emerging Hubs" },
+  { href: "/locations/port-melbourne", label: "Port Melbourne", postcode: "3207", tier: "Emerging Hubs" },
+  { href: "/locations/fitzroy", label: "Fitzroy", postcode: "3065", tier: "Emerging Hubs" },
+  { href: "/locations/albert-park", label: "Albert Park", postcode: "3206", tier: "Emerging Hubs" },
+  { href: "/locations/kew", label: "Kew", postcode: "3101", tier: "Emerging Hubs" },
+  { href: "/locations/carlton", label: "Carlton", postcode: "3053", tier: "Emerging Hubs" },
+  { href: "/locations/collingwood", label: "Collingwood", postcode: "3066", tier: "Emerging Hubs" },
 ];
 
 const Header = () => {
@@ -163,6 +193,53 @@ const Header = () => {
             </AnimatePresence>
           </div>
 
+          {/* Locations Dropdown */}
+          <div
+            className="relative"
+            onMouseEnter={() => setActiveDropdown("locations")}
+            onMouseLeave={() => setActiveDropdown(null)}
+          >
+            <button
+              className="flex items-center gap-1 text-sm font-medium text-muted-foreground hover:text-foreground transition-colors py-2"
+            >
+              Locations
+              <ChevronDown className={`w-4 h-4 transition-transform ${activeDropdown === "locations" ? "rotate-180" : ""}`} />
+            </button>
+
+            <AnimatePresence>
+              {activeDropdown === "locations" && (
+                <motion.div
+                  initial={{ opacity: 0, y: 10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: 10 }}
+                  transition={{ duration: 0.2 }}
+                  className="absolute top-full left-0 pt-2 z-50"
+                >
+                  <div className="bg-card border border-border rounded-xl shadow-xl p-4 w-[600px] max-h-[70vh] overflow-y-auto">
+                    <h3 className="text-xs font-semibold text-muted-foreground uppercase tracking-wider mb-3">
+                      Melbourne Cybersecurity Services by Location
+                    </h3>
+                    <div className="grid grid-cols-3 gap-2">
+                      {locationsItems.map((item) => (
+                        <Link
+                          key={item.href}
+                          href={item.href}
+                          className="flex items-start gap-2 p-2 rounded-lg hover:bg-muted transition-colors group"
+                        >
+                          <MapPin className="w-4 h-4 text-primary mt-0.5 shrink-0" />
+                          <div className="min-w-0">
+                            <p className="text-sm font-medium text-foreground truncate">{item.label}</p>
+                            <p className="text-xs text-muted-foreground">{item.postcode}</p>
+                          </div>
+                        </Link>
+                      ))}
+                    </div>
+                  </div>
+                </motion.div>
+              )}
+            </AnimatePresence>
+          </div>
+
           {/* Simple Links */}
           {simpleNavLinks.map((link) => (
             <Link
@@ -289,6 +366,41 @@ const Header = () => {
                         >
                           View all industries →
                         </Link>
+                      </div>
+                    </motion.div>
+                  )}
+                </AnimatePresence>
+              </div>
+
+              {/* Locations Accordion */}
+              <div>
+                <button
+                  onClick={() => setMobileExpanded(mobileExpanded === "locations" ? null : "locations")}
+                  className="flex items-center justify-between w-full text-base font-medium text-muted-foreground hover:text-foreground transition-colors py-2"
+                >
+                  Locations
+                  <ChevronDown className={`w-4 h-4 transition-transform ${mobileExpanded === "locations" ? "rotate-180" : ""}`} />
+                </button>
+                <AnimatePresence>
+                  {mobileExpanded === "locations" && (
+                    <motion.div
+                      initial={{ opacity: 0, height: 0 }}
+                      animate={{ opacity: 1, height: "auto" }}
+                      exit={{ opacity: 0, height: 0 }}
+                      className="overflow-hidden"
+                    >
+                      <div className="pl-4 pb-2 flex flex-col gap-1 max-h-[300px] overflow-y-auto">
+                        {locationsItems.map((item) => (
+                          <Link
+                            key={item.href}
+                            href={item.href}
+                            onClick={() => setIsMenuOpen(false)}
+                            className="text-sm text-muted-foreground hover:text-foreground py-2 flex items-center gap-2"
+                          >
+                            <MapPin className="w-4 h-4 text-primary shrink-0" />
+                            <span>{item.label} ({item.postcode})</span>
+                          </Link>
+                        ))}
                       </div>
                     </motion.div>
                   )}
