@@ -26,34 +26,11 @@ const industriesItems = [
   { href: "/industries/research", label: "Research & Innovation", icon: FlaskConical, description: "Protect intellectual property" },
 ];
 
+// Only show locations that have been created (have page content)
 const locationsItems = [
-  // Tier 1 - CBD & Inner Business Core
+  // Tier 1 - CBD & Inner Business Core (Active)
   { href: "/locations/melbourne-cbd", label: "Melbourne CBD", postcode: "3000", tier: "CBD & Inner Business" },
   { href: "/locations/southbank", label: "Southbank", postcode: "3006", tier: "CBD & Inner Business" },
-  { href: "/locations/docklands", label: "Docklands", postcode: "3008", tier: "CBD & Inner Business" },
-
-  // Tier 2 - Affluent Inner Suburbs
-  { href: "/locations/south-yarra", label: "South Yarra", postcode: "3141", tier: "Inner Suburbs" },
-  { href: "/locations/toorak", label: "Toorak", postcode: "3142", tier: "Inner Suburbs" },
-  { href: "/locations/st-kilda", label: "St Kilda", postcode: "3182", tier: "Inner Suburbs" },
-  { href: "/locations/brighton", label: "Brighton", postcode: "3186", tier: "Inner Suburbs" },
-  { href: "/locations/richmond", label: "Richmond", postcode: "3121", tier: "Inner Suburbs" },
-
-  // Tier 3 - Professional & Commercial Hubs
-  { href: "/locations/hawthorn", label: "Hawthorn", postcode: "3122", tier: "Commercial Hubs" },
-  { href: "/locations/camberwell", label: "Camberwell", postcode: "3124", tier: "Commercial Hubs" },
-  { href: "/locations/malvern", label: "Malvern", postcode: "3144", tier: "Commercial Hubs" },
-  { href: "/locations/prahran", label: "Prahran", postcode: "3181", tier: "Commercial Hubs" },
-  { href: "/locations/east-melbourne", label: "East Melbourne", postcode: "3002", tier: "Commercial Hubs" },
-
-  // Tier 4 - Growth & Emerging Hubs
-  { href: "/locations/south-melbourne", label: "South Melbourne", postcode: "3205", tier: "Emerging Hubs" },
-  { href: "/locations/port-melbourne", label: "Port Melbourne", postcode: "3207", tier: "Emerging Hubs" },
-  { href: "/locations/fitzroy", label: "Fitzroy", postcode: "3065", tier: "Emerging Hubs" },
-  { href: "/locations/albert-park", label: "Albert Park", postcode: "3206", tier: "Emerging Hubs" },
-  { href: "/locations/kew", label: "Kew", postcode: "3101", tier: "Emerging Hubs" },
-  { href: "/locations/carlton", label: "Carlton", postcode: "3053", tier: "Emerging Hubs" },
-  { href: "/locations/collingwood", label: "Collingwood", postcode: "3066", tier: "Emerging Hubs" },
 ];
 
 const Header = () => {

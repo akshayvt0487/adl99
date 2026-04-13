@@ -181,12 +181,7 @@ const locationsData: Record<string, LocationData> = {
       }
     ],
     nearbySuburbs: [
-      { name: "Southbank", postcode: "3006", slug: "southbank" },
-      { name: "Docklands", postcode: "3008", slug: "docklands" },
-      { name: "East Melbourne", postcode: "3002", slug: "east-melbourne" },
-      { name: "South Melbourne", postcode: "3205", slug: "south-melbourne" },
-      { name: "Carlton", postcode: "3053", slug: "carlton" },
-      { name: "Fitzroy", postcode: "3065", slug: "fitzroy" }
+      { name: "Southbank", postcode: "3006", slug: "southbank" }
     ]
   },
   "southbank": {
@@ -315,12 +310,7 @@ const locationsData: Record<string, LocationData> = {
       }
     ],
     nearbySuburbs: [
-      { name: "Melbourne CBD", postcode: "3000", slug: "melbourne-cbd" },
-      { name: "South Melbourne", postcode: "3205", slug: "south-melbourne" },
-      { name: "South Yarra", postcode: "3141", slug: "south-yarra" },
-      { name: "Port Melbourne", postcode: "3207", slug: "port-melbourne" },
-      { name: "Docklands", postcode: "3008", slug: "docklands" },
-      { name: "St Kilda", postcode: "3182", slug: "st-kilda" }
+      { name: "Melbourne CBD", postcode: "3000", slug: "melbourne-cbd" }
     ]
   }
 };
