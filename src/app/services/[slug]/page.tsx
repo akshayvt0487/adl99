@@ -79,6 +79,17 @@ export async function generateMetadata({ params }: ServicePageProps): Promise<Me
     return {
       title: customSEO?.title || service.seo?.title || `${service.title} | ADL99`,
       description: customSEO?.description || service.seo?.description || service.serviceFields?.shortDescription || "",
+      robots: {
+        index: true,
+        follow: true,
+        googleBot: {
+          index: true,
+          follow: true,
+          'max-video-preview': -1,
+          'max-image-preview': 'large',
+          'max-snippet': -1,
+        },
+      },
       alternates: {
         canonical: `https://www.adl99.com.au/services/${slug}`,
       },
@@ -87,11 +98,14 @@ export async function generateMetadata({ params }: ServicePageProps): Promise<Me
         description: customSEO?.description || service.seo?.description || service.serviceFields?.shortDescription || "",
         type: "website",
         url: `https://www.adl99.com.au/services/${slug}`,
+        siteName: "ADL99 Cybersecurity",
+        locale: "en_AU",
         images: [
           {
             url: `https://www.adl99.com.au/services/${slug}-og.png`,
             width: 1200,
             height: 630,
+            alt: customSEO?.title || service.title,
           },
         ],
       },
