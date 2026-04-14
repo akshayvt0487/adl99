@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import { Shield, CheckCircle2, Phone, Mail, ArrowRight, HelpCircle } from "lucide-react";
+import { Shield, CheckCircle2, Phone, Mail, ArrowRight, HelpCircle, Search, Lightbulb, Briefcase, BookOpen, Building2, AlertTriangle } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
 
@@ -37,6 +37,12 @@ interface LocationPageClientProps {
     slug: string;
   }>;
 }
+
+// Icon mapping for services
+const serviceIcons = [Search, Briefcase, Lightbulb, BookOpen, AlertTriangle, Shield];
+
+// Icon mapping for industries
+const industryIcons = [Building2, Building2, Building2, Building2];
 
 export default function LocationPageClient({
   locationName,
@@ -121,15 +127,21 @@ export default function LocationPageClient({
       </section>
 
       {/* Primary Keyword Section */}
-      <section className="py-20 bg-background">
-        <div className="container mx-auto px-6">
+      <section className="py-20 bg-background relative overflow-hidden">
+        <div className="absolute top-0 right-0 w-96 h-96 bg-primary/5 rounded-full blur-3xl -mr-48 -mt-48" />
+        <div className="absolute bottom-0 left-0 w-96 h-96 bg-accent/5 rounded-full blur-3xl -ml-48 -mb-48" />
+        <div className="container mx-auto px-6 relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="max-w-4xl mx-auto prose prose-lg prose-headings:font-display prose-headings:uppercase prose-headings:tracking-wide prose-headings:text-foreground prose-p:text-muted-foreground prose-a:text-primary prose-strong:text-foreground"
+            className="max-w-4xl mx-auto"
           >
-            <div dangerouslySetInnerHTML={{ __html: introContent }} />
+            <div className="bg-card/50 backdrop-blur-sm border border-border rounded-2xl p-8 md:p-12 shadow-lg">
+              <div className="prose prose-lg max-w-none prose-headings:font-display prose-headings:uppercase prose-headings:tracking-wide prose-headings:text-foreground prose-p:text-muted-foreground prose-a:text-primary prose-strong:text-foreground prose-ul:text-muted-foreground prose-li:text-muted-foreground">
+                <div dangerouslySetInnerHTML={{ __html: introContent }} />
+              </div>
+            </div>
           </motion.div>
         </div>
       </section>
@@ -142,41 +154,63 @@ export default function LocationPageClient({
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="mb-12"
+              className="text-center mb-12"
             >
-              <p className="text-lg text-muted-foreground max-w-3xl">
+              <div className="inline-flex items-center justify-center px-4 py-2 rounded-full bg-primary/10 text-primary text-sm font-semibold uppercase tracking-wide mb-4">
+                <Shield className="w-4 h-4 mr-2" />
+                Our Services
+              </div>
+              <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-4 uppercase tracking-wide">
+                {locationName} Cyber Security Services
+              </h2>
+              <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
                 {servicesIntro}
               </p>
             </motion.div>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {services.map((service, index) => (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
-                  className="bg-card p-8 rounded-2xl border border-border"
-                >
-                  <h3 className="font-display text-xl font-bold mb-3 uppercase tracking-wide">{service.title}</h3>
-                  <p className="text-muted-foreground">{service.description}</p>
-                </motion.div>
-              ))}
+              {services.map((service, index) => {
+                const IconComponent = serviceIcons[index % serviceIcons.length];
+                return (
+                  <motion.div
+                    key={index}
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.5, delay: index * 0.1 }}
+                    className="bg-card p-8 rounded-2xl border border-border hover:border-primary/30 hover:shadow-lg transition-all duration-300 group"
+                  >
+                    <div className="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center mb-5 group-hover:bg-primary/20 transition-colors">
+                      <IconComponent className="w-7 h-7 text-primary" />
+                    </div>
+                    <h3 className="font-display text-xl font-bold mb-3 uppercase tracking-wide">{service.title}</h3>
+                    <p className="text-muted-foreground leading-relaxed">{service.description}</p>
+                  </motion.div>
+                );
+              })}
             </div>
           </div>
         </div>
       </section>
 
       {/* Why ADL99 Section */}
-      <section className="py-20 bg-background">
-        <div className="container mx-auto px-6">
+      <section className="py-20 bg-gradient-to-b from-background via-primary/5 to-background relative overflow-hidden">
+        <div className="absolute inset-0 bg-grid-pattern opacity-[0.02]" />
+        <div className="container mx-auto px-6 relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="max-w-4xl mx-auto prose prose-lg prose-headings:font-display prose-headings:uppercase prose-headings:tracking-wide prose-headings:text-foreground prose-p:text-muted-foreground prose-a:text-primary prose-strong:text-foreground"
+            className="max-w-4xl mx-auto"
           >
-            <div dangerouslySetInnerHTML={{ __html: whyAdl99Content }} />
+            <div className="relative">
+              <div className="absolute -top-4 -left-4 w-24 h-24 bg-accent/10 rounded-full blur-2xl" />
+              <div className="absolute -bottom-4 -right-4 w-32 h-32 bg-primary/10 rounded-full blur-2xl" />
+              <div className="relative bg-card/80 backdrop-blur-sm border border-border rounded-2xl p-8 md:p-12 shadow-xl">
+                <div className="prose prose-lg max-w-none prose-headings:font-display prose-headings:uppercase prose-headings:tracking-wide prose-headings:text-foreground prose-p:text-muted-foreground prose-a:text-primary prose-strong:text-foreground prose-ul:text-muted-foreground prose-li:text-muted-foreground prose-li:marker:text-accent">
+                  <div dangerouslySetInnerHTML={{ __html: whyAdl99Content }} />
+                </div>
+              </div>
+            </div>
           </motion.div>
         </div>
       </section>
@@ -185,25 +219,48 @@ export default function LocationPageClient({
       <section className="py-20 bg-secondary/30">
         <div className="container mx-auto px-6">
           <div className="max-w-6xl mx-auto">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="text-center mb-12"
+            >
+              <div className="inline-flex items-center justify-center px-4 py-2 rounded-full bg-accent/10 text-accent text-sm font-semibold uppercase tracking-wide mb-4">
+                <Building2 className="w-4 h-4 mr-2" />
+                Industries We Serve
+              </div>
+              <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-4 uppercase tracking-wide">
+                Industries We Protect in {locationName}
+              </h2>
+              <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
+                Specialized cybersecurity solutions tailored for your industry's unique challenges and compliance requirements.
+              </p>
+            </motion.div>
             <div className="grid md:grid-cols-2 gap-8">
-              {industries.map((industry, index) => (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
-                  className="bg-card p-8 rounded-2xl border border-border"
-                >
-                  <h3 className="font-display text-xl font-bold mb-3 uppercase tracking-wide">{industry.title}</h3>
-                  <p className="text-muted-foreground mb-4">{industry.description}</p>
-                  <Button variant="link" className="p-0 text-primary font-semibold gap-2" asChild>
-                    <Link href={industry.link}>
-                      Learn more <ArrowRight className="w-4 h-4" />
-                    </Link>
-                  </Button>
-                </motion.div>
-              ))}
+              {industries.map((industry, index) => {
+                const IconComponent = industryIcons[index % industryIcons.length];
+                return (
+                  <motion.div
+                    key={index}
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.5, delay: index * 0.1 }}
+                    className="bg-card p-8 rounded-2xl border border-border hover:border-accent/40 hover:shadow-lg transition-all duration-300 group"
+                  >
+                    <div className="w-12 h-12 rounded-xl bg-accent/10 flex items-center justify-center mb-4 group-hover:bg-accent/20 transition-colors">
+                      <IconComponent className="w-6 h-6 text-accent" />
+                    </div>
+                    <h3 className="font-display text-xl font-bold mb-3 uppercase tracking-wide">{industry.title}</h3>
+                    <p className="text-muted-foreground mb-4 leading-relaxed">{industry.description}</p>
+                    <Button variant="link" className="p-0 text-accent font-semibold gap-2 group-hover:gap-3 transition-all" asChild>
+                      <Link href={industry.link}>
+                        Learn more <ArrowRight className="w-4 h-4" />
+                      </Link>
+                    </Button>
+                  </motion.div>
+                );
+              })}
             </div>
           </div>
         </div>
@@ -213,14 +270,23 @@ export default function LocationPageClient({
       <section className="py-20 bg-background">
         <div className="container mx-auto px-6">
           <div className="max-w-4xl mx-auto">
-            <motion.p
+            <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="text-lg text-muted-foreground mb-8"
+              className="text-center mb-12"
             >
-              {threatsIntro}
-            </motion.p>
+              <div className="inline-flex items-center justify-center px-4 py-2 rounded-full bg-accent/10 text-accent text-sm font-semibold uppercase tracking-wide mb-4">
+                <AlertTriangle className="w-4 h-4 mr-2" />
+                Threat Intelligence
+              </div>
+              <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-4 uppercase tracking-wide">
+                Cyber Threats Facing {locationName} Businesses
+              </h2>
+              <p className="text-lg text-muted-foreground">
+                {threatsIntro}
+              </p>
+            </motion.div>
             <div className="space-y-6">
               {threats.map((threat, index) => (
                 <motion.div
@@ -229,10 +295,20 @@ export default function LocationPageClient({
                   whileInView={{ opacity: 1, x: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
-                  className="bg-card p-8 rounded-2xl border-l-4 border-accent"
+                  className="relative bg-card p-8 rounded-2xl border-l-4 border-accent hover:shadow-lg transition-all duration-300 group overflow-hidden"
                 >
-                  <h3 className="font-display text-xl font-bold mb-3 uppercase tracking-wide">{threat.title}</h3>
-                  <p className="text-muted-foreground">{threat.description}</p>
+                  <div className="absolute top-0 right-0 w-32 h-32 bg-accent/5 rounded-bl-full -mr-16 -mt-16 group-hover:scale-110 transition-transform duration-300" />
+                  <div className="relative z-10">
+                    <div className="flex items-start gap-4">
+                      <div className="w-10 h-10 rounded-lg bg-accent/10 flex items-center justify-center flex-shrink-0 mt-1">
+                        <AlertTriangle className="w-5 h-5 text-accent" />
+                      </div>
+                      <div className="flex-1">
+                        <h3 className="font-display text-xl font-bold mb-3 uppercase tracking-wide">{threat.title}</h3>
+                        <p className="text-muted-foreground leading-relaxed">{threat.description}</p>
+                      </div>
+                    </div>
+                  </div>
                 </motion.div>
               ))}
             </div>
@@ -241,24 +317,32 @@ export default function LocationPageClient({
       </section>
 
       {/* Social Proof Section */}
-      <section className="py-20 bg-accent/5 border-y border-border">
-        <div className="container mx-auto px-6">
+      <section className="py-20 bg-gradient-to-br from-accent/5 via-primary/5 to-background border-y border-border relative overflow-hidden">
+        <div className="absolute inset-0 bg-grid-pattern opacity-5" />
+        <div className="container mx-auto px-6 relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             className="max-w-4xl mx-auto text-center"
           >
+            <div className="inline-flex items-center justify-center px-4 py-2 rounded-full bg-primary/10 text-primary text-sm font-semibold uppercase tracking-wide mb-4">
+              <CheckCircle2 className="w-4 h-4 mr-2" />
+              Trusted Partner
+            </div>
             <h2 className="font-display text-3xl md:text-4xl font-bold mb-6 uppercase tracking-wide">
               {locationName}'s Trusted Cyber Security Provider
             </h2>
-            <div className="grid md:grid-cols-3 gap-8 mt-12">
+            <p className="text-lg text-muted-foreground mb-12">
+              Australian-owned, Melbourne-based cybersecurity expertise you can rely on.
+            </p>
+            <div className="grid md:grid-cols-3 gap-8">
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: 0.1 }}
-                className="text-center"
+                className="text-center p-6 rounded-2xl bg-card/50 backdrop-blur-sm border border-border hover:border-accent/30 hover:shadow-lg transition-all duration-300"
               >
                 <div className="inline-flex items-center justify-center w-14 h-14 rounded-xl bg-accent/10 mb-4">
                   <Shield className="h-7 w-7 text-accent" />
@@ -273,7 +357,7 @@ export default function LocationPageClient({
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: 0.2 }}
-                className="text-center"
+                className="text-center p-6 rounded-2xl bg-card/50 backdrop-blur-sm border border-border hover:border-accent/30 hover:shadow-lg transition-all duration-300"
               >
                 <div className="inline-flex items-center justify-center w-14 h-14 rounded-xl bg-accent/10 mb-4">
                   <Shield className="h-7 w-7 text-accent" />
@@ -288,7 +372,7 @@ export default function LocationPageClient({
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: 0.3 }}
-                className="text-center"
+                className="text-center p-6 rounded-2xl bg-card/50 backdrop-blur-sm border border-border hover:border-accent/30 hover:shadow-lg transition-all duration-300"
               >
                 <div className="inline-flex items-center justify-center w-14 h-14 rounded-xl bg-accent/10 mb-4">
                   <Shield className="h-7 w-7 text-accent" />
