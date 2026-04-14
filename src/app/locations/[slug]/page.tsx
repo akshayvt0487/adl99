@@ -18,7 +18,12 @@ interface LocationData {
   seoTitle: string;
   seoDescription: string;
   introH2: string;
-  introContent: string;
+  introSubtext: string;
+  introChallenges: Array<{
+    icon: string;
+    title: string;
+    description: string;
+  }>;
   servicesH2: string;
   servicesIntro: string;
   services: Array<{
@@ -62,13 +67,30 @@ const locationsData: Record<string, LocationData> = {
     heroSubtext: "Trusted cyber security services for Melbourne CBD businesses — from cyber maturity assessments to 24/7 incident response.",
     seoTitle: "Cyber Security Melbourne CBD | ADL99",
     seoDescription: "Trusted cybersecurity services for Melbourne CBD businesses. Cyber maturity assessments, vCISO, incident response & Essential Eight compliance. Talk to ADL99 today.",
-    introH2: "Cyber Security Services in Melbourne CBD",
-    introContent: `
-      <h2>Cyber Security Services in Melbourne CBD</h2>
-      <p>Melbourne's CBD is home to Australia's densest concentration of professional services firms, corporate headquarters, and government offices. With over 480,000 workers commuting into the Hoddle Grid daily, CBD businesses manage vast volumes of sensitive client data, financial records, and intellectual property — making them prime targets for sophisticated cyber threats including business email compromise, ransomware, and credential theft.</p>
-      <p>As a specialist <strong>cyber security company</strong> serving Melbourne CBD, ADL99 understands that CBD organisations face unique challenges: complex regulatory obligations under APRA CPS 234 and the Australian Privacy Act, distributed hybrid workforces, and interconnected supply chains that expand the attack surface far beyond the office walls. Our <strong>cyber security services</strong> are built to address these realities — from Essential Eight compliance and cyber maturity assessments to 24/7 incident response and virtual CISO leadership.</p>
-      <p>Whether your office is on Collins Street, Spring Street, or anywhere within the Hoddle Grid, ADL99 delivers <strong>cyber security solutions</strong> that protect what matters most: your client relationships, your reputation, and your regulatory standing.</p>
-    `,
+    introH2: "Security Challenges We Solve in Melbourne CBD",
+    introSubtext: "Melbourne's CBD hosts Australia's densest concentration of professional services firms, corporate headquarters, and government offices. With over 480,000 workers managing sensitive data daily, CBD businesses face sophisticated cyber threats. ADL99 delivers solutions that protect what matters most.",
+    introChallenges: [
+      {
+        icon: "Shield",
+        title: "High-Value Target Protection",
+        description: "CBD businesses manage vast volumes of sensitive client data, financial records, and intellectual property — making them prime targets for business email compromise, ransomware, and credential theft."
+      },
+      {
+        icon: "FileText",
+        title: "Complex Regulatory Compliance",
+        description: "Navigate APRA CPS 234, Australian Privacy Act, and industry-specific regulations with confidence. We ensure your cybersecurity posture meets all compliance obligations."
+      },
+      {
+        icon: "Users",
+        title: "Distributed Workforce Security",
+        description: "Hybrid workforces and remote access create expanded attack surfaces. We secure your organization across office, home, and mobile environments."
+      },
+      {
+        icon: "Link",
+        title: "Supply Chain Risk Management",
+        description: "Interconnected supply chains extend your attack surface far beyond office walls. We help you identify, assess, and mitigate third-party security risks."
+      }
+    ],
     servicesH2: "Melbourne CBD Cyber Security Services — What We Deliver",
     servicesIntro: "ADL99 provides comprehensive cyber security solutions tailored for Melbourne CBD's corporate and professional services community.",
     services: [
@@ -191,13 +213,30 @@ const locationsData: Record<string, LocationData> = {
     heroSubtext: "Comprehensive cyber security services for Southbank businesses — from startups to corporate towers.",
     seoTitle: "Cyber Security Southbank Melbourne | ADL99",
     seoDescription: "Cybersecurity services for Southbank businesses. From corporate towers to creative studios — ADL99 delivers cyber maturity assessments, vCISO & incident response.",
-    introH2: "Cyber Security Services for Southbank Businesses",
-    introContent: `
-      <h2>Cyber Security Services for Southbank Businesses</h2>
-      <p>Southbank's skyline tells a story of ambition — corporate towers alongside creative studios, media offices, and hospitality venues. This mix of industries means diverse attack surfaces: cloud-dependent startups, POS systems in restaurants, and sensitive IP in media production. Cybercriminals exploit the assumption that "only big companies get hacked." In reality, Southbank's mid-size businesses are frequently targeted because they hold valuable data but often lack dedicated security teams.</p>
-      <p>ADL99 delivers <strong>cyber security services</strong> tailored to Southbank's diverse business community. As a specialist <strong>cyber security company</strong> based in Melbourne, we provide everything from penetration testing and vulnerability assessments to vCISO leadership and Essential Eight compliance — giving Southbank businesses access to enterprise-grade <strong>cyber security solutions</strong> without the enterprise price tag.</p>
-      <p>From the arts precinct to the Crown entertainment complex to the Eureka Tower's corporate offices, ADL99 protects Southbank's businesses with practical, scalable cyber security that matches your industry and risk profile.</p>
-    `,
+    introH2: "Security Challenges We Solve in Southbank",
+    introSubtext: "Southbank's skyline tells a story of ambition — corporate towers alongside creative studios, media offices, and hospitality venues. This diverse business landscape creates unique security challenges. ADL99 delivers practical, scalable cyber security that matches your industry and risk profile.",
+    introChallenges: [
+      {
+        icon: "Target",
+        title: "Mid-Size Business Targeting",
+        description: "Cybercriminals exploit the assumption that 'only big companies get hacked.' Southbank's mid-size businesses hold valuable data but often lack dedicated security teams — making them prime targets."
+      },
+      {
+        icon: "Database",
+        title: "Diverse Attack Surfaces",
+        description: "From cloud-dependent startups to POS systems in hospitality venues to sensitive IP in media production — each industry brings unique vulnerabilities that require specialized protection."
+      },
+      {
+        icon: "Cloud",
+        title: "Cloud Security Gaps",
+        description: "Southbank businesses run on SaaS platforms like Microsoft 365, AWS, and Adobe Cloud. Misconfigurations and weak access controls create easy entry points for attackers."
+      },
+      {
+        icon: "CreditCard",
+        title: "Payment Security Compliance",
+        description: "Hospitality venues handle credit card data daily. PCI DSS compliance and POS system security are critical to prevent card data breaches and maintain customer trust."
+      }
+    ],
     servicesH2: "Southbank Cyber Security Solutions — Full-Spectrum Protection",
     servicesIntro: "ADL99 delivers comprehensive cyber security solutions designed for Southbank's unique mix of creative, corporate, and hospitality businesses.",
     services: [
@@ -449,7 +488,9 @@ export default async function LocationPage({ params }: LocationPageProps) {
         locationName={location.name}
         heroTitle={location.heroTitle}
         heroSubtext={location.heroSubtext}
-        introContent={location.introContent}
+        introH2={location.introH2}
+        introSubtext={location.introSubtext}
+        introChallenges={location.introChallenges}
         servicesIntro={location.servicesIntro}
         services={location.services.map(s => ({ title: s.title, description: s.description }))}
         whyAdl99Content={location.whyAdl99Content}

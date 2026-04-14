@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import { Shield, CheckCircle2, Phone, Mail, ArrowRight, HelpCircle, Search, Lightbulb, Briefcase, BookOpen, Building2, AlertTriangle } from "lucide-react";
+import { Shield, CheckCircle2, Phone, Mail, ArrowRight, HelpCircle, Search, Lightbulb, Briefcase, BookOpen, Building2, AlertTriangle, FileText, Users, Link as LinkIcon, Target, Database, Cloud, CreditCard } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
 
@@ -10,7 +10,13 @@ interface LocationPageClientProps {
   locationName: string;
   heroTitle: string;
   heroSubtext: string;
-  introContent: string;
+  introH2: string;
+  introSubtext: string;
+  introChallenges: Array<{
+    icon: string;
+    title: string;
+    description: string;
+  }>;
   servicesIntro: string;
   services: Array<{
     title: string;
@@ -44,11 +50,25 @@ const serviceIcons = [Search, Briefcase, Lightbulb, BookOpen, AlertTriangle, Shi
 // Icon mapping for industries
 const industryIcons = [Building2, Building2, Building2, Building2];
 
+// Icon mapping for intro challenges
+const iconMap: Record<string, React.ComponentType<{ className?: string }>> = {
+  Shield,
+  FileText,
+  Users,
+  Link: LinkIcon,
+  Target,
+  Database,
+  Cloud,
+  CreditCard,
+};
+
 export default function LocationPageClient({
   locationName,
   heroTitle,
   heroSubtext,
-  introContent,
+  introH2,
+  introSubtext,
+  introChallenges,
   servicesIntro,
   services,
   whyAdl99Content,
@@ -126,39 +146,54 @@ export default function LocationPageClient({
         </div>
       </section>
 
-      {/* Primary Keyword Section */}
+      {/* Security Challenges Section */}
       <section className="py-20 bg-gradient-to-b from-background via-secondary/20 to-background relative overflow-hidden">
         <div className="absolute top-0 right-0 w-96 h-96 bg-primary/5 rounded-full blur-3xl -mr-48 -mt-48" />
         <div className="absolute bottom-0 left-0 w-96 h-96 bg-accent/5 rounded-full blur-3xl -ml-48 -mb-48" />
-        <div className="absolute inset-0 bg-grid-pattern opacity-[0.015]" />
         <div className="container mx-auto px-6 relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="max-w-5xl mx-auto"
+            className="text-center mb-12"
           >
-            <div className="relative">
-              {/* Decorative corner accents */}
-              <div className="absolute -top-2 -left-2 w-16 h-16 border-t-4 border-l-4 border-primary/20 rounded-tl-2xl" />
-              <div className="absolute -bottom-2 -right-2 w-16 h-16 border-b-4 border-r-4 border-accent/20 rounded-br-2xl" />
-
-              <div className="bg-gradient-to-br from-card/90 via-card/80 to-card/90 backdrop-blur-md border border-border/50 rounded-2xl p-10 md:p-14 shadow-2xl">
-                <div className="prose prose-lg max-w-none
-                  prose-headings:font-display prose-headings:uppercase prose-headings:tracking-wide prose-headings:text-foreground prose-headings:mb-6
-                  prose-h2:text-3xl prose-h2:md:text-4xl prose-h2:leading-tight prose-h2:relative prose-h2:inline-block
-                  prose-h2:after:content-[''] prose-h2:after:absolute prose-h2:after:bottom-0 prose-h2:after:left-0 prose-h2:after:w-20 prose-h2:after:h-1 prose-h2:after:bg-accent prose-h2:after:-mb-3
-                  prose-p:text-muted-foreground prose-p:text-base prose-p:md:text-lg prose-p:leading-relaxed prose-p:mb-5
-                  prose-a:text-primary prose-a:font-semibold prose-a:no-underline hover:prose-a:text-primary/80 prose-a:transition-colors
-                  prose-strong:text-foreground prose-strong:font-bold
-                  prose-ul:space-y-3 prose-ul:my-6
-                  prose-li:text-muted-foreground prose-li:text-base prose-li:md:text-lg prose-li:leading-relaxed
-                  prose-li:pl-2 prose-li:marker:text-accent prose-li:marker:text-xl">
-                  <div dangerouslySetInnerHTML={{ __html: introContent }} />
-                </div>
-              </div>
+            <div className="inline-flex items-center justify-center px-4 py-2 rounded-full bg-accent/10 text-accent text-sm font-semibold uppercase tracking-wide mb-4">
+              <AlertTriangle className="w-4 h-4 mr-2" />
+              Challenges We Solve
             </div>
+            <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-4 uppercase tracking-wide">
+              {introH2}
+            </h2>
+            <p className="text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+              {introSubtext}
+            </p>
           </motion.div>
+
+          <div className="grid md:grid-cols-2 gap-6 max-w-6xl mx-auto">
+            {introChallenges.map((challenge, index) => {
+              const IconComponent = iconMap[challenge.icon] || Shield;
+              return (
+                <motion.div
+                  key={challenge.title}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  className="relative bg-card border border-border rounded-2xl p-8 hover:shadow-lg hover:border-accent/30 transition-all duration-300 group"
+                >
+                  <div className="w-14 h-14 rounded-xl bg-accent/10 flex items-center justify-center mb-5 group-hover:bg-accent/20 transition-colors">
+                    <IconComponent className="w-7 h-7 text-accent" />
+                  </div>
+                  <h3 className="font-display text-xl font-bold text-foreground mb-3 uppercase tracking-wide">
+                    {challenge.title}
+                  </h3>
+                  <p className="text-muted-foreground leading-relaxed">
+                    {challenge.description}
+                  </p>
+                </motion.div>
+              );
+            })}
+          </div>
         </div>
       </section>
 
