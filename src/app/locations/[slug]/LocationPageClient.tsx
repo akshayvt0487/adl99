@@ -638,7 +638,7 @@ export default function LocationPageClient({
                     value={`item-${index}`}
                     className="bg-card border border-border rounded-2xl mb-4 px-6 overflow-hidden"
                   >
-                    <AccordionTrigger className="font-display text-lg font-bold text-foreground uppercase tracking-wide hover:no-underline py-6">
+                    <AccordionTrigger className="font-display text-lg font-bold text-foreground text-left uppercase tracking-wide hover:no-underline py-6">
                       {faq.question}
                     </AccordionTrigger>
                     <AccordionContent className="text-muted-foreground leading-relaxed pb-6">
