@@ -618,7 +618,7 @@ export default function LocationPageClient({
             className="max-w-3xl mx-auto"
           >
             <div className="text-center mb-12">
-              <div className="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center mx-auto mb-4">
+              <div className="w-16 h-14 rounded-xl bg-primary/10 flex items-center justify-center mx-auto mb-4">
                 <HelpCircle className="w-7 h-7 text-primary" />
               </div>
               <h2 className="font-display text-3xl md:text-4xl font-bold mb-4 uppercase tracking-wide">
