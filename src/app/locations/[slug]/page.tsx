@@ -32,7 +32,13 @@ interface LocationData {
     description: string;
   }>;
   whyAdl99H2: string;
-  whyAdl99Content: string;
+  whyAdl99Intro: string;
+  whyAdl99Points: Array<{
+    icon: string;
+    title: string;
+    description: string;
+  }>;
+  whyAdl99Cta: string;
   industriesH2: string;
   industries: Array<{
     h3: string;
@@ -126,18 +132,30 @@ const locationsData: Record<string, LocationData> = {
       }
     ],
     whyAdl99H2: "Why ADL99 Is Melbourne CBD's Trusted Cyber Security Company",
-    whyAdl99Content: `
-      <h2>Why ADL99 Is Melbourne CBD's Trusted Cyber Security Company</h2>
-      <p>ADL99 is an Australian-owned cybersecurity consultancy based in Melbourne. We're not a managed IT provider dabbling in security — we're security specialists who live and breathe cyber risk every day. Our team holds industry certifications across offensive and defensive security, and we've responded to incidents affecting CBD law firms, accounting practices, financial services firms, and government offices.</p>
-      <p>What sets ADL99 apart as Melbourne CBD's <strong>cyber security provider</strong>?</p>
-      <ul>
-        <li><strong>Local expertise:</strong> We understand Australian compliance obligations (APRA CPS 234, Privacy Act, Notifiable Data Breaches) and the threat landscape facing Melbourne businesses.</li>
-        <li><strong>Framework-aligned:</strong> Our services map to Essential Eight, NIST Cybersecurity Framework, and ISO 27001 — giving CBD organisations a single partner for all compliance needs.</li>
-        <li><strong>Scalable delivery:</strong> Whether you're a 10-person boutique firm or a 500-employee corporate office, our cyber security solutions scale to your size and risk profile.</li>
-        <li><strong>24/7 response capability:</strong> Cyber incidents don't respect business hours. Neither do we.</li>
-      </ul>
-      <p>Your CBD office is a high-value target. Let ADL99 assess your cyber maturity before attackers find the gaps.</p>
-    `,
+    whyAdl99Intro: "ADL99 is an Australian-owned cybersecurity consultancy based in Melbourne. We're not a managed IT provider dabbling in security — we're security specialists who live and breathe cyber risk every day. Our team holds industry certifications across offensive and defensive security, and we've responded to incidents affecting CBD law firms, accounting practices, financial services firms, and government offices.",
+    whyAdl99Points: [
+      {
+        icon: "MapPin",
+        title: "Local Expertise",
+        description: "We understand Australian compliance obligations (APRA CPS 234, Privacy Act, Notifiable Data Breaches) and the threat landscape facing Melbourne businesses."
+      },
+      {
+        icon: "Award",
+        title: "Framework-Aligned",
+        description: "Our services map to Essential Eight, NIST Cybersecurity Framework, and ISO 27001 — giving CBD organisations a single partner for all compliance needs."
+      },
+      {
+        icon: "TrendingUp",
+        title: "Scalable Delivery",
+        description: "Whether you're a 10-person boutique firm or a 500-employee corporate office, our cyber security solutions scale to your size and risk profile."
+      },
+      {
+        icon: "Clock",
+        title: "24/7 Response Capability",
+        description: "Cyber incidents don't respect business hours. Neither do we. Our emergency response team is available around the clock."
+      }
+    ],
+    whyAdl99Cta: "Your CBD office is a high-value target. Let ADL99 assess your cyber maturity before attackers find the gaps.",
     industriesH2: "Industries We Protect in Melbourne CBD",
     industries: [
       {
@@ -272,18 +290,30 @@ const locationsData: Record<string, LocationData> = {
       }
     ],
     whyAdl99H2: "ADL99 — Your Local Southbank Cyber Security Company",
-    whyAdl99Content: `
-      <h2>ADL99 — Your Local Southbank Cyber Security Company</h2>
-      <p>ADL99 is Melbourne's trusted <strong>cyber security provider</strong> for businesses that demand more than checkbox compliance. We're Australian-owned, Melbourne-based, and deeply familiar with the challenges Southbank's diverse business community faces — from securing cloud-native startups to protecting hospitality POS systems to hardening legacy corporate infrastructure.</p>
-      <p>Why Southbank businesses choose ADL99:</p>
-      <ul>
-        <li><strong>Industry versatility:</strong> We've protected Southbank media companies, hospitality venues, tech startups, and corporate offices — we understand your sector's unique risks.</li>
-        <li><strong>Cloud security expertise:</strong> Southbank's businesses run on SaaS platforms. We secure Microsoft 365, Google Workspace, AWS, and Azure environments with configuration reviews and access controls.</li>
-        <li><strong>Rapid response:</strong> Located in St Kilda Road, we're minutes from Southbank with 24/7 emergency incident response capability.</li>
-        <li><strong>Transparent pricing:</strong> Fixed-price engagements with no surprise bills. Cyber security should be predictable, not a budget black hole.</li>
-      </ul>
-      <p>Operating from Southbank? ADL99 delivers enterprise-grade cybersecurity scaled for your business.</p>
-    `,
+    whyAdl99Intro: "ADL99 is Melbourne's trusted cyber security provider for businesses that demand more than checkbox compliance. We're Australian-owned, Melbourne-based, and deeply familiar with the challenges Southbank's diverse business community faces — from securing cloud-native startups to protecting hospitality POS systems to hardening legacy corporate infrastructure.",
+    whyAdl99Points: [
+      {
+        icon: "Layers",
+        title: "Industry Versatility",
+        description: "We've protected Southbank media companies, hospitality venues, tech startups, and corporate offices — we understand your sector's unique risks."
+      },
+      {
+        icon: "CloudCog",
+        title: "Cloud Security Expertise",
+        description: "Southbank's businesses run on SaaS platforms. We secure Microsoft 365, Google Workspace, AWS, and Azure environments with configuration reviews and access controls."
+      },
+      {
+        icon: "Zap",
+        title: "Rapid Response",
+        description: "Located in St Kilda Road, we're minutes from Southbank with 24/7 emergency incident response capability."
+      },
+      {
+        icon: "DollarSign",
+        title: "Transparent Pricing",
+        description: "Fixed-price engagements with no surprise bills. Cyber security should be predictable, not a budget black hole."
+      }
+    ],
+    whyAdl99Cta: "Operating from Southbank? ADL99 delivers enterprise-grade cybersecurity scaled for your business.",
     industriesH2: "Industries We Protect in Southbank",
     industries: [
       {
@@ -493,7 +523,10 @@ export default async function LocationPage({ params }: LocationPageProps) {
         introChallenges={location.introChallenges}
         servicesIntro={location.servicesIntro}
         services={location.services.map(s => ({ title: s.title, description: s.description }))}
-        whyAdl99Content={location.whyAdl99Content}
+        whyAdl99H2={location.whyAdl99H2}
+        whyAdl99Intro={location.whyAdl99Intro}
+        whyAdl99Points={location.whyAdl99Points}
+        whyAdl99Cta={location.whyAdl99Cta}
         industries={location.industries}
         threatsIntro={location.threatsIntro}
         threats={location.threats.map(t => ({ title: t.title, description: t.description }))}

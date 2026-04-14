@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import { Shield, CheckCircle2, Phone, Mail, ArrowRight, HelpCircle, Search, Lightbulb, Briefcase, BookOpen, Building2, AlertTriangle, FileText, Users, Link as LinkIcon, Target, Database, Cloud, CreditCard } from "lucide-react";
+import { Shield, CheckCircle2, Phone, Mail, ArrowRight, HelpCircle, Search, Lightbulb, Briefcase, BookOpen, Building2, AlertTriangle, FileText, Users, Link as LinkIcon, Target, Database, Cloud, CreditCard, MapPin, Award, TrendingUp, Clock, Layers, CloudCog, Zap, DollarSign } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
 
@@ -22,7 +22,14 @@ interface LocationPageClientProps {
     title: string;
     description: string;
   }>;
-  whyAdl99Content: string;
+  whyAdl99H2: string;
+  whyAdl99Intro: string;
+  whyAdl99Points: Array<{
+    icon: string;
+    title: string;
+    description: string;
+  }>;
+  whyAdl99Cta: string;
   industries: Array<{
     title: string;
     description: string;
@@ -62,6 +69,18 @@ const iconMap: Record<string, React.ComponentType<{ className?: string }>> = {
   CreditCard,
 };
 
+// Icon mapping for Why ADL99 points
+const whyAdl99IconMap: Record<string, React.ComponentType<{ className?: string }>> = {
+  MapPin,
+  Award,
+  TrendingUp,
+  Clock,
+  Layers,
+  CloudCog,
+  Zap,
+  DollarSign,
+};
+
 export default function LocationPageClient({
   locationName,
   heroTitle,
@@ -71,7 +90,10 @@ export default function LocationPageClient({
   introChallenges,
   servicesIntro,
   services,
-  whyAdl99Content,
+  whyAdl99H2,
+  whyAdl99Intro,
+  whyAdl99Points,
+  whyAdl99Cta,
   industries,
   threatsIntro,
   threats,
@@ -244,39 +266,64 @@ export default function LocationPageClient({
       </section>
 
       {/* Why ADL99 Section */}
-      <section className="py-20 bg-gradient-to-b from-background via-primary/5 to-background relative overflow-hidden">
-        <div className="absolute inset-0 bg-grid-pattern opacity-[0.02]" />
-        <div className="container mx-auto px-6 relative z-10">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="max-w-5xl mx-auto"
-          >
-            <div className="relative">
-              {/* Decorative corner accents */}
-              <div className="absolute -top-2 -left-2 w-16 h-16 border-t-4 border-l-4 border-accent/20 rounded-tl-2xl" />
-              <div className="absolute -bottom-2 -right-2 w-16 h-16 border-b-4 border-r-4 border-primary/20 rounded-br-2xl" />
-
-              <div className="absolute -top-4 -left-4 w-24 h-24 bg-accent/10 rounded-full blur-2xl" />
-              <div className="absolute -bottom-4 -right-4 w-32 h-32 bg-primary/10 rounded-full blur-2xl" />
-
-              <div className="relative bg-gradient-to-br from-card/90 via-card/80 to-card/90 backdrop-blur-md border border-border/50 rounded-2xl p-10 md:p-14 shadow-2xl">
-                <div className="prose prose-lg max-w-none
-                  prose-headings:font-display prose-headings:uppercase prose-headings:tracking-wide prose-headings:text-foreground prose-headings:mb-6
-                  prose-h2:text-3xl prose-h2:md:text-4xl prose-h2:leading-tight prose-h2:relative prose-h2:inline-block
-                  prose-h2:after:content-[''] prose-h2:after:absolute prose-h2:after:bottom-0 prose-h2:after:left-0 prose-h2:after:w-20 prose-h2:after:h-1 prose-h2:after:bg-primary prose-h2:after:-mb-3
-                  prose-p:text-muted-foreground prose-p:text-base prose-p:md:text-lg prose-p:leading-relaxed prose-p:mb-6
-                  prose-a:text-primary prose-a:font-semibold prose-a:no-underline hover:prose-a:text-primary/80 prose-a:transition-colors
-                  prose-strong:text-foreground prose-strong:font-bold
-                  prose-ul:space-y-4 prose-ul:my-8
-                  prose-li:text-muted-foreground prose-li:text-base prose-li:md:text-lg prose-li:leading-relaxed
-                  prose-li:pl-3 prose-li:marker:text-primary prose-li:marker:text-xl">
-                  <div dangerouslySetInnerHTML={{ __html: whyAdl99Content }} />
-                </div>
+      <section className="py-20 bg-background">
+        <div className="container mx-auto px-6">
+          <div className="max-w-6xl mx-auto">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="text-center mb-12"
+            >
+              <div className="inline-flex items-center justify-center px-4 py-2 rounded-full bg-primary/10 text-primary text-sm font-semibold uppercase tracking-wide mb-4">
+                <CheckCircle2 className="w-4 h-4 mr-2" />
+                Why Choose Us
               </div>
+              <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-4 uppercase tracking-wide">
+                {whyAdl99H2}
+              </h2>
+              <p className="text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+                {whyAdl99Intro}
+              </p>
+            </motion.div>
+
+            <div className="grid md:grid-cols-2 gap-6 mb-12">
+              {whyAdl99Points.map((point, index) => {
+                const IconComponent = whyAdl99IconMap[point.icon] || Shield;
+                return (
+                  <motion.div
+                    key={point.title}
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.5, delay: index * 0.1 }}
+                    className="relative bg-card border border-border rounded-2xl p-8 hover:shadow-lg hover:border-primary/30 transition-all duration-300 group"
+                  >
+                    <div className="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center mb-5 group-hover:bg-primary/20 transition-colors">
+                      <IconComponent className="w-7 h-7 text-primary" />
+                    </div>
+                    <h3 className="font-display text-xl font-bold text-foreground mb-3 uppercase tracking-wide">
+                      {point.title}
+                    </h3>
+                    <p className="text-muted-foreground leading-relaxed">
+                      {point.description}
+                    </p>
+                  </motion.div>
+                );
+              })}
             </div>
-          </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="text-center bg-gradient-to-br from-accent/5 to-primary/5 border border-accent/20 rounded-2xl p-8"
+            >
+              <p className="text-lg font-semibold text-foreground">
+                {whyAdl99Cta}
+              </p>
+            </motion.div>
+          </div>
         </div>
       </section>
 
