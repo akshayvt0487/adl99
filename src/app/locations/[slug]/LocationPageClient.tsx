@@ -216,13 +216,27 @@ export default function LocationPageClient({
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="max-w-4xl mx-auto"
+            className="max-w-5xl mx-auto"
           >
             <div className="relative">
+              {/* Decorative corner accents */}
+              <div className="absolute -top-2 -left-2 w-16 h-16 border-t-4 border-l-4 border-accent/20 rounded-tl-2xl" />
+              <div className="absolute -bottom-2 -right-2 w-16 h-16 border-b-4 border-r-4 border-primary/20 rounded-br-2xl" />
+
               <div className="absolute -top-4 -left-4 w-24 h-24 bg-accent/10 rounded-full blur-2xl" />
               <div className="absolute -bottom-4 -right-4 w-32 h-32 bg-primary/10 rounded-full blur-2xl" />
-              <div className="relative bg-card/80 backdrop-blur-sm border border-border rounded-2xl p-8 md:p-12 shadow-xl">
-                <div className="prose prose-lg max-w-none prose-headings:font-display prose-headings:uppercase prose-headings:tracking-wide prose-headings:text-foreground prose-p:text-muted-foreground prose-a:text-primary prose-strong:text-foreground prose-ul:text-muted-foreground prose-li:text-muted-foreground prose-li:marker:text-accent">
+
+              <div className="relative bg-gradient-to-br from-card/90 via-card/80 to-card/90 backdrop-blur-md border border-border/50 rounded-2xl p-10 md:p-14 shadow-2xl">
+                <div className="prose prose-lg max-w-none
+                  prose-headings:font-display prose-headings:uppercase prose-headings:tracking-wide prose-headings:text-foreground prose-headings:mb-6
+                  prose-h2:text-3xl prose-h2:md:text-4xl prose-h2:leading-tight prose-h2:relative prose-h2:inline-block
+                  prose-h2:after:content-[''] prose-h2:after:absolute prose-h2:after:bottom-0 prose-h2:after:left-0 prose-h2:after:w-20 prose-h2:after:h-1 prose-h2:after:bg-primary prose-h2:after:-mb-3
+                  prose-p:text-muted-foreground prose-p:text-base prose-p:md:text-lg prose-p:leading-relaxed prose-p:mb-6
+                  prose-a:text-primary prose-a:font-semibold prose-a:no-underline hover:prose-a:text-primary/80 prose-a:transition-colors
+                  prose-strong:text-foreground prose-strong:font-bold
+                  prose-ul:space-y-4 prose-ul:my-8
+                  prose-li:text-muted-foreground prose-li:text-base prose-li:md:text-lg prose-li:leading-relaxed
+                  prose-li:pl-3 prose-li:marker:text-primary prose-li:marker:text-xl">
                   <div dangerouslySetInnerHTML={{ __html: whyAdl99Content }} />
                 </div>
               </div>
