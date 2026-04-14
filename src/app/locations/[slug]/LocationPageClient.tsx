@@ -327,6 +327,114 @@ export default function LocationPageClient({
         </div>
       </section>
 
+      {/* Local Presence Section - Image + Content */}
+      <section className="py-20 bg-secondary/30">
+        <div className="container mx-auto px-6">
+          <div className="max-w-7xl mx-auto">
+            <div className="grid lg:grid-cols-2 gap-12 items-center">
+              {/* Image Side */}
+              <motion.div
+                initial={{ opacity: 0, x: -30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6 }}
+                className="relative"
+              >
+                <div className="relative rounded-2xl overflow-hidden shadow-2xl">
+                  <Image
+                    src="/banner-images/about.webp"
+                    alt={`Cybersecurity team in ${locationName}`}
+                    width={600}
+                    height={400}
+                    className="w-full h-auto object-cover"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-primary/40 to-transparent" />
+                </div>
+                {/* Floating badge */}
+                <div className="absolute -bottom-6 -right-6 bg-accent text-accent-foreground rounded-2xl p-6 shadow-xl">
+                  <div className="flex items-center gap-3">
+                    <Shield className="w-8 h-8" />
+                    <div>
+                      <div className="font-display text-2xl font-bold uppercase">24/7</div>
+                      <div className="text-sm">Response Team</div>
+                    </div>
+                  </div>
+                </div>
+              </motion.div>
+
+              {/* Content Side */}
+              <motion.div
+                initial={{ opacity: 0, x: 30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6 }}
+              >
+                <div className="inline-flex items-center justify-center px-4 py-2 rounded-full bg-accent/10 text-accent text-sm font-semibold uppercase tracking-wide mb-4">
+                  <MapPin className="w-4 h-4 mr-2" />
+                  Local Expertise
+                </div>
+                <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-6 uppercase tracking-wide">
+                  Melbourne-Based Cybersecurity Specialists
+                </h2>
+                <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
+                  Based in St Kilda Road, we&apos;re minutes from {locationName} with deep understanding of Melbourne&apos;s business landscape and threat environment. Our local presence means faster response times and face-to-face consultations when you need them.
+                </p>
+
+                <div className="space-y-4 mb-8">
+                  <div className="flex items-start gap-4">
+                    <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0 mt-1">
+                      <CheckCircle2 className="w-5 h-5 text-primary" />
+                    </div>
+                    <div>
+                      <h3 className="font-display text-lg font-bold text-foreground uppercase tracking-wide mb-2">
+                        Rapid On-Site Response
+                      </h3>
+                      <p className="text-muted-foreground">
+                        When incidents require hands-on support, our team can be at your {locationName} office within the hour.
+                      </p>
+                    </div>
+                  </div>
+
+                  <div className="flex items-start gap-4">
+                    <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0 mt-1">
+                      <CheckCircle2 className="w-5 h-5 text-primary" />
+                    </div>
+                    <div>
+                      <h3 className="font-display text-lg font-bold text-foreground uppercase tracking-wide mb-2">
+                        Australian Data Sovereignty
+                      </h3>
+                      <p className="text-muted-foreground">
+                        Your data stays in Australia. No offshore teams, no overseas data centers. Complete transparency and control.
+                      </p>
+                    </div>
+                  </div>
+
+                  <div className="flex items-start gap-4">
+                    <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0 mt-1">
+                      <CheckCircle2 className="w-5 h-5 text-primary" />
+                    </div>
+                    <div>
+                      <h3 className="font-display text-lg font-bold text-foreground uppercase tracking-wide mb-2">
+                        Face-to-Face Consultations
+                      </h3>
+                      <p className="text-muted-foreground">
+                        Meet with our security consultants at your office or ours. Real conversations, not just ticketing systems.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <Button size="lg" variant="default" className="gap-2" asChild>
+                  <Link href="/contact">
+                    Schedule a Consultation <ArrowRight className="w-4 h-4" />
+                  </Link>
+                </Button>
+              </motion.div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Industries Section */}
       <section className="py-20 bg-secondary/30">
         <div className="container mx-auto px-6">
