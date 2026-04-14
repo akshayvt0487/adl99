@@ -127,19 +127,35 @@ export default function LocationPageClient({
       </section>
 
       {/* Primary Keyword Section */}
-      <section className="py-20 bg-background relative overflow-hidden">
+      <section className="py-20 bg-gradient-to-b from-background via-secondary/20 to-background relative overflow-hidden">
         <div className="absolute top-0 right-0 w-96 h-96 bg-primary/5 rounded-full blur-3xl -mr-48 -mt-48" />
         <div className="absolute bottom-0 left-0 w-96 h-96 bg-accent/5 rounded-full blur-3xl -ml-48 -mb-48" />
+        <div className="absolute inset-0 bg-grid-pattern opacity-[0.015]" />
         <div className="container mx-auto px-6 relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="max-w-4xl mx-auto"
+            className="max-w-5xl mx-auto"
           >
-            <div className="bg-card/50 backdrop-blur-sm border border-border rounded-2xl p-8 md:p-12 shadow-lg">
-              <div className="prose prose-lg max-w-none prose-headings:font-display prose-headings:uppercase prose-headings:tracking-wide prose-headings:text-foreground prose-p:text-muted-foreground prose-a:text-primary prose-strong:text-foreground prose-ul:text-muted-foreground prose-li:text-muted-foreground">
-                <div dangerouslySetInnerHTML={{ __html: introContent }} />
+            <div className="relative">
+              {/* Decorative corner accents */}
+              <div className="absolute -top-2 -left-2 w-16 h-16 border-t-4 border-l-4 border-primary/20 rounded-tl-2xl" />
+              <div className="absolute -bottom-2 -right-2 w-16 h-16 border-b-4 border-r-4 border-accent/20 rounded-br-2xl" />
+
+              <div className="bg-gradient-to-br from-card/90 via-card/80 to-card/90 backdrop-blur-md border border-border/50 rounded-2xl p-10 md:p-14 shadow-2xl">
+                <div className="prose prose-lg max-w-none
+                  prose-headings:font-display prose-headings:uppercase prose-headings:tracking-wide prose-headings:text-foreground prose-headings:mb-6
+                  prose-h2:text-3xl prose-h2:md:text-4xl prose-h2:leading-tight prose-h2:relative prose-h2:inline-block
+                  prose-h2:after:content-[''] prose-h2:after:absolute prose-h2:after:bottom-0 prose-h2:after:left-0 prose-h2:after:w-20 prose-h2:after:h-1 prose-h2:after:bg-accent prose-h2:after:-mb-3
+                  prose-p:text-muted-foreground prose-p:text-base prose-p:md:text-lg prose-p:leading-relaxed prose-p:mb-5
+                  prose-a:text-primary prose-a:font-semibold prose-a:no-underline hover:prose-a:text-primary/80 prose-a:transition-colors
+                  prose-strong:text-foreground prose-strong:font-bold
+                  prose-ul:space-y-3 prose-ul:my-6
+                  prose-li:text-muted-foreground prose-li:text-base prose-li:md:text-lg prose-li:leading-relaxed
+                  prose-li:pl-2 prose-li:marker:text-accent prose-li:marker:text-xl">
+                  <div dangerouslySetInnerHTML={{ __html: introContent }} />
+                </div>
               </div>
             </div>
           </motion.div>
