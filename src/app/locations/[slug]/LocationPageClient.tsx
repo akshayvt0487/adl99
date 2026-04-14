@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { Shield, CheckCircle2, Phone, Mail, ArrowRight, HelpCircle, Search, Lightbulb, Briefcase, BookOpen, Building2, AlertTriangle, FileText, Users, Link as LinkIcon, Target, Database, Cloud, CreditCard, MapPin, Award, TrendingUp, Clock, Layers, CloudCog, Zap, DollarSign } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
@@ -338,15 +339,15 @@ export default function LocationPageClient({
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6 }}
-                className="relative"
+                className="relative h-full "
               >
-                <div className="relative rounded-2xl overflow-hidden shadow-2xl">
+                <div className="relative rounded-2xl overflow-hidden shadow-2xl h-full min-h-[500px]">
                   <Image
                     src="/banner-images/about.webp"
                     alt={`Cybersecurity team in ${locationName}`}
                     width={600}
-                    height={400}
-                    className="w-full h-auto object-cover"
+                    height={600}
+                    className="w-full h-full object-cover"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-primary/40 to-transparent" />
                 </div>
@@ -624,21 +625,29 @@ export default function LocationPageClient({
                 Cyber Security FAQs for {locationName} Businesses
               </h2>
             </div>
-            <div className="space-y-6">
-              {faqs.map((faq, index) => (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.4, delay: index * 0.05 }}
-                  className="bg-card rounded-2xl border border-border p-6"
-                >
-                  <h3 className="font-display text-xl font-bold mb-3 uppercase tracking-wide">{faq.question}</h3>
-                  <p className="text-muted-foreground">{faq.answer}</p>
-                </motion.div>
-              ))}
-            </div>
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5 }}
+            >
+              <Accordion type="single" collapsible className="w-full">
+                {faqs.map((faq, index) => (
+                  <AccordionItem
+                    key={index}
+                    value={`item-${index}`}
+                    className="bg-card border border-border rounded-2xl mb-4 px-6 overflow-hidden"
+                  >
+                    <AccordionTrigger className="font-display text-lg font-bold text-foreground uppercase tracking-wide hover:no-underline py-6">
+                      {faq.question}
+                    </AccordionTrigger>
+                    <AccordionContent className="text-muted-foreground leading-relaxed pb-6">
+                      {faq.answer}
+                    </AccordionContent>
+                  </AccordionItem>
+                ))}
+              </Accordion>
+            </motion.div>
           </motion.div>
         </div>
       </section>
