@@ -26,11 +26,21 @@ const industriesItems = [
   { href: "/industries/research", label: "Research & Innovation", icon: FlaskConical, description: "Protect intellectual property" },
 ];
 
-// Only show locations that have been created (have page content)
+// Melbourne locations organized by tier
 const locationsItems = [
-  // Tier 1 - CBD & Inner Business Core (Active)
+  // Tier 1 - CBD & Inner Business Core
   { href: "/locations/melbourne-cbd", label: "Melbourne CBD", postcode: "3000", tier: "CBD & Inner Business" },
   { href: "/locations/southbank", label: "Southbank", postcode: "3006", tier: "CBD & Inner Business" },
+  { href: "/locations/docklands", label: "Docklands", postcode: "3008", tier: "CBD & Inner Business" },
+  // Tier 2 - Affluent Inner Suburbs
+  { href: "/locations/south-yarra", label: "South Yarra", postcode: "3141", tier: "Affluent Inner Suburbs" },
+  { href: "/locations/toorak", label: "Toorak", postcode: "3142", tier: "Affluent Inner Suburbs" },
+  { href: "/locations/st-kilda", label: "St Kilda", postcode: "3182", tier: "Affluent Inner Suburbs" },
+  { href: "/locations/brighton", label: "Brighton", postcode: "3186", tier: "Affluent Inner Suburbs" },
+  { href: "/locations/richmond", label: "Richmond", postcode: "3121", tier: "Affluent Inner Suburbs" },
+  // Tier 3 - Professional & Commercial Hubs
+  { href: "/locations/hawthorn", label: "Hawthorn", postcode: "3122", tier: "Professional Hubs" },
+  { href: "/locations/malvern", label: "Malvern", postcode: "3144", tier: "Professional Hubs" },
 ];
 
 const Header = () => {
@@ -176,12 +186,13 @@ const Header = () => {
             onMouseEnter={() => setActiveDropdown("locations")}
             onMouseLeave={() => setActiveDropdown(null)}
           >
-            <button
+            <Link
+              href="/locations"
               className="flex items-center gap-1 text-sm font-medium text-muted-foreground hover:text-foreground transition-colors py-2"
             >
               Locations
               <ChevronDown className={`w-4 h-4 transition-transform ${activeDropdown === "locations" ? "rotate-180" : ""}`} />
-            </button>
+            </Link>
 
             <AnimatePresence>
               {activeDropdown === "locations" && (
@@ -210,6 +221,14 @@ const Header = () => {
                           </div>
                         </Link>
                       ))}
+                    </div>
+                    <div className="border-t border-border mt-3 pt-3">
+                      <Link
+                        href="/locations"
+                        className="text-sm text-primary hover:underline font-medium"
+                      >
+                        View all locations →
+                      </Link>
                     </div>
                   </div>
                 </motion.div>
@@ -378,6 +397,13 @@ const Header = () => {
                             <span>{item.label} ({item.postcode})</span>
                           </Link>
                         ))}
+                        <Link
+                          href="/locations"
+                          onClick={() => setIsMenuOpen(false)}
+                          className="text-sm text-primary font-medium py-2"
+                        >
+                          View all locations →
+                        </Link>
                       </div>
                     </motion.div>
                   )}
