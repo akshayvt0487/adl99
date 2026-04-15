@@ -146,8 +146,6 @@ export default async function LocationPage({ params }: LocationPageProps) {
         introH2={location.introH2}
         introSubtext={location.introSubtext}
         introChallenges={location.introChallenges}
-        servicesIntro={location.servicesIntro}
-        services={location.services.map(s => ({ title: s.title, description: s.description }))}
         whyAdl99H2={location.whyAdl99H2}
         whyAdl99Intro={location.whyAdl99Intro}
         whyAdl99Points={location.whyAdl99Points}

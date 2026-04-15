@@ -18,11 +18,6 @@ interface LocationPageClientProps {
     title: string;
     description: string;
   }>;
-  servicesIntro: string;
-  services: Array<{
-    title: string;
-    description: string;
-  }>;
   whyAdl99H2: string;
   whyAdl99Intro: string;
   whyAdl99Points: Array<{
@@ -52,8 +47,15 @@ interface LocationPageClientProps {
   }>;
 }
 
-// Icon mapping for services
-const serviceIcons = [Search, Briefcase, Lightbulb, BookOpen, AlertTriangle, Shield];
+// All services available
+const allServices = [
+  { title: "Cyber Maturity Assessments", description: "Evaluate your security posture with comprehensive assessments aligned to Essential Eight and NIST frameworks.", icon: Search },
+  { title: "Technical Advisory Services", description: "Expert guidance on security strategy, architecture, and implementation from experienced consultants.", icon: Shield },
+  { title: "Engineering Support", description: "Hands-on technical implementation support for security tools, configurations, and infrastructure.", icon: Briefcase },
+  { title: "Cyber Awareness Training", description: "Educate your team on security best practices, phishing awareness, and incident response procedures.", icon: BookOpen },
+  { title: "vCISO Services", description: "Virtual Chief Information Security Officer services providing strategic security leadership.", icon: Lightbulb },
+  { title: "Urgent Incident Response", description: "24/7 emergency cyber incident response for breaches, ransomware, and security emergencies.", icon: AlertTriangle },
+];
 
 // Icon mapping for industries
 const industryIcons = [Building2, Building2, Building2, Building2];
@@ -89,8 +91,6 @@ export default function LocationPageClient({
   introH2,
   introSubtext,
   introChallenges,
-  servicesIntro,
-  services,
   whyAdl99H2,
   whyAdl99Intro,
   whyAdl99Points,
@@ -235,15 +235,15 @@ export default function LocationPageClient({
                 Our Services
               </div>
               <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-4 uppercase tracking-wide">
-                {locationName} Cyber Security Services
+                Cyber Security Services in {locationName}
               </h2>
               <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-                {servicesIntro}
+                Comprehensive cybersecurity solutions tailored for businesses in {locationName} and across Australia.
               </p>
             </motion.div>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {services.map((service, index) => {
-                const IconComponent = serviceIcons[index % serviceIcons.length];
+              {allServices.map((service, index) => {
+                const IconComponent = service.icon;
                 return (
                   <motion.div
                     key={index}
