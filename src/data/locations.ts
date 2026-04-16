@@ -1874,7 +1874,7 @@ export const locationsData: Record<string, LocationData> = {
   "east-melbourne": {
     name: "East Melbourne",
     postcode: "3002",
-    heroTitle: "Cyber Security Services in East Melbourne (3002)",
+    heroTitle: "Cyber Security Services in East Melbourne",
     heroSubtext: "Protect your business with expert cyber security solutions in East Melbourne. From healthcare to government contractors — we deliver tailored security for high-trust industries.",
     seoTitle: "Cyber Security East Melbourne (3002) | Healthcare & Government IT Security - ADL99",
     seoDescription: "Cyber security services in East Melbourne (3002). Protect healthcare, government & professional services from cyber threats. HIPAA, Essential Eight compliance. Call ADL99.",
@@ -2036,7 +2036,7 @@ export const locationsData: Record<string, LocationData> = {
   "south-melbourne": {
     name: "South Melbourne",
     postcode: "3205",
-    heroTitle: "Cyber Security Services in South Melbourne (3205)",
+    heroTitle: "Cyber Security Services in South Melbourne",
     heroSubtext: "Protect your South Melbourne business with tailored cyber security solutions. From tech startups to manufacturing — we secure diverse businesses across the precinct.",
     seoTitle: "Cyber Security South Melbourne (3205) | Tech & Manufacturing IT Security - ADL99",
     seoDescription: "Cyber security services in South Melbourne (3205). Protect tech startups, manufacturing & professional businesses from cyber threats. Essential Eight, vCISO, incident response. Call ADL99.",
@@ -2198,7 +2198,7 @@ export const locationsData: Record<string, LocationData> = {
   "port-melbourne": {
     name: "Port Melbourne",
     postcode: "3207",
-    heroTitle: "Cyber Security Services in Port Melbourne (3207)",
+    heroTitle: "Cyber Security Services in Port Melbourne",
     heroSubtext: "Protect your Port Melbourne business with comprehensive cyber security solutions. From logistics to maritime services — we secure businesses in Melbourne's working port precinct.",
     seoTitle: "Cyber Security Port Melbourne (3207) | Logistics & Maritime IT Security - ADL99",
     seoDescription: "Cyber security services in Port Melbourne (3207). Protect logistics, maritime, warehousing & distribution businesses from cyber threats. Supply chain security, Essential Eight. Call ADL99.",
@@ -2360,7 +2360,7 @@ export const locationsData: Record<string, LocationData> = {
   "fitzroy": {
     name: "Fitzroy",
     postcode: "3065",
-    heroTitle: "Cyber Security Services in Fitzroy (3065)",
+    heroTitle: "Cyber Security Services in Fitzroy",
     heroSubtext: "Protect your Fitzroy business with tailored cyber security solutions. From creative studios to hospitality venues — we secure Melbourne's most vibrant creative precinct.",
     seoTitle: "Cyber Security Fitzroy (3065) | Creative & Hospitality IT Security - ADL99",
     seoDescription: "Cyber security services in Fitzroy (3065). Protect creative agencies, bars, restaurants & retail businesses from cyber threats. Affordable security for local businesses. Call ADL99.",
@@ -2522,7 +2522,7 @@ export const locationsData: Record<string, LocationData> = {
   "albert-park": {
     name: "Albert Park",
     postcode: "3206",
-    heroTitle: "Cyber Security Services in Albert Park (3206)",
+    heroTitle: "Cyber Security Services in Albert Park",
     heroSubtext: "Protect your Albert Park business with professional cyber security solutions. From healthcare to professional services — we secure businesses across this prestigious bayside suburb.",
     seoTitle: "Cyber Security Albert Park (3206) | Healthcare & Professional Services IT Security - ADL99",
     seoDescription: "Cyber security services in Albert Park (3206). Protect medical practices, professional services & small businesses from cyber threats. Privacy compliance, Essential Eight. Call ADL99.",
@@ -2684,7 +2684,7 @@ export const locationsData: Record<string, LocationData> = {
   "kew": {
     name: "Kew",
     postcode: "3101",
-    heroTitle: "Cyber Security Services in Kew (3101)",
+    heroTitle: "Cyber Security Services in Kew",
     heroSubtext: "Protect your Kew business with expert cyber security solutions. From healthcare to financial services — we secure businesses across Melbourne's established eastern suburb.",
     seoTitle: "Cyber Security Kew (3101) | Healthcare, Finance & Professional Services IT Security - ADL99",
     seoDescription: "Cyber security services in Kew (3101). Protect medical practices, financial advisors & professional services from cyber threats. Privacy compliance, ransomware protection. Call ADL99.",
@@ -2846,7 +2846,7 @@ export const locationsData: Record<string, LocationData> = {
   "carlton": {
     name: "Carlton",
     postcode: "3053",
-    heroTitle: "Cyber Security Services in Carlton (3053)",
+    heroTitle: "Cyber Security Services in Carlton",
     heroSubtext: "Protect your Carlton business with tailored cyber security solutions. From university research to hospitality — we secure businesses in Melbourne's knowledge precinct.",
     seoTitle: "Cyber Security Carlton (3053) | Research, Education & Hospitality IT Security - ADL99",
     seoDescription: "Cyber security services in Carlton (3053). Protect research organizations, education providers, hospitality & retail businesses from cyber threats. Affordable security. Call ADL99.",
@@ -3008,7 +3008,7 @@ export const locationsData: Record<string, LocationData> = {
   "armadale": {
     name: "Armadale",
     postcode: "3143",
-    heroTitle: "Cyber Security Services in Armadale (3143)",
+    heroTitle: "Cyber Security Services in Armadale",
     heroSubtext: "Protect your Armadale business with professional cyber security solutions. From boutique retail to professional services — we secure businesses in Melbourne's prestigious shopping precinct.",
     seoTitle: "Cyber Security Armadale (3143) | Retail, Fashion & Professional Services IT Security - ADL99",
     seoDescription: "Cyber security services in Armadale (3143). Protect boutique retail, fashion, professional services & small businesses from cyber threats. PCI compliance, privacy protection. Call ADL99.",
