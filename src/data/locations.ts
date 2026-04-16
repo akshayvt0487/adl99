@@ -1551,65 +1551,65 @@ export const locationsData: Record<string, LocationData> = {
     name: "Camberwell",
     postcode: "3124",
     heroTitle: "Protecting Camberwell's Most Trusted Firms",
-    heroSubtext: "Cybersecurity services for Camberwell businesses. ADL99 provides cyber maturity assessments, compliance support & vCISO for Burke Road's professional community.",
-    seoTitle: "Cyber Security Camberwell Melbourne | ADL99",
-    seoDescription: "Cybersecurity services for Camberwell businesses. ADL99 provides cyber maturity assessments, compliance support & vCISO for Burke Road's professional community.",
-    introH2: "Cyber Security Services for Camberwell Businesses",
-    introSubtext: "Camberwell's Burke Road is home to one of Melbourne's most concentrated strips of professional services — accountants, solicitors, financial planners, and medical practitioners who collectively manage millions in client assets and sensitive personal data. These established firms often have deep client relationships but shallow cyber defences.",
+    heroSubtext: "Expert cyber security for Camberwell's professional corridor. ADL99 protects accountants, solicitors, and medical practices on Burke Road with tailored compliance and threat protection.",
+    seoTitle: "Cyber Security Camberwell (3124) | Burke Road Professional Services - ADL99",
+    seoDescription: "Cyber security for Camberwell (3124) professional services. Protect accountants, solicitors & medical practices from conveyancing fraud, ransomware & data breaches. ADL99 delivers compliance-focused security.",
+    introH2: "Cyber Security Services for Accountants, Solicitors & Medical Practices in Camberwell",
+    introSubtext: "Camberwell's Burke Road professional corridor hosts one of Melbourne's densest concentrations of accountants, solicitors, financial planners, and medical practices. These firms manage sensitive client data, financial records, and health information — making them prime targets for conveyancing fraud, ransomware, and business email compromise. ADL99 delivers cyber security that protects client trust.",
     introChallenges: [
       {
-        icon: "Shield",
-        title: "Conveyancing Fraud Prevention",
-        description: "Email interception and payment redirection scams targeting property settlements. Secure your conveyancing process with multi-factor authentication and verification protocols."
-      },
-      {
-        icon: "FileText",
-        title: "Client Data Protection",
-        description: "Financial records, medical histories, and legal documents require robust security. Protect sensitive client information from theft and unauthorized access."
-      },
-      {
-        icon: "Users",
-        title: "Practice Management Security",
-        description: "Practice management software vulnerabilities can expose entire client databases. Secure your systems against ransomware and data breaches."
+        icon: "AlertTriangle",
+        title: "Conveyancing Fraud & Payment Redirection",
+        description: "Burke Road conveyancers are targeted by email interception attacks. Attackers impersonate solicitors to redirect settlement payments. Multi-million dollar losses occur when firms lack email security and payment verification protocols."
       },
       {
         icon: "Database",
-        title: "Privacy Act Compliance",
-        description: "Navigate Australian Privacy Principles and notifiable data breach obligations. Ensure your firm meets all regulatory requirements."
+        title: "Client Data Breach Exposure",
+        description: "Accountants hold tax file numbers, financial records, and client credentials. Medical practices store sensitive health information. A single breach triggers Privacy Act notification obligations and destroys decades of client trust."
+      },
+      {
+        icon: "Lock",
+        title: "Practice Management System Vulnerabilities",
+        description: "MYOB, Xero, Medical Director, and Best Practice software are targeted by ransomware. Outdated versions, weak passwords, and poor access controls create entry points that encrypt entire client databases."
+      },
+      {
+        icon: "FileText",
+        title: "Professional Compliance Gaps",
+        description: "Tax Practitioners Board cyber security obligations, Privacy Act requirements, and professional indemnity conditions demand documented security controls. Many Camberwell firms lack the policies, training, and technical measures required."
       }
     ],
-    servicesH2: "Camberwell Cyber Security Solutions",
-    servicesIntro: "ADL99 delivers cyber security services designed for Camberwell's professional community.",
+    servicesH2: "Cyber Security Solutions for Camberwell Professional Services",
+    servicesIntro: "ADL99 delivers compliance-focused cyber security tailored for Camberwell's accountants, solicitors, and medical practices.",
     services: [
       {
-        h3: "Cyber Maturity Assessments",
-        title: "Cyber Maturity Assessments for Burke Road Firms",
-        description: "Comprehensive evaluation of your security posture tailored for professional services. Identify vulnerabilities in practice management systems and client data protection."
+        h3: "Conveyancing Fraud Prevention for Camberwell Solicitors",
+        title: "Conveyancing Fraud Prevention",
+        description: "Multi-factor authentication, payment verification protocols, and email security to prevent settlement redirection scams. Protect your conveyancing clients from multi-million dollar fraud."
       },
       {
-        h3: "vCISO Services",
-        title: "vCISO for Small & Mid-Size Practices",
-        description: "Strategic security leadership without the full-time cost. Get expert guidance on compliance, risk management, and security program development."
+        h3: "Privacy Act Compliance for Camberwell Practices",
+        title: "Privacy Act & NDB Compliance",
+        description: "Privacy impact assessments, breach notification procedures, and Australian Privacy Principles compliance for firms holding sensitive client data. Meet Tax Practitioners Board and professional indemnity requirements."
       },
       {
-        h3: "Penetration Testing",
-        title: "Penetration Testing & Vulnerability Scanning",
-        description: "Proactive testing of your systems to identify weaknesses before attackers exploit them. Secure practice management software and client portals."
+        h3: "Practice Management System Security",
+        title: "Practice Management Security Hardening",
+        description: "Secure MYOB, Xero, Medical Director, and Best Practice systems. Implement access controls, patch management, and backup solutions to protect client databases from ransomware."
       },
       {
-        h3: "Cyber Awareness Training",
-        title: "Cyber Awareness Training Programs",
-        description: "Educate your team on phishing, social engineering, and secure data handling. Build a human firewall to complement technical controls."
+        h3: "vCISO for Camberwell Professional Services",
+        title: "Virtual CISO Services",
+        description: "Part-time security leadership for professional practices. Strategic guidance on compliance, risk management, and security program development without full-time CISO costs."
       },
       {
-        h3: "Incident Response",
-        title: "Emergency Incident Response & Recovery",
-        description: "24/7 rapid response to cyber incidents. Minimize downtime, contain threats, and restore operations quickly."
+        h3: "Cyber Awareness Training for Burke Road Firms",
+        title: "Staff Cyber Awareness Training",
+        description: "Training tailored for professional services staff. Recognize conveyancing fraud, phishing emails, and social engineering attacks. Build a human defense layer."
       },
       {
-        h3: "Compliance Support",
-        title: "Essential Eight & ASD Compliance",
-        description: "Align your security posture with government-recommended frameworks. Meet compliance obligations while protecting client data."
+        h3: "Incident Response for Professional Practices",
+        title: "Emergency Cyber Incident Response",
+        description: "24/7 rapid response to ransomware, data breaches, and cyber incidents. Minimize practice disruption, meet notification obligations, and restore operations."
       }
     ],
     whyAdl99H2: "Why Camberwell Firms Choose ADL99 as Their Cyber Security Provider",
@@ -1712,12 +1712,12 @@ export const locationsData: Record<string, LocationData> = {
   "prahran": {
     name: "Prahran",
     postcode: "3181",
-    heroTitle: "Cyber Security Services in Prahran (3181)",
-    heroSubtext: "Protect your business with tailored cyber security solutions in Prahran. From retail and hospitality to creative agencies — we help local businesses defend against cyber threats.",
-    seoTitle: "Cyber Security Prahran (3181) | Expert IT Security for Local Businesses - ADL99",
-    seoDescription: "Cyber security services in Prahran (3181). Protect your retail, hospitality or creative business from cyber threats. Essential Eight compliance, vCISO, incident response. Call ADL99.",
-    introH2: "Cyber Security Challenges in Prahran's Commercial District",
-    introSubtext: "Prahran's vibrant mix of retail, hospitality, and creative businesses along Chapel Street face unique cyber risks. From payment fraud to customer data breaches, protecting your business requires proactive security.",
+    heroTitle: "Cyber Security for Prahran's Chapel Street Retail & Hospitality",
+    heroSubtext: "Protect Prahran retail, hospitality & creative businesses from payment fraud and customer data breaches. ADL99 delivers PCI compliance and cyber security for Chapel Street.",
+    seoTitle: "Cyber Security Prahran (3181) | Chapel Street Retail & Hospitality - ADL99",
+    seoDescription: "Cyber security for Prahran (3181) retail, hospitality & creative businesses. PCI DSS compliance, POS security, payment fraud prevention on Chapel Street. Call ADL99.",
+    introH2: "Cyber Security for Retail, Hospitality & Creative Businesses in Prahran",
+    introSubtext: "Prahran's Chapel Street corridor hosts hundreds of retail stores, restaurants, bars, and creative agencies processing thousands of daily card transactions. Payment fraud, customer data breaches, and PCI compliance failures destroy business reputations overnight. ADL99 secures Prahran businesses with payment security and Privacy Act compliance.",
     introChallenges: [
       {
         icon: "CreditCard",
