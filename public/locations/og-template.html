@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Location OG Image Template</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
+        }
+
+        .og-container {
+            width: 1200px;
+            height: 630px;
+            background: linear-gradient(135deg, #0066CC 0%, #004A99 100%);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .og-container::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -20%;
+            width: 800px;
+            height: 800px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 50%;
+        }
+
+        .og-container::after {
+            content: '';
+            position: absolute;
+            bottom: -30%;
+            left: -10%;
+            width: 600px;
+            height: 600px;
+            background: rgba(255, 255, 255, 0.03);
+            border-radius: 50%;
+        }
+
+        .content {
+            position: relative;
+            z-index: 1;
+            text-align: center;
+            padding: 60px;
+        }
+
+        .logo {
+            font-size: 48px;
+            font-weight: 700;
+            color: white;
+            margin-bottom: 40px;
+            letter-spacing: 2px;
+        }
+
+        .location-badge {
+            display: inline-block;
+            background: rgba(255, 255, 255, 0.2);
+            color: white;
+            padding: 12px 24px;
+            border-radius: 30px;
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 30px;
+            backdrop-filter: blur(10px);
+        }
+
+        .location-name {
+            font-size: 72px;
+            font-weight: 800;
+            color: white;
+            margin-bottom: 20px;
+            line-height: 1.1;
+        }
+
+        .postcode {
+            font-size: 36px;
+            font-weight: 600;
+            color: rgba(255, 255, 255, 0.9);
+            margin-bottom: 40px;
+        }
+
+        .tagline {
+            font-size: 28px;
+            font-weight: 500;
+            color: rgba(255, 255, 255, 0.95);
+            max-width: 900px;
+            line-height: 1.4;
+        }
+
+        .shield-icon {
+            position: absolute;
+            top: 40px;
+            right: 40px;
+            width: 80px;
+            height: 80px;
+            opacity: 0.3;
+        }
+    </style>
+</head>
+<body>
+    <div class="og-container">
+        <!-- Shield icon (decorative) -->
+        <svg class="shield-icon" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+        </svg>
+
+        <div class="content">
+            <div class="logo">ADL99</div>
+            <div class="location-badge">Cyber Security Services</div>
+            <h1 class="location-name" id="locationName">Melbourne CBD</h1>
+            <div class="postcode" id="postcode">3000</div>
+            <p class="tagline">Expert Cyber Security for Local Businesses</p>
+        </div>
+    </div>
+
+    <script>
+        // To generate images:
+        // 1. Update the locationName and postcode elements
+        // 2. Take a screenshot at exactly 1200x630px
+        // 3. Save as {slug}-og.png
+
+        const locations = [
+            { name: "Melbourne CBD", postcode: "3000", slug: "melbourne-cbd" },
+            { name: "Southbank", postcode: "3006", slug: "southbank" },
+            { name: "Docklands", postcode: "3008", slug: "docklands" },
+            { name: "South Yarra", postcode: "3141", slug: "south-yarra" },
+            { name: "Toorak", postcode: "3142", slug: "toorak" },
+            { name: "St Kilda", postcode: "3182", slug: "st-kilda" },
+            { name: "Brighton", postcode: "3186", slug: "brighton" },
+            { name: "Richmond", postcode: "3121", slug: "richmond" },
+            { name: "Hawthorn", postcode: "3122", slug: "hawthorn" },
+            { name: "Malvern", postcode: "3144", slug: "malvern" },
+            { name: "Camberwell", postcode: "3124", slug: "camberwell" },
+            { name: "Prahran", postcode: "3181", slug: "prahran" },
+            { name: "East Melbourne", postcode: "3002", slug: "east-melbourne" },
+            { name: "South Melbourne", postcode: "3205", slug: "south-melbourne" },
+            { name: "Port Melbourne", postcode: "3207", slug: "port-melbourne" },
+            { name: "Fitzroy", postcode: "3065", slug: "fitzroy" },
+            { name: "Albert Park", postcode: "3206", slug: "albert-park" },
+            { name: "Kew", postcode: "3101", slug: "kew" },
+            { name: "Carlton", postcode: "3053", slug: "carlton" },
+            { name: "Armadale", postcode: "3143", slug: "armadale" }
+        ];
+
+        // You can use this array to generate all images programmatically
+    </script>
+</body>
+</html>

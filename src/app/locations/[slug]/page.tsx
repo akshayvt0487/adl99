@@ -31,6 +31,14 @@ export async function generateMetadata({ params }: LocationPageProps): Promise<M
   return {
     title: location.seoTitle,
     description: location.seoDescription,
+    keywords: [
+      `cyber security ${location.name}`,
+      `cybersecurity ${location.postcode}`,
+      `IT security ${location.name}`,
+      `cyber security services ${location.name}`,
+      `${location.name} cyber security company`,
+      `Melbourne cyber security`,
+    ],
     alternates: {
       canonical: `https://www.adl99.com.au/locations/${slug}`,
     },
@@ -39,19 +47,24 @@ export async function generateMetadata({ params }: LocationPageProps): Promise<M
       description: location.seoDescription,
       type: "website",
       url: `https://www.adl99.com.au/locations/${slug}`,
+      siteName: "ADL99 Cybersecurity",
+      locale: "en_AU",
       images: [
         {
-          url: `https://www.adl99.com.au/og-image.jpg`,
+          url: `https://www.adl99.com.au/locations/${slug}-og.png`,
           width: 1200,
           height: 630,
+          alt: `Cyber Security Services in ${location.name} - ADL99`,
         },
       ],
     },
     twitter: {
       card: "summary_large_image",
+      site: "@ADL99Security",
+      creator: "@ADL99Security",
       title: location.seoTitle,
       description: location.seoDescription,
-      images: [`https://www.adl99.com.au/og-image.jpg`],
+      images: [`https://www.adl99.com.au/locations/${slug}-og.png`],
     },
   };
 }
