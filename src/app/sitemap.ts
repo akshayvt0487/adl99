@@ -1,6 +1,7 @@
 import { MetadataRoute } from 'next';
 import { fetchGraphQL } from '@/lib/wordpress-server';
 import { GET_ALL_SERVICES, GET_ALL_INDUSTRIES } from '@/lib/wordpress-queries';
+import { getAllLocationSlugs } from '@/data/locations';
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const baseUrl = 'https://www.adl99.com.au';
@@ -8,6 +9,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   // Fetch dynamic routes
   let services: string[] = [];
   let industries: string[] = [];
+  let locations: string[] = [];
 
   try {
     const servicesData = await fetchGraphQL<any>(GET_ALL_SERVICES, {}, 3600);
@@ -21,6 +23,12 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     industries = industriesData.industries?.nodes?.map((i: any) => i.slug) || [];
   } catch (error) {
     console.error('Error fetching industries for sitemap:', error);
+  }
+
+  try {
+    locations = getAllLocationSlugs();
+  } catch (error) {
+    console.error('Error fetching locations for sitemap:', error);
   }
 
   // Static pages
@@ -61,6 +69,18 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       changeFrequency: 'monthly' as const,
       priority: 0.7,
     },
+    {
+      url: `${baseUrl}/locations`,
+      lastModified: new Date(),
+      changeFrequency: 'weekly' as const,
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/blog`,
+      lastModified: new Date(),
+      changeFrequency: 'weekly' as const,
+      priority: 0.8,
+    },
   ];
 
   // Dynamic service pages
@@ -79,5 +99,27 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     priority: 0.8,
   }));
 
-  return [...staticPages, ...servicePages, ...industryPages];
+  // Dynamic location pages
+  const locationPages = locations.map((slug) => ({
+    url: `${baseUrl}/locations/${slug}`,
+    lastModified: new Date(),
+    changeFrequency: 'weekly' as const,
+    priority: 0.7,
+  }));
+
+  // Blog post pages
+  const blogPosts = [
+    'essential-eight-maturity-model-explained',
+    'ransomware-protection-strategies-2024',
+    'cyber-security-compliance-small-business',
+  ];
+
+  const blogPages = blogPosts.map((slug) => ({
+    url: `${baseUrl}/blog/${slug}`,
+    lastModified: new Date(),
+    changeFrequency: 'monthly' as const,
+    priority: 0.6,
+  }));
+
+  return [...staticPages, ...servicePages, ...industryPages, ...locationPages, ...blogPages];
 }
