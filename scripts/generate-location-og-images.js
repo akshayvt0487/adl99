@@ -3,16 +3,26 @@ const path = require('path');
 const fs = require('fs');
 
 const locations = [
-  {
-    slug: 'melbourne-cbd',
-    title: 'Cyber Security Melbourne CBD',
-    subtitle: 'ADL99 | Trusted Protection for CBD Businesses'
-  },
-  {
-    slug: 'southbank',
-    title: 'Cyber Security Southbank',
-    subtitle: 'ADL99 | Enterprise-Grade Security for Your Business'
-  }
+  { slug: 'melbourne-cbd', title: 'Cyber Security Melbourne CBD', subtitle: 'ADL99 | Trusted Protection for CBD Businesses' },
+  { slug: 'southbank', title: 'Cyber Security Southbank', subtitle: 'ADL99 | Enterprise-Grade Security' },
+  { slug: 'docklands', title: 'Cyber Security Docklands', subtitle: 'ADL99 | Protect Your Business' },
+  { slug: 'south-yarra', title: 'Cyber Security South Yarra', subtitle: 'ADL99 | Expert Protection' },
+  { slug: 'toorak', title: 'Cyber Security Toorak', subtitle: 'ADL99 | Premium Business Security' },
+  { slug: 'st-kilda', title: 'Cyber Security St Kilda', subtitle: 'ADL99 | Local Business Protection' },
+  { slug: 'brighton', title: 'Cyber Security Brighton', subtitle: 'ADL99 | Professional Services Security' },
+  { slug: 'richmond', title: 'Cyber Security Richmond', subtitle: 'ADL99 | Small Business Protection' },
+  { slug: 'hawthorn', title: 'Cyber Security Hawthorn', subtitle: 'ADL99 | Professional Practice Security' },
+  { slug: 'malvern', title: 'Cyber Security Malvern', subtitle: 'ADL99 | Trusted Local Protection' },
+  { slug: 'camberwell', title: 'Cyber Security Camberwell', subtitle: 'ADL99 | Burke Road Professional Services' },
+  { slug: 'prahran', title: 'Cyber Security Prahran', subtitle: 'ADL99 | Chapel Street Business Protection' },
+  { slug: 'east-melbourne', title: 'Cyber Security East Melbourne', subtitle: 'ADL99 | Healthcare & Government Security' },
+  { slug: 'south-melbourne', title: 'Cyber Security South Melbourne', subtitle: 'ADL99 | Tech & Manufacturing Security' },
+  { slug: 'port-melbourne', title: 'Cyber Security Port Melbourne', subtitle: 'ADL99 | Logistics & Maritime Security' },
+  { slug: 'fitzroy', title: 'Cyber Security Fitzroy', subtitle: 'ADL99 | Creative & Hospitality Security' },
+  { slug: 'albert-park', title: 'Cyber Security Albert Park', subtitle: 'ADL99 | Professional Practice Protection' },
+  { slug: 'kew', title: 'Cyber Security Kew', subtitle: 'ADL99 | Medical & Financial Services' },
+  { slug: 'carlton', title: 'Cyber Security Carlton', subtitle: 'ADL99 | Education & Research Security' },
+  { slug: 'armadale', title: 'Cyber Security Armadale', subtitle: 'ADL99 | Retail & Fashion Protection' }
 ];
 
 async function generateLocationOGImage(location) {
@@ -23,6 +33,19 @@ async function generateLocationOGImage(location) {
   if (!fs.existsSync(locationsDir)) {
     fs.mkdirSync(locationsDir, { recursive: true });
   }
+
+  // Escape XML entities
+  const escapeXml = (unsafe) => {
+    return unsafe.replace(/[<>&'"]/g, (c) => {
+      switch (c) {
+        case '<': return '&lt;';
+        case '>': return '&gt;';
+        case '&': return '&amp;';
+        case '\'': return '&apos;';
+        case '"': return '&quot;';
+      }
+    });
+  };
 
   // Create gradient background (1200x630)
   const svgBackground = `
@@ -37,12 +60,12 @@ async function generateLocationOGImage(location) {
 
       <!-- Title -->
       <text x="80" y="280" font-family="Arial, sans-serif" font-size="64" font-weight="bold" fill="#ffffff">
-        ${location.title}
+        ${escapeXml(location.title)}
       </text>
 
       <!-- Subtitle -->
       <text x="80" y="350" font-family="Arial, sans-serif" font-size="32" fill="#94a3b8">
-        ${location.subtitle}
+        ${escapeXml(location.subtitle)}
       </text>
 
       <!-- Decorative elements -->
