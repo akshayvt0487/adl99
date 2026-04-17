@@ -92,23 +92,11 @@ const BlogContent: React.FC<BlogContentProps> = ({ content }) => {
         ctaCard.innerHTML = `
           <div class="absolute top-0 right-0 w-32 h-32 bg-primary/10 rounded-full blur-3xl"></div>
           <div class="relative z-10">
-            <div class="flex items-start gap-4">
-              <div class="p-3 bg-primary/20 rounded-lg flex-shrink-0">
-                <svg class="w-8 h-8 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
-                </svg>
-              </div>
-              <div class="flex-1">
-                <h3 class="text-xl font-bold text-foreground mb-2">Need Help Implementing This?</h3>
-                <p class="text-sm text-muted-foreground mb-4">Our team at ADL99 can assess your current security posture and create a customized implementation plan.</p>
-                <a href="/contact" class="inline-flex items-center gap-2 px-6 py-3 bg-primary text-primary-foreground rounded-lg hover:bg-primary/90 transition-colors text-sm font-semibold shadow-sm">
-                  Get Free Assessment
-                  <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
-                  </svg>
-                </a>
-              </div>
-            </div>
+            <h3 class="text-xl font-bold text-foreground mb-2">Need Help Implementing This?</h3>
+            <p class="text-sm text-muted-foreground mb-4">Our team at ADL99 can assess your current security posture and create a customized implementation plan.</p>
+            <a href="/contact" class="inline-flex items-center gap-2 px-6 py-3 bg-primary text-primary-foreground rounded-lg hover:bg-primary/90 transition-colors text-sm font-semibold shadow-sm">
+              Get Free Assessment
+            </a>
           </div>
         `;
         h2.parentElement?.insertBefore(ctaCard, h2.nextSibling);
@@ -203,49 +191,97 @@ const BlogContent: React.FC<BlogContentProps> = ({ content }) => {
     // Process lists with icons
     const ulElements = tempDiv.querySelectorAll('ul');
     ulElements.forEach((ul) => {
-      ul.className = 'space-y-3 my-6';
       const liElements = ul.querySelectorAll('li');
 
-      // Check if this is a numbered list in content
-      const isNumberedInContent = liElements[0]?.textContent?.match(/^\d+\)/);
+      // Check if this is a simple list (like "The eight controls are:")
+      const previousElement = ul.previousElementSibling;
+      const previousText = previousElement?.textContent?.toLowerCase() || '';
+      const isSimpleList = previousText.includes('controls are:') ||
+                          previousText.includes('include:') ||
+                          previousText.includes('following:') ||
+                          liElements.length > 0 && !liElements[0].querySelector('strong') &&
+                          liElements[0].textContent!.length < 50;
 
-      liElements.forEach((li, index) => {
-        li.className = 'flex items-start gap-3 text-muted-foreground bg-card border border-border rounded-lg p-4 hover:border-primary/50 transition-colors';
+      if (isSimpleList) {
+        // Simple bullet list styling
+        ul.className = 'list-disc list-inside space-y-2 my-4 ml-4';
+        liElements.forEach((li) => {
+          li.className = 'text-muted-foreground';
+        });
+      } else {
+        // Card-based list styling
+        ul.className = 'space-y-3 my-6';
 
-        // Add icon
-        const iconWrapper = document.createElement('div');
-        iconWrapper.className = 'mt-1 flex-shrink-0 flex items-center justify-center w-6 h-6 rounded-full bg-primary/10';
+        // Check if this is a numbered list in content
+        const isNumberedInContent = liElements[0]?.textContent?.match(/^\d+\)/);
 
-        if (isNumberedInContent) {
-          iconWrapper.innerHTML = `<span class="text-xs font-bold text-primary">${index + 1}</span>`;
-        } else {
-          iconWrapper.innerHTML = '<svg class="w-4 h-4 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>';
-        }
+        liElements.forEach((li, index) => {
+          // Check if this list item contains strong tags in the middle (like TL;DR items)
+          const hasInlineStrong = li.querySelector('strong') && li.childNodes.length > 1;
 
-        li.prepend(iconWrapper);
-      });
+          if (hasInlineStrong) {
+            // Flex layout for TL;DR items with inline formatting, but keep text together
+            li.className = 'flex items-start gap-3 text-muted-foreground bg-card border border-border rounded-lg p-4 hover:border-primary/50 transition-colors';
+
+            // Add checkmark icon
+            const iconWrapper = document.createElement('div');
+            iconWrapper.className = 'mt-1 flex-shrink-0 flex items-center justify-center w-6 h-6 rounded-full bg-primary/10';
+            iconWrapper.innerHTML = '<svg class="w-4 h-4 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>';
+
+            // Wrap the content in a flex-1 div to keep it together
+            const contentWrapper = document.createElement('div');
+            contentWrapper.className = 'flex-1';
+            while (li.firstChild) {
+              contentWrapper.appendChild(li.firstChild);
+            }
+
+            li.appendChild(iconWrapper);
+            li.appendChild(contentWrapper);
+          } else {
+            // Flex layout for regular list items
+            li.className = 'flex items-start gap-3 text-muted-foreground bg-card border border-border rounded-lg p-4 hover:border-primary/50 transition-colors';
+
+            // Add icon
+            const iconWrapper = document.createElement('div');
+            iconWrapper.className = 'mt-1 flex-shrink-0 flex items-center justify-center w-6 h-6 rounded-full bg-primary/10';
+
+            if (isNumberedInContent) {
+              iconWrapper.innerHTML = `<span class="text-xs font-bold text-primary">${index + 1}</span>`;
+            } else {
+              iconWrapper.innerHTML = '<svg class="w-4 h-4 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>';
+            }
+
+            li.prepend(iconWrapper);
+          }
+        });
+      }
     });
 
-    // Process blockquotes
+    // Process blockquotes - make them CTA style
     const blockquotes = tempDiv.querySelectorAll('blockquote');
     blockquotes.forEach((blockquote) => {
-      blockquote.className = 'bg-gradient-to-br from-primary/10 via-primary/5 to-background border-l-4 border-primary rounded-r-xl p-8 my-8 relative overflow-hidden shadow-sm';
+      // Get the text content
+      const text = blockquote.textContent?.trim() || '';
 
-      // Add decorative elements
-      const decorator = document.createElement('div');
-      decorator.className = 'absolute top-0 right-0 w-24 h-24 bg-primary/5 rounded-full blur-2xl';
-      blockquote.appendChild(decorator);
+      // Convert blockquote to CTA card
+      blockquote.className = 'my-8 bg-gradient-to-r from-primary to-primary/90 rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow';
 
-      // Add quote icon
-      const icon = document.createElement('div');
-      icon.className = 'absolute top-6 right-6 text-primary/20';
-      icon.innerHTML = '<svg class="w-12 h-12" fill="currentColor" viewBox="0 0 24 24"><path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/></svg>';
-      blockquote.prepend(icon);
-
-      const pInBlockquote = blockquote.querySelectorAll('p');
-      pInBlockquote.forEach((p) => {
-        p.className = 'text-base font-medium text-foreground mb-0 relative z-10';
-      });
+      // Clear existing content and rebuild as CTA
+      blockquote.innerHTML = `
+        <a href="/contact" class="flex items-center justify-between group">
+          <div class="flex-1">
+            <p class="text-lg font-semibold text-primary-foreground mb-0">${text}</p>
+          </div>
+          <div class="ml-4 flex items-center gap-2">
+            <span class="px-4 py-2 bg-white/20 text-primary-foreground rounded-lg font-medium text-sm group-hover:bg-white/30 transition-colors">
+              Book Now
+            </span>
+            <svg class="w-5 h-5 text-primary-foreground group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+            </svg>
+          </div>
+        </a>
+      `;
     });
 
     // Add info boxes for "Common gap" sections

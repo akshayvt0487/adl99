@@ -176,8 +176,8 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
                 </div>
 
                 {/* Sidebar - Fixed on Scroll */}
-                <aside className="lg:col-span-1 relative">
-                  <div className="space-y-6 lg:sticky lg:top-24">
+                <aside className="lg:col-span-1">
+                  <div className="space-y-6 sticky top-24">
                     {/* Quick Contact Card */}
                     <div className="bg-primary/5 border border-primary/20 rounded-xl p-6">
                       <h3 className="text-lg font-bold text-foreground mb-3">Need Expert Help?</h3>
