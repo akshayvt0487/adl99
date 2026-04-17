@@ -2,6 +2,7 @@ import { MetadataRoute } from 'next';
 import { fetchGraphQL } from '@/lib/wordpress-server';
 import { GET_ALL_SERVICES, GET_ALL_INDUSTRIES } from '@/lib/wordpress-queries';
 import { getAllLocationSlugs } from '@/data/locations';
+import { getAllBlogSlugs } from '@/lib/markdown';
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const baseUrl = 'https://www.adl99.com.au';
@@ -10,6 +11,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   let services: string[] = [];
   let industries: string[] = [];
   let locations: string[] = [];
+  let blogPosts: string[] = [];
 
   try {
     const servicesData = await fetchGraphQL<any>(GET_ALL_SERVICES, {}, 3600);
@@ -29,6 +31,12 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     locations = getAllLocationSlugs();
   } catch (error) {
     console.error('Error fetching locations for sitemap:', error);
+  }
+
+  try {
+    blogPosts = getAllBlogSlugs().map((post) => post.slug);
+  } catch (error) {
+    console.error('Error fetching blog posts for sitemap:', error);
   }
 
   // Static pages
@@ -75,6 +83,12 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       changeFrequency: 'weekly' as const,
       priority: 0.8,
     },
+    {
+      url: `${baseUrl}/blog`,
+      lastModified: new Date(),
+      changeFrequency: 'weekly' as const,
+      priority: 0.9,
+    },
   ];
 
   // Dynamic service pages
@@ -101,5 +115,13 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     priority: 0.7,
   }));
 
-  return [...staticPages, ...servicePages, ...industryPages, ...locationPages];
+  // Dynamic blog pages
+  const blogPages = blogPosts.map((slug) => ({
+    url: `${baseUrl}/blog/${slug}`,
+    lastModified: new Date(),
+    changeFrequency: 'monthly' as const,
+    priority: 0.8,
+  }));
+
+  return [...staticPages, ...servicePages, ...industryPages, ...locationPages, ...blogPages];
 }
