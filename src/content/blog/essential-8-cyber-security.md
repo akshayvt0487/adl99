@@ -7,7 +7,7 @@ updated: "April 2026"
 readTime: "12 min"
 author: "ADL99 Security Advisory Team"
 category: "Compliance"
-image: "/banner-images/services.webp"
+image: "/banner-images/services_technical-advisory.webp"
 ---
 
 ## TL;DR

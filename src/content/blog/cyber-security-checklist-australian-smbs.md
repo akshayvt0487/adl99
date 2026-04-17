@@ -7,7 +7,7 @@ updated: "April 2026"
 readTime: "8 min"
 author: "ADL99 Security Advisory Team"
 category: "Essential Eight"
-image: "/banner-images/services.webp"
+image: "/banner-images/services_cyber-maturity.webp"
 ---
 
 ## TL;DR

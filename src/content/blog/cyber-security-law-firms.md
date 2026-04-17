@@ -7,7 +7,7 @@ updated: "April 2026"
 readTime: "14 min"
 author: "ADL99 Security Advisory Team"
 category: "Industry Guides"
-image: "/banner-images/about.webp"
+image: "/banner-images/Law Firms.webp"
 ---
 
 ## TL;DR: Cyber Security for Law Firms at a Glance

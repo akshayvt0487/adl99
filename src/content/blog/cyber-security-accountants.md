@@ -7,7 +7,7 @@ updated: "April 2026"
 readTime: "15 min"
 author: "ADL99 Security Advisory Team"
 category: "Industry Guides"
-image: "/banner-images/services.webp"
+image: "/banner-images/Accounting.webp"
 ---
 
 ## TL;DR: Cyber Security for Accountants at a Glance
