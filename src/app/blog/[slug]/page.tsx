@@ -4,10 +4,10 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import Breadcrumb from "@/components/Breadcrumb";
 import BlogContent from "@/components/BlogContent";
-import { Calendar, Clock, User, ArrowLeft, ArrowRight, Download, Share2 } from "lucide-react";
+import { Calendar, Clock, User, ArrowLeft, ArrowRight, Download, Share2, BookOpen } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
-import { getBlogPost, getAllBlogSlugs } from "@/lib/markdown";
+import { getBlogPost, getAllBlogSlugs, getAllBlogPosts } from "@/lib/markdown";
 
 interface BlogPostPageProps {
   params: Promise<{ slug: string }>;
@@ -65,6 +65,20 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
     post = await getBlogPost(slug);
   } catch {
     notFound();
+  }
+
+  // Get related posts (same category, exclude current post, limit to 3)
+  const allPosts = getAllBlogPosts();
+  const relatedPosts = allPosts
+    .filter(p => p.slug !== slug && p.category === post.category)
+    .slice(0, 3);
+
+  // If not enough related posts from same category, add more from other categories
+  if (relatedPosts.length < 3) {
+    const additionalPosts = allPosts
+      .filter(p => p.slug !== slug && !relatedPosts.includes(p))
+      .slice(0, 3 - relatedPosts.length);
+    relatedPosts.push(...additionalPosts);
   }
 
   return (
@@ -167,9 +181,9 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
                   <BlogContent content={post.content || ''} />
                 </div>
 
-                {/* Sidebar */}
+                {/* Sidebar - Fixed on Scroll */}
                 <aside className="lg:col-span-1">
-                  <div className="sticky top-24 space-y-6">
+                  <div className="lg:sticky lg:top-24 space-y-6 max-h-[calc(100vh-6rem)] lg:overflow-y-auto">
                     {/* Quick Contact Card */}
                     <div className="bg-primary/5 border border-primary/20 rounded-xl p-6">
                       <h3 className="text-lg font-bold text-foreground mb-3">Need Expert Help?</h3>
@@ -219,6 +233,61 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
                   </div>
                 </aside>
               </div>
+
+              {/* Related Posts Section */}
+              {relatedPosts.length > 0 && (
+                <div className="mt-20 pt-12 border-t border-border">
+                  <div className="flex items-center gap-3 mb-8">
+                    <BookOpen className="w-6 h-6 text-primary" />
+                    <h2 className="text-3xl font-bold text-foreground">Related Articles</h2>
+                  </div>
+                  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    {relatedPosts.map((relatedPost) => (
+                      <Link
+                        key={relatedPost.slug}
+                        href={`/blog/${relatedPost.slug}`}
+                        className="group bg-card border border-border rounded-xl overflow-hidden hover:border-primary/50 hover:shadow-lg transition-all"
+                      >
+                        <div className="relative h-48 overflow-hidden">
+                          <Image
+                            src={relatedPost.image}
+                            alt={relatedPost.title}
+                            fill
+                            className="object-cover group-hover:scale-105 transition-transform duration-300"
+                          />
+                          <div className="absolute top-4 left-4">
+                            <span className="px-3 py-1 bg-primary text-primary-foreground text-xs font-semibold rounded-full">
+                              {relatedPost.category}
+                            </span>
+                          </div>
+                        </div>
+                        <div className="p-6">
+                          <div className="flex items-center gap-4 text-sm text-muted-foreground mb-3">
+                            <div className="flex items-center gap-1">
+                              <Calendar className="w-4 h-4" />
+                              <span>{new Date(relatedPost.date).toLocaleDateString('en-AU', { day: 'numeric', month: 'short', year: 'numeric' })}</span>
+                            </div>
+                            <div className="flex items-center gap-1">
+                              <Clock className="w-4 h-4" />
+                              <span>{relatedPost.readTime}</span>
+                            </div>
+                          </div>
+                          <h3 className="text-xl font-bold text-foreground mb-3 group-hover:text-primary transition-colors line-clamp-2">
+                            {relatedPost.title}
+                          </h3>
+                          <p className="text-sm text-muted-foreground line-clamp-3 mb-4">
+                            {relatedPost.description}
+                          </p>
+                          <div className="flex items-center text-sm text-primary font-medium group-hover:gap-2 transition-all">
+                            <span>Read More</span>
+                            <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                          </div>
+                        </div>
+                      </Link>
+                    ))}
+                  </div>
+                </div>
+              )}
             </div>
           </div>
         </section>
