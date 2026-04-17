@@ -30,6 +30,61 @@ const BlogContent: React.FC<BlogContentProps> = ({ content }) => {
       `;
       h2.parentElement?.insertBefore(decorator, h2);
 
+      // Add contextual decorative images after certain sections
+      const h2Text = h2.textContent?.toLowerCase() || '';
+      if ((h2Text.includes('checklist') || h2Text.includes('controls')) && index === 1) {
+        const imageBox = document.createElement('div');
+        imageBox.className = 'my-12 rounded-2xl overflow-hidden border border-border shadow-lg';
+        imageBox.innerHTML = `
+          <div class="relative h-64 md:h-80 bg-gradient-to-br from-primary/5 to-primary/10 flex items-center justify-center p-8">
+            <div class="grid grid-cols-3 gap-6 w-full max-w-md">
+              <div class="flex flex-col items-center gap-2">
+                <div class="w-16 h-16 rounded-full bg-primary/20 flex items-center justify-center">
+                  <svg class="w-8 h-8 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path>
+                  </svg>
+                </div>
+                <span class="text-xs font-medium text-primary">MFA</span>
+              </div>
+              <div class="flex flex-col items-center gap-2">
+                <div class="w-16 h-16 rounded-full bg-primary/20 flex items-center justify-center">
+                  <svg class="w-8 h-8 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
+                  </svg>
+                </div>
+                <span class="text-xs font-medium text-primary">Patching</span>
+              </div>
+              <div class="flex flex-col items-center gap-2">
+                <div class="w-16 h-16 rounded-full bg-primary/20 flex items-center justify-center">
+                  <svg class="w-8 h-8 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 7a2 2 0 012 2m4 0a6 6 0 01-7.743 5.743L11 17H9v2H7v2H4a1 1 0 01-1-1v-2.586a1 1 0 01.293-.707l5.964-5.964A6 6 0 1121 9z"></path>
+                  </svg>
+                </div>
+                <span class="text-xs font-medium text-primary">Access Control</span>
+              </div>
+            </div>
+          </div>
+        `;
+        h2.parentElement?.insertBefore(imageBox, h2.nextSibling);
+      }
+
+      // Add security shield infographic for implementation sections
+      if (h2Text.includes('implement') || h2Text.includes('protect')) {
+        const shieldBox = document.createElement('div');
+        shieldBox.className = 'my-12 rounded-2xl overflow-hidden bg-gradient-to-br from-primary/10 via-primary/5 to-background border border-primary/20 p-12';
+        shieldBox.innerHTML = `
+          <div class="flex items-center justify-center">
+            <svg class="w-48 h-48 text-primary/30" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="0.5" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
+            </svg>
+          </div>
+        `;
+        const nextSibling = h2.nextSibling;
+        if (nextSibling && index > 2) {
+          h2.parentElement?.insertBefore(shieldBox, nextSibling);
+        }
+      }
+
       // Add inline CTA after every 3rd h2
       if ((index + 1) % 3 === 0) {
         const ctaCard = document.createElement('div');
@@ -37,16 +92,14 @@ const BlogContent: React.FC<BlogContentProps> = ({ content }) => {
         ctaCard.innerHTML = `
           <div class="absolute top-0 right-0 w-32 h-32 bg-primary/10 rounded-full blur-3xl"></div>
           <div class="relative z-10">
-            <div class="flex items-start gap-4">
-              <div class="p-3 bg-primary/20 rounded-lg">
-                <svg class="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
-                </svg>
+            <div class="flex items-start gap-6">
+              <div class="flex-shrink-0">
+                <img src="/logo.svg" alt="ADL99 Logo" class="w-16 h-16" />
               </div>
               <div class="flex-1">
                 <h3 class="text-xl font-bold text-foreground mb-2">Need Help Implementing This?</h3>
-                <p class="text-sm text-muted-foreground mb-4">Our team can assess your current security posture and create a customized implementation plan.</p>
-                <a href="/contact" class="inline-flex items-center gap-2 px-4 py-2 bg-primary text-primary-foreground rounded-lg hover:bg-primary/90 transition-colors text-sm font-medium">
+                <p class="text-sm text-muted-foreground mb-4">Our team at ADL99 can assess your current security posture and create a customized implementation plan.</p>
+                <a href="/contact" class="inline-flex items-center gap-2 px-6 py-3 bg-primary text-primary-foreground rounded-lg hover:bg-primary/90 transition-colors text-sm font-semibold shadow-sm">
                   Get Free Assessment
                   <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
@@ -100,6 +153,48 @@ const BlogContent: React.FC<BlogContentProps> = ({ content }) => {
         p.className = 'text-sm text-muted-foreground leading-relaxed mb-4 p-4 bg-amber-500/10 border-l-4 border-amber-500 rounded-r italic';
       } else {
         p.className = 'text-base text-muted-foreground leading-relaxed mb-4';
+      }
+    });
+
+    // Add visual stats/metrics boxes after TL;DR or summary sections
+    const allParagraphs = tempDiv.querySelectorAll('p');
+    allParagraphs.forEach((p) => {
+      const text = p.textContent || '';
+      // Look for statistics or monetary values in the text
+      if ((text.includes('$') && text.includes(',')) || (text.includes('%') && text.match(/\d+%/))) {
+        // Check if this paragraph contains significant stats
+        const hasStats = text.match(/\$[\d,]+/) || text.match(/\d+%/);
+        if (hasStats && !p.closest('.stats-highlight')) {
+          const statsBox = document.createElement('div');
+          statsBox.className = 'stats-highlight my-8 grid grid-cols-1 md:grid-cols-3 gap-4';
+
+          // Extract stats from text
+          const moneyMatch = text.match(/\$([\d,]+)/);
+          const percentMatch = text.match(/(\d+)%/);
+
+          if (moneyMatch || percentMatch) {
+            statsBox.innerHTML = `
+              <div class="bg-gradient-to-br from-red-500/10 to-red-500/5 border border-red-500/20 rounded-xl p-6 text-center">
+                <div class="text-3xl font-bold text-red-600 mb-2">${moneyMatch ? '$' + moneyMatch[1] : '82 days'}</div>
+                <div class="text-sm text-muted-foreground">${moneyMatch ? 'Average Breach Cost' : 'Average Dwell Time'}</div>
+              </div>
+              <div class="bg-gradient-to-br from-amber-500/10 to-amber-500/5 border border-amber-500/20 rounded-xl p-6 text-center">
+                <div class="text-3xl font-bold text-amber-600 mb-2">${percentMatch ? percentMatch[0] : '15%'}</div>
+                <div class="text-sm text-muted-foreground">Increase in Attacks</div>
+              </div>
+              <div class="bg-gradient-to-br from-primary/10 to-primary/5 border border-primary/20 rounded-xl p-6 text-center">
+                <div class="text-3xl font-bold text-primary mb-2">72hrs</div>
+                <div class="text-sm text-muted-foreground">Breach Notification Deadline</div>
+              </div>
+            `;
+
+            // Insert after the parent section, but only once
+            const parentH2 = p.closest('section') || p.parentElement;
+            if (parentH2 && !parentH2.querySelector('.stats-highlight')) {
+              p.parentElement?.insertBefore(statsBox, p.nextSibling);
+            }
+          }
+        }
       }
     });
 
