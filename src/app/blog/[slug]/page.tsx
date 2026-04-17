@@ -4,7 +4,8 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import Breadcrumb from "@/components/Breadcrumb";
 import BlogContent from "@/components/BlogContent";
-import { Calendar, Clock, User, ArrowLeft, ArrowRight, Download, Share2, BookOpen } from "lucide-react";
+import ShareButton from "@/components/ShareButton";
+import { Calendar, Clock, User, ArrowLeft, ArrowRight, BookOpen } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
 import { getBlogPost, getAllBlogSlugs, getAllBlogPosts } from "@/lib/markdown";
@@ -155,17 +156,10 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
                   <Clock className="w-4 h-4" />
                   <span>Last updated: {post.updated}</span>
                 </div>
-
-                <div className="flex items-center gap-3">
-                  <button className="inline-flex items-center gap-2 px-4 py-2 text-sm font-medium text-foreground bg-background border border-border rounded-lg hover:bg-muted transition-colors">
-                    <Share2 className="w-4 h-4" />
-                    <span>Share</span>
-                  </button>
-                  <button className="inline-flex items-center gap-2 px-4 py-2 text-sm font-medium text-primary-foreground bg-primary rounded-lg hover:bg-primary/90 transition-colors">
-                    <Download className="w-4 h-4" />
-                    <span>Download PDF</span>
-                  </button>
-                </div>
+                <ShareButton
+                  title={post.title}
+                  url={`https://www.adl99.com.au/blog/${slug}`}
+                />
               </div>
             </div>
           </div>
@@ -182,8 +176,8 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
                 </div>
 
                 {/* Sidebar - Fixed on Scroll */}
-                <aside className="lg:col-span-1">
-                  <div className="lg:sticky lg:top-24 space-y-6">
+                <aside className="lg:col-span-1 relative">
+                  <div className="space-y-6 lg:sticky lg:top-24">
                     {/* Quick Contact Card */}
                     <div className="bg-primary/5 border border-primary/20 rounded-xl p-6">
                       <h3 className="text-lg font-bold text-foreground mb-3">Need Expert Help?</h3>
