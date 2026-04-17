@@ -1,6 +1,8 @@
 "use client";
 
 import React, { useEffect, useState } from 'react';
+import { Shield, AlertTriangle, CheckCircle2, Info, Zap, Lock, Users, FileCheck, Server, Database, ArrowRight } from 'lucide-react';
+import Link from 'next/link';
 
 interface BlogContentProps {
   content: string;
@@ -10,65 +12,167 @@ const BlogContent: React.FC<BlogContentProps> = ({ content }) => {
   const [enhancedContent, setEnhancedContent] = useState('');
 
   useEffect(() => {
-    // Parse the HTML content and enhance it with components
     const tempDiv = document.createElement('div');
     tempDiv.innerHTML = content;
 
     // Process headings
     const h2Elements = tempDiv.querySelectorAll('h2');
-    h2Elements.forEach((h2) => {
-      h2.className = 'text-3xl md:text-4xl font-bold text-foreground mt-16 mb-6 first:mt-0';
+    h2Elements.forEach((h2, index) => {
+      h2.className = 'text-3xl md:text-4xl font-bold text-foreground mt-16 mb-6 first:mt-0 scroll-mt-24';
+      h2.id = `section-${index}`;
+
+      // Add decorative element before h2
+      const decorator = document.createElement('div');
+      decorator.className = 'flex items-center gap-4 mb-6';
+      decorator.innerHTML = `
+        <div class="h-1 w-12 bg-gradient-to-r from-primary to-primary/50 rounded-full"></div>
+        <div class="h-2 w-2 rounded-full bg-primary/50"></div>
+      `;
+      h2.parentElement?.insertBefore(decorator, h2);
+
+      // Add inline CTA after every 3rd h2
+      if ((index + 1) % 3 === 0) {
+        const ctaCard = document.createElement('div');
+        ctaCard.className = 'my-12 bg-gradient-to-br from-primary/10 via-primary/5 to-background border border-primary/20 rounded-2xl p-8 relative overflow-hidden';
+        ctaCard.innerHTML = `
+          <div class="absolute top-0 right-0 w-32 h-32 bg-primary/10 rounded-full blur-3xl"></div>
+          <div class="relative z-10">
+            <div class="flex items-start gap-4">
+              <div class="p-3 bg-primary/20 rounded-lg">
+                <svg class="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
+                </svg>
+              </div>
+              <div class="flex-1">
+                <h3 class="text-xl font-bold text-foreground mb-2">Need Help Implementing This?</h3>
+                <p class="text-sm text-muted-foreground mb-4">Our team can assess your current security posture and create a customized implementation plan.</p>
+                <a href="/contact" class="inline-flex items-center gap-2 px-4 py-2 bg-primary text-primary-foreground rounded-lg hover:bg-primary/90 transition-colors text-sm font-medium">
+                  Get Free Assessment
+                  <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+        `;
+        h2.parentElement?.insertBefore(ctaCard, h2.nextSibling);
+      }
     });
 
     const h3Elements = tempDiv.querySelectorAll('h3');
-    h3Elements.forEach((h3) => {
-      h3.className = 'text-2xl md:text-3xl font-bold text-foreground mt-12 mb-4 flex items-center gap-3';
-      // Add an icon before h3
-      const icon = document.createElement('span');
-      icon.innerHTML = '<svg class="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>';
-      h3.prepend(icon);
+    h3Elements.forEach((h3, index) => {
+      h3.className = 'text-2xl md:text-3xl font-bold text-foreground mt-12 mb-6 flex items-center gap-3 scroll-mt-24';
+      h3.id = `subsection-${index}`;
+
+      // Add icon before h3
+      const iconWrapper = document.createElement('div');
+      iconWrapper.className = 'flex items-center justify-center w-10 h-10 rounded-lg bg-primary/10 flex-shrink-0';
+      iconWrapper.innerHTML = '<svg class="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>';
+      h3.prepend(iconWrapper);
+
+      // Wrap h3 content after certain patterns and add feature cards
+      if (h3.textContent?.includes('What it is:') || h3.textContent?.includes('Why it matters') || h3.textContent?.includes('How to implement')) {
+        // Create a card wrapper for the subsection
+        let nextElement = h3.nextElementSibling;
+        const cardContent: Element[] = [];
+
+        while (nextElement && nextElement.tagName !== 'H3' && nextElement.tagName !== 'H2') {
+          cardContent.push(nextElement);
+          nextElement = nextElement.nextElementSibling;
+        }
+
+        if (cardContent.length > 0) {
+          const card = document.createElement('div');
+          card.className = 'bg-card border border-border rounded-xl p-6 my-6 hover:border-primary/50 transition-colors';
+          cardContent.forEach(el => card.appendChild(el));
+          h3.parentElement?.insertBefore(card, h3.nextSibling);
+        }
+      }
     });
 
     // Process paragraphs
     const pElements = tempDiv.querySelectorAll('p');
     pElements.forEach((p) => {
-      // Check if paragraph starts with bold text (like "What it is:")
       if (p.innerHTML.startsWith('<strong>')) {
-        p.className = 'text-base text-muted-foreground leading-relaxed mb-4 pl-6 border-l-2 border-primary/20';
+        p.className = 'text-base text-muted-foreground leading-relaxed mb-4 pl-6 border-l-2 border-primary/30 bg-primary/5 py-3 rounded-r';
+      } else if (p.textContent?.includes('Real example:')) {
+        p.className = 'text-sm text-muted-foreground leading-relaxed mb-4 p-4 bg-amber-500/10 border-l-4 border-amber-500 rounded-r italic';
       } else {
         p.className = 'text-base text-muted-foreground leading-relaxed mb-4';
       }
     });
 
-    // Process lists
+    // Process lists with icons
     const ulElements = tempDiv.querySelectorAll('ul');
     ulElements.forEach((ul) => {
       ul.className = 'space-y-3 my-6';
       const liElements = ul.querySelectorAll('li');
-      liElements.forEach((li) => {
-        li.className = 'flex items-start gap-3 text-muted-foreground';
-        // Add checkmark icon
-        const icon = document.createElement('span');
-        icon.className = 'mt-1 flex-shrink-0';
-        icon.innerHTML = '<svg class="w-5 h-5 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>';
-        li.prepend(icon);
+
+      // Check if this is a numbered list in content
+      const isNumberedInContent = liElements[0]?.textContent?.match(/^\d+\)/);
+
+      liElements.forEach((li, index) => {
+        li.className = 'flex items-start gap-3 text-muted-foreground bg-card border border-border rounded-lg p-4 hover:border-primary/50 transition-colors';
+
+        // Add icon
+        const iconWrapper = document.createElement('div');
+        iconWrapper.className = 'mt-1 flex-shrink-0 flex items-center justify-center w-6 h-6 rounded-full bg-primary/10';
+
+        if (isNumberedInContent) {
+          iconWrapper.innerHTML = `<span class="text-xs font-bold text-primary">${index + 1}</span>`;
+        } else {
+          iconWrapper.innerHTML = '<svg class="w-4 h-4 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>';
+        }
+
+        li.prepend(iconWrapper);
       });
     });
 
-    // Process blockquotes (for important notes)
+    // Process blockquotes
     const blockquotes = tempDiv.querySelectorAll('blockquote');
     blockquotes.forEach((blockquote) => {
-      blockquote.className = 'bg-primary/5 border-l-4 border-primary rounded-r-lg p-6 my-8 relative';
+      blockquote.className = 'bg-gradient-to-br from-primary/10 via-primary/5 to-background border-l-4 border-primary rounded-r-xl p-8 my-8 relative overflow-hidden shadow-sm';
+
+      // Add decorative elements
+      const decorator = document.createElement('div');
+      decorator.className = 'absolute top-0 right-0 w-24 h-24 bg-primary/5 rounded-full blur-2xl';
+      blockquote.appendChild(decorator);
+
       // Add quote icon
       const icon = document.createElement('div');
-      icon.className = 'absolute top-4 right-4 text-primary/20';
-      icon.innerHTML = '<svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24"><path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/></svg>';
+      icon.className = 'absolute top-6 right-6 text-primary/20';
+      icon.innerHTML = '<svg class="w-12 h-12" fill="currentColor" viewBox="0 0 24 24"><path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/></svg>';
       blockquote.prepend(icon);
 
       const pInBlockquote = blockquote.querySelectorAll('p');
       pInBlockquote.forEach((p) => {
-        p.className = 'text-sm font-medium text-foreground mb-0';
+        p.className = 'text-base font-medium text-foreground mb-0 relative z-10';
       });
+    });
+
+    // Add info boxes for "Common gap" sections
+    const allElements = Array.from(tempDiv.querySelectorAll('p, strong'));
+    allElements.forEach((el) => {
+      if (el.textContent?.includes('Common gap:') || el.textContent?.includes('Gap ')) {
+        const parent = el.parentElement;
+        if (parent) {
+          const infoBox = document.createElement('div');
+          infoBox.className = 'bg-amber-500/10 border border-amber-500/30 rounded-xl p-6 my-6 flex gap-4';
+          infoBox.innerHTML = `
+            <div class="flex-shrink-0">
+              <svg class="w-6 h-6 text-amber-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"></path>
+              </svg>
+            </div>
+            <div class="flex-1">
+              <h4 class="font-semibold text-amber-900 mb-2">⚠️ Common Gap Alert</h4>
+              ${el.outerHTML}
+            </div>
+          `;
+          parent.replaceChild(infoBox, el);
+        }
+      }
     });
 
     // Process strong text
@@ -80,26 +184,75 @@ const BlogContent: React.FC<BlogContentProps> = ({ content }) => {
     // Process links
     const aElements = tempDiv.querySelectorAll('a');
     aElements.forEach((a) => {
-      a.className = 'text-primary hover:underline font-medium';
+      a.className = 'text-primary hover:underline font-medium inline-flex items-center gap-1 group';
+      // Add arrow icon to internal links
+      if (a.getAttribute('href')?.startsWith('/')) {
+        const arrow = document.createElement('svg');
+        arrow.setAttribute('class', 'w-4 h-4 group-hover:translate-x-1 transition-transform');
+        arrow.setAttribute('fill', 'none');
+        arrow.setAttribute('stroke', 'currentColor');
+        arrow.setAttribute('viewBox', '0 0 24 24');
+        arrow.innerHTML = '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>';
+        a.appendChild(arrow);
+      }
     });
 
     setEnhancedContent(tempDiv.innerHTML);
   }, [content]);
 
   if (!enhancedContent) {
-    return <div className="animate-pulse space-y-4">
-      <div className="h-8 bg-muted rounded w-3/4"></div>
-      <div className="h-4 bg-muted rounded"></div>
-      <div className="h-4 bg-muted rounded"></div>
-      <div className="h-4 bg-muted rounded w-5/6"></div>
-    </div>;
+    return (
+      <div className="animate-pulse space-y-8">
+        <div className="h-8 bg-muted rounded w-3/4"></div>
+        <div className="space-y-3">
+          <div className="h-4 bg-muted rounded"></div>
+          <div className="h-4 bg-muted rounded"></div>
+          <div className="h-4 bg-muted rounded w-5/6"></div>
+        </div>
+        <div className="h-48 bg-muted rounded-xl"></div>
+        <div className="space-y-3">
+          <div className="h-4 bg-muted rounded"></div>
+          <div className="h-4 bg-muted rounded w-4/5"></div>
+        </div>
+      </div>
+    );
   }
 
   return (
-    <div
-      className="blog-content"
-      dangerouslySetInnerHTML={{ __html: enhancedContent }}
-    />
+    <div className="blog-content">
+      <div dangerouslySetInnerHTML={{ __html: enhancedContent }} />
+
+      {/* Bottom CTA */}
+      <div className="mt-16 bg-gradient-to-br from-primary via-primary/95 to-primary/80 rounded-2xl p-8 md:p-12 text-center relative overflow-hidden">
+        <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxwYXRoIGQ9Ik0zNiAxOGMzLjMxNCAwIDYgMi42ODYgNiA2cy0yLjY4NiA2LTYgNi02LTIuNjg2LTYtNiAyLjY4Ni02IDYtNnoiIHN0cm9rZT0iIzAwMCIgc3Ryb2tlLW9wYWNpdHk9Ii4wNSIgc3Ryb2tlLXdpZHRoPSIyIi8+PC9nPjwvc3ZnPg==')] opacity-10"></div>
+        <div className="relative z-10">
+          <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-white/20 mb-6">
+            <Shield className="w-8 h-8 text-white" />
+          </div>
+          <h3 className="text-2xl md:text-3xl font-bold text-white mb-4">
+            Ready to Implement These Security Controls?
+          </h3>
+          <p className="text-lg text-white/90 mb-8 max-w-2xl mx-auto">
+            Get a free security assessment and personalized implementation roadmap from our expert team.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link
+              href="/contact"
+              className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-white text-primary rounded-lg hover:bg-white/90 transition-colors font-semibold shadow-lg"
+            >
+              Book Free Consultation
+              <ArrowRight className="w-5 h-5" />
+            </Link>
+            <Link
+              href="/services/cyber-maturity"
+              className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-white/10 text-white border-2 border-white/30 rounded-lg hover:bg-white/20 transition-colors font-semibold backdrop-blur-sm"
+            >
+              Learn About Assessments
+            </Link>
+          </div>
+        </div>
+      </div>
+    </div>
   );
 };
 
