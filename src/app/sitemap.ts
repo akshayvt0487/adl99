@@ -75,12 +75,6 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       changeFrequency: 'weekly' as const,
       priority: 0.8,
     },
-    {
-      url: `${baseUrl}/blog`,
-      lastModified: new Date(),
-      changeFrequency: 'weekly' as const,
-      priority: 0.8,
-    },
   ];
 
   // Dynamic service pages
@@ -107,19 +101,5 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     priority: 0.7,
   }));
 
-  // Blog post pages
-  const blogPosts = [
-    'essential-eight-maturity-model-explained',
-    'ransomware-protection-strategies-2024',
-    'cyber-security-compliance-small-business',
-  ];
-
-  const blogPages = blogPosts.map((slug) => ({
-    url: `${baseUrl}/blog/${slug}`,
-    lastModified: new Date(),
-    changeFrequency: 'monthly' as const,
-    priority: 0.6,
-  }));
-
-  return [...staticPages, ...servicePages, ...industryPages, ...locationPages, ...blogPages];
+  return [...staticPages, ...servicePages, ...industryPages, ...locationPages];
 }

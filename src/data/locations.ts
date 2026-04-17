@@ -191,7 +191,7 @@ export const locationsData: Record<string, LocationData> = {
       },
       {
         question: "What should I do if my CBD business is hit by a cyber attack?",
-        answer: "1) Disconnect affected systems from the network (but don't power them off — this destroys forensic evidence). 2) Contact ADL99's emergency incident response team on 03 7067 3373. 3) Preserve logs and evidence. 4) Do NOT pay any ransom before consulting with response professionals. 5) Notify your cyber insurer if you have coverage."
+        answer: "1) Disconnect affected systems from the network (but don't power them off — this destroys forensic evidence).\n2) Contact ADL99's emergency incident response team on 03 7067 3373.\n3) Preserve logs and evidence.\n4) Do NOT pay any ransom before consulting with response professionals.\n5) Notify your cyber insurer if you have coverage."
       },
       {
         question: "Does ADL99 provide cyber security for small Melbourne CBD businesses?",
@@ -493,7 +493,7 @@ export const locationsData: Record<string, LocationData> = {
       },
       {
         question: "What should Docklands businesses do after a cyber incident?",
-        answer: "1) Activate your incident response plan. 2) Contact ADL99's emergency team on 03 7067 3373. 3) Preserve evidence and logs. 4) Notify APRA within 72 hours if you're a regulated entity. 5) Engage legal counsel for breach notification obligations under Privacy Act. 6) Document timeline and actions for post-incident review."
+        answer: "1) Activate your incident response plan.\n2) Contact ADL99's emergency team on 03 7067 3373.\n3) Preserve evidence and logs.\n4) Notify APRA within 72 hours if you're a regulated entity.\n5) Engage legal counsel for breach notification obligations under Privacy Act.\n6) Document timeline and actions for post-incident review."
       },
       {
         question: "Can ADL99 help with Essential Eight compliance?",
@@ -1092,7 +1092,7 @@ export const locationsData: Record<string, LocationData> = {
       },
       {
         question: "What should Brighton practices do after a ransomware attack?",
-        answer: "1) DO NOT pay the ransom immediately. 2) Contact ADL99 on 03 7067 3373. 3) Disconnect affected systems (don't power off). 4) Activate business continuity plans for patient care. 5) Notify OAIC if patient data is compromised. 6) Contact cyber insurer if you have coverage. We'll assess recovery options and contain the attack."
+        answer: "1) DO NOT pay the ransom immediately.\n2) Contact ADL99 on 03 7067 3373.\n3) Disconnect affected systems (don't power off).\n4) Activate business continuity plans for patient care.\n5) Notify OAIC if patient data is compromised.\n6) Contact cyber insurer if you have coverage.\n\nWe'll assess recovery options and contain the attack."
       }
     ],
     nearbySuburbs: [
@@ -1227,7 +1227,7 @@ export const locationsData: Record<string, LocationData> = {
     faqs: [
       {
         question: "What cyber security do Richmond startups actually need?",
-        answer: "Start with: 1) Multi-factor authentication on all accounts, 2) Encrypted devices and data, 3) Regular backups, 4) Basic access controls, 5) Secure development practices. As you scale, add: penetration testing, vCISO guidance, compliance frameworks (SOC 2, ISO 27001), and security monitoring. ADL99 builds investor-ready security from day one."
+        answer: "Start with:\n1) Multi-factor authentication on all accounts\n2) Encrypted devices and data\n3) Regular backups\n4) Basic access controls\n5) Secure development practices\n\nAs you scale, add: penetration testing, vCISO guidance, compliance frameworks (SOC 2, ISO 27001), and security monitoring. ADL99 builds investor-ready security from day one."
       },
       {
         question: "How much does cyber security cost for a Richmond tech startup?",
@@ -1386,7 +1386,7 @@ export const locationsData: Record<string, LocationData> = {
       },
       {
         question: "What should Hawthorn practices do about tax season cyber threats?",
-        answer: "1) Increase email security and phishing awareness before tax season. 2) Verify all backup integrity. 3) Enable multi-factor authentication on all systems. 4) Review access controls and disable unused accounts. 5) Brief staff on common tax season scams. 6) Have incident response plan ready. ADL99 provides pre-tax-season security readiness reviews."
+        answer: "1) Increase email security and phishing awareness before tax season.\n2) Verify all backup integrity.\n3) Enable multi-factor authentication on all systems.\n4) Review access controls and disable unused accounts.\n5) Brief staff on common tax season scams.\n6) Have incident response plan ready.\n\nADL99 provides pre-tax-season security readiness reviews."
       },
       {
         question: "How much does cyber security cost for a Hawthorn professional practice?",
@@ -1525,7 +1525,7 @@ export const locationsData: Record<string, LocationData> = {
     faqs: [
       {
         question: "What cyber security do Malvern specialist practices need?",
-        answer: "Specialist practices require: 1) Privacy Act compliance (Australian Privacy Principles, Notifiable Data Breaches), 2) Patient/client data security, 3) Secure practice management systems, 4) Staff awareness training, 5) Incident response capability, 6) Regular security assessments. ADL99 provides complete security programs for Malvern specialist practices."
+        answer: "Specialist practices require:\n1) Privacy Act compliance (Australian Privacy Principles, Notifiable Data Breaches)\n2) Patient/client data security\n3) Secure practice management systems\n4) Staff awareness training\n5) Incident response capability\n6) Regular security assessments\n\nADL99 provides complete security programs for Malvern specialist practices."
       },
       {
         question: "How much does cyber security cost for a Malvern specialist practice?",
@@ -2019,7 +2019,7 @@ export const locationsData: Record<string, LocationData> = {
       },
       {
         question: "What should a medical practice do if patient records are breached?",
-        answer: "1) Contain the breach immediately. 2) Contact ADL99's incident response team. 3) Assess if the breach is likely to cause serious harm. 4) If so, notify OAIC and affected patients as soon as practicable (typically within 30 days). 5) Document all response actions. ADL99 provides healthcare breach response and OAIC notification support."
+        answer: "1) Contain the breach immediately.\n2) Contact ADL99's incident response team.\n3) Assess if the breach is likely to cause serious harm.\n4) If so, notify OAIC and affected patients as soon as practicable (typically within 30 days).\n5) Document all response actions.\n\nADL99 provides healthcare breach response and OAIC notification support."
       },
       {
         question: "How much does healthcare cyber security compliance cost?",
@@ -2173,11 +2173,11 @@ export const locationsData: Record<string, LocationData> = {
     faqs: [
       {
         question: "What cyber security should a startup implement from day one?",
-        answer: "Start with: 1) Multi-factor authentication on all accounts. 2) Encrypted laptops and secure password management. 3) Cloud security baseline (proper IAM and encryption). 4) Basic security awareness training. 5) Documented incident response plan. ADL99 provides startup security foundations packages starting from $3,000."
+        answer: "Start with:\n1) Multi-factor authentication on all accounts\n2) Encrypted laptops and secure password management\n3) Cloud security baseline (proper IAM and encryption)\n4) Basic security awareness training\n5) Documented incident response plan\n\nADL99 provides startup security foundations packages starting from $3,000."
       },
       {
         question: "How do we protect our source code and intellectual property?",
-        answer: "Implement: 1) Access controls and least privilege. 2) Code repository security (private repos, branch protection). 3) Data loss prevention monitoring. 4) Employee agreements covering IP ownership. 5) Encryption for sensitive data at rest. ADL99 provides IP protection assessments and implementation for tech companies."
+        answer: "Implement:\n1) Access controls and least privilege\n2) Code repository security (private repos, branch protection)\n3) Data loss prevention monitoring\n4) Employee agreements covering IP ownership\n5) Encryption for sensitive data at rest\n\nADL99 provides IP protection assessments and implementation for tech companies."
       },
       {
         question: "What security do investors expect during due diligence?",
@@ -2185,7 +2185,7 @@ export const locationsData: Record<string, LocationData> = {
       },
       {
         question: "How can manufacturers secure operational technology systems?",
-        answer: "OT security requires: 1) Network segmentation between IT and OT. 2) Asset inventory of all connected devices. 3) Patch management for OT systems. 4) Access controls and monitoring. 5) Offline backups of critical configurations. ADL99 specializes in manufacturing OT/IT security."
+        answer: "OT security requires:\n1) Network segmentation between IT and OT\n2) Asset inventory of all connected devices\n3) Patch management for OT systems\n4) Access controls and monitoring\n5) Offline backups of critical configurations\n\nADL99 specializes in manufacturing OT/IT security."
       }
     ],
     nearbySuburbs: [
@@ -2509,7 +2509,7 @@ export const locationsData: Record<string, LocationData> = {
       },
       {
         question: "What should I do if my business is hit by ransomware?",
-        answer: "1) Don't pay immediately. 2) Disconnect infected systems. 3) Contact ADL99's incident response team immediately. 4) Preserve evidence. 5) Check if backups are available. Many ransomware attacks can be recovered without paying. ADL99 provides emergency ransomware response."
+        answer: "1) Don't pay immediately.\n2) Disconnect infected systems.\n3) Contact ADL99's incident response team immediately.\n4) Preserve evidence.\n5) Check if backups are available.\n\nMany ransomware attacks can be recovered without paying. ADL99 provides emergency ransomware response."
       }
     ],
     nearbySuburbs: [
@@ -2663,7 +2663,7 @@ export const locationsData: Record<string, LocationData> = {
       },
       {
         question: "What should I do if patient records are breached?",
-        answer: "1) Contain the breach immediately. 2) Contact ADL99's healthcare incident response team. 3) Assess if breach is likely to cause serious harm. 4) Notify OAIC and affected patients within 30 days if required. 5) Document all response actions. ADL99 provides healthcare breach response and OAIC notification support."
+        answer: "1) Contain the breach immediately.\n2) Contact ADL99's healthcare incident response team.\n3) Assess if breach is likely to cause serious harm.\n4) Notify OAIC and affected patients within 30 days if required.\n5) Document all response actions.\n\nADL99 provides healthcare breach response and OAIC notification support."
       },
       {
         question: "What cyber security do accounting practices need under TPB requirements?",
@@ -2825,7 +2825,7 @@ export const locationsData: Record<string, LocationData> = {
       },
       {
         question: "How can medical specialists protect patient records?",
-        answer: "Implement: 1) Encrypted practice management systems. 2) Multi-factor authentication. 3) Role-based access controls. 4) Regular backups. 5) Staff privacy training. 6) Incident response procedures. 7) Breach notification plans. ADL99 specializes in medical specialist practice security."
+        answer: "Implement:\n1) Encrypted practice management systems\n2) Multi-factor authentication\n3) Role-based access controls\n4) Regular backups\n5) Staff privacy training\n6) Incident response procedures\n7) Breach notification plans\n\nADL99 specializes in medical specialist practice security."
       },
       {
         question: "What cyber insurance do Kew practices need?",
@@ -2983,7 +2983,7 @@ export const locationsData: Record<string, LocationData> = {
     faqs: [
       {
         question: "How can research organizations protect intellectual property?",
-        answer: "Implement: 1) Access controls limiting IP access to authorized researchers. 2) Encrypted storage and transmission. 3) Data loss prevention monitoring. 4) Secure collaboration platforms. 5) NDAs and IP ownership agreements. 6) Regular security audits. ADL99 provides research IP protection assessments."
+        answer: "Implement:\n1) Access controls limiting IP access to authorized researchers\n2) Encrypted storage and transmission\n3) Data loss prevention monitoring\n4) Secure collaboration platforms\n5) NDAs and IP ownership agreements\n6) Regular security audits\n\nADL99 provides research IP protection assessments."
       },
       {
         question: "What privacy obligations apply to education providers?",
