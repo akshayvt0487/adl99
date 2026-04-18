@@ -10,8 +10,6 @@ category: "Compliance"
 image: "/banner-images/services_technical-advisory.webp"
 ---
 
-## TL;DR
-
 - The **Essential 8** is Australia's baseline cybersecurity framework — 8 controls developed by the ACSC to stop the most common attacks.
 - **Most Australian SMBs sit at Maturity Level 0 or 1** — which is no longer considered acceptable by regulators and insurers.
 - **Target: Maturity Level 2** for most businesses. Level 3 for financial services, healthcare, and critical infrastructure.

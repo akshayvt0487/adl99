@@ -10,8 +10,6 @@ category: "Industry Guides"
 image: "/banner-images/Law Firms.webp"
 ---
 
-## TL;DR: Cyber Security for Law Firms at a Glance
-
 Law firms are **3x more likely to be targeted by cyber criminals** than other industries. In 2025, the legal sector experienced a 42% increase in cyber attacks — primarily targeting client data, financial records, and intellectual property. A single breach can cost a law firm **$2–5 million** in incident response, regulatory fines, and reputational damage. This guide covers the threats law firms face, compliance obligations, and a step-by-step roadmap to secure your firm. **Expected read time: 14 minutes.**
 
 ---

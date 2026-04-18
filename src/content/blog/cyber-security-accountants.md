@@ -10,8 +10,6 @@ category: "Industry Guides"
 image: "/banner-images/Accounting.webp"
 ---
 
-## TL;DR: Cyber Security for Accountants at a Glance
-
 Accountants are **prime targets for cyber criminals**. In 2025, accounting firms experienced a 38% increase in cyber attacks — primarily targeting client financial data, tax records, and personal information. A single breach can cost an accounting firm **$1.5–4 million** in incident response, regulatory fines, client lawsuits, and reputational damage. This guide covers the threats accounting firms face, compliance obligations, and a step-by-step roadmap to secure your practice. **Expected read time: 15 minutes.**
 
 ---
