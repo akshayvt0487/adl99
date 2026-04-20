@@ -84,8 +84,8 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="border-t border-background/10 pt-8 text-center items-center w-full">
-          <p className="text-xs text-background/50 mb-4 max-w-6xl">
+        <div className="border-t border-background/10 pt-8 w-full ">
+          <p className="text-xs text-background/50 mb-4 max-w-4xl mx-auto text-center">
             While every effort is made to ensure the accuracy of the information on this website, ADL99 makes no guarantees regarding its completeness or correctness. We recommend contacting ADL99 directly for a customised review specific to your requirements.
           </p>
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">

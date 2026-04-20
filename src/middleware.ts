@@ -6,6 +6,11 @@ export function middleware(request: NextRequest) {
   const host = request.headers.get('host') || '';
   const protocol = request.headers.get('x-forwarded-proto') || 'https';
 
+  // Skip all redirects if we are running locally in development
+  if (process.env.NODE_ENV === 'development' || host.includes('localhost')) {
+    return NextResponse.next();
+  }
+
   // Slug redirects (old URLs to new URLs)
   const slugRedirects: Record<string, string> = {
     '/services/cyber-maturity': '/services/cyber-maturity-assessments',

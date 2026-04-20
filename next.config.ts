@@ -16,6 +16,11 @@ const nextConfig: NextConfig = {
     ],
   },
   async redirects() {
+    // Disable these forced redirects on localhost
+    if (process.env.NODE_ENV === 'development') {
+      return [];
+    }
+
     return [
       // Redirect non-www to www
       {
