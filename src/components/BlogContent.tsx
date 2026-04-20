@@ -85,6 +85,112 @@ const BlogContent: React.FC<BlogContentProps> = ({ content }) => {
         }
       }
 
+      // Add threat landscape visualization for security/threat/risk sections
+      if ((h2Text.includes('threat') || h2Text.includes('risk') || h2Text.includes('why') || h2Text.includes('matter')) && index > 0 && index < 3) {
+        const threatBox = document.createElement('div');
+        threatBox.className = 'my-12 rounded-2xl overflow-hidden border border-red-200 bg-gradient-to-br from-red-50 to-orange-50 p-8';
+        threatBox.innerHTML = `
+          <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+            <div class="text-center p-4 bg-white/50 rounded-lg">
+              <div class="text-3xl font-bold text-red-600 mb-2">82%</div>
+              <div class="text-xs text-muted-foreground">Involve Human Error</div>
+            </div>
+            <div class="text-center p-4 bg-white/50 rounded-lg">
+              <div class="text-3xl font-bold text-orange-600 mb-2">$56k</div>
+              <div class="text-xs text-muted-foreground">Avg Cost per Breach</div>
+            </div>
+            <div class="text-center p-4 bg-white/50 rounded-lg">
+              <div class="text-3xl font-bold text-amber-600 mb-2">82d</div>
+              <div class="text-xs text-muted-foreground">Avg Dwell Time</div>
+            </div>
+            <div class="text-center p-4 bg-white/50 rounded-lg">
+              <div class="text-3xl font-bold text-red-600 mb-2">60%</div>
+              <div class="text-xs text-muted-foreground">Close Within 6mo</div>
+            </div>
+          </div>
+        `;
+        h2.parentElement?.insertBefore(threatBox, h2.nextSibling);
+      }
+
+      // Add compliance framework visualization
+      if ((h2Text.includes('compliance') || h2Text.includes('framework') || h2Text.includes('standard')) && index > 1) {
+        const complianceBox = document.createElement('div');
+        complianceBox.className = 'my-12 rounded-2xl overflow-hidden bg-gradient-to-br from-blue-50 to-indigo-50 border border-blue-200 p-8';
+        complianceBox.innerHTML = `
+          <div class="grid grid-cols-2 md:grid-cols-3 gap-6">
+            <div class="flex flex-col items-center gap-3 p-4 bg-white/60 rounded-lg">
+              <div class="w-12 h-12 rounded-full bg-blue-100 flex items-center justify-center">
+                <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                </svg>
+              </div>
+              <span class="text-sm font-semibold text-foreground">Essential 8</span>
+            </div>
+            <div class="flex flex-col items-center gap-3 p-4 bg-white/60 rounded-lg">
+              <div class="w-12 h-12 rounded-full bg-indigo-100 flex items-center justify-center">
+                <svg class="w-6 h-6 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+                </svg>
+              </div>
+              <span class="text-sm font-semibold text-foreground">ISO 27001</span>
+            </div>
+            <div class="flex flex-col items-center gap-3 p-4 bg-white/60 rounded-lg">
+              <div class="w-12 h-12 rounded-full bg-purple-100 flex items-center justify-center">
+                <svg class="w-6 h-6 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
+                </svg>
+              </div>
+              <span class="text-sm font-semibold text-foreground">NIST CSF</span>
+            </div>
+          </div>
+        `;
+        h2.parentElement?.insertBefore(complianceBox, h2.nextSibling);
+      }
+
+      // Add attack vector visualization
+      if ((h2Text.includes('attack') || h2Text.includes('breach') || h2Text.includes('ransomware') || h2Text.includes('phishing')) && index > 0) {
+        const attackBox = document.createElement('div');
+        attackBox.className = 'my-12 rounded-2xl overflow-hidden bg-gradient-to-br from-red-900 to-orange-900 p-8 text-white';
+        attackBox.innerHTML = `
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div class="flex items-start gap-4">
+              <div class="flex-shrink-0 w-10 h-10 rounded-lg bg-white/20 flex items-center justify-center">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                </svg>
+              </div>
+              <div>
+                <div class="font-bold mb-1">Phishing</div>
+                <div class="text-sm text-white/80">Email-based attacks targeting credentials</div>
+              </div>
+            </div>
+            <div class="flex items-start gap-4">
+              <div class="flex-shrink-0 w-10 h-10 rounded-lg bg-white/20 flex items-center justify-center">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path>
+                </svg>
+              </div>
+              <div>
+                <div class="font-bold mb-1">Ransomware</div>
+                <div class="text-sm text-white/80">Data encryption & extortion</div>
+              </div>
+            </div>
+            <div class="flex items-start gap-4">
+              <div class="flex-shrink-0 w-10 h-10 rounded-lg bg-white/20 flex items-center justify-center">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H5a2 2 0 00-2 2v9a2 2 0 002 2h14a2 2 0 002-2V8a2 2 0 00-2-2h-5m-4 0V5a2 2 0 114 0v1m-4 0a2 2 0 104 0m-5 8a2 2 0 100-4 2 2 0 000 4zm0 0c1.306 0 2.417.835 2.83 2M9 14a3.001 3.001 0 00-2.83 2M15 11h3m-3 4h2"></path>
+                </svg>
+              </div>
+              <div>
+                <div class="font-bold mb-1">Credential Theft</div>
+                <div class="text-sm text-white/80">Stolen passwords & session hijacking</div>
+              </div>
+            </div>
+          </div>
+        `;
+        h2.parentElement?.insertBefore(attackBox, h2.nextSibling);
+      }
+
       // Add inline CTA after every 3rd h2
       if ((index + 1) % 3 === 0) {
         const ctaCard = document.createElement('div');
