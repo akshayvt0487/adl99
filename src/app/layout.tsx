@@ -92,6 +92,14 @@ export const metadata: Metadata = {
     siteName: "ADL99 Cybersecurity",
     title: "ADL99 Cybersecurity | Expert Cyber Security Services Australia",
     description: "Protect your business with Australia's trusted cybersecurity experts. vCISO, Essential Eight compliance, penetration testing & 24/7 security monitoring. Get a free security assessment today.",
+    images: [
+      {
+        url: "/icon.png",
+        width: 192,
+        height: 192,
+        alt: "ADL99 Cybersecurity Logo",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
@@ -99,6 +107,7 @@ export const metadata: Metadata = {
     creator: "@adl99cyber",
     title: "ADL99 Cybersecurity | Expert Cyber Security Services Australia",
     description: "Protect your business with Australia's trusted cybersecurity experts. vCISO, Essential Eight, penetration testing & more.",
+    images: ["/icon.png"],
   },
   robots: {
     index: true,
@@ -120,12 +129,13 @@ export const metadata: Metadata = {
   },
   icons: {
     icon: [
-      { url: "/favicon.ico", sizes: "any" },
       { url: "/icon.png", type: "image/png", sizes: "192x192" },
-      { url: "/favicon.png", type: "image/png", sizes: "32x32" },
+      { url: "/favicon-32x32.png", type: "image/png", sizes: "32x32" },
+      { url: "/favicon-16x16.png", type: "image/png", sizes: "16x16" },
+      { url: "/favicon.ico", sizes: "any" },
     ],
     apple: [
-      { url: "/apple-icon.png", sizes: "180x180", type: "image/png" },
+      { url: "/apple-touch-icon.png", sizes: "180x180", type: "image/png" },
     ],
   },
   manifest: "/site.webmanifest",
@@ -154,9 +164,9 @@ export default function RootLayout({
     url: "https://www.adl99.com.au",
     logo: {
       "@type": "ImageObject",
-      url: "https://www.adl99.com.au/og-image.png",
-      width: 1200,
-      height: 630,
+      url: "https://www.adl99.com.au/icon.png",
+      width: 192,
+      height: 192,
     },
     description: "Leading Australian cybersecurity consulting firm specializing in vCISO services, Essential Eight compliance, and comprehensive security solutions.",
     address: {
