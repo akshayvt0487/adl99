@@ -84,7 +84,7 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="border-t border-background/10 pt-8 text-center">
+        <div className="border-t border-background/10 pt-8 text-center items-center w-full">
           <p className="text-xs text-background/50 mb-4 max-w-6xl">
             While every effort is made to ensure the accuracy of the information on this website, ADL99 makes no guarantees regarding its completeness or correctness. We recommend contacting ADL99 directly for a customised review specific to your requirements.
           </p>
