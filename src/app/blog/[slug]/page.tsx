@@ -5,6 +5,7 @@ import Footer from "@/components/Footer";
 import Breadcrumb from "@/components/Breadcrumb";
 import BlogContent from "@/components/BlogContent";
 import ShareButton from "@/components/ShareButton";
+import MobileCTA from "@/components/MobileCTA";
 import { Calendar, Clock, User, ArrowLeft, ArrowRight, BookOpen } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
@@ -454,6 +455,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
         </section>
       </main>
 
+      <MobileCTA />
       <Footer />
     </div>
   );
