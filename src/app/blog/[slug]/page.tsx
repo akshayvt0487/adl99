@@ -28,8 +28,24 @@ export async function generateMetadata({ params }: BlogPostPageProps): Promise<M
     const post = await getBlogPost(slug);
 
     return {
-      title: `${post.title} | ADL99 Blog`,
+      title: `${post.title}`,
       description: post.description,
+      keywords: [
+        // Extract keywords from category and title
+        post.category.toLowerCase(),
+        'cybersecurity Australia',
+        'cyber security',
+        'Melbourne',
+        'Australian business',
+        'security compliance',
+        'cyber threats',
+        'data protection',
+        'ADL99',
+      ],
+      authors: [{ name: post.author }],
+      creator: post.author,
+      publisher: 'ADL99 Cybersecurity',
+      category: post.category,
       alternates: {
         canonical: `https://www.adl99.com.au/blog/${slug}`,
       },
@@ -38,8 +54,13 @@ export async function generateMetadata({ params }: BlogPostPageProps): Promise<M
         description: post.description,
         type: "article",
         url: `https://www.adl99.com.au/blog/${slug}`,
+        siteName: 'ADL99 Cybersecurity',
+        locale: 'en_AU',
         publishedTime: post.date,
+        modifiedTime: post.date,
         authors: [post.author],
+        section: post.category,
+        tags: [post.category, 'Cybersecurity', 'Australia', 'Security'],
         images: [
           {
             url: `https://www.adl99.com.au${post.image}`,
@@ -48,6 +69,26 @@ export async function generateMetadata({ params }: BlogPostPageProps): Promise<M
             alt: post.title,
           },
         ],
+      },
+      twitter: {
+        card: 'summary_large_image',
+        site: '@adl99cyber',
+        creator: '@adl99cyber',
+        title: post.title,
+        description: post.description,
+        images: [`https://www.adl99.com.au${post.image}`],
+      },
+      robots: {
+        index: true,
+        follow: true,
+        nocache: false,
+        googleBot: {
+          index: true,
+          follow: true,
+          'max-video-preview': -1,
+          'max-image-preview': 'large',
+          'max-snippet': -1,
+        },
       },
     };
   } catch {
@@ -82,8 +123,84 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
     relatedPosts.push(...additionalPosts);
   }
 
+  // JSON-LD structured data for SEO
+  const articleSchema = {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "@id": `https://www.adl99.com.au/blog/${slug}#article`,
+    headline: post.title,
+    description: post.description,
+    image: {
+      "@type": "ImageObject",
+      url: `https://www.adl99.com.au${post.image}`,
+      width: 1200,
+      height: 630,
+    },
+    datePublished: post.date,
+    dateModified: post.date,
+    author: {
+      "@type": "Organization",
+      name: post.author,
+      url: "https://www.adl99.com.au",
+    },
+    publisher: {
+      "@type": "Organization",
+      name: "ADL99 Cybersecurity",
+      url: "https://www.adl99.com.au",
+      logo: {
+        "@type": "ImageObject",
+        url: "https://www.adl99.com.au/android-chrome-512x512.png",
+        width: 512,
+        height: 512,
+      },
+    },
+    mainEntityOfPage: {
+      "@type": "WebPage",
+      "@id": `https://www.adl99.com.au/blog/${slug}`,
+    },
+    articleSection: post.category,
+    keywords: `${post.category}, cybersecurity, Australia, cyber security, Melbourne, ${post.title}`,
+    inLanguage: "en-AU",
+    isAccessibleForFree: true,
+  };
+
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: "Home",
+        item: "https://www.adl99.com.au",
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: "Blog",
+        item: "https://www.adl99.com.au/blog",
+      },
+      {
+        "@type": "ListItem",
+        position: 3,
+        name: post.title,
+        item: `https://www.adl99.com.au/blog/${slug}`,
+      },
+    ],
+  };
+
   return (
     <div className="min-h-screen bg-background">
+      {/* JSON-LD Structured Data */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
+
       <Header />
       <Breadcrumb
         items={[
@@ -95,6 +212,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
 
       <main>
         {/* Hero Section */}
+        <article itemScope itemType="https://schema.org/BlogPosting">
         <section className="relative py-20 md:py-32 overflow-hidden">
           <div className="absolute inset-0">
             <Image
@@ -121,13 +239,18 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
                 {post.category}
               </div>
 
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-primary-foreground mb-6 leading-tight">
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-primary-foreground mb-6 leading-tight" itemProp="headline">
                 {post.title}
               </h1>
 
-              <p className="text-lg md:text-xl text-primary-foreground/90 mb-8 leading-relaxed">
+              <p className="text-lg md:text-xl text-primary-foreground/90 mb-8 leading-relaxed" itemProp="description">
                 {post.description}
               </p>
+
+              <meta itemProp="datePublished" content={post.date} />
+              <meta itemProp="dateModified" content={post.date} />
+              <meta itemProp="author" content={post.author} />
+              <meta itemProp="image" content={`https://www.adl99.com.au${post.image}`} />
 
               <div className="flex flex-wrap items-center gap-6 text-primary-foreground/80">
                 <div className="flex items-center gap-2">
@@ -171,7 +294,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
             <div className="max-w-5xl mx-auto">
               <div className="grid grid-cols-1 lg:grid-cols-4 gap-12">
                 {/* Main Content */}
-                <div className="lg:col-span-3">
+                <div className="lg:col-span-3" itemProp="articleBody">
                   <BlogContent content={post.content || ''} />
                 </div>
 
@@ -285,6 +408,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
             </div>
           </div>
         </section>
+        </article>
 
         {/* CTA Section */}
         <section className="py-16 md:py-24 bg-gradient-to-b from-muted/30 to-background">

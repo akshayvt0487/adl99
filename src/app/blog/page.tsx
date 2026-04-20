@@ -8,20 +8,123 @@ import Image from "next/image";
 import { getAllBlogPosts } from "@/lib/markdown";
 
 export const metadata: Metadata = {
-  title: "Cybersecurity Blog & Insights | ADL99",
-  description: "Expert cybersecurity insights, best practices, and industry trends. Stay informed about the latest security threats and protective measures for Australian businesses.",
+  title: "Cybersecurity Blog & Insights | Expert Advice for Australian Businesses",
+  description: "Expert cybersecurity insights, best practices, and industry trends. Stay informed about the latest security threats and protective measures for Australian businesses. Essential 8, compliance, and security tips.",
+  keywords: [
+    'cybersecurity blog',
+    'cyber security insights',
+    'Australia cybersecurity',
+    'security best practices',
+    'Essential 8',
+    'compliance guides',
+    'cyber threats Australia',
+    'security news',
+    'Melbourne cybersecurity',
+    'business security tips',
+  ],
+  alternates: {
+    canonical: 'https://www.adl99.com.au/blog',
+  },
   openGraph: {
     title: "Cybersecurity Blog & Insights | ADL99",
     description: "Expert cybersecurity insights, best practices, and industry trends for Australian businesses.",
     type: "website",
+    url: 'https://www.adl99.com.au/blog',
+    siteName: 'ADL99 Cybersecurity',
+    locale: 'en_AU',
+    images: [
+      {
+        url: '/android-chrome-512x512.png',
+        width: 512,
+        height: 512,
+        alt: 'ADL99 Cybersecurity Blog',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    site: '@adl99cyber',
+    creator: '@adl99cyber',
+    title: "Cybersecurity Blog & Insights | ADL99",
+    description: "Expert cybersecurity insights, best practices, and industry trends for Australian businesses.",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
   },
 };
 
 export default function BlogPage() {
   const blogPosts = getAllBlogPosts();
 
+  // JSON-LD for Blog listing page
+  const blogSchema = {
+    "@context": "https://schema.org",
+    "@type": "Blog",
+    "@id": "https://www.adl99.com.au/blog#blog",
+    url: "https://www.adl99.com.au/blog",
+    name: "ADL99 Cybersecurity Blog",
+    description: "Expert cybersecurity insights, best practices, and industry trends for Australian businesses",
+    publisher: {
+      "@type": "Organization",
+      name: "ADL99 Cybersecurity",
+      url: "https://www.adl99.com.au",
+      logo: {
+        "@type": "ImageObject",
+        url: "https://www.adl99.com.au/android-chrome-512x512.png",
+      },
+    },
+    blogPost: blogPosts.map(post => ({
+      "@type": "BlogPosting",
+      headline: post.title,
+      description: post.description,
+      image: `https://www.adl99.com.au${post.image}`,
+      datePublished: post.date,
+      url: `https://www.adl99.com.au/blog/${post.slug}`,
+      author: {
+        "@type": "Organization",
+        name: post.author,
+      },
+    })),
+  };
+
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: "Home",
+        item: "https://www.adl99.com.au",
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: "Blog",
+        item: "https://www.adl99.com.au/blog",
+      },
+    ],
+  };
+
   return (
     <>
+      {/* JSON-LD Structured Data */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(blogSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
+
       <Header />
       <main className="min-h-screen bg-background">
         {/* Breadcrumb */}
@@ -44,7 +147,7 @@ export default function BlogPage() {
                 <BookOpen className="w-4 h-4" />
                 <span>Cybersecurity Insights</span>
               </div>
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6">
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6" itemProp="name">
                 Cybersecurity Blog & Resources
               </h1>
               <p className="text-lg md:text-xl text-muted-foreground mb-8 max-w-3xl mx-auto">
