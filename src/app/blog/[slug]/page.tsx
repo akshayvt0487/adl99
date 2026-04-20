@@ -325,8 +325,8 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
                         <Link href="/services/vciso" className="block text-sm text-muted-foreground hover:text-primary transition-colors">
                           → vCISO Services
                         </Link>
-                        <Link href="/services/compliance" className="block text-sm text-muted-foreground hover:text-primary transition-colors">
-                          → Compliance Services
+                        <Link href="/services/technical-advisory" className="block text-sm text-muted-foreground hover:text-primary transition-colors">
+                          → Technical Advisory
                         </Link>
                         <Link href="/services/cyber-awareness-training" className="block text-sm text-muted-foreground hover:text-primary transition-colors">
                           → Security Training

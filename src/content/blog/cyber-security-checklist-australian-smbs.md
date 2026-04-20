@@ -46,7 +46,7 @@ The first eight items map directly to the **ACSC's Essential 8** — Australia's
 
 **Action:** Enable MFA on all email accounts, cloud platforms (Microsoft 365, Google Workspace), remote access tools, and admin accounts. Prioritise phishing-resistant MFA (hardware keys or authenticator apps) over SMS codes.
 
-> **Essential 8 link:** This is a core [Essential 8 compliance](/services/compliance) control. Maturity Level 2 requires MFA for all remote access and privileged accounts. See the [Essential Eight Maturity Model explained](/blog/essential-eight-maturity-model-explained) for a full breakdown.
+> **Essential 8 link:** This is a core [Essential 8 compliance](/services/cyber-maturity-assessments) control. Maturity Level 2 requires MFA for all remote access and privileged accounts. See the [Essential Eight Maturity Model explained](/blog/essential-eight-maturity-model-explained) for a full breakdown.
 
 ---
 
@@ -118,7 +118,7 @@ The first eight items map directly to the **ACSC's Essential 8** — Australia's
 
 **Action:** Follow the **3-2-1 rule**: 3 copies of data, on 2 different media types, with 1 stored offsite or in an immutable cloud location. Test restores at least quarterly. Ensure backups are isolated from your main network.
 
-> **Essential 8 link:** This control is also the foundation of any [incident response planning](/services/compliance) strategy. Without verified backups, recovery from a ransomware attack is significantly harder. Read our [ransomware protection strategies guide](/blog/ransomware-protection-strategies-2024) for a deeper dive.
+> **Essential 8 link:** This control is also the foundation of any [incident response planning](/services/cyber-maturity-assessments) strategy. Without verified backups, recovery from a ransomware attack is significantly harder. Read our [ransomware protection strategies guide](/blog/ransomware-protection-strategies-2024) for a deeper dive.
 
 ---
 

@@ -83,7 +83,7 @@ export const servicesData: ServiceData[] = [
   },
   {
     title: "Cyber Maturity Assessments",
-    slug: "cyber-maturity",
+    slug: "cyber-maturity-assessments",
     excerpt: "Know exactly where you stand—and where you need to go.",
     content: `<p>Our Cyber Maturity Assessment provides a comprehensive evaluation of your organization's security capabilities, helping you understand where you stand and what steps to take next.</p>
 <p>We benchmark your security practices against frameworks like NIST, ISO 27001, and the Australian Essential Eight, giving you a clear roadmap for improvement.</p>`,
@@ -219,7 +219,7 @@ export const servicesData: ServiceData[] = [
   },
   {
     title: "Cyber Awareness Training",
-    slug: "cyber-awareness",
+    slug: "cyber-awareness-training",
     excerpt: "Turn your biggest vulnerability into your strongest defence.",
     content: `<p>Your employees are your first line of defense. Our Cyber Awareness Training transforms your team from a security vulnerability into a security asset.</p>
 <p>Through engaging, practical training sessions, we teach your staff to recognize threats, respond appropriately, and maintain secure practices in their daily work.</p>`,

@@ -69,7 +69,7 @@ Depending on your industry, Essential 8 compliance may already be required:
 - **Critical infrastructure:** Required under SOCI Act
 - **All other businesses:** Strongly recommended by ACSC; increasingly expected by insurers and enterprise clients
 
-> **Need help mapping your compliance obligations?** Our [compliance services](/services/compliance) cover Essential 8, Privacy Act, ASIC, APRA, and Critical Infrastructure requirements. We also publish industry-specific guides for [law firms](/industries/law-firms) and [accounting firms](/industries/accounting).
+> **Need help mapping your compliance obligations?** Our [cyber maturity assessments](/services/cyber-maturity-assessments) cover Essential 8, Privacy Act, ASIC, APRA, and Critical Infrastructure requirements. We also publish industry-specific guides for [law firms](/industries/law-firms) and [accounting firms](/industries/accounting).
 
 ---
 
