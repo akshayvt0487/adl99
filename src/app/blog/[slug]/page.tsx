@@ -229,7 +229,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
             <div className="max-w-4xl">
               <Link
                 href="/blog"
-                className="inline-flex items-center gap-2 text-primary-foreground/80 hover:text-primary-foreground mb-8 transition-colors group"
+                className="inline-flex items-center gap-2 mr-3 text-primary-foreground/80 hover:text-primary-foreground mb-8 transition-colors group"
               >
                 <ArrowLeft className="w-4 h-4 group-hover:-translate-x-1 transition-transform" />
                 <span>Back to Blog</span>
