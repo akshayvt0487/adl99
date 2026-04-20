@@ -49,12 +49,12 @@ interface LocationPageClientProps {
 
 // All services available
 const allServices = [
-  { title: "Cyber Maturity Assessments", description: "Evaluate your security posture with comprehensive assessments aligned to Essential Eight and NIST frameworks.", icon: Search },
-  { title: "Technical Advisory Services", description: "Expert guidance on security strategy, architecture, and implementation from experienced consultants.", icon: Shield },
-  { title: "Engineering Support", description: "Hands-on technical implementation support for security tools, configurations, and infrastructure.", icon: Briefcase },
-  { title: "Cyber Awareness Training", description: "Educate your team on security best practices, phishing awareness, and incident response procedures.", icon: BookOpen },
-  { title: "vCISO Services", description: "Virtual Chief Information Security Officer services providing strategic security leadership.", icon: Lightbulb },
-  { title: "Urgent Incident Response", description: "24/7 emergency cyber incident response for breaches, ransomware, and security emergencies.", icon: AlertTriangle },
+  { title: "Cyber Maturity Assessments", description: "Evaluate your security posture with comprehensive assessments aligned to Essential Eight and NIST frameworks.", icon: Search, href: "/services/cyber-maturity-assessments" },
+  { title: "Technical Advisory Services", description: "Expert guidance on security strategy, architecture, and implementation from experienced consultants.", icon: Shield, href: "/services/technical-advisory" },
+  { title: "Engineering Support", description: "Hands-on technical implementation support for security tools, configurations, and infrastructure.", icon: Briefcase, href: "/services/engineering-support" },
+  { title: "Cyber Awareness Training", description: "Educate your team on security best practices, phishing awareness, and incident response procedures.", icon: BookOpen, href: "/services/cyber-awareness-training" },
+  { title: "vCISO Services", description: "Virtual Chief Information Security Officer services providing strategic security leadership.", icon: Lightbulb, href: "/services/vciso" },
+  { title: "Urgent Incident Response", description: "24/7 emergency cyber incident response for breaches, ransomware, and security emergencies.", icon: AlertTriangle, href: "/cyber-security-urgent-help" },
 ];
 
 // Icon mapping for industries
@@ -251,13 +251,20 @@ export default function LocationPageClient({
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.5, delay: index * 0.1 }}
-                    className="bg-card p-8 rounded-2xl border border-border hover:border-primary/30 hover:shadow-lg transition-all duration-300 group"
                   >
-                    <div className="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center mb-5 group-hover:bg-primary/20 transition-colors">
-                      <IconComponent className="w-7 h-7 text-primary" />
-                    </div>
-                    <h3 className="font-display text-xl font-bold mb-3 uppercase tracking-wide">{service.title}</h3>
-                    <p className="text-muted-foreground leading-relaxed">{service.description}</p>
+                    <Link
+                      href={service.href}
+                      className="block bg-card p-8 rounded-2xl border border-border hover:border-primary/30 hover:shadow-lg transition-all duration-300 group h-full"
+                    >
+                      <div className="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center mb-5 group-hover:bg-primary/20 transition-colors">
+                        <IconComponent className="w-7 h-7 text-primary" />
+                      </div>
+                      <h3 className="font-display text-xl font-bold mb-3 uppercase tracking-wide">{service.title}</h3>
+                      <p className="text-muted-foreground leading-relaxed mb-4">{service.description}</p>
+                      <span className="text-primary font-semibold inline-flex items-center gap-2 group-hover:gap-3 transition-all">
+                        Learn more <ArrowRight className="w-4 h-4" />
+                      </span>
+                    </Link>
                   </motion.div>
                 );
               })}
