@@ -84,25 +84,30 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="border-t border-background/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
-          <p className="text-sm text-background/60">
-            © {new Date().getFullYear()} ADL99 Cyber Security. All rights reserved.
+        <div className="border-t border-background/10 pt-8">
+          <p className="text-xs text-background/50 mb-4 max-w-4xl">
+            While every effort is made to ensure the accuracy of the information on this website, ADL99 makes no guarantees regarding its completeness or correctness. We recommend contacting ADL99 directly for a customised review specific to your requirements.
           </p>
-          <a
-            href="https://www.dsigns.com.au"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="hover:opacity-80 transition-opacity"
-          >
-            <Image
-              src="/dsigns-logo-white.png"
-              alt="Website by DSIGNS"
-              width={80}
-              height={24}
-              loading="lazy"
-              className="h-6"
-            />
-          </a>
+          <div className="flex flex-col md:flex-row justify-between items-center gap-4">
+            <p className="text-sm text-background/60">
+              © {new Date().getFullYear()} ADL99 Cyber Security. All rights reserved.
+            </p>
+            <a
+              href="https://www.dsigns.com.au"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:opacity-80 transition-opacity"
+            >
+              <Image
+                src="/dsigns-logo-white.png"
+                alt="Website by DSIGNS"
+                width={80}
+                height={24}
+                loading="lazy"
+                className="h-6"
+              />
+            </a>
+          </div>
         </div>
       </div>
     </footer>
