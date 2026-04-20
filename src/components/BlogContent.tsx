@@ -272,13 +272,10 @@ const BlogContent: React.FC<BlogContentProps> = ({ content }) => {
           <div class="flex-1">
             <p class="text-lg font-semibold text-primary-foreground mb-0">${text}</p>
           </div>
-          <div class="ml-4 flex items-center gap-2">
+          <div class="ml-4">
             <span class="px-4 py-2 bg-white/20 text-primary-foreground rounded-lg font-medium text-sm group-hover:bg-white/30 transition-colors">
               Book Now
             </span>
-            <svg class="w-5 h-5 text-primary-foreground group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
-            </svg>
           </div>
         </a>
       `;
