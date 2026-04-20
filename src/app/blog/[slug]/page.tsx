@@ -227,13 +227,15 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
 
           <div className="container mx-auto px-6 relative z-10">
             <div className="max-w-4xl">
-              <Link
-                href="/blog"
-                className="inline-flex items-center gap-2 text-primary-foreground/80 hover:text-primary-foreground mb-6 transition-colors group"
-              >
-                <ArrowLeft className="w-4 h-4 group-hover:-translate-x-1 transition-transform" />
-                <span>Back to Blog</span>
-              </Link>
+              <div className="mb-8">
+                <Link
+                  href="/blog"
+                  className="inline-flex items-center gap-2 text-primary-foreground/80 hover:text-primary-foreground mb-4 transition-colors group"
+                >
+                  <ArrowLeft className="w-4 h-4 group-hover:-translate-x-1 transition-transform" />
+                  <span>Back to Blog</span>
+                </Link>
+              </div>
 
               <div className="inline-block px-4 py-2 bg-accent text-accent-foreground text-sm font-semibold rounded-full mb-6">
                 {post.category}
