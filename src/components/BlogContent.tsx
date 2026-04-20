@@ -478,7 +478,7 @@ const BlogContent: React.FC<BlogContentProps> = ({ content }) => {
               <ArrowRight className="w-5 h-5" />
             </Link>
             <Link
-              href="/services/cyber-maturity"
+              href="/services/cyber-maturity-assessments"
               className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-white/10 text-white border-2 border-white/30 rounded-lg hover:bg-white/20 transition-colors font-semibold backdrop-blur-sm"
             >
               Learn About Assessments

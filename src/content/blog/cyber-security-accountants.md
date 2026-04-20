@@ -40,7 +40,7 @@ Accounting firms are legally required to protect client data under the Privacy A
 
 Cyber insurance has limits. A major breach can exceed your policy limits, leaving you exposed.
 
-**The bottom line:** If you're an accounting firm without strong cyber security, it's not a question of "if" you'll be breached — it's "when." If you're already dealing with an incident, use our [panic button](/panic-button) for immediate help.
+**The bottom line:** If you're an accounting firm without strong cyber security, it's not a question of "if" you'll be breached — it's "when." If you're already dealing with an incident, use our [panic button](/cyber-security-urgent-help) for immediate help.
 
 ---
 
@@ -124,7 +124,7 @@ Cyber insurance has limits. A major breach can exceed your policy limits, leavin
 - Monitor user activity (EDR, user behavior analytics)
 - Conduct exit interviews and revoke access immediately
 - Implement data classification and DLP
-- Conduct regular [security awareness training](/services/cyber-awareness)
+- Conduct regular [security awareness training](/services/cyber-awareness-training)
 
 ### 6. Third-Party Vendor Breaches
 
@@ -365,7 +365,7 @@ Classify your data by sensitivity:
 - Conduct phishing simulations and measure click rates
 - Reward staff who report suspicious activity
 
-Our [cyber awareness training program](/services/cyber-awareness) is tailored for professional services firms including accounting practices.
+Our [cyber awareness training program](/services/cyber-awareness-training) is tailored for professional services firms including accounting practices.
 
 ---
 
@@ -429,7 +429,7 @@ After assessing dozens of Australian accounting firms, we've identified the most
 
 ## Next Steps: Get Your Accounting Firm Cyber Security Assessment
 
-[**Book your free 30-minute accounting firm cyber security assessment →**](/services/cyber-maturity)
+[**Book your free 30-minute accounting firm cyber security assessment →**](/services/cyber-maturity-assessments)
 
 Or, if you need ongoing support, consider our [**vCISO services for accounting firms →**](/services/vciso)
 

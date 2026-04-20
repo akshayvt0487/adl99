@@ -37,7 +37,7 @@ The eight controls are:
 7. Multi-Factor Authentication
 8. Regular Backups
 
-> **Not sure where your business sits today?** Our [cyber maturity assessment](/services/cyber-maturity) gives you a clear picture of your current Essential 8 maturity level — and a prioritised roadmap to improve it.
+> **Not sure where your business sits today?** Our [cyber maturity assessment](/services/cyber-maturity-assessments) gives you a clear picture of your current Essential 8 maturity level — and a prioritised roadmap to improve it.
 
 ---
 
@@ -256,7 +256,7 @@ After assessing Australian organisations across professional services, healthcar
 
 **Gap 5: Macros enabled by default.** Users can enable macros in Office documents without IT approval. Fix: Disable macros by default via Group Policy. Allow only digitally signed macros from trusted sources.
 
-> **Not sure which gaps apply to your business?** Our [cyber maturity assessment](/services/cyber-maturity) identifies your current Essential 8 maturity level and prioritises the gaps with the highest risk. Also see the [Essential Eight Maturity Model explained](/blog/essential-eight-maturity-model-explained) for the official ACSC definitions.
+> **Not sure which gaps apply to your business?** Our [cyber maturity assessment](/services/cyber-maturity-assessments) identifies your current Essential 8 maturity level and prioritises the gaps with the highest risk. Also see the [Essential Eight Maturity Model explained](/blog/essential-eight-maturity-model-explained) for the official ACSC definitions.
 
 ---
 
@@ -306,7 +306,7 @@ Implementing Essential 8 is a significant undertaking — but it's the most effe
 
 **The best starting point is understanding where you are today.**
 
-Our [Essential 8 compliance assessment](/services/cyber-maturity) gives you:
+Our [Essential 8 compliance assessment](/services/cyber-maturity-assessments) gives you:
 
 1. A current-state maturity rating for each of the 8 controls
 2. A prioritised gap analysis
@@ -314,9 +314,9 @@ Our [Essential 8 compliance assessment](/services/cyber-maturity) gives you:
 4. Cost and timeline estimates
 5. Vendor and tool recommendations
 
-If you need ongoing support beyond the assessment, our [vCISO services](/services/vciso) provide a dedicated security expert to manage your Essential 8 implementation and keep your compliance on track. If you're currently under attack, use our [panic button](/panic-button) for immediate incident response.
+If you need ongoing support beyond the assessment, our [vCISO services](/services/vciso) provide a dedicated security expert to manage your Essential 8 implementation and keep your compliance on track. If you're currently under attack, use our [panic button](/cyber-security-urgent-help) for immediate incident response.
 
-[**Book your free 30-minute Essential 8 assessment →**](/services/cyber-maturity)
+[**Book your free 30-minute Essential 8 assessment →**](/services/cyber-maturity-assessments)
 
 ---
 
@@ -340,7 +340,7 @@ Costs vary significantly based on organisation size, existing controls, and whet
 
 **Can we implement Essential 8 ourselves?**
 
-You can, but it requires expertise across multiple domains — identity management, endpoint security, patch management, backup architecture, and more. Most organisations benefit from external support, at least for the initial assessment and implementation planning. A [vCISO](/services/vciso) can provide this expertise without the cost of a full-time CISO hire. We also offer [security awareness training](/services/cyber-awareness) to upskill your team alongside technical controls.
+You can, but it requires expertise across multiple domains — identity management, endpoint security, patch management, backup architecture, and more. Most organisations benefit from external support, at least for the initial assessment and implementation planning. A [vCISO](/services/vciso) can provide this expertise without the cost of a full-time CISO hire. We also offer [security awareness training](/services/cyber-awareness-training) to upskill your team alongside technical controls.
 
 **What happens if we don't comply?**
 

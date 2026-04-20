@@ -14,7 +14,7 @@ const MobileCTA = () => {
             Free Consultation
           </Button>
         </a>
-        <Link href="/panic-button" className="flex-1">
+        <Link href="/cyber-security-urgent-help" className="flex-1">
           <Button variant="accent" size="sm" className="w-full gap-2">
             <AlertTriangle className="w-4 h-4" />
             URGENT HELP

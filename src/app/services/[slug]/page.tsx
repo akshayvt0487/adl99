@@ -33,7 +33,7 @@ export async function generateStaticParams() {
 
 // SEO metadata for specific services
 const serviceSEO: Record<string, { title: string; description: string }> = {
-  "cyber-maturity": {
+  "cyber-maturity-assessments": {
     title: "Cyber Maturity Assessment Services Melbourne | ADL99",
     description: "Know where your business stands against NIST, ISO 27001 & Essential Eight. ADL99 delivers a clear cyber security roadmap and gap analysis.",
   },
@@ -45,7 +45,7 @@ const serviceSEO: Record<string, { title: string; description: string }> = {
     title: "Cybersecurity Engineering Support Services | ADL99 Melbourne",
     description: "Hands-on security implementation from ADL99's Melbourne engineers — deploying and optimising your network defence, endpoint protection and cloud security.",
   },
-  "cyber-awareness": {
+  "cyber-awareness-training": {
     title: "Cyber Awareness Training  | ADL99 Melbourne",
     description: "Turn your employees into your strongest defence. ADL99 delivers phishing simulations, staff training and security awareness programs for Australian workplaces.",
   },

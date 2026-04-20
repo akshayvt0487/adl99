@@ -48,12 +48,12 @@ const Footer = () => {
           <div>
             <h2 className="font-semibold mb-4">Services</h2>
             <ul className="space-y-2 text-sm text-background/70">
-              <li><Link href="/services/cyber-maturity" className="hover:text-background hover:underline transition-colors">Cyber Maturity Assessments</Link></li>
+              <li><Link href="/services/cyber-maturity-assessments" className="hover:text-background hover:underline transition-colors">Cyber Maturity Assessments</Link></li>
               <li><Link href="/services/technical-advisory" className="hover:text-background hover:underline transition-colors">Technical Advisory Services</Link></li>
               <li><Link href="/services/engineering-support" className="hover:text-background hover:underline transition-colors">Engineering Support</Link></li>
-              <li><Link href="/services/cyber-awareness" className="hover:text-background hover:underline transition-colors">Cyber Awareness Training</Link></li>
+              <li><Link href="/services/cyber-awareness-training" className="hover:text-background hover:underline transition-colors">Cyber Awareness Training</Link></li>
               <li><Link href="/services/vciso" className="hover:text-background hover:underline transition-colors">vCISO Services</Link></li>
-              <li><Link href="/panic-button" className="hover:text-background hover:underline transition-colors">Urgent Help</Link></li>
+              <li><Link href="/cyber-security-urgent-help" className="hover:text-background hover:underline transition-colors">Urgent Help</Link></li>
             </ul>
           </div>
 

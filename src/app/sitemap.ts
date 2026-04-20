@@ -72,7 +72,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       priority: 0.9,
     },
     {
-      url: `${baseUrl}/panic-button`,
+      url: `${baseUrl}/cyber-security-urgent-help`,
       lastModified: new Date(),
       changeFrequency: 'monthly' as const,
       priority: 0.7,

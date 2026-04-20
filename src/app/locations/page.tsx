@@ -112,7 +112,7 @@ export default function LocationsPage() {
                   Get in Touch
                 </Link>
                 <Link
-                  href="/panic-button"
+                  href="/cyber-security-urgent-help"
                   className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-lg bg-destructive text-destructive-foreground font-medium hover:bg-destructive/90 transition-colors"
                 >
                   <Shield className="w-4 h-4" />

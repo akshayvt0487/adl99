@@ -6,6 +6,24 @@ export function middleware(request: NextRequest) {
   const host = request.headers.get('host') || '';
   const protocol = request.headers.get('x-forwarded-proto') || 'https';
 
+  // Slug redirects (old URLs to new URLs)
+  const slugRedirects: Record<string, string> = {
+    '/services/cyber-maturity': '/services/cyber-maturity-assessments',
+    '/services/cyber-awareness': '/services/cyber-awareness-training',
+    '/panic-button': '/cyber-security-urgent-help',
+  };
+
+  // Check if current pathname needs to be redirected
+  if (slugRedirects[pathname]) {
+    const newUrl = new URL(`${slugRedirects[pathname]}${search}`, request.url);
+    return NextResponse.redirect(newUrl, {
+      status: 301,
+      headers: {
+        'Cache-Control': 'public, max-age=31536000, immutable',
+      },
+    });
+  }
+
   // Always redirect to www.adl99.com.au with HTTPS
   const isNonWww = host === 'adl99.com.au';
   const isHttp = protocol === 'http';

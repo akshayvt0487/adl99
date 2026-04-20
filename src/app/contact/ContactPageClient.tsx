@@ -78,7 +78,7 @@ export default function ContactPageClient({
               {emergencyBannerText}
             </p>
             <Button variant="secondary" size="sm" asChild>
-              <Link href="/panic-button">URGENT HELP</Link>
+              <Link href="/cyber-security-urgent-help">URGENT HELP</Link>
             </Button>
           </div>
         </div>

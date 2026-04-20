@@ -143,7 +143,7 @@ export default function LocationPageClient({
                 className="border-primary-foreground bg-transparent text-primary-foreground hover:bg-primary-foreground hover:text-primary"
                 asChild
               >
-                <Link href="/panic-button">Experiencing an Incident?</Link>
+                <Link href="/cyber-security-urgent-help">Experiencing an Incident?</Link>
               </Button>
             </div>
             {/* Trust Badges */}

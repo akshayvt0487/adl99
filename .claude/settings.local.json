@@ -42,7 +42,13 @@
       "Bash(ADL99\"\n- Services Hub: \"Cybersecurity Services for Australian Businesses)",
       "Bash(ADL99 Melbourne\"\n- Industries Hub: \"Industry Cybersecurity Solutions Melbourne)",
       "Bash(ADL99\"\n- Restored all service and industry detail page metadata\n- Kept OG image improvements \\(10KB PNG with white background for homepage and about\\)\n\nCo-Authored-By: Claude Sonnet 4.5 <noreply@anthropic.com>\nEOF\n\\)\")",
-      "Bash(DR\" section headings from all blog posts for cleaner\ncontent flow. The summary content is preserved but without the\nheading label.\n\nCo-Authored-By: Claude Sonnet 4.5 <noreply@anthropic.com>\nEOF\n\\)\")"
+      "Bash(DR\" section headings from all blog posts for cleaner\ncontent flow. The summary content is preserved but without the\nheading label.\n\nCo-Authored-By: Claude Sonnet 4.5 <noreply@anthropic.com>\nEOF\n\\)\")",
+      "Bash(identify:*)",
+      "Bash(ADL99 Blog\" suffix\n- Enhanced meta descriptions with keywords\n- Language locale set to en_AU\n- Article sections and tags for categorization\n\nAll blog posts now have complete schema.org markup, proper\nsemantic HTML5, comprehensive metadata, and optimized content\nstructure for maximum search engine visibility.\n\nCo-Authored-By: Claude Sonnet 4.5 <noreply@anthropic.com>\nEOF\n\\)\")",
+      "Bash(if [ -d \"panic-button\" ])",
+      "Bash(then cp -r panic-button cyber-security-urgent-help)",
+      "Bash(else echo \"panic-button directory not found\")",
+      "Bash(fi)"
     ]
   }
 }

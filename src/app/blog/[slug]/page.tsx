@@ -227,15 +227,13 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
 
           <div className="container mx-auto px-6 relative z-10">
             <div className="max-w-4xl">
-              <div className="mb-8">
-                <Link
-                  href="/blog"
-                  className="inline-flex items-center gap-2 text-primary-foreground/80 hover:text-primary-foreground mb-4 transition-colors group"
-                >
-                  <ArrowLeft className="w-4 h-4 group-hover:-translate-x-1 transition-transform" />
-                  <span>Back to Blog</span>
-                </Link>
-              </div>
+              <Link
+                href="/blog"
+                className="inline-flex items-center gap-2 text-primary-foreground/80 hover:text-primary-foreground mb-8 transition-colors group"
+              >
+                <ArrowLeft className="w-4 h-4 group-hover:-translate-x-1 transition-transform" />
+                <span>Back to Blog</span>
+              </Link>
 
               <div className="inline-block px-4 py-2 bg-accent text-accent-foreground text-sm font-semibold rounded-full mb-6">
                 {post.category}
@@ -321,7 +319,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
                     <div className="bg-card border border-border rounded-xl p-6">
                       <h3 className="text-lg font-bold text-foreground mb-4">Related Services</h3>
                       <div className="space-y-3">
-                        <Link href="/services/cyber-maturity" className="block text-sm text-muted-foreground hover:text-primary transition-colors">
+                        <Link href="/services/cyber-maturity-assessments" className="block text-sm text-muted-foreground hover:text-primary transition-colors">
                           → Cyber Maturity Assessment
                         </Link>
                         <Link href="/services/vciso" className="block text-sm text-muted-foreground hover:text-primary transition-colors">
@@ -330,7 +328,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
                         <Link href="/services/compliance" className="block text-sm text-muted-foreground hover:text-primary transition-colors">
                           → Compliance Services
                         </Link>
-                        <Link href="/services/cyber-awareness" className="block text-sm text-muted-foreground hover:text-primary transition-colors">
+                        <Link href="/services/cyber-awareness-training" className="block text-sm text-muted-foreground hover:text-primary transition-colors">
                           → Security Training
                         </Link>
                       </div>
@@ -343,7 +341,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
                         Get immediate incident response support.
                       </p>
                       <Link
-                        href="/panic-button"
+                        href="/cyber-security-urgent-help"
                         className="inline-flex items-center justify-center w-full px-4 py-2 text-sm font-medium text-white bg-red-600 rounded-lg hover:bg-red-700 transition-colors"
                       >
                         Emergency Help

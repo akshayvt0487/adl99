@@ -9,12 +9,12 @@ import Image from "next/image";
 import logo from "@/assets/adl99-logo.png";
 
 const servicesItems = [
-  { href: "/services/cyber-maturity", label: "Cyber Maturity Assessments", icon: FileSearch, description: "Evaluate your security posture" },
+  { href: "/services/cyber-maturity-assessments", label: "Cyber Maturity Assessments", icon: FileSearch, description: "Evaluate your security posture" },
   { href: "/services/technical-advisory", label: "Technical Advisory Services", icon: Shield, description: "Expert guidance on security strategy" },
   { href: "/services/engineering-support", label: "Engineering Support", icon: Wrench, description: "Hands-on technical implementation" },
-  { href: "/services/cyber-awareness", label: "Cyber Awareness Training", icon: Users, description: "Educate your team on security" },
+  { href: "/services/cyber-awareness-training", label: "Cyber Awareness Training", icon: Users, description: "Educate your team on security" },
   { href: "/services/vciso", label: "vCISO Services", icon: UserCheck, description: "Virtual Chief Information Security Officer" },
-  { href: "/panic-button", label: "Urgent Help", icon: AlertTriangle, description: "Emergency cyber incident response" },
+  { href: "/cyber-security-urgent-help", label: "Urgent Help", icon: AlertTriangle, description: "Emergency cyber incident response" },
 ];
 
 const industriesItems = [
@@ -181,7 +181,7 @@ const Header = () => {
               Free Consultation
             </Button>
           </Link>
-          <Link href="/panic-button" aria-label="Get urgent cybersecurity help">
+          <Link href="/cyber-security-urgent-help" aria-label="Get urgent cybersecurity help">
             <Button variant="accent" size="sm" className="gap-2">
               <AlertTriangle className="w-4 h-4" />
               <span className="hidden sm:inline">URGENT HELP</span>

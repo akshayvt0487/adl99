@@ -147,7 +147,7 @@ export default async function ServicesPage() {
         slug: service.slug,
         description: service.serviceFields?.shortDescription || service.excerpt || '',
         accent: service.serviceFields?.isAccent || service.slug === 'urgent-help',
-        link: service.slug === 'urgent-help' ? '/panic-button' : `/services/${service.slug}`,
+        link: service.slug === 'urgent-help' ? '/cyber-security-urgent-help' : `/services/${service.slug}`,
       }))
     : [];
 

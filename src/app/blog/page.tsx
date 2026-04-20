@@ -34,9 +34,9 @@ export const metadata: Metadata = {
     locale: 'en_AU',
     images: [
       {
-        url: '/android-chrome-512x512.png',
-        width: 512,
-        height: 512,
+        url: 'https://www.adl99.com.au/opengraph-image.png',
+        width: 1200,
+        height: 630,
         alt: 'ADL99 Cybersecurity Blog',
       },
     ],
@@ -47,6 +47,7 @@ export const metadata: Metadata = {
     creator: '@adl99cyber',
     title: "Cybersecurity Blog & Insights | ADL99",
     description: "Expert cybersecurity insights, best practices, and industry trends for Australian businesses.",
+    images: ['https://www.adl99.com.au/opengraph-image.png'],
   },
   robots: {
     index: true,
@@ -77,7 +78,9 @@ export default function BlogPage() {
       url: "https://www.adl99.com.au",
       logo: {
         "@type": "ImageObject",
-        url: "https://www.adl99.com.au/android-chrome-512x512.png",
+        url: "https://www.adl99.com.au/opengraph-image.png",
+        width: 1200,
+        height: 630,
       },
     },
     blogPost: blogPosts.map(post => ({

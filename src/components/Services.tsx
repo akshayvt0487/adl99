@@ -113,8 +113,8 @@ const Services = ({ data, sectionTitle, sectionDescription }: ServicesProps) => 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {services.map((service, index) => {
             const IconComponent = service.icon;
-            const linkPath = service.slug === 'urgent-help' 
-              ? '/panic-button' 
+            const linkPath = service.slug === 'urgent-help'
+              ? '/cyber-security-urgent-help'
               : `/services/${service.slug}`;
             
             return (

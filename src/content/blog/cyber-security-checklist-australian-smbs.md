@@ -24,7 +24,7 @@ Worse: **one in three successful breaches began with a Business Email Compromise
 
 The regulatory pressure is mounting too. Under Australia's Privacy Act, businesses with an annual turnover above $3 million must notify both affected individuals and the OAIC within 72 hours of a qualifying breach. And from May 2025, a **mandatory ransomware reporting regime** applies to businesses with turnovers of $3 million or more.
 
-The good news? Most successful attacks exploit the same predictable gaps — gaps that a structured [cyber maturity assessment](/services/cyber-maturity) can identify and close before they become incidents. If you're already under attack, our [urgent cyber help](/services/urgent-help) team is available now.
+The good news? Most successful attacks exploit the same predictable gaps — gaps that a structured [cyber maturity assessment](/services/cyber-maturity-assessments) can identify and close before they become incidents. If you're already under attack, our [urgent cyber help](/services/urgent-help) team is available now.
 
 This checklist gives you the starting point.
 
@@ -128,7 +128,7 @@ The first eight items map directly to the **ACSC's Essential 8** — Australia's
 
 **Why it matters:** Email remains the number one entry point for cyber attacks. **82% of small businesses without cybersecurity training faced attacks** — and AI is making phishing emails increasingly convincing and harder to spot.
 
-**Action:** Run phishing simulations at least quarterly. Deliver short, role-relevant training modules monthly. Ensure all new staff complete security onboarding before accessing company systems. Our [cyber awareness training](/services/cyber-awareness) program is designed specifically for Australian SMBs.
+**Action:** Run phishing simulations at least quarterly. Deliver short, role-relevant training modules monthly. Ensure all new staff complete security onboarding before accessing company systems. Our [cyber awareness training](/services/cyber-awareness-training) program is designed specifically for Australian SMBs.
 
 ---
 
@@ -158,7 +158,7 @@ The first eight items map directly to the **ACSC's Essential 8** — Australia's
 
 **Why it matters:** Cyber threats evolve. Controls that were sufficient 12 months ago may have gaps today. A structured assessment gives you an objective view of where you stand.
 
-**Action:** Conduct an internal review against this checklist every quarter. Engage an external provider for a formal [cyber security maturity assessment](/services/cyber-maturity) at least annually. Use the results to build a prioritised remediation roadmap.
+**Action:** Conduct an internal review against this checklist every quarter. Engage an external provider for a formal [cyber security maturity assessment](/services/cyber-maturity-assessments) at least annually. Use the results to build a prioritised remediation roadmap.
 
 ---
 
@@ -200,7 +200,7 @@ If any of these sound familiar, the right next step is a structured review. Our 
 
 This checklist is a starting point — not a finish line.
 
-If you've worked through it and found gaps (most businesses do), the most effective next step is a structured [cyber security maturity assessment](/services/cyber-maturity) with a qualified advisor. This gives you:
+If you've worked through it and found gaps (most businesses do), the most effective next step is a structured [cyber security maturity assessment](/services/cyber-maturity-assessments) with a qualified advisor. This gives you:
 
 - An objective baseline of your current security posture
 - A prioritised remediation roadmap mapped to Essential 8
@@ -235,7 +235,7 @@ Not necessarily for the basics — MFA, patching, and backups can be implemented
 
 **What should I do if we've already had a breach?**
 
-Stop, contain, and call a specialist. Do not attempt to investigate or remediate a live incident without professional support — you risk destroying forensic evidence and making the situation worse. ADL99's incident response team is available to assist Australian businesses through active incidents. Use our [panic button](/panic-button) for immediate help, or [contact us](/contact) if you suspect a breach.
+Stop, contain, and call a specialist. Do not attempt to investigate or remediate a live incident without professional support — you risk destroying forensic evidence and making the situation worse. ADL99's incident response team is available to assist Australian businesses through active incidents. Use our [panic button](/cyber-security-urgent-help) for immediate help, or [contact us](/contact) if you suspect a breach.
 
 **How does this checklist relate to the Essential 8?**
 
