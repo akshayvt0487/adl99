@@ -80,6 +80,7 @@ const Footer = () => {
               <li><a href="mailto:info@adl99.com.au" className="hover:text-background transition-colors">info@adl99.com.au</a></li>
               <li><Link href="/contact" className="hover:text-background transition-colors">Contact Us</Link></li>
               <li><Link href="/about" className="hover:text-background transition-colors">About Us</Link></li>
+              <li><Link href="/blog" className="hover:text-background transition-colors">Blog</Link></li>
             </ul>
           </div>
         </div>
