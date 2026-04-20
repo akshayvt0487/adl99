@@ -94,9 +94,9 @@ export const metadata: Metadata = {
     description: "Protect your business with Australia's trusted cybersecurity experts. vCISO, Essential Eight compliance, penetration testing & 24/7 security monitoring. Get a free security assessment today.",
     images: [
       {
-        url: "/icon.png",
-        width: 192,
-        height: 192,
+        url: "/android-chrome-512x512.png",
+        width: 512,
+        height: 512,
         alt: "ADL99 Cybersecurity Logo",
       },
     ],
@@ -107,7 +107,7 @@ export const metadata: Metadata = {
     creator: "@adl99cyber",
     title: "ADL99 Cybersecurity | Expert Cyber Security Services Australia",
     description: "Protect your business with Australia's trusted cybersecurity experts. vCISO, Essential Eight, penetration testing & more.",
-    images: ["/icon.png"],
+    images: ["/android-chrome-512x512.png"],
   },
   robots: {
     index: true,
@@ -164,9 +164,9 @@ export default function RootLayout({
     url: "https://www.adl99.com.au",
     logo: {
       "@type": "ImageObject",
-      url: "https://www.adl99.com.au/icon.png",
-      width: 192,
-      height: 192,
+      url: "https://www.adl99.com.au/android-chrome-512x512.png",
+      width: 512,
+      height: 512,
     },
     description: "Leading Australian cybersecurity consulting firm specializing in vCISO services, Essential Eight compliance, and comprehensive security solutions.",
     address: {
