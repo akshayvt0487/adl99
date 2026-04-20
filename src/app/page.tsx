@@ -9,8 +9,10 @@ import Industries from "@/components/Industries";
 import Process from "@/components/Process";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
+import BlogSection from "@/components/BlogSection";
 import { fetchGraphQL } from "@/lib/wordpress-server";
 import { GET_HOME_PAGE, GET_ALL_SERVICES, GET_ALL_INDUSTRIES } from "@/lib/wordpress-queries";
+import { getAllBlogPosts } from "@/lib/markdown";
 import type { Metadata } from "next";
 
 // Enhanced SEO metadata for homepage
@@ -99,6 +101,7 @@ export default async function HomePage() {
   ]);
 
   const homePage = homePageData?.page;
+  const blogPosts = getAllBlogPosts();
 
   // Enhanced JSON-LD structured data for rich snippets
   const organizationSchema = {
@@ -288,6 +291,7 @@ export default async function HomePage() {
           data={homePage?.homeFields?.processSection}
           isLoading={false}
         />
+        <BlogSection posts={blogPosts} />
         <Contact />
       </main>
       <Footer />
