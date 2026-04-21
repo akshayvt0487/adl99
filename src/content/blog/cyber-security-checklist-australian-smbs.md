@@ -7,7 +7,7 @@ updated: "April 2026"
 readTime: "8 min"
 author: "ADL99 Security Advisory Team"
 category: "Essential Eight"
-image: "/banner-images/services_cyber-maturity.webp"
+image: "/blog-images/12-Point Cyber Security Checklist for Australian SMBs/HERO IMAGE.webp"
 ---
 
 Australian SMBs are being hit harder than ever — cyber attack costs jumped 14% last year, averaging **$56,600 per incident for small businesses**. This 12-point checklist maps directly to the ACSC's Essential 8 framework and gives you a clear, prioritised action plan. Work through the 12 controls below to identify your gaps.
@@ -15,6 +15,8 @@ Australian SMBs are being hit harder than ever — cyber attack costs jumped 14%
 ---
 
 ## Why Australian SMBs Can't Afford to Skip This
+
+![Why SMBs Can't Skip This](/blog-images/12-Point Cyber Security Checklist for Australian SMBs/WHY SMBs CAN'T SKIP THIS.webp)
 
 Cyber attacks are no longer a "big business" problem.
 
@@ -32,6 +34,8 @@ This checklist gives you the starting point.
 
 ## The 12-Point Cyber Security Checklist
 
+![Checklist Overview](/blog-images/12-Point Cyber Security Checklist for Australian SMBs/CHECKLIST OVERVIEW.webp)
+
 The first eight items map directly to the **ACSC's Essential 8** — Australia's recommended baseline for every business. Items 9–12 go beyond the baseline to address the gaps we most commonly see in Australian SMBs.
 
 > **How to use this checklist:** Work through each item. Mark it as ✅ Done, ⚠️ Partial, or ❌ Not started. Any "partial" or "not started" item is a risk exposure that needs an owner and a deadline.
@@ -39,6 +43,8 @@ The first eight items map directly to the **ACSC's Essential 8** — Australia's
 ---
 
 ### 1. Multi-Factor Authentication (MFA)
+
+![Multi-Factor Authentication](/blog-images/12-Point Cyber Security Checklist for Australian SMBs/MULTI-FACTOR AUTHENTICATION (MFA).webp)
 
 **What it is:** Requiring two or more verification methods before granting access to systems, email, and cloud apps.
 
@@ -51,6 +57,8 @@ The first eight items map directly to the **ACSC's Essential 8** — Australia's
 ---
 
 ### 2. Patch Applications
+
+![Patching](/blog-images/12-Point Cyber Security Checklist for Australian SMBs/PATCHING.webp)
 
 **What it is:** Regularly updating all software applications to fix known security vulnerabilities.
 
@@ -112,6 +120,8 @@ The first eight items map directly to the **ACSC's Essential 8** — Australia's
 
 ### 8. Regular Backups
 
+![Backups](/blog-images/12-Point Cyber Security Checklist for Australian SMBs/BACKUPS.webp)
+
 **What it is:** Maintaining secure, tested, offline or immutable backups of all critical business data.
 
 **Why it matters:** Backups are your last line of defence against ransomware. Regular backups helped **58% of SMBs recover without paying a ransom** (Sophos, 2023). Without them, you may face a choice between paying criminals or losing your data.
@@ -123,6 +133,8 @@ The first eight items map directly to the **ACSC's Essential 8** — Australia's
 ---
 
 ### 9. Security Awareness Training
+
+![Security Training](/blog-images/12-Point Cyber Security Checklist for Australian SMBs/SECURITY TRAINING.webp)
 
 **What it is:** Regular, structured training that teaches staff to recognise and respond to phishing, social engineering, and other common threats.
 
@@ -144,6 +156,8 @@ The first eight items map directly to the **ACSC's Essential 8** — Australia's
 
 ### 11. Data Classification & Access Control
 
+![Access Control](/blog-images/12-Point Cyber Security Checklist for Australian SMBs/ACCESS CONTROL.webp)
+
 **What it is:** Identifying your most sensitive data, labelling it, and ensuring only authorised people can access it.
 
 **Why it matters:** You can't protect what you haven't identified. Many SMBs discover during a breach that sensitive client data was accessible to far more staff than necessary.
@@ -153,6 +167,8 @@ The first eight items map directly to the **ACSC's Essential 8** — Australia's
 ---
 
 ### 12. Regular Security Audits & Assessments
+
+![Audits & Assessments](/blog-images/12-Point Cyber Security Checklist for Australian SMBs/AUDITS & ASSESSMENTS.webp)
 
 **What it is:** Periodically reviewing your entire security posture against a recognised framework — not just checking individual controls.
 
@@ -212,6 +228,8 @@ For businesses that need ongoing support — not just a one-time assessment — 
 **Book a free 30-minute cyber security consultation** with the ADL99 team to discuss where your business stands and what to prioritise first.
 
 > [**Book Your Free Consultation →**](/contact)
+
+![Final Image](/blog-images/12-Point Cyber Security Checklist for Australian SMBs/FINAL IMG.webp)
 
 ---
 
