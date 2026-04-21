@@ -366,27 +366,45 @@ const BlogContent: React.FC<BlogContentProps> = ({ content }) => {
     // Process blockquotes - make them CTA style
     const blockquotes = tempDiv.querySelectorAll('blockquote');
     blockquotes.forEach((blockquote) => {
-      // Get the text content
-      const text = blockquote.textContent?.trim() || '';
+      // Check if blockquote contains a link
+      const link = blockquote.querySelector('a');
+      const href = link?.getAttribute('href') || '/contact';
+      const linkText = link?.textContent?.trim() || '';
+
+      // Get the full text content
+      const fullText = blockquote.textContent?.trim() || '';
 
       // Convert blockquote to CTA card
       blockquote.className = 'my-8 bg-gradient-to-r from-primary to-primary/90 rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow';
 
-      // Clear existing content and rebuild as CTA
-      blockquote.innerHTML = `
-        <a href="/contact" class="block group">
-          <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4 text-center md:text-left">
-            <div class="flex-1">
-              <p class="text-lg font-semibold text-primary-foreground mb-0">${text}</p>
+      // If there's a link, use it as button; otherwise use default text
+      if (link && linkText) {
+        // Center-aligned single button style
+        blockquote.innerHTML = `
+          <a href="${href}" class="block group text-center">
+            <p class="text-lg font-semibold text-primary-foreground mb-4">${linkText}</p>
+            <span class="inline-flex items-center justify-center px-8 py-4 bg-white/20 text-primary-foreground rounded-lg font-medium text-base group-hover:bg-white/30 transition-colors">
+              Book Now →
+            </span>
+          </a>
+        `;
+      } else {
+        // Two-column style for plain text blockquotes
+        blockquote.innerHTML = `
+          <a href="/contact" class="block group">
+            <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4 text-center md:text-left">
+              <div class="flex-1">
+                <p class="text-lg font-semibold text-primary-foreground mb-0">${fullText}</p>
+              </div>
+              <div class="flex-shrink-0 flex justify-center md:justify-start">
+                <span class="inline-flex items-center justify-center px-6 py-3 bg-white/20 text-primary-foreground rounded-lg font-medium text-sm group-hover:bg-white/30 transition-colors whitespace-nowrap">
+                  Book Now
+                </span>
+              </div>
             </div>
-            <div class="flex-shrink-0 flex justify-center md:justify-start">
-              <span class="inline-flex items-center justify-center px-6 py-3 bg-white/20 text-primary-foreground rounded-lg font-medium text-sm group-hover:bg-white/30 transition-colors whitespace-nowrap">
-                Book Now
-              </span>
-            </div>
-          </div>
-        </a>
-      `;
+          </a>
+        `;
+      }
     });
 
     // Add info boxes for "Common gap" sections
