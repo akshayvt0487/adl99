@@ -15,6 +15,11 @@ const BlogContent: React.FC<BlogContentProps> = ({ content }) => {
     const tempDiv = document.createElement('div');
     tempDiv.innerHTML = content;
 
+    // Debug: Log the content to see what we're receiving
+    if (process.env.NODE_ENV === 'development') {
+      console.log('Raw content preview:', content.substring(0, 500));
+    }
+
     // Process headings
     const h2Elements = tempDiv.querySelectorAll('h2');
     h2Elements.forEach((h2, index) => {
@@ -433,9 +438,13 @@ const BlogContent: React.FC<BlogContentProps> = ({ content }) => {
 
     // Process images - wrap them properly and add styling
     const imgElements = tempDiv.querySelectorAll('img');
+    console.log('Found images:', imgElements.length);
+
     imgElements.forEach((img) => {
       const src = img.getAttribute('src');
       const alt = img.getAttribute('alt') || '';
+
+      console.log('Processing image:', { src, alt });
 
       // Create figure wrapper
       const figure = document.createElement('figure');
@@ -453,8 +462,13 @@ const BlogContent: React.FC<BlogContentProps> = ({ content }) => {
 
       figure.appendChild(styledImg);
 
-      // Replace the original img with the figure
-      if (img.parentNode) {
+      // If the image is inside a paragraph, replace the entire paragraph
+      const parentP = img.closest('p');
+      if (parentP && parentP.childNodes.length === 1) {
+        // Image is the only child of the paragraph
+        parentP.parentNode?.replaceChild(figure, parentP);
+      } else if (img.parentNode) {
+        // Replace just the image
         img.parentNode.replaceChild(figure, img);
       }
     });
