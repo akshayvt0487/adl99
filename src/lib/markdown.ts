@@ -56,6 +56,7 @@ export async function getBlogPost(slug: string): Promise<BlogPost> {
   }
 
   // Convert markdown to HTML using marked
+  console.log('[markdown.ts] Using MARKED library for conversion');
   const contentHtml = await marked.parse(content);
 
   // Debug: Log the converted HTML for the first image
