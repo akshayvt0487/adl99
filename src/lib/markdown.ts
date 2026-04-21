@@ -1,8 +1,7 @@
 import fs from 'fs';
 import path from 'path';
 import matter from 'gray-matter';
-import { remark } from 'remark';
-import html from 'remark-html';
+import { marked } from 'marked';
 
 const postsDirectory = path.join(process.cwd(), 'src/content/blog');
 
@@ -56,11 +55,8 @@ export async function getBlogPost(slug: string): Promise<BlogPost> {
     console.log('[markdown.ts] Found markdown image:', imageMatch[0]);
   }
 
-  // Convert markdown to HTML with proper options
-  const processedContent = await remark()
-    .use(html, { sanitize: false })
-    .process(content);
-  const contentHtml = processedContent.toString();
+  // Convert markdown to HTML using marked
+  const contentHtml = await marked.parse(content);
 
   // Debug: Log the converted HTML for the first image
   const imgMatch = contentHtml.match(/<img[^>]*>/);
