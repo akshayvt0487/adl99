@@ -7,7 +7,7 @@ updated: "April 2026"
 readTime: "12 min"
 author: "ADL99 Security Advisory Team"
 category: "Essential Eight"
-image: "/blog-images/Essential 8 Cyber Security/HERO IMAGE.webp"
+image: "</blog-images/Essential 8 Cyber Security/HERO IMAGE.webp>"
 ---
 
 - The **Essential 8** is Australia's baseline cybersecurity framework — 8 controls developed by the ACSC to stop the most common attacks.
@@ -22,7 +22,7 @@ image: "/blog-images/Essential 8 Cyber Security/HERO IMAGE.webp"
 
 ## What is Essential 8?
 
-![What is Essential 8](/blog-images/Essential 8 Cyber Security/WHAT IS ESSENTIAL 8.webp)
+![What is Essential 8](</blog-images/Essential 8 Cyber Security/WHAT IS ESSENTIAL 8.webp>)
 
 The **Essential 8** (also called the ASD Essential Eight or ACSC Essential Eight) is a set of eight prioritised cybersecurity mitigation strategies developed by the Australian Signals Directorate (ASD) through the Australian Cyber Security Centre (ACSC).
 
@@ -45,11 +45,11 @@ The eight controls are:
 
 ## Why Essential 8 Matters for Australian Businesses in 2026
 
-![Why Essential 8 Matters](/blog-images/Essential 8 Cyber Security/WHY IT MATTERS SECTION.webp)
+![Why Essential 8 Matters](</blog-images/Essential 8 Cyber Security/WHY IT MATTERS SECTION.webp>)
 
 ### The threat landscape is getting worse
 
-![Risk Section](/blog-images/Essential 8 Cyber Security/RISK SECTION.webp)
+![Risk Section](</blog-images/Essential 8 Cyber Security/RISK SECTION.webp>)
 
 The ACSC received over **84,700 cybercrime reports in FY2024-25** — that's one report every six minutes. Ransomware attacks, data breaches, and financial losses all increased throughout the year.
 
@@ -81,11 +81,11 @@ Depending on your industry, Essential 8 compliance may already be required:
 
 ## The 8 Essential Controls Explained
 
-![The 8 Essential Controls](/blog-images/Essential 8 Cyber Security/THE 8 ESSENTIAL CONTROLS.webp)
+![The 8 Essential Controls](</blog-images/Essential 8 Cyber Security/THE 8 ESSENTIAL CONTROLS.webp>)
 
 ### 1. Application Control
 
-![Application Control](/blog-images/Essential 8 Cyber Security/Application Control.webp)
+![Application Control](</blog-images/Essential 8 Cyber Security/Application Control.webp>)
 
 **What it is:** Only allowing approved, trusted applications to run on your devices. Everything else is blocked — including malware.
 
@@ -105,7 +105,7 @@ Depending on your industry, Essential 8 compliance may already be required:
 
 ### 2. Patch Applications
 
-![Patch Applications](/blog-images/Essential 8 Cyber Security/Patch Applications.webp)
+![Patch Applications](</blog-images/Essential 8 Cyber Security/Patch Applications.webp>)
 
 **What it is:** Regularly updating software (browsers, Office, Adobe, Java, etc.) to fix known security vulnerabilities.
 
@@ -125,7 +125,7 @@ Depending on your industry, Essential 8 compliance may already be required:
 
 ### 3. Configure Microsoft Office Macros
 
-![Configure Microsoft Office Macros](/blog-images/Essential 8 Cyber Security/Configure Microsoft Office Macros.webp)
+![Configure Microsoft Office Macros](</blog-images/Essential 8 Cyber Security/Configure Microsoft Office Macros.webp>)
 
 **What it is:** Restricting or disabling Microsoft Office macros (small programs embedded in Word/Excel files) that are commonly used to deliver malware.
 
@@ -145,7 +145,7 @@ Depending on your industry, Essential 8 compliance may already be required:
 
 ### 4. User Application Hardening
 
-![User Application Hardening](/blog-images/Essential 8 Cyber Security/User Application Hardening.webp)
+![User Application Hardening](</blog-images/Essential 8 Cyber Security/User Application Hardening.webp>)
 
 **What it is:** Configuring browsers and applications to reduce their attack surface — disabling features that are commonly exploited but rarely needed.
 
@@ -165,7 +165,7 @@ Depending on your industry, Essential 8 compliance may already be required:
 
 ### 5. Restrict Administrative Privileges
 
-![Restrict Administrative Privileges](/blog-images/Essential 8 Cyber Security/Restrict Administrative Privileges.webp)
+![Restrict Administrative Privileges](</blog-images/Essential 8 Cyber Security/Restrict Administrative Privileges.webp>)
 
 **What it is:** Giving users only the minimum permissions they need to do their job. Admin access is tightly controlled and only granted when necessary.
 
@@ -185,7 +185,7 @@ Depending on your industry, Essential 8 compliance may already be required:
 
 ### 6. Patch Operating Systems
 
-![Patch Operating Systems](/blog-images/Essential 8 Cyber Security/Patch Operating Systems.webp)
+![Patch Operating Systems](</blog-images/Essential 8 Cyber Security/Patch Operating Systems.webp>)
 
 **What it is:** Keeping Windows, macOS, Linux, and other operating systems updated with the latest security patches.
 
@@ -205,7 +205,7 @@ Depending on your industry, Essential 8 compliance may already be required:
 
 ### 7. Multi-Factor Authentication (MFA)
 
-![Multi-Factor Authentication](/blog-images/Essential 8 Cyber Security/Multi-Factor Authentication (MFA).webp)
+![Multi-Factor Authentication](</blog-images/Essential 8 Cyber Security/Multi-Factor Authentication (MFA).webp>)
 
 **What it is:** Requiring two or more forms of identification to access systems — typically a password plus a code from an authenticator app or hardware token.
 
@@ -225,7 +225,7 @@ Depending on your industry, Essential 8 compliance may already be required:
 
 ### 8. Regular Backups
 
-![Regular Backups](/blog-images/Essential 8 Cyber Security/Regular Backups.webp)
+![Regular Backups](</blog-images/Essential 8 Cyber Security/Regular Backups.webp>)
 
 **What it is:** Regularly backing up important data and systems, storing backups securely, and testing that you can actually restore from them.
 

@@ -15,11 +15,6 @@ const BlogContent: React.FC<BlogContentProps> = ({ content }) => {
     const tempDiv = document.createElement('div');
     tempDiv.innerHTML = content;
 
-    // Debug: Log the content to see what we're receiving
-    if (process.env.NODE_ENV === 'development') {
-      console.log('Raw content preview:', content.substring(0, 500));
-    }
-
     // Process headings
     const h2Elements = tempDiv.querySelectorAll('h2');
     h2Elements.forEach((h2, index) => {
@@ -438,13 +433,10 @@ const BlogContent: React.FC<BlogContentProps> = ({ content }) => {
 
     // Process images - wrap them properly and add styling
     const imgElements = tempDiv.querySelectorAll('img');
-    console.log('Found images:', imgElements.length);
 
     imgElements.forEach((img) => {
       const src = img.getAttribute('src');
       const alt = img.getAttribute('alt') || '';
-
-      console.log('Processing image:', { src, alt });
 
       // Create figure wrapper
       const figure = document.createElement('figure');

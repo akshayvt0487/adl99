@@ -26,7 +26,7 @@ export async function generateMetadata({ params }: BlogPostPageProps): Promise<M
   const { slug } = await params;
 
   try {
-    const post = await getBlogPost(slug);
+    const post = getBlogPost(slug);
 
     return {
       title: `${post.title}`,
@@ -105,7 +105,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
 
   let post;
   try {
-    post = await getBlogPost(slug);
+    post = getBlogPost(slug);
   } catch {
     notFound();
   }

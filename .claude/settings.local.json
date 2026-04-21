@@ -48,7 +48,8 @@
       "Bash(if [ -d \"panic-button\" ])",
       "Bash(then cp -r panic-button cyber-security-urgent-help)",
       "Bash(else echo \"panic-button directory not found\")",
-      "Bash(fi)"
+      "Bash(fi)",
+      "Bash(del test-marked.js test-marked-simple.js)"
     ]
   }
 }
