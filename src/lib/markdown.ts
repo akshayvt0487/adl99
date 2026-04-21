@@ -50,11 +50,26 @@ export async function getBlogPost(slug: string): Promise<BlogPost> {
   const fileContents = fs.readFileSync(fullPath, 'utf8');
   const { data, content } = matter(fileContents);
 
+  // Debug: Log the first image line from markdown
+  const imageMatch = content.match(/!\[.*?\]\(.*?\)/);
+  if (imageMatch) {
+    console.log('[markdown.ts] Found markdown image:', imageMatch[0]);
+  }
+
   // Convert markdown to HTML with proper options
   const processedContent = await remark()
     .use(html, { sanitize: false })
     .process(content);
   const contentHtml = processedContent.toString();
+
+  // Debug: Log the converted HTML for the first image
+  const imgMatch = contentHtml.match(/<img[^>]*>/);
+  if (imgMatch) {
+    console.log('[markdown.ts] Converted to HTML img:', imgMatch[0]);
+  } else {
+    console.log('[markdown.ts] WARNING: No <img> tags found in converted HTML!');
+    console.log('[markdown.ts] First 500 chars of HTML:', contentHtml.substring(0, 500));
+  }
 
   return {
     slug,
