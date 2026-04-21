@@ -375,11 +375,11 @@ const BlogContent: React.FC<BlogContentProps> = ({ content }) => {
       // Clear existing content and rebuild as CTA
       blockquote.innerHTML = `
         <a href="/contact" class="block group">
-          <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+          <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4 text-center md:text-left">
             <div class="flex-1">
               <p class="text-lg font-semibold text-primary-foreground mb-0">${text}</p>
             </div>
-            <div class="flex-shrink-0">
+            <div class="flex-shrink-0 flex justify-center md:justify-start">
               <span class="inline-flex items-center justify-center px-6 py-3 bg-white/20 text-primary-foreground rounded-lg font-medium text-sm group-hover:bg-white/30 transition-colors whitespace-nowrap">
                 Book Now
               </span>
