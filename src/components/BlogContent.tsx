@@ -431,6 +431,32 @@ const BlogContent: React.FC<BlogContentProps> = ({ content }) => {
       }
     });
 
+    // Process images
+    const imgElements = tempDiv.querySelectorAll('img');
+    imgElements.forEach((img) => {
+      // Wrap image in a figure element for better styling
+      const figure = document.createElement('figure');
+      figure.className = 'my-8 rounded-xl overflow-hidden border border-border shadow-lg';
+
+      // Style the image
+      img.className = 'w-full h-auto object-cover';
+      img.setAttribute('loading', 'lazy');
+
+      // Add figcaption if alt text exists
+      const alt = img.getAttribute('alt');
+      if (alt) {
+        const figcaption = document.createElement('figcaption');
+        figcaption.className = 'sr-only';
+        figcaption.textContent = alt;
+        figure.appendChild(img.cloneNode());
+        figure.appendChild(figcaption);
+        img.parentElement?.replaceChild(figure, img);
+      } else {
+        figure.appendChild(img.cloneNode());
+        img.parentElement?.replaceChild(figure, img);
+      }
+    });
+
     setEnhancedContent(tempDiv.innerHTML);
   }, [content]);
 
