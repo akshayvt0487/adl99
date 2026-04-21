@@ -431,29 +431,31 @@ const BlogContent: React.FC<BlogContentProps> = ({ content }) => {
       }
     });
 
-    // Process images
+    // Process images - wrap them properly and add styling
     const imgElements = tempDiv.querySelectorAll('img');
     imgElements.forEach((img) => {
-      // Wrap image in a figure element for better styling
+      const src = img.getAttribute('src');
+      const alt = img.getAttribute('alt') || '';
+
+      // Create figure wrapper
       const figure = document.createElement('figure');
-      figure.className = 'my-8 rounded-xl overflow-hidden border border-border shadow-lg';
+      figure.className = 'my-8 rounded-xl overflow-hidden border border-border shadow-lg bg-muted/30';
 
-      // Style the image
-      img.className = 'w-full h-auto object-cover';
-      img.setAttribute('loading', 'lazy');
+      // Create a styled img element
+      const styledImg = document.createElement('img');
+      styledImg.src = src || '';
+      styledImg.alt = alt;
+      styledImg.className = 'w-full h-auto';
+      styledImg.setAttribute('loading', 'lazy');
+      styledImg.style.display = 'block';
+      styledImg.style.maxWidth = '100%';
+      styledImg.style.height = 'auto';
 
-      // Add figcaption if alt text exists
-      const alt = img.getAttribute('alt');
-      if (alt) {
-        const figcaption = document.createElement('figcaption');
-        figcaption.className = 'sr-only';
-        figcaption.textContent = alt;
-        figure.appendChild(img.cloneNode());
-        figure.appendChild(figcaption);
-        img.parentElement?.replaceChild(figure, img);
-      } else {
-        figure.appendChild(img.cloneNode());
-        img.parentElement?.replaceChild(figure, img);
+      figure.appendChild(styledImg);
+
+      // Replace the original img with the figure
+      if (img.parentNode) {
+        img.parentNode.replaceChild(figure, img);
       }
     });
 

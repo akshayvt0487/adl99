@@ -50,8 +50,10 @@ export async function getBlogPost(slug: string): Promise<BlogPost> {
   const fileContents = fs.readFileSync(fullPath, 'utf8');
   const { data, content } = matter(fileContents);
 
-  // Convert markdown to HTML
-  const processedContent = await remark().use(html).process(content);
+  // Convert markdown to HTML with proper options
+  const processedContent = await remark()
+    .use(html, { sanitize: false })
+    .process(content);
   const contentHtml = processedContent.toString();
 
   return {
