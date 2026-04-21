@@ -7,7 +7,7 @@ updated: "April 2026"
 readTime: "12 min"
 author: "ADL99 Security Advisory Team"
 category: "Essential Eight"
-image: "</blog-images/Essential 8 Cyber Security/HERO IMAGE.webp>"
+image: "/blog-images/Essential 8 Cyber Security/HERO IMAGE.webp"
 ---
 
 - The **Essential 8** is Australia's baseline cybersecurity framework — 8 controls developed by the ACSC to stop the most common attacks.

@@ -7,7 +7,7 @@ updated: "April 2026"
 readTime: "8 min"
 author: "ADL99 Security Advisory Team"
 category: "Essential Eight"
-image: "</blog-images/12-Point Cyber Security Checklist for Australian SMBs/HERO IMAGE.webp>"
+image: "/blog-images/12-Point Cyber Security Checklist for Australian SMBs/HERO IMAGE.webp"
 ---
 
 Australian SMBs are being hit harder than ever — cyber attack costs jumped 14% last year, averaging **$56,600 per incident for small businesses**. This 12-point checklist maps directly to the ACSC's Essential 8 framework and gives you a clear, prioritised action plan. Work through the 12 controls below to identify your gaps.
