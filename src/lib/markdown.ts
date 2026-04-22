@@ -49,8 +49,8 @@ export function getBlogPost(slug: string): BlogPost {
   const fileContents = fs.readFileSync(fullPath, 'utf8');
   const { data, content } = matter(fileContents);
 
-  // Convert markdown to HTML using marked
-  const contentHtml = marked.parse(content);
+  // Convert markdown to HTML using marked (synchronous)
+  const contentHtml = marked.parse(content) as string;
 
   return {
     slug,
