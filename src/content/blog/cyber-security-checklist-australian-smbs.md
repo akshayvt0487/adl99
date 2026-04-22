@@ -16,7 +16,7 @@ Australian SMBs are being hit harder than ever — cyber attack costs jumped 14%
 
 ## Why Australian SMBs Can't Afford to Skip This
 
-![Why SMBs Can't Skip This](</blog-images/12-Point Cyber Security Checklist for Australian SMBs/WHY SMBs CAN'T SKIP THIS.webp>)
+![Why SMBs Can't Skip This](/blog-images/12-Point%20Cyber%20Security%20Checklist%20for%20Australian%20SMBs/WHY%20SMBs%20CAN%27T%20SKIP%20THIS.webp)
 
 Cyber attacks are no longer a "big business" problem.
 
@@ -34,7 +34,7 @@ This checklist gives you the starting point.
 
 ## The 12-Point Cyber Security Checklist
 
-![Checklist Overview](</blog-images/12-Point Cyber Security Checklist for Australian SMBs/CHECKLIST OVERVIEW.webp>)
+![Checklist Overview](/blog-images/12-Point%20Cyber%20Security%20Checklist%20for%20Australian%20SMBs/CHECKLIST%20OVERVIEW.webp)
 
 The first eight items map directly to the **ACSC's Essential 8** — Australia's recommended baseline for every business. Items 9–12 go beyond the baseline to address the gaps we most commonly see in Australian SMBs.
 
@@ -44,7 +44,7 @@ The first eight items map directly to the **ACSC's Essential 8** — Australia's
 
 ### 1. Multi-Factor Authentication (MFA)
 
-![Multi-Factor Authentication](</blog-images/12-Point Cyber Security Checklist for Australian SMBs/MULTI-FACTOR AUTHENTICATION (MFA).webp>)
+![Multi-Factor Authentication](/blog-images/12-Point%20Cyber%20Security%20Checklist%20for%20Australian%20SMBs/MULTI-FACTOR%20AUTHENTICATION%20(MFA).webp)
 
 **What it is:** Requiring two or more verification methods before granting access to systems, email, and cloud apps.
 
@@ -58,7 +58,7 @@ The first eight items map directly to the **ACSC's Essential 8** — Australia's
 
 ### 2. Patch Applications
 
-![Patching](</blog-images/12-Point Cyber Security Checklist for Australian SMBs/PATCHING.webp>)
+![Patching](/blog-images/12-Point%20Cyber%20Security%20Checklist%20for%20Australian%20SMBs/PATCHING.webp)
 
 **What it is:** Regularly updating all software applications to fix known security vulnerabilities.
 
@@ -120,7 +120,7 @@ The first eight items map directly to the **ACSC's Essential 8** — Australia's
 
 ### 8. Regular Backups
 
-![Backups](</blog-images/12-Point Cyber Security Checklist for Australian SMBs/BACKUPS.webp>)
+![Backups](/blog-images/12-Point%20Cyber%20Security%20Checklist%20for%20Australian%20SMBs/BACKUPS.webp)
 
 **What it is:** Maintaining secure, tested, offline or immutable backups of all critical business data.
 
@@ -134,7 +134,7 @@ The first eight items map directly to the **ACSC's Essential 8** — Australia's
 
 ### 9. Security Awareness Training
 
-![Security Training](</blog-images/12-Point Cyber Security Checklist for Australian SMBs/SECURITY TRAINING.webp>)
+![Security Training](/blog-images/12-Point%20Cyber%20Security%20Checklist%20for%20Australian%20SMBs/SECURITY%20TRAINING.webp)
 
 **What it is:** Regular, structured training that teaches staff to recognise and respond to phishing, social engineering, and other common threats.
 
@@ -156,7 +156,7 @@ The first eight items map directly to the **ACSC's Essential 8** — Australia's
 
 ### 11. Data Classification & Access Control
 
-![Access Control](</blog-images/12-Point Cyber Security Checklist for Australian SMBs/ACCESS CONTROL.webp>)
+![Access Control](/blog-images/12-Point%20Cyber%20Security%20Checklist%20for%20Australian%20SMBs/ACCESS%20CONTROL.webp)
 
 **What it is:** Identifying your most sensitive data, labelling it, and ensuring only authorised people can access it.
 
@@ -168,7 +168,7 @@ The first eight items map directly to the **ACSC's Essential 8** — Australia's
 
 ### 12. Regular Security Audits & Assessments
 
-![Audits & Assessments](</blog-images/12-Point Cyber Security Checklist for Australian SMBs/AUDITS & ASSESSMENTS.webp>)
+![Audits & Assessments](/blog-images/12-Point%20Cyber%20Security%20Checklist%20for%20Australian%20SMBs/AUDITS%20%26%20ASSESSMENTS.webp)
 
 **What it is:** Periodically reviewing your entire security posture against a recognised framework — not just checking individual controls.
 
@@ -229,7 +229,7 @@ For businesses that need ongoing support — not just a one-time assessment — 
 
 > [**Book Your Free Consultation →**](/contact)
 
-![Final Image](</blog-images/12-Point Cyber Security Checklist for Australian SMBs/FINAL IMG.webp>)
+![Final Image](/blog-images/12-Point%20Cyber%20Security%20Checklist%20for%20Australian%20SMBs/FINAL%20IMG.webp)
 
 ---
 
