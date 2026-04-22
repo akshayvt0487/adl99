@@ -28,7 +28,16 @@ export default function MigratePage() {
       const data = await response.json();
 
       if (response.ok) {
-        setResult({ success: true, message: data.message });
+        // Trigger cache revalidation
+        await fetch("/api/revalidate", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({ path: "/services/cyber-awareness-training" }),
+        });
+
+        setResult({ success: true, message: data.message + " Cache cleared - changes are now live!" });
         setPassword(""); // Clear password for security
       } else {
         setResult({ success: false, message: data.error });
