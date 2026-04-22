@@ -378,11 +378,13 @@ const BlogContent: React.FC<BlogContentProps> = ({ content }) => {
 
       // Always use center-aligned single button style for all blockquotes
       blockquote.innerHTML = `
-        <a href="${href}" class="block group">
-          <p class="text-lg md:text-xl font-semibold text-primary-foreground mb-6">${fullText}</p>
-          <span class="inline-flex items-center justify-center px-8 py-4 bg-white/20 text-primary-foreground rounded-lg font-semibold text-base group-hover:bg-white/30 transition-colors">
-            Book Now →
-          </span>
+        <a href="${href}" class="block w-full group">
+          <div class="flex flex-col items-center gap-6">
+            <p class="text-lg md:text-xl font-semibold text-primary-foreground text-center w-full">${fullText}</p>
+            <span class="inline-block px-8 py-4 bg-white/20 text-primary-foreground rounded-lg font-semibold text-base group-hover:bg-white/30 transition-colors">
+              Book Now →
+            </span>
+          </div>
         </a>
       `;
     });
