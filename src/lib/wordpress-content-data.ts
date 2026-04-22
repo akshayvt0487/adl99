@@ -247,7 +247,7 @@ export const servicesData: ServiceData[] = [
       whatsIncluded: [
         { item: "Customised training programs" },
         { item: "Phishing simulation campaigns" },
-        { item: "Interactive workshops" },
+        { item: "Cyber incident simulation tabletop exercises" },
         { item: "Ongoing awareness materials" },
         { item: "Training effectiveness reporting" },
       ],
@@ -260,6 +260,7 @@ export const servicesData: ServiceData[] = [
         { question: "How long are training sessions?", answer: "Sessions range from 1-hour awareness talks to full-day workshops depending on depth required." },
         { question: "Can training be customised for our industry?", answer: "Absolutely. We tailor content to your industry's specific threats and compliance requirements." },
         { question: "Do you offer phishing simulations?", answer: "Yes, we provide realistic phishing simulations to test and reinforce training." },
+        { question: "What is a cyber incident simulation tabletop exercise?", answer: "A tabletop exercise is a facilitated discussion where your team works through a realistic cyber incident scenario—such as a ransomware attack, data breach, or business email compromise. We guide your staff through decision-making under pressure, testing your incident response plan, communication protocols, and recovery procedures. These exercises identify gaps in your response capabilities before a real incident occurs, ensuring your team knows exactly what to do when it matters most." },
       ],
     },
   },
