@@ -10,11 +10,15 @@ category: "Industry Guides"
 image: "/banner-images/Law Firms.webp"
 ---
 
+![Cyber Security for Law Firms](/blog-images/Cyber%20Security%20for%20Law%20Firms/Cyber%20Security%20for%20Law%20Firms/HERO%20IMAGE.webp)
+
 Law firms are **3x more likely to be targeted by cyber criminals** than other industries. In 2025, the legal sector experienced a 42% increase in cyber attacks — primarily targeting client data, financial records, and intellectual property. A single breach can cost a law firm **$2–5 million** in incident response, regulatory fines, and reputational damage. This guide covers the threats law firms face, compliance obligations, and a step-by-step roadmap to secure your firm. **Expected read time: 14 minutes.**
 
 ---
 
 ## Why Law Firms Are a Top Target for Cyber Attacks
+
+![Why Law Firms Are Targets](/blog-images/Cyber%20Security%20for%20Law%20Firms/Cyber%20Security%20for%20Law%20Firms/WHY%20LAW%20FIRMS%20ARE%20TARGETS.webp)
 
 Law firms are cyber criminals' favourite targets. Here's why:
 
@@ -46,7 +50,11 @@ Cyber insurance has limits. A major breach can exceed your policy limits, leavin
 
 ## The Cyber Threats Law Firms Face Most
 
+![Cyber Threats Statistics](/blog-images/Cyber%20Security%20for%20Law%20Firms/Cyber%20Security%20for%20Law%20Firms/CYBER%20THREATS%20LAW%20FIRMS%20FACE%20(Stats%20Section).webp)
+
 ### 1. Phishing & Email Compromise
+
+![Phishing & Email Compromise](/blog-images/Cyber%20Security%20for%20Law%20Firms/Cyber%20Security%20for%20Law%20Firms/Phishing%20%26%20Email%20Compromise.webp)
 
 **What it is:** Attackers send fake emails pretending to be clients, opposing counsel, or staff members. They trick users into clicking malicious links or downloading infected attachments.
 
@@ -62,6 +70,8 @@ Cyber insurance has limits. A major breach can exceed your policy limits, leavin
 - Implement email authentication (DMARC, SPF, DKIM)
 
 ### 2. Ransomware Attacks
+
+![Ransomware Attacks](/blog-images/Cyber%20Security%20for%20Law%20Firms/Cyber%20Security%20for%20Law%20Firms/Ransomware%20Attacks.webp)
 
 **What it is:** Attackers encrypt your files and demand payment to decrypt them.
 
@@ -80,6 +90,8 @@ Cyber insurance has limits. A major breach can exceed your policy limits, leavin
 
 ### 3. Data Exfiltration & Theft
 
+![Data Exfiltration & Theft](/blog-images/Cyber%20Security%20for%20Law%20Firms/Cyber%20Security%20for%20Law%20Firms/Data%20Exfiltration%20%26%20Theft.webp)
+
 **What it is:** Attackers steal confidential data and either sell it or use it for extortion.
 
 **Why it's dangerous:** Stolen client data can be sold to competitors, used for blackmail, or published online. This destroys client trust and triggers regulatory investigations.
@@ -95,6 +107,8 @@ Cyber insurance has limits. A major breach can exceed your policy limits, leavin
 - Conduct regular security audits
 
 ### 4. Insider Threats
+
+![Insider Threats](/blog-images/Cyber%20Security%20for%20Law%20Firms/Cyber%20Security%20for%20Law%20Firms/Insider%20Threats.webp)
 
 **What it is:** A current or former employee intentionally or accidentally compromises security.
 
@@ -130,13 +144,19 @@ Cyber insurance has limits. A major breach can exceed your policy limits, leavin
 
 ## Compliance Obligations for Law Firms
 
+![Compliance Section](/blog-images/Cyber%20Security%20for%20Law%20Firms/Cyber%20Security%20for%20Law%20Firms/COMPLIANCE%20SECTION.webp)
+
 ### Privacy Act 1988 (Cth)
+
+![Privacy Act](/blog-images/Cyber%20Security%20for%20Law%20Firms/Cyber%20Security%20for%20Law%20Firms/Privacy%20Act.webp)
 
 The Privacy Act requires law firms to take "reasonable steps" to protect personal data. The Office of the Australian Information Commissioner (OAIC) has explicitly stated that Essential 8 is a reasonable baseline.
 
 **What this means:** If you handle client personal data, you must implement Essential 8 Level 2 minimum. See our dedicated [law firms industry page](/industries/law-firms) for more on how we help legal practices.
 
 ### Legal Professional Privilege
+
+![Legal Professional Privilege](/blog-images/Cyber%20Security%20for%20Law%20Firms/Cyber%20Security%20for%20Law%20Firms/Legal%20Professional%20Privilege.webp)
 
 Legal Professional Privilege (LPP) is a fundamental principle of Australian law. It protects confidential communications between lawyers and clients. A breach of LPP can result in:
 
@@ -158,6 +178,8 @@ If your law firm manages client funds (e.g., trust accounts), you may be subject
 ---
 
 ## The Essential 8 for Law Firms: Adapted Framework
+
+![Essential 8 for Law Firms](/blog-images/Cyber%20Security%20for%20Law%20Firms/Cyber%20Security%20for%20Law%20Firms/ESSENTIAL%208%20FOR%20LAW%20FIRMS%20(Adapted%20Framework).webp)
 
 The **Essential 8** is a framework developed by the Australian Cyber Security Centre (ACSC) to protect organisations from the most common cyber attacks. It's especially relevant for law firms because it addresses the specific threats outlined above.
 
@@ -344,6 +366,8 @@ Your case management system is the heart of your firm:
 
 ### 4. Implement Data Classification
 
+![Data Sharing](/blog-images/Cyber%20Security%20for%20Law%20Firms/Cyber%20Security%20for%20Law%20Firms/DATA%20Sharing.webp)
+
 Classify your data by sensitivity:
 
 - **Public:** Marketing materials, public information
@@ -364,6 +388,8 @@ Our [cyber awareness training program](/services/cyber-awareness-training) is ta
 ---
 
 ## Common Cyber Security Gaps in Law Firms
+
+![Common Cyber Security Gaps](/blog-images/Cyber%20Security%20for%20Law%20Firms/Cyber%20Security%20for%20Law%20Firms/COMMON%20CYBER%20SECURITY%20GAPS.webp)
 
 After assessing dozens of Australian law firms, we've identified the most common gaps:
 
@@ -429,6 +455,8 @@ After assessing dozens of Australian law firms, we've identified the most common
 
 ## Next Steps: Get Your Law Firm Cyber Security Assessment
 
+![Next Steps](/blog-images/Cyber%20Security%20for%20Law%20Firms/Cyber%20Security%20for%20Law%20Firms/Next%20Steps%20Get%20Your%20Law%20Firm%20Cyber%20Security%20Assessment.webp)
+
 [**Book your free 30-minute law firm cyber security assessment →**](/services/cyber-maturity-assessments)
 
 Or, if you need ongoing support, consider our [**vCISO services for law firms →**](/services/vciso)
@@ -436,6 +464,8 @@ Or, if you need ongoing support, consider our [**vCISO services for law firms �
 Also see our [law firms industry page →](/industries/law-firms) for a full overview of how ADL99 supports legal practices across Australia.
 
 ---
+
+!["Need Help" Section](/blog-images/Cyber%20Security%20for%20Law%20Firms/Cyber%20Security%20for%20Law%20Firms/%22NEED%20HELP%22%20SECTION.webp)
 
 ## Frequently Asked Questions
 
