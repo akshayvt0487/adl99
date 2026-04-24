@@ -1,15 +1,18 @@
 import { Metadata } from "next";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import Breadcrumb from "@/components/Breadcrumb";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
+import Image from "next/image";
+import { motion } from "framer-motion";
 import {
   Accordion,
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
-import { Shield, Users, Zap, FileText, CheckCircle, AlertTriangle } from "lucide-react";
+import { Shield, Users, Zap, FileText, CheckCircle2, AlertTriangle, Search, Briefcase, BookOpen, Lightbulb, MapPin, Award, TrendingUp, Clock, Building2 } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "Cybersecurity Services Melbourne | ADL99 — Melbourne's Trusted Cyber Security Partner",
@@ -174,21 +177,21 @@ const services = [
     description:
       "Know exactly where your business stands against the Essential Eight and ASD frameworks. ADL99 benchmarks your current security posture, identifies your real risk exposure, and gives you a clear, prioritised roadmap — not a 200-page report no one reads.",
     link: "/services/cyber-maturity-assessments",
-    icon: Shield,
+    icon: Search,
   },
   {
     title: "Virtual CISO (vCISO)",
     description:
       "Melbourne businesses with 10–200 employees rarely need a full-time CISO — but they do need executive-level security leadership. ADL99's vCISO service gives you strategic oversight, board reporting, and security program governance at a fraction of the cost.",
     link: "/services/vciso",
-    icon: Users,
+    icon: Lightbulb,
   },
   {
     title: "Cyber Awareness Training",
     description:
       "Your people are your biggest vulnerability — and your strongest defence. ADL99 runs tailored phishing simulations and awareness programs built around the real threats hitting Melbourne businesses right now, not generic slide decks from 2019.",
     link: "/services/cyber-awareness-training",
-    icon: FileText,
+    icon: BookOpen,
   },
   {
     title: "Emergency Incident Response",
@@ -203,14 +206,14 @@ const services = [
     description:
       "Navigate the crowded cybersecurity vendor landscape with confidence. ADL99 provides vendor-agnostic guidance on security tools, architecture decisions, and infrastructure choices — so Melbourne businesses invest in what actually works for their environment.",
     link: "/services/technical-advisory",
-    icon: Zap,
+    icon: Shield,
   },
   {
     title: "Security Engineering Support",
     description:
       "Buying security tools is easy. Making them work together is hard. ADL99's engineering team implements, configures, and manages your security stack — ensuring your investments actually protect you, not just tick compliance boxes.",
     link: "/services/engineering-support",
-    icon: CheckCircle,
+    icon: Briefcase,
   },
 ];
 
