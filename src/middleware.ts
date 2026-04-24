@@ -15,6 +15,7 @@ export function middleware(request: NextRequest) {
   const slugRedirects: Record<string, string> = {
     '/services/cyber-maturity': '/services/cyber-maturity-assessments',
     '/services/cyber-awareness': '/services/cyber-awareness-training',
+    '/services/compliance': '/services/cyber-maturity-assessments',
     '/panic-button': '/cyber-security-urgent-help',
   };
 
