@@ -5,8 +5,8 @@ import Breadcrumb from "@/components/Breadcrumb";
 import MelbournePageClient from "./MelbournePageClient";
 
 export const metadata: Metadata = {
-  title: "Cybersecurity Services Melbourne | ADL99 — Melbourne's Trusted Cyber Security Partner",
-  description: "ADL99 delivers expert cybersecurity services to Melbourne businesses. From cyber maturity assessments to 24/7 incident response — protect your data, meet compliance, and get peace of mind. Book a free consultation.",
+  title: "Cybersecurity Services Melbourne | ADL99 Cyber Security",
+  description: "Expert cybersecurity for Melbourne businesses. Assessments, vCISO, incident response & training. Protect your data, meet compliance. Free consultation.",
   keywords: [
     "cybersecurity Melbourne",
     "cyber security Melbourne",
@@ -29,6 +29,31 @@ export const metadata: Metadata = {
     siteName: "ADL99",
     locale: "en_AU",
     type: "website",
+    images: [
+      {
+        url: "https://www.adl99.com.au/banner-images/services.webp",
+        width: 1200,
+        height: 630,
+        alt: "ADL99 Cybersecurity Services Melbourne",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Cybersecurity Services Melbourne | ADL99",
+    description: "Melbourne's trusted cybersecurity partner. Expert assessments, vCISO services, incident response & training.",
+    images: ["https://www.adl99.com.au/banner-images/services.webp"],
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
   },
 };
 
