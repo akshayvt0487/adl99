@@ -392,19 +392,19 @@ export default function MelbournePage() {
 
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 pt-6 border-t border-border">
             <div className="flex items-center gap-2 text-sm text-muted-foreground">
-              <CheckCircle className="w-5 h-5 text-primary" />
+              <CheckCircle2 className="w-5 h-5 text-primary" />
               <span>Melbourne-Based Team</span>
             </div>
             <div className="flex items-center gap-2 text-sm text-muted-foreground">
-              <CheckCircle className="w-5 h-5 text-primary" />
+              <CheckCircle2 className="w-5 h-5 text-primary" />
               <span>No Lock-In Contracts</span>
             </div>
             <div className="flex items-center gap-2 text-sm text-muted-foreground">
-              <CheckCircle className="w-5 h-5 text-primary" />
+              <CheckCircle2 className="w-5 h-5 text-primary" />
               <span>Response Within 2 Business Hours</span>
             </div>
             <div className="flex items-center gap-2 text-sm text-muted-foreground">
-              <CheckCircle className="w-5 h-5 text-primary" />
+              <CheckCircle2 className="w-5 h-5 text-primary" />
               <span>Vendor-Agnostic Advice</span>
             </div>
           </div>
