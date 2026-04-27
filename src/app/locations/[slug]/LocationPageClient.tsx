@@ -127,7 +127,7 @@ export default function LocationPageClient({
                 <Shield className="w-4 h-4 md:w-5 md:h-5 text-primary-foreground" />
               </div>
               <h1 className="text-lg md:text-xl font-medium text-primary-foreground/80 uppercase tracking-wide">
-                Cyber Security {locationName} Melbourne
+                Cyber Security {locationName}
               </h1>
             </div>
             <h2 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold text-primary-foreground mb-6 uppercase tracking-wide">
