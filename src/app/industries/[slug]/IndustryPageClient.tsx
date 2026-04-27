@@ -31,6 +31,20 @@ const getIndustryBannerImage = (slug: string) => {
   return imageMap[slug] || "services.webp";
 };
 
+// Fallback hero headlines for better SEO structure
+const getIndustryHeroHeadline = (slug: string, title: string) => {
+  const headlines: Record<string, string> = {
+    "law-firms": "Protect Client Confidentiality & Meet Compliance",
+    "health-clinics": "Privacy Act-Compliant Security for Patient Data",
+    "accounting": "Defend Client Financial Data & Tax Systems",
+    "retail": "Secure POS Systems & Achieve PCI Compliance",
+    "manufacturing": "Protect OT Systems & Industrial Infrastructure",
+    "research": "Defend Research IP from Nation-State Threats"
+  };
+
+  return headlines[slug] || `Specialist Cybersecurity for ${title}`;
+};
+
 // Industry-specific section titles per SEO CSV
 const getIndustrySectionTitles = (slug: string) => {
   const titles: Record<string, { challenges: string; solutions: string; faq: string }> = {
@@ -123,7 +137,7 @@ export default function IndustryPageClient({
             </div>
             <h2 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold text-primary-foreground mb-6 uppercase tracking-wide">
               {industry.industryFields?.heroHeadline ||
-                `Cybersecurity for ${industry.title}`}
+                getIndustryHeroHeadline(industry.slug, industry.title)}
             </h2>
             {(industry.industryFields?.heroSubheadline ||
               industry.industryFields?.shortDescription) && (

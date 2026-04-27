@@ -27,7 +27,8 @@ export default function ServicePageClient({ service }: ServicePageClientProps) {
   const IconComponent = getIcon(service.serviceFields?.icon || fallbackData?.painPoints?.[0]?.icon || "shield");
 
   // Prioritize WordPress content, fall back to fallback data if needed
-  const heroHeadline = service.serviceFields?.heroHeadline || service.title;
+  // Ensure heroHeadline is different from service.title for better SEO structure
+  const heroHeadline = service.serviceFields?.heroHeadline || fallbackData?.heroHeadline || service.title;
   const heroSubheadline = service.serviceFields?.heroSubheadline || fallbackData?.heroSubheadline || "";
   const introTitle = fallbackData?.introTitle || "";
   const introContent = service.content || fallbackData?.introContent || "";
