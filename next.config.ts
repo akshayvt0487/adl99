@@ -22,12 +22,39 @@ const nextConfig: NextConfig = {
         headers: [
           {
             key: 'Cache-Control',
-            value: 'public, max-age=86400, must-revalidate',
+            value: 'public, max-age=3600, must-revalidate',
           },
         ],
       },
       {
-        source: '/:all*(svg|jpg|jpeg|png|gif|ico|webp)',
+        source: '/favicon-:size.png',
+        headers: [
+          {
+            key: 'Cache-Control',
+            value: 'public, max-age=3600, must-revalidate',
+          },
+        ],
+      },
+      {
+        source: '/apple-touch-icon.png',
+        headers: [
+          {
+            key: 'Cache-Control',
+            value: 'public, max-age=3600, must-revalidate',
+          },
+        ],
+      },
+      {
+        source: '/android-chrome-:size.png',
+        headers: [
+          {
+            key: 'Cache-Control',
+            value: 'public, max-age=3600, must-revalidate',
+          },
+        ],
+      },
+      {
+        source: '/:all*(svg|jpg|jpeg|png|gif|webp)',
         headers: [
           {
             key: 'Cache-Control',
@@ -44,6 +71,12 @@ const nextConfig: NextConfig = {
     }
 
     return [
+      // Redirect melbourne-cbd to melbourne
+      {
+        source: '/locations/melbourne-cbd',
+        destination: '/locations/melbourne',
+        permanent: true,
+      },
       // Redirect non-www to www
       {
         source: '/:path*',
