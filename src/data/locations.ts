@@ -54,6 +54,125 @@ export interface LocationData {
 }
 
 export const locationsData: Record<string, LocationData> = {
+  "melbourne": {
+    name: "Melbourne",
+    postcode: "3000",
+    heroTitle: "Protecting Melbourne Businesses from CBD to Bayside",
+    heroSubtext: "Comprehensive cyber security services across Greater Melbourne — from CBD corporates to bayside startups.",
+    seoTitle: "Cyber Security Melbourne | ADL99 — Trusted Local Team",
+    seoDescription: "Cyber security Melbourne — ADL99 protects businesses across Greater Melbourne with Essential Eight, vCISO & 24/7 incident response.",
+    introH2: "Cyber Security Services Across Greater Melbourne",
+    introSubtext: "Melbourne is Australia's cyber security hub, home to 200,000+ businesses spanning finance, healthcare, legal, manufacturing, and tech. ADL99 delivers practical, scalable cyber security that protects what matters most.",
+    introChallenges: [
+      {
+        icon: "Target",
+        title: "High-Value Target Density",
+        description: "Melbourne's concentration of financial services, legal practices, and healthcare makes it a prime hunting ground for sophisticated cybercriminals."
+      },
+      {
+        icon: "Users",
+        title: "SMB Resource Constraints",
+        description: "Most Melbourne businesses operate with fewer than 50 employees and no dedicated security staff, leaving them vulnerable."
+      },
+      {
+        icon: "Database",
+        title: "Compliance Complexity",
+        description: "Australian Privacy Act, Essential Eight, and industry-specific requirements create obligations many Melbourne businesses struggle to navigate."
+      }
+    ],
+    servicesH2: "Melbourne Cyber Security Solutions",
+    servicesIntro: "ADL99 delivers comprehensive cyber security solutions for Melbourne businesses of all sizes.",
+    services: [
+      {
+        h3: "Cyber Maturity Assessments",
+        title: "Cyber Maturity Assessments",
+        description: "Benchmark your security posture against the Essential Eight and identify priority vulnerabilities."
+      },
+      {
+        h3: "Virtual CISO Services",
+        title: "Virtual CISO Services",
+        description: "Executive-level security leadership without the full-time CISO price tag."
+      },
+      {
+        h3: "Incident Response",
+        title: "24/7 Incident Response",
+        description: "Immediate response for Melbourne businesses under active cyber attack."
+      }
+    ],
+    whyAdl99H2: "Why Melbourne Businesses Choose ADL99",
+    whyAdl99Intro: "ADL99 is Melbourne-based, Australian-owned, and deeply familiar with the local business landscape.",
+    whyAdl99Points: [
+      {
+        icon: "MapPin",
+        title: "Local Team",
+        description: "Based at 470 St Kilda Road — we're minutes from CBD, Southbank, and surrounding suburbs."
+      },
+      {
+        icon: "Shield",
+        title: "Vendor Agnostic",
+        description: "No hidden commissions. Our recommendations are based on what's right for your business."
+      },
+      {
+        icon: "Clock",
+        title: "Rapid Response",
+        description: "24/7 incident response across Greater Melbourne — both remote and on-site."
+      }
+    ],
+    whyAdl99Cta: "Protecting Melbourne businesses from every suburb and every sector.",
+    industriesH2: "Industries We Protect in Melbourne",
+    industries: [
+      {
+        h3: "Legal Practices",
+        title: "Law Firms",
+        description: "Protect client confidentiality and attorney-client privilege.",
+        link: "/industries/law-firms"
+      },
+      {
+        h3: "Healthcare Providers",
+        title: "Health Clinics",
+        description: "Privacy Act-compliant security for patient data and medical systems.",
+        link: "/industries/health-clinics"
+      },
+      {
+        h3: "Accounting Firms",
+        title: "Accounting Practices",
+        description: "Defend client financial data and tax systems from cyber threats.",
+        link: "/industries/accounting"
+      }
+    ],
+    threatsH2: "Cyber Threats Targeting Melbourne Businesses",
+    threatsIntro: "Melbourne businesses face sophisticated attacks from ransomware to business email compromise.",
+    threats: [
+      {
+        h3: "Ransomware Attacks",
+        title: "Ransomware",
+        description: "Melbourne SMBs are increasingly targeted by ransomware gangs demanding six-figure payments."
+      },
+      {
+        h3: "Business Email Compromise",
+        title: "BEC Attacks",
+        description: "Invoice fraud and CEO impersonation scams cost Melbourne businesses millions annually."
+      }
+    ],
+    faqsH2: "Melbourne Cyber Security FAQs",
+    faqs: [
+      {
+        question: "What cyber security services does ADL99 provide in Melbourne?",
+        answer: "ADL99 provides cyber maturity assessments, vCISO services, technical advisory, engineering support, cyber awareness training, and 24/7 incident response across Greater Melbourne."
+      },
+      {
+        question: "Where is ADL99 located?",
+        answer: "ADL99 is headquartered at 470 St Kilda Road, Melbourne VIC 3004 — minutes from CBD, Southbank, and South Yarra."
+      }
+    ],
+    nearbySuburbs: [
+      { name: "Southbank", postcode: "3006", slug: "southbank" },
+      { name: "Richmond", postcode: "3121", slug: "richmond" },
+      { name: "South Melbourne", postcode: "3205", slug: "south-melbourne" },
+      { name: "St Kilda", postcode: "3182", slug: "st-kilda" },
+      { name: "Docklands", postcode: "3008", slug: "docklands" }
+    ]
+  },
   "southbank": {
     name: "Southbank",
     postcode: "3006",
