@@ -54,157 +54,6 @@ export interface LocationData {
 }
 
 export const locationsData: Record<string, LocationData> = {
-  "melbourne-cbd": {
-    name: "Melbourne CBD",
-    postcode: "3000",
-    heroTitle: "Protect What Matters Most",
-    heroSubtext: "Trusted cyber security services for Melbourne CBD businesses — from cyber maturity assessments to 24/7 incident response.",
-    seoTitle: "Cyber Security Melbourne CBD | ADL99",
-    seoDescription: "Trusted cybersecurity services for Melbourne CBD businesses. Cyber maturity assessments, vCISO, incident response & Essential Eight compliance. Talk to ADL99 today.",
-    introH2: "Cyber Security Services in Melbourne CBD",
-    introSubtext: "Melbourne's CBD hosts Australia's densest concentration of professional services firms, corporate headquarters, and government offices. With over 480,000 workers managing sensitive data daily, CBD businesses face sophisticated cyber threats. ADL99 delivers solutions that protect what matters most.",
-    introChallenges: [
-      {
-        icon: "Shield",
-        title: "High-Value Target Protection",
-        description: "CBD businesses manage vast volumes of sensitive client data, financial records, and intellectual property — making them prime targets for business email compromise, ransomware, and credential theft."
-      },
-      {
-        icon: "FileText",
-        title: "Complex Regulatory Compliance",
-        description: "Navigate APRA CPS 234, Australian Privacy Act, and industry-specific regulations with confidence. We ensure your cybersecurity posture meets all compliance obligations."
-      },
-      {
-        icon: "Users",
-        title: "Distributed Workforce Security",
-        description: "Hybrid workforces and remote access create expanded attack surfaces. We secure your organization across office, home, and mobile environments."
-      },
-      {
-        icon: "Link",
-        title: "Supply Chain Risk Management",
-        description: "Interconnected supply chains extend your attack surface far beyond office walls. We help you identify, assess, and mitigate third-party security risks."
-      }
-    ],
-    servicesH2: "Melbourne CBD Cyber Security Solutions — What We Deliver",
-    servicesIntro: "ADL99 provides comprehensive cyber security solutions tailored for Melbourne CBD's corporate and professional services community.",
-    services: [
-      {
-        h3: "Cyber Maturity Assessments for CBD Organisations",
-        title: "Cyber Maturity Assessments",
-        description: "Comprehensive evaluation of your security posture against Essential Eight, NIST, and ISO 27001 frameworks. Identify gaps, prioritise remediation, and build a clear roadmap to cyber resilience."
-      },
-      {
-        h3: "Virtual CISO Services for Melbourne CBD",
-        title: "Virtual CISO (vCISO)",
-        description: "Executive-level cybersecurity leadership without the full-time cost. Our vCISOs provide strategic oversight, board reporting, and security program management tailored for CBD organisations."
-      },
-      {
-        h3: "Essential Eight Compliance & Gap Analysis",
-        title: "Essential Eight Compliance",
-        description: "Achieve and maintain Essential Eight compliance with our gap analysis, implementation support, and ongoing monitoring services — critical for CBD firms working with government or regulated industries."
-      }
-    ],
-    whyAdl99H2: "Why ADL99 Is Melbourne CBD's Trusted Cyber Security Company",
-    whyAdl99Intro: "ADL99 is an Australian-owned cybersecurity consultancy based in Melbourne. We're not a managed IT provider dabbling in security — we're security specialists who live and breathe cyber risk every day. Our team holds industry certifications across offensive and defensive security, and we've responded to incidents affecting CBD law firms, accounting practices, financial services firms, and government offices.",
-    whyAdl99Points: [
-      {
-        icon: "MapPin",
-        title: "Local Expertise",
-        description: "We understand Australian compliance obligations (APRA CPS 234, Privacy Act, Notifiable Data Breaches) and the threat landscape facing Melbourne businesses."
-      },
-      {
-        icon: "Award",
-        title: "Framework-Aligned",
-        description: "Our services map to Essential Eight, NIST Cybersecurity Framework, and ISO 27001 — giving CBD organisations a single partner for all compliance needs."
-      },
-      {
-        icon: "TrendingUp",
-        title: "Scalable Delivery",
-        description: "Whether you're a 10-person boutique firm or a 500-employee corporate office, our cyber security solutions scale to your size and risk profile."
-      },
-      {
-        icon: "Clock",
-        title: "24/7 Response Capability",
-        description: "Cyber incidents don't respect business hours. Neither do we. Our emergency response team is available around the clock."
-      }
-    ],
-    whyAdl99Cta: "Your CBD office is a high-value target. Let ADL99 assess your cyber maturity before attackers find the gaps.",
-    industriesH2: "Industries We Protect in Melbourne CBD",
-    industries: [
-      {
-        h3: "Cyber Security for Law Firms in Melbourne CBD",
-        title: "Law Firms",
-        description: "Protect client privilege and sensitive case files with tailored security for legal practices. From conflict-of-interest walls to privileged communications protection.",
-        link: "/industries/law-firms"
-      },
-      {
-        h3: "Cyber Security for Accounting Firms in Melbourne CBD",
-        title: "Accounting & Financial Services",
-        description: "Secure sensitive financial data and client records with comprehensive security frameworks designed for accounting practices and financial advisory firms.",
-        link: "/industries/financial-services"
-      },
-      {
-        h3: "Cyber Security for Professional Services in Melbourne CBD",
-        title: "Professional Services",
-        description: "Protect consulting firms, recruitment agencies, and advisory practices with tailored security solutions for knowledge-based businesses.",
-        link: "/industries/professional-services"
-      },
-      {
-        h3: "Cyber Security for Government Contractors in Melbourne CBD",
-        title: "Government Contractors",
-        description: "Meet stringent security requirements for government contracts with Essential Eight compliance, PSPF adherence, and ongoing monitoring.",
-        link: "/industries/government"
-      }
-    ],
-    threatsH2: "Cyber Threats Facing Melbourne CBD Businesses in 2026",
-    threatsIntro: "CBD organisations face targeted attacks due to their high-value data and interconnected business ecosystems. Understanding these threats is the first step toward effective defense.",
-    threats: [
-      {
-        h3: "Business Email Compromise (BEC) Attacks in Melbourne CBD",
-        title: "Business Email Compromise (BEC)",
-        description: "Attackers impersonate executives or trusted partners to authorize fraudulent payments or data transfers. CBD firms handling large financial transactions are prime targets. Average BEC loss in Australia: $64,000 per incident."
-      },
-      {
-        h3: "Ransomware Targeting CBD Organisations",
-        title: "Ransomware",
-        description: "Cybercriminals encrypt critical systems and demand ransom payments. CBD law firms and accounting practices face double-extortion — encrypted systems plus threatened data leaks that breach client confidentiality."
-      },
-      {
-        h3: "Supply Chain Attacks Affecting CBD Businesses",
-        title: "Supply Chain Attacks",
-        description: "Attackers compromise trusted vendors or software providers to gain access to downstream targets. CBD organisations with extensive vendor networks face elevated risk."
-      }
-    ],
-    faqsH2: "Cyber Security FAQs for Melbourne CBD Businesses",
-    faqs: [
-      {
-        question: "What cyber security services does ADL99 provide in Melbourne CBD?",
-        answer: "ADL99 provides cyber maturity assessments, Virtual CISO (vCISO) services, Essential Eight compliance gap analysis, incident response, penetration testing, security awareness training, and ongoing security monitoring. We tailor our services to CBD businesses of all sizes."
-      },
-      {
-        question: "How much does cyber security cost for a Melbourne CBD business?",
-        answer: "Costs vary based on your organisation size, industry, and risk profile. A cyber maturity assessment typically starts from $5,000. Virtual CISO services range from $3,000-$8,000/month depending on scope. We provide transparent fixed-price quotes with no hidden fees. Contact us for a tailored proposal."
-      },
-      {
-        question: "Is ADL99 based in Melbourne CBD?",
-        answer: "ADL99 is based at 470 St Kilda Road, Melbourne VIC 3004 — minutes from the CBD. Our local presence means faster response times, face-to-face consultations, and deep understanding of Melbourne's business landscape and regulatory environment."
-      },
-      {
-        question: "What should I do if my CBD business is hit by a cyber attack?",
-        answer: "1) Disconnect affected systems from the network (but don't power them off — this destroys forensic evidence).\n2) Contact ADL99's emergency incident response team on 03 7067 3373.\n3) Preserve logs and evidence.\n4) Do NOT pay any ransom before consulting with response professionals.\n5) Notify your cyber insurer if you have coverage."
-      },
-      {
-        question: "Does ADL99 provide cyber security for small Melbourne CBD businesses?",
-        answer: "Yes. ADL99 works with CBD businesses of all sizes, from solo practitioners to 500+ employee organisations. Our cyber security services are scalable — we right-size our approach to your risk profile and budget, ensuring even small CBD firms get enterprise-grade protection without enterprise pricing."
-      }
-    ],
-    nearbySuburbs: [
-      { name: "Southbank", postcode: "3006", slug: "southbank" },
-      { name: "Docklands", postcode: "3008", slug: "docklands" },
-      { name: "East Melbourne", postcode: "3002", slug: "east-melbourne" },
-      { name: "Carlton", postcode: "3053", slug: "carlton" }
-    ]
-  },
   "southbank": {
     name: "Southbank",
     postcode: "3006",
@@ -350,7 +199,7 @@ export const locationsData: Record<string, LocationData> = {
       }
     ],
     nearbySuburbs: [
-      { name: "Melbourne CBD", postcode: "3000", slug: "melbourne-cbd" },
+      { name: "Melbourne", postcode: "3000", slug: "melbourne" },
       { name: "Docklands", postcode: "3008", slug: "docklands" },
       { name: "South Melbourne", postcode: "3205", slug: "south-melbourne" },
       { name: "Port Melbourne", postcode: "3207", slug: "port-melbourne" }
@@ -501,7 +350,7 @@ export const locationsData: Record<string, LocationData> = {
       }
     ],
     nearbySuburbs: [
-      { name: "Melbourne CBD", postcode: "3000", slug: "melbourne-cbd" },
+      { name: "Melbourne", postcode: "3000", slug: "melbourne" },
       { name: "Southbank", postcode: "3006", slug: "southbank" },
       { name: "South Melbourne", postcode: "3205", slug: "south-melbourne" },
       { name: "Port Melbourne", postcode: "3207", slug: "port-melbourne" }
@@ -655,7 +504,7 @@ export const locationsData: Record<string, LocationData> = {
       { name: "Toorak", postcode: "3142", slug: "toorak" },
       { name: "Prahran", postcode: "3181", slug: "prahran" },
       { name: "Richmond", postcode: "3121", slug: "richmond" },
-      { name: "Melbourne CBD", postcode: "3000", slug: "melbourne-cbd" }
+      { name: "Melbourne", postcode: "3000", slug: "melbourne" }
     ]
   },
   "toorak": {
@@ -1247,7 +1096,7 @@ export const locationsData: Record<string, LocationData> = {
       }
     ],
     nearbySuburbs: [
-      { name: "Melbourne CBD", postcode: "3000", slug: "melbourne-cbd" },
+      { name: "Melbourne", postcode: "3000", slug: "melbourne" },
       { name: "South Yarra", postcode: "3141", slug: "south-yarra" },
       { name: "Fitzroy", postcode: "3065", slug: "fitzroy" },
       { name: "Hawthorn", postcode: "3122", slug: "hawthorn" }
@@ -1397,7 +1246,7 @@ export const locationsData: Record<string, LocationData> = {
       { name: "Richmond", postcode: "3121", slug: "richmond" },
       { name: "Camberwell", postcode: "3124", slug: "camberwell" },
       { name: "Kew", postcode: "3101", slug: "kew" },
-      { name: "Melbourne CBD", postcode: "3000", slug: "melbourne-cbd" }
+      { name: "Melbourne", postcode: "3000", slug: "melbourne" }
     ]
   },
   "malvern": {
@@ -2027,7 +1876,7 @@ export const locationsData: Record<string, LocationData> = {
       }
     ],
     nearbySuburbs: [
-      { name: "Melbourne CBD", postcode: "3000", slug: "melbourne-cbd" },
+      { name: "Melbourne", postcode: "3000", slug: "melbourne" },
       { name: "Fitzroy", postcode: "3065", slug: "fitzroy" },
       { name: "Richmond", postcode: "3121", slug: "richmond" },
       { name: "Carlton", postcode: "3053", slug: "carlton" }
@@ -2189,7 +2038,7 @@ export const locationsData: Record<string, LocationData> = {
       }
     ],
     nearbySuburbs: [
-      { name: "Melbourne CBD", postcode: "3000", slug: "melbourne-cbd" },
+      { name: "Melbourne", postcode: "3000", slug: "melbourne" },
       { name: "Port Melbourne", postcode: "3207", slug: "port-melbourne" },
       { name: "Southbank", postcode: "3006", slug: "southbank" },
       { name: "Albert Park", postcode: "3206", slug: "albert-park" }
@@ -2352,7 +2201,7 @@ export const locationsData: Record<string, LocationData> = {
     ],
     nearbySuburbs: [
       { name: "South Melbourne", postcode: "3205", slug: "south-melbourne" },
-      { name: "Melbourne CBD", postcode: "3000", slug: "melbourne-cbd" },
+      { name: "Melbourne", postcode: "3000", slug: "melbourne" },
       { name: "Southbank", postcode: "3006", slug: "southbank" },
       { name: "Albert Park", postcode: "3206", slug: "albert-park" }
     ]
@@ -2999,7 +2848,7 @@ export const locationsData: Record<string, LocationData> = {
       }
     ],
     nearbySuburbs: [
-      { name: "Melbourne CBD", postcode: "3000", slug: "melbourne-cbd" },
+      { name: "Melbourne", postcode: "3000", slug: "melbourne" },
       { name: "Fitzroy", postcode: "3065", slug: "fitzroy" },
       { name: "Parkville", postcode: "3052", slug: "parkville" },
       { name: "East Melbourne", postcode: "3002", slug: "east-melbourne" }

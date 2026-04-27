@@ -262,6 +262,7 @@ export default async function HomePage() {
           title="Melbourne's Trusted Cybersecurity Services for Australian Businesses"
           description="Based in Melbourne and serving businesses across Australia, ADL99 delivers practical, no-nonsense cybersecurity tailored to your industry and budget. From cyber maturity assessments to emergency incident response, we protect what matters most — your data, your clients, and your reputation."
           links={[
+            { text: "Melbourne", href: "/locations/melbourne" },
             { text: "cyber maturity assessments", href: "/services/cyber-maturity-assessments" },
             { text: "emergency incident response", href: "/cyber-security-urgent-help" }
           ]}

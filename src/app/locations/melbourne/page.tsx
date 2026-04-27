@@ -5,26 +5,26 @@ import Breadcrumb from "@/components/Breadcrumb";
 import MelbournePageClient from "./MelbournePageClient";
 
 export const metadata: Metadata = {
-  title: "Cybersecurity Services Melbourne | ADL99 Cyber Security",
-  description: "Expert cybersecurity for Melbourne businesses. Assessments, vCISO, incident response & training. Protect your data, meet compliance. Free consultation.",
+  title: "Cyber Security Melbourne | ADL99 — Trusted Local Team",
+  description: "Cyber security Melbourne — ADL99 protects businesses across Greater Melbourne with Essential Eight, vCISO & 24/7 incident response.",
   keywords: [
-    "cybersecurity Melbourne",
     "cyber security Melbourne",
-    "cybersecurity company Melbourne",
-    "managed cybersecurity Melbourne",
-    "IT security Melbourne",
-    "penetration testing Melbourne",
+    "cyber security services Melbourne",
+    "Melbourne cyber security company",
+    "Melbourne cyber security consultants",
+    "Essential Eight Melbourne",
     "vCISO Melbourne",
-    "Essential 8 compliance Melbourne",
     "incident response Melbourne",
-    "cybersecurity for small business Melbourne",
+    "cyber security solutions Melbourne",
+    "cybersecurity Melbourne",
+    "Melbourne cybersecurity",
   ],
   alternates: {
     canonical: "https://www.adl99.com.au/locations/melbourne",
   },
   openGraph: {
-    title: "Cybersecurity Services Melbourne | ADL99",
-    description: "Melbourne's trusted cybersecurity partner. Expert assessments, vCISO services, incident response & awareness training for Australian businesses.",
+    title: "Cyber Security Melbourne | ADL99 — Trusted Local Team",
+    description: "Cyber security Melbourne — ADL99 protects businesses across Greater Melbourne with Essential Eight, vCISO & 24/7 incident response.",
     url: "https://www.adl99.com.au/locations/melbourne",
     siteName: "ADL99",
     locale: "en_AU",
@@ -34,22 +34,22 @@ export const metadata: Metadata = {
         url: "https://www.adl99.com.au/banner-images/services.webp",
         width: 1200,
         height: 630,
-        alt: "ADL99 Cybersecurity Services Melbourne",
+        alt: "Cyber Security Services in Melbourne",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Cybersecurity Services Melbourne | ADL99",
-    description: "Melbourne's trusted cybersecurity partner. Expert assessments, vCISO services, incident response & training.",
+    title: "Cyber Security Melbourne | ADL99 — Trusted Local Team",
+    description: "Cyber security Melbourne — ADL99 protects businesses across Greater Melbourne with Essential Eight, vCISO & 24/7 incident response.",
     images: ["https://www.adl99.com.au/banner-images/services.webp"],
   },
   robots: {
-    index: false,
-    follow: false,
+    index: true,
+    follow: true,
     googleBot: {
-      index: false,
-      follow: false,
+      index: true,
+      follow: true,
     },
   },
 };
@@ -64,12 +64,14 @@ const structuredData = {
     url: "https://www.adl99.com.au/locations/melbourne",
     address: {
       "@type": "PostalAddress",
+      streetAddress: "470 St Kilda Road",
       addressLocality: "Melbourne",
       addressRegion: "VIC",
+      postalCode: "3004",
       addressCountry: "AU",
     },
     areaServed: [
-      "Melbourne CBD",
+      "Melbourne",
       "Richmond",
       "South Melbourne",
       "St Kilda",
@@ -126,50 +128,42 @@ const structuredData = {
     mainEntity: [
       {
         "@type": "Question",
-        name: "How much do cybersecurity services cost for Melbourne businesses?",
+        name: "What cyber security services does ADL99 provide in Melbourne?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "Cybersecurity costs vary significantly depending on your business size, risk profile, and scope of work. For Melbourne SMBs, a cyber maturity assessment typically starts from a few thousand dollars and gives you a clear picture of your exposure. Ongoing advisory or vCISO services are structured as monthly retainers — often comparable to a fraction of what a single breach would cost. ADL99 provides transparent, fixed-scope pricing with no hidden fees. Book a free consultation to receive a scoping estimate tailored to your business.",
+          text: "ADL99 provides the full cyber security lifecycle for Melbourne businesses: cyber maturity assessments, virtual CISO (vCISO), technical advisory, engineering support, cyber awareness training, and 24/7 urgent incident response. We work with organisations across Greater Melbourne — from CBD to inner suburbs to growth corridors.",
         },
       },
       {
         "@type": "Question",
-        name: "Does my Melbourne business need the Essential Eight?",
+        name: "How much does cyber security cost for a Melbourne business?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "The Essential Eight is the Australian Signals Directorate's baseline cybersecurity mitigation framework, and while it's mandatory only for Commonwealth entities, it has become the de facto standard for risk management across Australian businesses of all sizes. Melbourne businesses in regulated industries (finance, health, legal) are increasingly expected to demonstrate Essential Eight maturity by clients, partners, and cyber insurers. ADL99 helps you assess your current maturity level and build a practical roadmap to improve it.",
+          text: "Pricing depends on scope and business size. Cyber maturity assessments for Melbourne SMBs are fixed-scope engagements typically starting in the low five figures. vCISO retainers scale to organisation size. Incident response is engagement-based. We always provide transparent fixed-scope quotes — never open-ended billing.",
         },
       },
       {
         "@type": "Question",
-        name: "What should I do if my Melbourne business has been hacked?",
+        name: "Does my Melbourne business need to comply with the Essential Eight?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "If you suspect an active breach: isolate affected systems from the network immediately, do not power off devices (preserves forensic evidence), and contact ADL99's emergency response line. We provide immediate remote incident response for Melbourne businesses — breach containment, forensic triage, and recovery planning. You should also notify the Office of the Australian Information Commissioner (OAIC) if personal data has been exposed, as required under the Notifiable Data Breaches scheme.",
+          text: "The Essential Eight is mandatory for federal government agencies and increasingly required by cyber insurers, enterprise customers, and government supply chains. Most Melbourne businesses we work with target Maturity Level 1 or 2 as a practical baseline — our cyber maturity assessment benchmarks where you currently sit and maps out how to lift it.",
         },
       },
       {
         "@type": "Question",
-        name: "How long does a cybersecurity assessment take for a Melbourne business?",
+        name: "What should I do if my Melbourne business gets hit by ransomware?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "For a typical Melbourne SMB (10–100 employees), a cyber maturity assessment takes between 3 and 10 business days depending on scope and complexity. The process includes a discovery session, documentation review, technical interviews, and delivery of a prioritised findings report with actionable recommendations. Larger or more complex organisations may require a longer engagement.",
+          text: "Don't pay any ransom, don't shut systems down before forensic preservation, and don't communicate publicly until you understand the scope. Contact our urgent incident response team — we provide remote triage within hours and on-site response across Greater Melbourne where required.",
         },
       },
       {
         "@type": "Question",
-        name: "What industries in Melbourne are most targeted by cybercriminals?",
+        name: "Where is ADL99 located in Melbourne?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "Based on ACSC reporting and ADL99's experience, the most heavily targeted sectors in Melbourne are: professional services (law firms and accounting practices) for their access to client financial and legal data; healthcare for patient records; retail and hospitality for payment card data; and financial services for direct access to funds. However, no industry is immune — Melbourne SMBs are targeted precisely because they often have less mature defences than large enterprises.",
-        },
-      },
-      {
-        "@type": "Question",
-        name: "Does ADL99 work with Melbourne businesses remotely or on-site?",
-        acceptedAnswer: {
-          "@type": "Answer",
-          text: "Both. Most ADL99 engagements are conducted remotely, which keeps costs lower and allows us to work efficiently. For incident response, on-site forensic work, or sensitive executive briefings, our Melbourne-based team can attend in person. We cover all of Greater Melbourne and regional Victoria.",
+          text: "ADL99 is headquartered at 470 St Kilda Road, Melbourne VIC 3004 — minutes from the CBD, Southbank, South Yarra, and the St Kilda Road corporate corridor. We deliver services across Greater Melbourne both on-site and remotely.",
         },
       },
     ],
