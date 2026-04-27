@@ -72,12 +72,17 @@ export default function ServicePageClient({ service }: ServicePageClientProps) {
             transition={{ duration: 0.6 }}
             className="max-w-4xl"
           >
-            <div className="w-16 h-16 rounded-2xl bg-primary-foreground/10 flex items-center justify-center mb-6">
-              <IconComponent className="w-8 h-8 text-primary-foreground" />
+            <div className="flex items-center gap-3 mb-6">
+              <div className="w-8 h-8 md:w-10 md:h-10 rounded-lg bg-primary-foreground/10 flex items-center justify-center shrink-0">
+                <IconComponent className="w-4 h-4 md:w-5 md:h-5 text-primary-foreground" />
+              </div>
+              <h1 className="text-lg md:text-xl font-medium text-primary-foreground/80 uppercase tracking-wide">
+                {service.title}
+              </h1>
             </div>
-            <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold text-primary-foreground mb-6 uppercase tracking-wide">
+            <h2 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold text-primary-foreground mb-6 uppercase tracking-wide">
               {heroHeadline}
-            </h1>
+            </h2>
             {heroSubheadline && (
               <p className="text-lg md:text-xl text-primary-foreground/80 mb-8">
                 {heroSubheadline}
