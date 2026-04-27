@@ -218,11 +218,11 @@ export default function MelbournePageClient() {
                 <Shield className="w-4 h-4 md:w-5 md:h-5 text-primary-foreground" />
               </div>
               <h1 className="text-lg md:text-xl font-medium text-primary-foreground/80 uppercase tracking-wide">
-                Cyber Security St Kilda
+                Cyber Security Melbourne
               </h1>
             </div>
             <h2 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold text-primary-foreground mb-6 uppercase tracking-wide">
-              Protecting Melbourne Businesses from CBD to Bayside
+              Cyber Security That Defends Every Corner of Melbourne
             </h2>
             <div className="bg-primary-foreground/10 backdrop-blur-sm border border-primary-foreground/20 rounded-2xl p-6 md:p-8 mb-8">
               <p className="text-primary-foreground/90 text-base md:text-lg leading-relaxed">
