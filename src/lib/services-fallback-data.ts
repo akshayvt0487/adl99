@@ -31,8 +31,8 @@ export interface ServiceFallbackData {
 }
 
 export const servicesFallbackData: Record<string, ServiceFallbackData> = {
-  "cyber-maturity": {
-    slug: "cyber-maturity",
+  "cyber-maturity-assessments": {
+    slug: "cyber-maturity-assessments",
     heroHeadline: "Know Where You Stand",
     heroSubheadline: "Melbourne-based cyber maturity assessments that benchmark your security against NIST, ISO 27001, and the Essential Eight — giving you a clear, prioritised roadmap for improvement.",
     introTitle: "Cyber Maturity Assessment Services in Melbourne & Australia",
