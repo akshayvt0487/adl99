@@ -136,8 +136,11 @@ export default function IndustryPageClient({
               </h1>
             </div>
             <h2 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold text-primary-foreground mb-6 uppercase tracking-wide">
-              {industry.industryFields?.heroHeadline ||
-                getIndustryHeroHeadline(industry.slug, industry.title)}
+              {(industry.industryFields?.heroHeadline &&
+                industry.industryFields.heroHeadline !== industry.title &&
+                industry.industryFields.heroHeadline !== `Cybersecurity for ${industry.title}`)
+                ? industry.industryFields.heroHeadline
+                : getIndustryHeroHeadline(industry.slug, industry.title)}
             </h2>
             {(industry.industryFields?.heroSubheadline ||
               industry.industryFields?.shortDescription) && (

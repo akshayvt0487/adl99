@@ -28,7 +28,10 @@ export default function ServicePageClient({ service }: ServicePageClientProps) {
 
   // Prioritize WordPress content, fall back to fallback data if needed
   // Ensure heroHeadline is different from service.title for better SEO structure
-  const heroHeadline = service.serviceFields?.heroHeadline || fallbackData?.heroHeadline || service.title;
+  const wpHeroHeadline = service.serviceFields?.heroHeadline;
+  const heroHeadline = (wpHeroHeadline && wpHeroHeadline !== service.title)
+    ? wpHeroHeadline
+    : fallbackData?.heroHeadline || service.title;
   const heroSubheadline = service.serviceFields?.heroSubheadline || fallbackData?.heroSubheadline || "";
   const introTitle = fallbackData?.introTitle || "";
   const introContent = service.content || fallbackData?.introContent || "";
