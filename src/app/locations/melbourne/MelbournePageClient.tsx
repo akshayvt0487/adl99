@@ -486,7 +486,7 @@ export default function MelbournePageClient() {
           >
             <div className="relative h-[400px] md:h-[500px] rounded-2xl overflow-hidden">
               <Image
-                src="/banner-images/services.webp"
+                src="/banner-images/about.webp"
                 alt="ADL99 Melbourne Office - Cyber Security Specialists at 470 St Kilda Road"
                 fill
                 className="object-cover"
@@ -625,7 +625,7 @@ export default function MelbournePageClient() {
             </div>
             <div className="relative h-[400px] rounded-2xl overflow-hidden">
               <Image
-                src="/banner-images/services.webp"
+                src="/banner-images/services_urgent-help.webp"
                 alt="Melbourne Cyber Security Protection - 24/7 Incident Response"
                 fill
                 className="object-cover"
