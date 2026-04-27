@@ -222,7 +222,7 @@ export default function MelbournePageClient() {
               </h1>
             </div>
             <h2 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold text-primary-foreground mb-6 uppercase tracking-wide">
-              Cyber Security That Defends Every Corner of Melbourne
+              Protecting Melbourne Businesses from CBD to Bayside
             </h2>
             <div className="bg-primary-foreground/10 backdrop-blur-sm border border-primary-foreground/20 rounded-2xl p-6 md:p-8 mb-8">
               <p className="text-primary-foreground/90 text-base md:text-lg leading-relaxed">
