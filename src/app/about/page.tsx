@@ -79,7 +79,7 @@ const defaultContent = {
   missionStatement: "Our Mission: Accessible Cybersecurity for Every Melbourne & Australian Business",
   missionDescription: "At ADL99, we believe every Melbourne and Australian business deserves enterprise-grade cybersecurity protection. We're here to demystify cybersecurity and make it accessible, practical, and effective — for organisations of all sizes, from St Kilda Road startups to national enterprises.\n\nFounded with a passion for protecting businesses from cyber threats, ADL99 brings together experienced security professionals who understand the unique challenges facing Australian organizations today.",
   australianOwnedTitle: "Melbourne-Based Cybersecurity Experts Serving Australia",
-  australianOwnedDescription: "ADL99 is headquartered at 470 St Kilda Road, Melbourne — giving our clients direct access to a local team that understands the Victorian business landscape. We serve clients across Melbourne, Victoria, and nationally, bringing enterprise-grade security expertise to businesses that previously couldn't access it.",
+  australianOwnedDescription: "ADL99 is headquartered at 470 St Kilda Road, Melbourne — giving our clients direct access to a local team that understands the Victorian business landscape. We serve clients across Melbourne, Victoria, and nationally, bringing enterprise-grade security expertise to businesses that previously couldn't access it. Learn more about our Melbourne cybersecurity services.",
   valuesTitle: "Our Values",
   valuesDescription: "The principles that guide everything we do at ADL99.",
   approachTitle: "Our Cybersecurity Approach: Assess, Defend, Leverage",

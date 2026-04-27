@@ -26,7 +26,7 @@ Accounting firms are cyber criminals' goldmine. Here's why:
 
 Accountants hold some of the most sensitive financial information in Australia: tax returns, bank account details, investment records, superannuation information, and personal identification. A single client data breach can expose hundreds of individuals and businesses.
 
-**Real example:** In 2024, a Melbourne accounting firm was breached by ransomware attackers who stole client tax data and demanded $750K. The firm paid the ransom and still faced regulatory investigations and client lawsuits.
+**Real example:** In 2024, a [Melbourne accounting firm](/locations/melbourne) was breached by ransomware attackers who stole client tax data and demanded $750K. The firm paid the ransom and still faced regulatory investigations and client lawsuits.
 
 ### 2. Tax Records Contain Personal Information
 
@@ -114,7 +114,7 @@ Cyber insurance has limits. A major breach can exceed your policy limits, leavin
 
 **Why it's dangerous:** Fraudulent tax returns can result in significant financial losses for clients. Identity theft can take years to resolve. Your firm faces regulatory investigations and client lawsuits.
 
-**Real example:** A Melbourne accounting firm's client data was breached. Attackers filed fraudulent tax returns for 50+ clients, claiming refunds totaling $2M. The ATO investigated the accounting firm.
+**Real example:** A [Melbourne accounting firm's](/locations/melbourne) client data was breached. Attackers filed fraudulent tax returns for 50+ clients, claiming refunds totaling $2M. The ATO investigated the accounting firm.
 
 **How to prevent it:**
 

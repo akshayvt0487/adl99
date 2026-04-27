@@ -262,13 +262,13 @@ Controls are fully integrated, continuously monitored, and regularly tested. Pro
 
 **Key rule from the ACSC:** Implement all eight controls at the same maturity level before advancing. Security is only as strong as its weakest control — if MFA is at Level 3 but patching is at Level 0, attackers will exploit the patching gap.
 
-**Most Australian SMBs currently sit at Level 0 or Level 1** — which is increasingly unacceptable to regulators, insurers, and enterprise clients. **Level 2 is the minimum target for 2026.**
+**Most Australian SMBs currently sit at Level 0 or Level 1** — which is increasingly unacceptable to regulators, insurers, and enterprise clients. **Level 2 is the minimum target for 2026.** ADL99 helps [Melbourne businesses](/locations/melbourne) achieve Essential 8 compliance with practical, staged implementation.
 
 ---
 
 ## Common Implementation Gaps We See
 
-After assessing Australian organisations across professional services, healthcare, and financial services, these are the most common gaps:
+After assessing [Melbourne](/locations/melbourne) and Australian organisations across professional services, healthcare, and financial services, these are the most common gaps:
 
 **Gap 1: No tested backups.** Backups exist but are never tested. Or backups are stored on the same network as production — meaning ransomware encrypts both. Fix: Test quarterly. Store backups in immutable, isolated storage.
 

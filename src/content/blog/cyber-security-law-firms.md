@@ -26,7 +26,7 @@ Law firms are cyber criminals' favourite targets. Here's why:
 
 Law firms hold some of the most sensitive information in the world: financial records, personal identification, litigation strategies, intellectual property, and confidential business information. A single client data breach can expose hundreds of people and companies.
 
-**Real example:** In 2024, a Melbourne law firm was breached by ransomware attackers who stole client data and demanded $500K. The firm paid the ransom and still faced regulatory investigations.
+**Real example:** In 2024, a [Melbourne law firm](/locations/melbourne) was breached by ransomware attackers who stole client data and demanded $500K. The firm paid the ransom and still faced regulatory investigations.
 
 ### 2. Legal Files Contain Sensitive Information
 
@@ -96,7 +96,7 @@ Cyber insurance has limits. A major breach can exceed your policy limits, leavin
 
 **Why it's dangerous:** Stolen client data can be sold to competitors, used for blackmail, or published online. This destroys client trust and triggers regulatory investigations.
 
-**Real example:** A Melbourne law firm's client database was stolen by an insider. The attacker sold the data to a competitor. The law firm lost 30% of its clients.
+**Real example:** A [Melbourne law firm's](/locations/melbourne) client database was stolen by an insider. The attacker sold the data to a competitor. The law firm lost 30% of its clients.
 
 **How to prevent it:**
 

@@ -127,7 +127,19 @@ export default function AboutPageClient({
                   <h2 className="font-display text-xl font-bold text-foreground uppercase tracking-wide">
                     {australianOwnedTitle}
                   </h2>
-                  <p className="text-muted-foreground">{australianOwnedDescription}</p>
+                  <p className="text-muted-foreground">
+                    {australianOwnedDescription.includes("Learn more") ? (
+                      <>
+                        {australianOwnedDescription.split("Learn more")[0]}
+                        <Link href="/locations/melbourne" className="text-primary hover:text-primary/80 underline">
+                          Learn more about our Melbourne cybersecurity services
+                        </Link>
+                        .
+                      </>
+                    ) : (
+                      australianOwnedDescription
+                    )}
+                  </p>
                 </div>
               </div>
               <div className="grid grid-cols-3 gap-6">

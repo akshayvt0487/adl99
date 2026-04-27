@@ -106,7 +106,7 @@ export default function ServicesPageClient({
               Cybersecurity Services for Melbourne & Australian Businesses
             </h2>
             <p className="text-muted-foreground text-lg leading-relaxed">
-              From cyber maturity assessments and virtual CISO services to phishing training and emergency incident response, ADL99 offers a complete cybersecurity service suite. Whether you're a Melbourne SMB or a multi-location Australian business, we scale our protection to fit your needs.
+              From cyber maturity assessments and virtual CISO services to phishing training and emergency incident response, ADL99 offers a complete cybersecurity service suite. Whether you're a <Link href="/locations/melbourne" className="text-primary hover:text-primary/80 underline">Melbourne</Link> SMB or a multi-location Australian business, we scale our protection to fit your needs.
             </p>
           </motion.div>
         </div>

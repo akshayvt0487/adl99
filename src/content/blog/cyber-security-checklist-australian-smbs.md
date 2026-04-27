@@ -196,7 +196,7 @@ Working through 12 controls at once is overwhelming. Here's how to approach it p
 
 ## Common Gaps We See in Australian SMBs
 
-After working with dozens of Melbourne and Australian businesses, these are the gaps that come up most often:
+After working with dozens of [Melbourne](/locations/melbourne) and Australian businesses, these are the gaps that come up most often:
 
 **No tested backups.** Many businesses have backups — but have never tested a restore. A backup you haven't tested is not a backup.
 
@@ -208,7 +208,7 @@ After working with dozens of Melbourne and Australian businesses, these are the 
 
 **Untrained staff.** Security tools alone don't stop phishing. People need to know what to look for.
 
-If any of these sound familiar, the right next step is a structured review. Our [vCISO services](/services/vciso) are specifically designed to help Australian SMBs build and maintain a security program without the cost of a full-time CISO. We work with businesses across Melbourne and Australia — see our [Melbourne CBD cyber security services](/locations/melbourne-cbd) if you're based locally.
+If any of these sound familiar, the right next step is a structured review. Our [vCISO services](/services/vciso) are specifically designed to help Australian SMBs build and maintain a security program without the cost of a full-time CISO. We work with businesses across [Melbourne](/locations/melbourne) and Australia — from the CBD to inner suburbs like [Southbank](/locations/southbank), [Richmond](/locations/richmond), and [Toorak](/locations/toorak).
 
 ---
 
