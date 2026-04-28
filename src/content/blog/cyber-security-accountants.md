@@ -511,4 +511,12 @@ A: Cyber insurance covers the costs of a breach. Cyber security prevents breache
 
 ---
 
+## Cybersecurity Melbourne: Protecting Accounting Firms Across Greater Melbourne
+
+Accounting firms across Melbourne face heightened cyber risks during tax season and financial year-end periods. Whether your practice operates in Melbourne CBD, Hawthorn, or suburban locations across Greater Melbourne, [cybersecurity Melbourne](/locations/melbourne) practices need specialized protection that addresses TPB compliance, Privacy Act obligations, and the unique threats targeting financial data.
+
+ADL99 delivers comprehensive [cyber security services in Melbourne](/locations/melbourne) tailored for accounting firms — from Essential Eight assessments and secure ATO portal configurations to 24/7 incident response when tax season attacks hit. Our Melbourne-based team understands the compliance landscape and operational realities facing Victorian accounting practices.
+
+---
+
 > **Also useful:** [Cyber Security Checklist for Australian SMBs](/blog/cyber-security-checklist-australian-smbs) — a quick self-assessment tool your firm can use to identify gaps before booking a full assessment.

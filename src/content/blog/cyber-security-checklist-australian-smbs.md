@@ -272,3 +272,11 @@ Under Australia's Privacy Act, businesses with annual turnovers above $3 million
 - [Notifiable Data Breaches Scheme — OAIC](https://www.oaic.gov.au/privacy/notifiable-data-breaches)
 - [Small Business Cyber Security Guide — cyber.gov.au](https://www.cyber.gov.au/protect-yourself/resources-protect-yourself/small-business-resources)
 - [Privacy Act 1988 — legislation.gov.au](https://www.legislation.gov.au/Details/C2021C00139)
+
+---
+
+## Cybersecurity Melbourne: Local Support for SMBs Across Greater Melbourne
+
+Small and medium businesses across Melbourne — from Southbank startups to Dandenong manufacturers — face the same sophisticated threats as larger enterprises, but often lack dedicated security resources. If your SMB operates in Melbourne, [cybersecurity Melbourne](/locations/melbourne) services from ADL99 can help you implement this checklist systematically, with practical guidance tailored to Victorian compliance requirements and local business realities.
+
+Our [Melbourne cyber security team](/locations/melbourne) delivers Essential Eight assessments, hands-on implementation support, and ongoing virtual CISO services scaled for SMBs across Greater Melbourne. We understand the constraints Melbourne small businesses face and focus on practical, cost-effective protection that actually works.

@@ -509,4 +509,12 @@ A: Cyber insurance covers the costs of a breach. Cyber security prevents breache
 
 ---
 
+## Cybersecurity Melbourne: Protecting Law Firms Across Greater Melbourne
+
+If your law firm operates in Melbourne, you're part of Victoria's thriving legal sector — and a prime target for cybercriminals. From CBD practices to suburban firms across Richmond, South Yarra, and beyond, [cybersecurity Melbourne](/locations/melbourne) businesses need specialized protection that understands local compliance requirements and the unique threats facing Australian legal practices.
+
+ADL99 provides comprehensive [cyber security services in Melbourne](/locations/melbourne), including Essential Eight assessments, virtual CISO services, and 24/7 incident response tailored specifically for law firms. Our Melbourne-based team understands the Privacy Act, Legal Professional Privilege obligations, and the regulatory landscape affecting Victorian legal practices.
+
+---
+
 > **Also useful:** [Cyber Security Checklist for Australian SMBs](/blog/cyber-security-checklist-australian-smbs) — a quick self-assessment tool your firm can use to identify gaps before booking a full assessment.

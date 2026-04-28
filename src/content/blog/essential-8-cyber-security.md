@@ -387,3 +387,11 @@ Yes — we've published industry-specific guides covering how Essential 8 applie
 - [OAIC Notifiable Data Breach Statistics](https://www.oaic.gov.au/privacy/notifiable-data-breaches/notifiable-data-breaches-statistics) — Latest Australian breach data
 - [APRA CPS 234](https://www.apra.gov.au/cps-234-information-security) — Information security standard for financial services
 - [Protective Security Policy Framework (PSPF)](https://www.protectivesecurity.gov.au/) — Government security policy framework
+
+---
+
+## Essential Eight Implementation Support in Melbourne
+
+Victorian businesses pursuing Essential Eight compliance need practical, local expertise that understands both the technical requirements and regional compliance landscape. [Cybersecurity Melbourne](/locations/melbourne) services from ADL99 include comprehensive Essential Eight assessments, gap analysis, and implementation roadmaps tailored to your organisation's size and industry.
+
+Our [Melbourne-based cyber security team](/locations/melbourne) works with businesses across Greater Melbourne — from CBD corporates to suburban SMBs — delivering Essential Eight maturity assessments, virtual CISO guidance, and hands-on engineering support. We help Melbourne organisations achieve compliance without the complexity of enterprise-scale implementations.
