@@ -204,64 +204,82 @@ export default function MelbournePageClient() {
   return (
     <div className="bg-background">
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-primary via-primary/95 to-primary/90 text-primary-foreground py-16 md:py-24 overflow-hidden">
+      <section className="relative bg-gradient-to-br from-primary via-primary/95 to-primary/90 text-primary-foreground overflow-hidden">
         <div className="absolute inset-0 bg-[url('/grid.svg')] opacity-10"></div>
         <div className="container mx-auto px-6 relative z-10">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="max-w-4xl"
-          >
-            <div className="flex items-center gap-3 mb-6">
-              <div className="w-8 h-8 md:w-10 md:h-10 rounded-lg bg-primary-foreground/10 flex items-center justify-center shrink-0">
-                <Shield className="w-4 h-4 md:w-5 md:h-5 text-primary-foreground" />
+          <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center py-16 md:py-24">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+            >
+              <div className="flex items-center gap-3 mb-6">
+                <div className="w-8 h-8 md:w-10 md:h-10 rounded-lg bg-primary-foreground/10 flex items-center justify-center shrink-0">
+                  <Shield className="w-4 h-4 md:w-5 md:h-5 text-primary-foreground" />
+                </div>
+                <h1 className="text-lg md:text-xl font-medium text-primary-foreground/80 uppercase tracking-wide">
+                  Cyber Security Melbourne
+                </h1>
               </div>
-              <h1 className="text-lg md:text-xl font-medium text-primary-foreground/80 uppercase tracking-wide">
-                Cyber Security Melbourne
-              </h1>
-            </div>
-            <h2 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold text-primary-foreground mb-6 uppercase tracking-wide">
-              Cyber Security That Defends Every Corner of Melbourne
-            </h2>
-            <div className="bg-primary-foreground/10 backdrop-blur-sm border border-primary-foreground/20 rounded-2xl p-6 md:p-8 mb-8">
-              <p className="text-primary-foreground/90 text-base md:text-lg leading-relaxed">
-                Comprehensive cyber security services for Melbourne's businesses — from CBD law firms and Southbank corporates to suburban clinics, growth-corridor manufacturers, and tech startups across Greater Melbourne.
-              </p>
-            </div>
-            <div className="flex flex-col sm:flex-row gap-4 mb-8">
-              <Button variant="accent" size="lg" asChild>
-                <Link href="/contact">Get Your Free Cyber Assessment</Link>
-              </Button>
-              <Button
-                variant="outline"
-                size="lg"
-                className="border-primary-foreground bg-transparent text-primary-foreground hover:bg-primary-foreground hover:text-primary"
-                asChild
-              >
-                <Link href="/cyber-security-urgent-help">Experiencing an Incident?</Link>
-              </Button>
-            </div>
-            {/* Trust Badges */}
-            <div className="flex flex-wrap gap-4 text-sm">
-              <div className="flex items-center gap-2">
-                <CheckCircle2 className="w-4 h-4" />
-                <span>Essential Eight Aligned</span>
+              <h2 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold text-primary-foreground mb-6 uppercase tracking-wide">
+                Cyber Security That Defends Every Corner of Melbourne
+              </h2>
+              <div className="bg-primary-foreground/10 backdrop-blur-sm border border-primary-foreground/20 rounded-2xl p-6 md:p-8 mb-8">
+                <p className="text-primary-foreground/90 text-base md:text-lg leading-relaxed">
+                  Comprehensive cyber security services for Melbourne's businesses — from CBD law firms and Southbank corporates to suburban clinics, growth-corridor manufacturers, and tech startups across Greater Melbourne.
+                </p>
               </div>
-              <div className="flex items-center gap-2">
-                <CheckCircle2 className="w-4 h-4" />
-                <span>NIST Framework</span>
+              <div className="flex flex-col sm:flex-row gap-4 mb-8">
+                <Button variant="accent" size="lg" asChild>
+                  <Link href="/contact">Get Your Free Cyber Assessment</Link>
+                </Button>
+                <Button
+                  variant="outline"
+                  size="lg"
+                  className="border-primary-foreground bg-transparent text-primary-foreground hover:bg-primary-foreground hover:text-primary"
+                  asChild
+                >
+                  <Link href="/cyber-security-urgent-help">Experiencing an Incident?</Link>
+                </Button>
               </div>
-              <div className="flex items-center gap-2">
-                <CheckCircle2 className="w-4 h-4" />
-                <span>ISO 27001</span>
+              {/* Trust Badges */}
+              <div className="flex flex-wrap gap-4 text-sm">
+                <div className="flex items-center gap-2">
+                  <CheckCircle2 className="w-4 h-4" />
+                  <span>Essential Eight Aligned</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <CheckCircle2 className="w-4 h-4" />
+                  <span>NIST Framework</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <CheckCircle2 className="w-4 h-4" />
+                  <span>ISO 27001</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <CheckCircle2 className="w-4 h-4" />
+                  <span>Australian-Owned</span>
+                </div>
               </div>
-              <div className="flex items-center gap-2">
-                <CheckCircle2 className="w-4 h-4" />
-                <span>Australian-Owned</span>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, scale: 0.95 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              className="relative hidden lg:block"
+            >
+              <div className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-2xl">
+                <Image
+                  src="/banner-images/services.webp"
+                  alt="Melbourne Cyber Security Services"
+                  fill
+                  className="object-cover"
+                  priority
+                />
               </div>
-            </div>
-          </motion.div>
+            </motion.div>
+          </div>
         </div>
       </section>
 
